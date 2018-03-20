@@ -3,6 +3,7 @@
  * Created by tianrenjie on 2017/11/9
  */
 import React, { PropTypes } from 'react';
+import './index.less';
 
 class App extends React.Component {
   static propTypes = {

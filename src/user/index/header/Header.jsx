@@ -25,7 +25,7 @@ class Header extends React.Component {
             <span className="menu-row-tip">亲爱的用户：欢迎光临“花之韵”鲜花销售系统</span>
           </Col>
           <Col span={6} offset={4}>
-            <ul className="menu-row-ul">
+            <ul className="menu-row-ul clearfix">
               <li className="menu-row-ul-li"><Link to="" className="menu-row-ul-li-a menu-row-ul-li-a-active">登录</Link></li>
               <li className="menu-row-ul-li"><Link to="" className="menu-row-ul-li-a">投诉建议</Link></li>
               <li className="menu-row-ul-li"><Link to="" className="menu-row-ul-li-a">我的订单</Link></li>
