@@ -11,13 +11,15 @@ class Search extends React.Component {
       <div className="logo">
         <Row className="logo-row">
           <Col>
-            <div></div>
+            <div className="logo-row-logo">
+              <img src="" alt="" />
+            </div>
           </Col>
           <Col>
-            <div></div>
+            <div className="logo-row-search">...</div>
           </Col>
           <Col>
-            <div></div>
+            <div className="logo-row-cart">...</div>
           </Col>
         </Row>
       </div>
