@@ -4,6 +4,7 @@
  */
 import React, { PropTypes } from 'react';
 import { Row, Col } from 'antd';
+import logo from '../../../../static/img/logo/logo.jpg';
 
 class Search extends React.Component {
   render() {
@@ -12,7 +13,7 @@ class Search extends React.Component {
         <Row className="logo-row">
           <Col>
             <div className="logo-row-logo">
-              <img src="" alt="" />
+              <img src={logo} alt="花之韵" />
             </div>
           </Col>
           <Col>

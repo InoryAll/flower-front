@@ -4,6 +4,7 @@
  */
 import React, { PropTypes } from 'react';
 import Header from './header/Header';
+import Search from './search/Search';
 import Footer from './footer/Footer';
 
 class Index extends React.Component {
@@ -12,6 +13,7 @@ class Index extends React.Component {
     return (
       <div>
         <Header />
+        <Search />
         <Footer />
       </div>
     );
