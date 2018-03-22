@@ -15,7 +15,7 @@ class SearchInput extends React.Component {
         <Row className="search-row">
           <Col span={17} offset={2}>
             <div className="search-row-box">
-              <input type="text" className="search-row-box-input" placeholder="请输入商品的关键字" />
+              <input type="text" className="search-row-box-input" placeholder="请输入您要搜索的商品的关键字" />
             </div>
           </Col>
           <Col span={3}>

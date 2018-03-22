@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08c3298d-d019-4401-abb2-96f78fb0689a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/user/index/search/searchInput/SearchInput.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/user/index/search/searchInput/SearchInput.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/bundle.js" afterPath="$PROJECT_DIR$/public/bundle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.less" afterPath="$PROJECT_DIR$/src/index.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/index/search/Search.jsx" afterPath="$PROJECT_DIR$/src/user/index/search/Search.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/index/search/Search.less" afterPath="$PROJECT_DIR$/src/user/index/search/Search.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/index/search/searchInput/SearchInput.jsx" afterPath="$PROJECT_DIR$/src/user/index/search/searchInput/SearchInput.jsx" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -48,8 +42,8 @@
       <file leaf-file-name="SearchInput.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/user/index/search/searchInput/SearchInput.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="25" column="36" lean-forward="true" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+            <state relative-caret-position="270">
+              <caret line="21" column="61" lean-forward="true" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
               <folding>
                 <element signature="e#62#103#0" expanded="true" />
               </folding>
@@ -442,12 +436,12 @@
       <workItem from="1521625076353" duration="409000" />
       <workItem from="1521679445295" duration="823000" />
       <workItem from="1521680305792" duration="488000" />
-      <workItem from="1521680847205" duration="7999000" />
+      <workItem from="1521680847205" duration="8164000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62301000" />
+    <option name="totallyTimeSpent" value="62466000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -845,8 +839,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/user/index/search/searchInput/SearchInput.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="25" column="36" lean-forward="true" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+        <state relative-caret-position="270">
+          <caret line="21" column="61" lean-forward="true" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
           <folding>
             <element signature="e#62#103#0" expanded="true" />
           </folding>
