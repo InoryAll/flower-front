@@ -5,21 +5,26 @@
 import React, { PropTypes } from 'react';
 import { Row, Col } from 'antd';
 import logo from '../../../../static/img/logo/logo.jpg';
+import './Search.less';
+import SearchInput from './searchInput/SearchInput';
 
 class Search extends React.Component {
+  static propTypes = {};
   render() {
     return (
       <div className="logo">
         <Row className="logo-row">
-          <Col>
+          <Col span={5} offset={2}>
             <div className="logo-row-logo">
-              <img src={logo} alt="花之韵" />
+              <img src={logo} alt="花之韵" className="logo-row-logo-img" />
             </div>
           </Col>
-          <Col>
-            <div className="logo-row-search">...</div>
+          <Col span={10}>
+            <div className="logo-row-search">
+              <SearchInput />
+            </div>
           </Col>
-          <Col>
+          <Col span={5}>
             <div className="logo-row-cart">...</div>
           </Col>
         </Row>
