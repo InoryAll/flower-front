@@ -1,0 +1,33 @@
+// 动画类
+
+// 顺时针旋转半圈
+@keyframes rotateClockwiseHalfCircle {
+  0%{
+    transform: rotate(0deg);
+    transform-origin: 50% 50%;
+  }
+  50%{
+    transform: rotate(90deg);
+    transform-origin: 50% 50%;
+  }
+  100%{
+    transform: rotate(180deg);
+    transform-origin: 50% 50%;
+  }
+}
+
+// 逆时针旋转半圈
+@keyframes rotateCounterclockwiseHalfCircle {
+  0%{
+    transform: rotate(0deg);
+    transform-origin: 50% 50%;
+  }
+  50%{
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+  }
+  100%{
+    transform: rotate(-180deg);
+    transform-origin: 50% 50%;
+  }
+}

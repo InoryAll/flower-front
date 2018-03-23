@@ -3,12 +3,27 @@
   padding: 10px 0;
   z-index: 99;
   margin: 0 auto;
+  position: relative;
 }
 .cart-row-button{
   &-box{
     padding: 8px 10px;
     background: #fafafa;
     border: 1px solid #f0f0f0;
+    &-active{
+      background: #fff;
+     .cart-row-button-box-arrow{
+       animation: rotateClockwiseHalfCircle 0.3s linear 0s normal;
+       animation-fill-mode: both;
+     }
+    }
+    &-negative{
+      background: #fafafa;
+      .cart-row-button-box-arrow{
+        animation: rotateCounterclockwiseHalfCircle 0.3s linear 0s normal;
+        animation-fill-mode: both;
+      }
+    }
     &-cart{
       color: #dcdcdc;
       font-size: 24px;
@@ -27,6 +42,10 @@
   }
 }
 .cart-row-content{
+  position: absolute;
+  right: 0;
+  background: #fff;
+  z-index: 99;
   &-box{
     width: 400px;
     float: right;
