@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08c3298d-d019-4401-abb2-96f78fb0689a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/animation/animation.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/index/search/cart/Cart.jsx" afterPath="$PROJECT_DIR$/src/user/index/search/cart/Cart.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/index/search/cart/Cart.less" afterPath="$PROJECT_DIR$/src/user/index/search/cart/Cart.less" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -45,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Cart.jsx" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Cart.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/user/index/search/cart/Cart.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="27" column="12" lean-forward="true" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
+            <state relative-caret-position="330">
+              <caret line="38" column="14" lean-forward="true" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
               <folding>
                 <element signature="e#59#100#0" expanded="true" />
               </folding>
@@ -120,11 +117,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Cart.less" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Cart.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/user/index/search/cart/Cart.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="39" column="29" lean-forward="true" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
+            <state relative-caret-position="360">
+              <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -204,8 +201,8 @@
         <option value="$PROJECT_DIR$/src/user/index/search/cart/goods/Goods.jsx" />
         <option value="$PROJECT_DIR$/src/user/index/search/cart/goods/Goods.less" />
         <option value="$PROJECT_DIR$/src/animation/animation.less" />
-        <option value="$PROJECT_DIR$/src/user/index/search/cart/Cart.jsx" />
         <option value="$PROJECT_DIR$/src/user/index/search/cart/Cart.less" />
+        <option value="$PROJECT_DIR$/src/user/index/search/cart/Cart.jsx" />
       </list>
     </option>
   </component>
@@ -435,12 +432,12 @@
       <workItem from="1521679445295" duration="823000" />
       <workItem from="1521680305792" duration="488000" />
       <workItem from="1521680847205" duration="8925000" />
-      <workItem from="1521771091644" duration="13935000" />
+      <workItem from="1521771091644" duration="14457000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77162000" />
+    <option name="totallyTimeSpent" value="77684000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -822,21 +819,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/index/search/cart/Cart.jsx">
+    <entry file="file://$PROJECT_DIR$/src/user/index/search/cart/Cart.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="27" column="12" lean-forward="true" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
-          <folding>
-            <element signature="e#59#100#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="360">
+          <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/index/search/cart/Cart.less">
+    <entry file="file://$PROJECT_DIR$/src/user/index/search/cart/Cart.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="39" column="29" lean-forward="true" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
-          <folding />
+        <state relative-caret-position="330">
+          <caret line="38" column="14" lean-forward="true" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
+          <folding>
+            <element signature="e#59#100#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -38,7 +38,7 @@ class Cart extends React.Component {
           </Col>
         </Row>
         <If condition={this.state.visible}>
-          <Row className="cart-row-content">
+          <Row className="cart-row-content" onMouseEnter={ this.handleMouseEnter } onMouseLeave={ this.handleMouseLeave }>
             <Col className="clearfix">
               <div className="cart-row-content-box">
                 <Row className="cart-row-content-box-row-title">
