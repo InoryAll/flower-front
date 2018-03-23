@@ -7,6 +7,7 @@ import { Row, Col } from 'antd';
 import logo from '../../../../static/img/logo/logo.jpg';
 import './Search.less';
 import SearchInput from './searchInput/SearchInput';
+import Cart from './cart/Cart';
 
 class Search extends React.Component {
   static propTypes = {};
@@ -25,7 +26,9 @@ class Search extends React.Component {
             </div>
           </Col>
           <Col span={5}>
-            <div className="logo-row-cart">...</div>
+            <div className="logo-row-cart">
+              <Cart />
+            </div>
           </Col>
         </Row>
       </div>

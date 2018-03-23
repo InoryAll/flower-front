@@ -12,7 +12,8 @@
          "locals": ["module"]
        }]
      }],
-       ["import", { libraryName: "antd", style: "css" }]
+       ["import", { libraryName: "antd", style: "css" }],
+      "jsx-control-statements"
       ]
     }
   }

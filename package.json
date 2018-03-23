@@ -6,6 +6,7 @@
     "antd": "^2.13.9",
     "es6-promise": "^4.1.1",
     "isomorphic-fetch": "^2.2.1",
+    "jsx-control-statements": "^3.2.8",
     "lodash": "^4.17.4",
     "moment": "^2.19.1",
     "prop-types": "^15.5.10",
