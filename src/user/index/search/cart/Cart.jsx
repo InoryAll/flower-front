@@ -6,6 +6,7 @@ import React, { PropTypes } from 'react';
 import { Row, Col, Icon } from 'antd';
 import { If } from 'jsx-control-statements';
 import { Link } from 'react-router';
+import Goods from './goods/Goods';
 import './Cart.less';
 
 class Cart extends React.Component {
@@ -33,10 +34,15 @@ class Cart extends React.Component {
               <Row className="cart-row-content-box-row-list">
                 <Col>
                   <div className="cart-row-content-box-row-list-box">
-                    <If condition={ 1 || true }>
+                    <If condition={ 0 || false }>
                       <div className="no-items">
                         <span>您的购物车中暂无商品，赶快选择心爱的商品吧！</span>
                       </div>
+                    </If>
+                    <If condition={ 1 || true }>
+                      <Goods />
+                      <Goods />
+                      <Goods />
                     </If>
                   </div>
                 </Col>

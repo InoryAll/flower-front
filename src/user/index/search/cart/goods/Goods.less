@@ -1,0 +1,34 @@
+.goods{
+  padding: 8px 16px;
+}
+.goods + .goods{
+  border-top: 1px dotted #ddd;
+}
+.goods-row{
+  &-img{
+    display: block;
+    width: 48px;
+    height: 48px;
+    border: 1px solid #ddd;
+  }
+  &-name{
+    &-a{
+      color: #333;
+      &:hover{
+        text-decoration: underline;
+        color: #333;
+      }
+    }
+  }
+  &-des{
+    float: right;
+  }
+  &-delete{
+    float: right;
+    color: #005ea6;
+    &:hover{
+      text-decoration: underline;
+      color: #005ea6;
+    }
+  }
+}
