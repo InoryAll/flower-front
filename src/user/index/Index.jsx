@@ -5,6 +5,7 @@
 import React, { PropTypes } from 'react';
 import Header from './header/Header';
 import Search from './search/Search';
+import Navigation from './navigation/Navigation';
 import Footer from './footer/Footer';
 
 class Index extends React.Component {
@@ -14,6 +15,7 @@ class Index extends React.Component {
       <div>
         <Header />
         <Search />
+        <Navigation />
         <Footer />
       </div>
     );
