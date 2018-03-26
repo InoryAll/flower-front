@@ -11,7 +11,7 @@ import '../../../../animation/animation.less';
 import './Cart.less';
 
 class Cart extends React.Component {
-  static propsTypes = {};
+  static propTypes = {};
   state = {
     visible: false,
   };

@@ -9,7 +9,7 @@ import promote from '../../../../static/img/header/promote.jpg';
 import './Header.less';
 
 class Header extends React.Component {
-  static propsTypes = {};
+  static propTypes = {};
   render() {
     return (
       <header className="header">
