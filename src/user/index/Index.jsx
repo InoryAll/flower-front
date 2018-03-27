@@ -6,6 +6,7 @@ import React, { PropTypes } from 'react';
 import Header from './header/Header';
 import Search from './search/Search';
 import Navigation from './navigation/Navigation';
+import Banner from './banner/Banner';
 import Footer from './footer/Footer';
 
 class Index extends React.Component {
@@ -16,6 +17,7 @@ class Index extends React.Component {
         <Header />
         <Search />
         <Navigation />
+        <Banner />
         <Footer />
       </div>
     );
