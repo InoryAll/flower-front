@@ -9,9 +9,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: __dirname + "/src/index.jsx",//已多次提及的唯一入口文件
   output: {
-    path: __dirname,
+    path: __dirname + "/public",
     filename: "bundle.js",
-    publicPath: "http://127.0.0.1:9000",
+    publicPath: "http://t.flower.cn:9000/",
   },
   devtool: 'eval-source-map',
   devServer: {
@@ -20,7 +20,7 @@ module.exports = {
     inline: true,//热加载配置
     hot: true,//热加载配置
     port: 9000,//端口号
-    host:'127.0.0.1',//运行的域名，需要在本地配置hosts.
+    host:'t.flower.cn',//运行的域名，需要在本地配置hosts.
     overlay: true,//显示编译错误
   },
   module: {

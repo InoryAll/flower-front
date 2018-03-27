@@ -13,14 +13,14 @@ class Carousel extends React.Component {
   static propTypes = {};
   state = {
     imgUrlArray: [
-      'http://127.0.0.1:9000/static/img/logo/logo.jpg',
-      'http://127.0.0.1:9000/static/img/logo/logo.jpg',
+      '../../../../../static/img/logo/logo.jpg',
+      '../../../../../static/img/logo/logo.jpg',
     ],
   };
   render() {
     return (
       <div className="carousel">
-        <BannerAnim prefixCls="banner-user" autoPlay>
+        <BannerAnim prefixCls="banner-user" autoPlay arrow={false}>
           <Element
             prefixCls="banner-user-elem"
             key="0"
@@ -29,8 +29,7 @@ class Carousel extends React.Component {
               key="bg"
               className="bg"
               style={{
-                background: `url(${this.state.imgUrlArray[0]}) no-repeat`,
-                backgroundSize: '100% 100%',
+                backgroundColor: '#64CBCC',
               }}
             />
           </Element>
@@ -42,7 +41,7 @@ class Carousel extends React.Component {
               key="bg"
               className="bg"
               style={{
-                background: '#64CBCC',
+                backgroundColor: '#64CBCC',
               }}
             />
           </Element>
