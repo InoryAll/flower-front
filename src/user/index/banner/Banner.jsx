@@ -15,9 +15,7 @@ class Banner extends React.Component {
           <Col span={20} offset={2}>
             <Row>
               <Col span={14} offset={5}>
-                <div className="carousel">
-                  <Carousel />
-                </div>
+                <Carousel />
               </Col>
               <Col span={5}>
               ...

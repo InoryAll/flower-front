@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08c3298d-d019-4401-abb2-96f78fb0689a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/user/index/banner/Banner.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/user/index/banner/Banner.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/user/index/banner/carousel/Carousel.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/user/index/banner/carousel/Carousel.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/index/Index.jsx" afterPath="$PROJECT_DIR$/src/user/index/Index.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/index/banner/Banner.jsx" afterPath="$PROJECT_DIR$/src/user/index/banner/Banner.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/index/banner/carousel/Carousel.jsx" afterPath="$PROJECT_DIR$/src/user/index/banner/carousel/Carousel.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/index/banner/carousel/Carousel.less" afterPath="$PROJECT_DIR$/src/user/index/banner/carousel/Carousel.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack.config.js" afterPath="$PROJECT_DIR$/webpack.config.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -74,8 +70,8 @@
       <file leaf-file-name="Banner.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/user/index/banner/Banner.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="14" column="36" lean-forward="true" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+            <state relative-caret-position="300">
+              <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#64#105#0" expanded="true" />
@@ -84,11 +80,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Carousel.jsx" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Carousel.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/user/index/banner/carousel/Carousel.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-120">
-              <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+            <state relative-caret-position="360">
+              <caret line="15" column="54" lean-forward="true" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#66#107#0" expanded="true" />
@@ -97,7 +93,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Banner.less" pinned="false" current-in-tab="true">
+      <file leaf-file-name="webpack.config.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webpack.config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="13" column="39" lean-forward="true" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Carousel.less" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/user/index/banner/carousel/Carousel.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="5" column="17" lean-forward="true" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Banner.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/user/index/banner/Banner.less">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
@@ -142,6 +158,7 @@
       <find>ver</find>
       <find>&lt;h4</find>
       <find>&lt;li</find>
+      <find>__dirname</find>
     </findStrings>
     <replaceStrings>
       <replace>dl className=&quot;info-row-ul-li-dl&quot;</replace>
@@ -202,7 +219,6 @@
         <option value="$PROJECT_DIR$/src/user/index/header/Header.jsx" />
         <option value="$PROJECT_DIR$/src/user/index/search/cart/Cart.jsx" />
         <option value="$PROJECT_DIR$/src/user/index/navigation/Navigation.jsx" />
-        <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/src/user/index/search/cart/Cart.less" />
         <option value="$PROJECT_DIR$/src/user/index/navigation/category/Category.jsx" />
         <option value="$PROJECT_DIR$/src/user/index/navigation/Navigation.less" />
@@ -210,7 +226,9 @@
         <option value="$PROJECT_DIR$/src/user/index/banner/Banner.less" />
         <option value="$PROJECT_DIR$/src/user/index/Index.jsx" />
         <option value="$PROJECT_DIR$/src/user/index/banner/Banner.jsx" />
+        <option value="$PROJECT_DIR$/src/user/index/banner/carousel/Carousel.less" />
         <option value="$PROJECT_DIR$/src/user/index/banner/carousel/Carousel.jsx" />
+        <option value="$PROJECT_DIR$/webpack.config.js" />
       </list>
     </option>
   </component>
@@ -290,118 +308,6 @@
             <path>
               <item name="flower-front" type="b2602c69:ProjectViewProjectNode" />
               <item name="flower-front" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flower-front" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flower-front" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flower-front" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flower-front" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="rc-banner-anim" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flower-front" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flower-front" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="rc-banner-anim" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flower-front" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flower-front" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="rc-banner-anim" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flower-front" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flower-front" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flower-front" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flower-front" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flower-front" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flower-front" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="animation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flower-front" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flower-front" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flower-front" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flower-front" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="index" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flower-front" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flower-front" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="index" type="462c0819:PsiDirectoryNode" />
-              <item name="banner" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flower-front" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flower-front" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="index" type="462c0819:PsiDirectoryNode" />
-              <item name="banner" type="462c0819:PsiDirectoryNode" />
-              <item name="carousel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flower-front" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flower-front" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="index" type="462c0819:PsiDirectoryNode" />
-              <item name="footer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flower-front" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flower-front" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="index" type="462c0819:PsiDirectoryNode" />
-              <item name="header" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flower-front" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flower-front" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="index" type="462c0819:PsiDirectoryNode" />
-              <item name="navigation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flower-front" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flower-front" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="index" type="462c0819:PsiDirectoryNode" />
-              <item name="navigation" type="462c0819:PsiDirectoryNode" />
-              <item name="category" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flower-front" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flower-front" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="index" type="462c0819:PsiDirectoryNode" />
-              <item name="search" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="flower-front" type="b2602c69:ProjectViewProjectNode" />
@@ -502,12 +408,12 @@
       <workItem from="1521771091644" duration="14712000" />
       <workItem from="1522035085521" duration="9226000" />
       <workItem from="1522111578150" duration="1092000" />
-      <workItem from="1522118217101" duration="16126000" />
+      <workItem from="1522118217101" duration="18403000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104383000" />
+    <option name="totallyTimeSpent" value="106660000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -550,7 +456,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -712,14 +618,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/bundle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82320">
-          <caret line="2744" column="724" lean-forward="false" selection-start-line="2744" selection-start-column="724" selection-end-line="2744" selection-end-column="724" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/user/index/header/Header.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="960">
@@ -780,14 +678,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="5" column="9" lean-forward="true" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webpack.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="29" column="33" lean-forward="true" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
           <folding />
         </state>
       </provider>
@@ -888,14 +778,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/index/banner/carousel/Carousel.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/rc-banner-anim/lib/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -904,21 +786,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/index/banner/carousel/Carousel.jsx">
+    <entry file="file://$PROJECT_DIR$/src/user/index/banner/Banner.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-120">
-          <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#66#107#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="60">
+          <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/bundle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="614">
+          <caret line="2744" column="724" lean-forward="false" selection-start-line="2744" selection-start-column="724" selection-end-line="2744" selection-end-column="724" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/user/index/banner/carousel/Carousel.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="5" column="17" lean-forward="true" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/user/index/banner/Banner.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="14" column="36" lean-forward="true" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+        <state relative-caret-position="300">
+          <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#64#105#0" expanded="true" />
@@ -926,11 +821,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/index/banner/Banner.less">
+    <entry file="file://$PROJECT_DIR$/webpack.config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+        <state relative-caret-position="297">
+          <caret line="13" column="39" lean-forward="true" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/user/index/banner/carousel/Carousel.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="15" column="54" lean-forward="true" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#66#107#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

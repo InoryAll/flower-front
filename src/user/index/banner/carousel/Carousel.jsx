@@ -6,55 +6,49 @@ import React, { PropTypes } from 'react';
 import BannerAnim, { Element } from 'rc-banner-anim';
 import TweenOne from 'rc-tween-one';
 import 'rc-banner-anim/assets/index.css';
+import './Carousel.less';
 
 const BgElement = Element.BgElement;
 class Carousel extends React.Component {
+  static propTypes = {};
+  state = {
+    imgUrlArray: [
+      'http://127.0.0.1:9000/static/img/logo/logo.jpg',
+      'http://127.0.0.1:9000/static/img/logo/logo.jpg',
+    ],
+  };
   render() {
     return (
-      <BannerAnim prefixCls="banner-user" autoPlay>
-        <Element
-          prefixCls="banner-user-elem"
-          key="0"
-        >
-          <BgElement
-            key="bg"
-            className="bg"
-            style={{
-              background: '#364D79',
-            }}
-          />
-          <TweenOne className="banner-user-title" animation={{ y: 30, opacity: 0, type: 'from' }}>
-            Ant Motion Banner
-          </TweenOne>
-          <TweenOne
-            className="banner-user-text"
-            animation={{ y: 30, opacity: 0, type: 'from', delay: 100 }}
+      <div className="carousel">
+        <BannerAnim prefixCls="banner-user" autoPlay>
+          <Element
+            prefixCls="banner-user-elem"
+            key="0"
           >
-            The Fast Way Use Animation In React
-          </TweenOne>
-        </Element>
-        <Element
-          prefixCls="banner-user-elem"
-          key="1"
-        >
-          <BgElement
-            key="bg"
-            className="bg"
-            style={{
-              background: '#64CBCC',
-            }}
-          />
-          <TweenOne className="banner-user-title" animation={{ y: 30, opacity: 0, type: 'from' }}>
-            Ant Motion Banner
-          </TweenOne>
-          <TweenOne
-            className="banner-user-text"
-            animation={{ y: 30, opacity: 0, type: 'from', delay: 100 }}
+            <BgElement
+              key="bg"
+              className="bg"
+              style={{
+                background: `url(${this.state.imgUrlArray[0]}) no-repeat`,
+                backgroundSize: '100% 100%',
+              }}
+            />
+          </Element>
+          <Element
+            prefixCls="banner-user-elem"
+            key="1"
           >
-            The Fast Way Use Animation In React
-          </TweenOne>
-        </Element>
-      </BannerAnim>);
+            <BgElement
+              key="bg"
+              className="bg"
+              style={{
+                background: '#64CBCC',
+              }}
+            />
+          </Element>
+        </BannerAnim>
+      </div>
+    );
   }
 }
 

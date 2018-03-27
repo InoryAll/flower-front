@@ -9,8 +9,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: __dirname + "/src/index.jsx",//已多次提及的唯一入口文件
   output: {
-    path: __dirname + "/public",
-    filename: "bundle.js"
+    path: __dirname,
+    filename: "bundle.js",
+    publicPath: "http://127.0.0.1:9000",
   },
   devtool: 'eval-source-map',
   devServer: {
