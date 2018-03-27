@@ -18,8 +18,8 @@ module.exports = {
     historyApiFallback: true,//不跳转
     inline: true,//热加载配置
     hot: true,//热加载配置
-    port: 80,//端口号
-    host:'t.flower.cn',//运行的域名，需要在本地配置hosts.
+    port: 9000,//端口号
+    host:'127.0.0.1',//运行的域名，需要在本地配置hosts.
     overlay: true,//显示编译错误
   },
   module: {
