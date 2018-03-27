@@ -26,8 +26,8 @@ class Carousel extends React.Component {
             key="0"
           >
             <BgElement
-              key="bg"
-              className="bg"
+              key="bg-1"
+              className="bg-1"
               style={{
                 backgroundColor: '#64CBCC',
               }}
@@ -38,8 +38,8 @@ class Carousel extends React.Component {
             key="1"
           >
             <BgElement
-              key="bg"
-              className="bg"
+              key="bg-2"
+              className="bg-2"
               style={{
                 backgroundColor: '#64CBCC',
               }}
