@@ -12,7 +12,7 @@ class Banner extends React.Component {
     return (
       <div className="banner">
         <Row>
-          <Col span={20} offset={2}>
+          <Col span={24} offset={0}>
             <Row>
               <Col span={19} offset={5}>
                 <Carousel />

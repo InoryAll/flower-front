@@ -21,9 +21,9 @@ class Navigation extends React.Component {
   render() {
     return (
       <div className="nav">
-        <nav>
+        <nav className="nav-container">
           <Row>
-            <Col span={20} offset="2">
+            <Col span={24} offset={0}>
               <Row>
                 <Col span={5}>
                   <Category />
