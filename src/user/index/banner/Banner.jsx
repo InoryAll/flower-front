@@ -9,13 +9,14 @@ import Sudoku from './sudoku/Sudoku';
 import './Banner.less';
 
 class Banner extends React.Component {
+  static propTypes = {};
   render() {
     return (
       <div className="banner">
         <Row>
           <Col span={24} offset={0}>
             <Row>
-              <Col span={19} offset={5}>
+              <Col span={19} offset={5} className="clearfix">
                 <Carousel />
                 <Sudoku />
               </Col>

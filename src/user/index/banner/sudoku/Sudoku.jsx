@@ -4,11 +4,27 @@
  */
 import React, { PropTypes } from 'react';
 import { Row, Col } from 'antd';
+import Announcement from './announcement/Announcement';
 import './Sudoku.less';
 
 class Sudoku extends React.Component {
+  static propTypes = {};
   render() {
-    return (<div className="sudoku">...</div>);
+    return (
+      <div className="sudoku">
+        <Row>
+          <Col>
+            <Announcement />
+          </Col>
+        </Row>
+        <Row>
+          <Col></Col>
+        </Row>
+        <Row>
+          <Col></Col>
+        </Row>
+      </div>
+    );
   }
 }
 
