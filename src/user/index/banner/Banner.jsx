@@ -5,6 +5,7 @@
 import React, { PropTypes } from 'react';
 import { Row, Col } from 'antd';
 import Carousel from './carousel/Carousel';
+import Sudoku from './sudoku/Sudoku';
 import './Banner.less';
 
 class Banner extends React.Component {
@@ -16,6 +17,7 @@ class Banner extends React.Component {
             <Row>
               <Col span={19} offset={5}>
                 <Carousel />
+                <Sudoku />
               </Col>
             </Row>
           </Col>

@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08c3298d-d019-4401-abb2-96f78fb0689a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/index/banner/Banner.jsx" afterPath="$PROJECT_DIR$/src/user/index/banner/Banner.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/index/banner/Banner.less" afterPath="$PROJECT_DIR$/src/user/index/banner/Banner.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/index/banner/carousel/Carousel.less" afterPath="$PROJECT_DIR$/src/user/index/banner/carousel/Carousel.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/index/navigation/Navigation.jsx" afterPath="$PROJECT_DIR$/src/user/index/navigation/Navigation.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/index/navigation/Navigation.less" afterPath="$PROJECT_DIR$/src/user/index/navigation/Navigation.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/index/banner/sudoku/Sudoku.jsx" afterPath="$PROJECT_DIR$/src/user/index/banner/sudoku/Sudoku.jsx" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,8 +20,8 @@
       <file leaf-file-name="Banner.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/user/index/banner/Banner.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+            <state relative-caret-position="330">
+              <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#64#105#0" expanded="true" />
@@ -34,7 +30,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Banner.less" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Banner.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/user/index/banner/Banner.less">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
@@ -77,11 +73,32 @@
       <file leaf-file-name="Sudoku.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/user/index/banner/sudoku/Sudoku.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="2" column="3" lean-forward="true" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+            <state relative-caret-position="240">
+              <caret line="8" column="38" lean-forward="true" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
+                <element signature="e#66#107#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Announcement.jsx" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/user/index/banner/sudoku/announcement/Announcement.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Announcement.less" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/user/index/banner/sudoku/announcement/Announcement.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -96,34 +113,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Carousel.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/user/index/banner/carousel/Carousel.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="45" column="14" lean-forward="true" selection-start-line="45" selection-start-column="14" selection-end-line="45" selection-end-column="14" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="e#66#107#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Carousel.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/user/index/banner/carousel/Carousel.less">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
               <caret line="5" column="16" lean-forward="true" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="webpack.config.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webpack.config.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="28" column="30" lean-forward="true" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -174,7 +168,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/App.test.js" />
         <option value="$PROJECT_DIR$/src/webpack.config.js" />
         <option value="$PROJECT_DIR$/.babelsrc" />
         <option value="$PROJECT_DIR$/src/rootReducer.js" />
@@ -220,11 +213,12 @@
         <option value="$PROJECT_DIR$/src/user/index/navigation/category/Category.less" />
         <option value="$PROJECT_DIR$/src/user/index/banner/carousel/Carousel.jsx" />
         <option value="$PROJECT_DIR$/src/user/index/banner/carousel/Carousel.less" />
-        <option value="$PROJECT_DIR$/src/user/index/banner/sudoku/Sudoku.jsx" />
         <option value="$PROJECT_DIR$/src/user/index/navigation/Navigation.less" />
         <option value="$PROJECT_DIR$/src/user/index/banner/Banner.less" />
         <option value="$PROJECT_DIR$/src/user/index/navigation/Navigation.jsx" />
         <option value="$PROJECT_DIR$/src/user/index/banner/Banner.jsx" />
+        <option value="$PROJECT_DIR$/src/user/index/banner/sudoku/Sudoku.jsx" />
+        <option value="$PROJECT_DIR$/src/user/index/banner/sudoku/announcement/Announcement.jsx" />
       </list>
     </option>
   </component>
@@ -338,6 +332,16 @@
               <item name="index" type="462c0819:PsiDirectoryNode" />
               <item name="banner" type="462c0819:PsiDirectoryNode" />
               <item name="sudoku" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flower-front" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flower-front" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="index" type="462c0819:PsiDirectoryNode" />
+              <item name="banner" type="462c0819:PsiDirectoryNode" />
+              <item name="sudoku" type="462c0819:PsiDirectoryNode" />
+              <item name="announcement" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="flower-front" type="b2602c69:ProjectViewProjectNode" />
@@ -499,12 +503,12 @@
       <workItem from="1522035085521" duration="9226000" />
       <workItem from="1522111578150" duration="1092000" />
       <workItem from="1522118217101" duration="18403000" />
-      <workItem from="1522209490081" duration="2308000" />
+      <workItem from="1522209490081" duration="4166000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112917000" />
+    <option name="totallyTimeSpent" value="114775000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -552,20 +556,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/action/action.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/selector/selector.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/component/Login.jsx" />
     <entry file="file://$PROJECT_DIR$/src/store.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -878,16 +868,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/index/banner/sudoku/Sudoku.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="2" column="3" lean-forward="true" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/user/index/header/Header.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -920,10 +900,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/user/index/banner/Banner.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/user/index/banner/Banner.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+        <state relative-caret-position="330">
+          <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#64#105#0" expanded="true" />
@@ -931,10 +919,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/index/banner/Banner.less">
+    <entry file="file://$PROJECT_DIR$/src/user/index/banner/sudoku/Sudoku.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        <state relative-caret-position="240">
+          <caret line="8" column="38" lean-forward="true" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#66#107#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/user/index/banner/sudoku/announcement/Announcement.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/user/index/banner/sudoku/announcement/Announcement.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
