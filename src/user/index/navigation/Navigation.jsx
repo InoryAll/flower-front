@@ -14,6 +14,7 @@ class Navigation extends React.Component {
     menuItem: 'index',
   };
   handleMenuClick = (menuItem) => {
+    console.log('menu changed:', menuItem);
     this.setState({
       menuItem,
     });
