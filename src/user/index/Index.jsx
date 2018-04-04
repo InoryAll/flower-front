@@ -7,6 +7,7 @@ import Header from './header/Header';
 import Search from './search/Search';
 import Navigation from './navigation/Navigation';
 import Banner from './banner/Banner';
+import Promote from './promote/Promote';
 import Footer from './footer/Footer';
 
 class Index extends React.Component {
@@ -18,6 +19,7 @@ class Index extends React.Component {
         <Search />
         <Navigation />
         <Banner />
+        <Promote />
         <Footer />
       </div>
     );
