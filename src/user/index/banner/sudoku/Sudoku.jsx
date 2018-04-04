@@ -5,6 +5,7 @@
 import React, { PropTypes } from 'react';
 import { Row, Col } from 'antd';
 import Announcement from './announcement/Announcement';
+import HotLine from './hotLine/HotLine';
 import './Sudoku.less';
 
 class Sudoku extends React.Component {
@@ -18,7 +19,9 @@ class Sudoku extends React.Component {
           </Col>
         </Row>
         <Row>
-          <Col></Col>
+          <Col>
+            <HotLine />
+          </Col>
         </Row>
         <Row>
           <Col></Col>
