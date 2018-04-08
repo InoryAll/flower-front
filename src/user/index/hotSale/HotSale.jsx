@@ -37,25 +37,25 @@ class HotSale extends React.Component {
               <li className="hotsale-ul-li">
                 <Link className="hotsale-link" to="#" >
                   <p className="hotsale-link-p">携手一生</p>
-                  <img className="hotsale-link-img" src={this.state.imgArr[1]} alt="" />
+                  <img className="hotsale-link-img" src={this.state.imgArr[1]} alt="花之韵" />
                 </Link>
               </li>
               <li className="hotsale-ul-li">
-                <Link className="hotsale-link" to="" >
+                <Link className="hotsale-link" to="#" >
                   <p className="hotsale-link-p">思念是一种病</p>
-                  <img className="hotsale-link-img" src={this.state.imgArr[2]} alt="" />
+                  <img className="hotsale-link-img" src={this.state.imgArr[2]} alt="花之韵" />
                 </Link>
               </li>
               <li className="hotsale-ul-li">
-                <Link className="hotsale-link" to="" >
+                <Link className="hotsale-link" to="#" >
                   <p className="hotsale-link-p">爱的守护神</p>
-                  <img className="hotsale-link-img" src={this.state.imgArr[3]} alt="" />
+                  <img className="hotsale-link-img" src={this.state.imgArr[3]} alt="花之韵" />
                 </Link>
               </li>
               <li className="hotsale-ul-li">
-                <Link className="hotsale-link" to="" >
+                <Link className="hotsale-link" to="#" >
                   <p className="hotsale-link-p">你是我的璀璨星光</p>
-                  <img className="hotsale-link-img" src={this.state.imgArr[4]} alt="" />
+                  <img className="hotsale-link-img" src={this.state.imgArr[4]} alt="花之韵" />
                 </Link>
               </li>
             </ul>
@@ -66,15 +66,15 @@ class HotSale extends React.Component {
           <Col span={5}>
             <ul className="hotsale-ul hotsale-ul-vertical">
               <li className="hotsale-ul-li">
-                <Link className="hotsale-link" to="" >
+                <Link className="hotsale-link" to="#" >
                   <p className="hotsale-link-p">风的光阴</p>
-                  <img className="hotsale-link-img" src={this.state.imgArr[6]} alt="" />
+                  <img className="hotsale-link-img" src={this.state.imgArr[6]} alt="花之韵" />
                 </Link>
               </li>
               <li className="hotsale-ul-li">
-                <Link className="hotsale-link" to="" >
+                <Link className="hotsale-link" to="#" >
                   <p className="hotsale-link-p">梦中婚礼</p>
-                  <img className="hotsale-link-img" src={this.state.imgArr[7]} alt="" />
+                  <img className="hotsale-link-img" src={this.state.imgArr[7]} alt="花之韵" />
                 </Link>
               </li>
             </ul>
