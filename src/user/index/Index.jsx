@@ -9,6 +9,7 @@ import Navigation from './navigation/Navigation';
 import Banner from './banner/Banner';
 import Promote from './promote/Promote';
 import HotSale from './hotSale/HotSale';
+import FirstFloor from './firstFloor/FirstFloor';
 import Footer from './footer/Footer';
 
 class Index extends React.Component {
@@ -22,6 +23,7 @@ class Index extends React.Component {
         <Banner />
         <Promote />
         <HotSale />
+        <FirstFloor />
         <Footer />
       </div>
     );
