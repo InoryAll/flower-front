@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="08c3298d-d019-4401-abb2-96f78fb0689a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/index/firstFloor/FirstFloor.jsx" afterPath="$PROJECT_DIR$/src/user/index/firstFloor/FirstFloor.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/index/firstFloor/floorSpecific/FloorSpecific.jsx" afterPath="$PROJECT_DIR$/src/user/index/firstFloor/floorSpecific/FloorSpecific.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/index/firstFloor/floorSpecific/FloorSpecific.less" afterPath="$PROJECT_DIR$/src/user/index/firstFloor/floorSpecific/FloorSpecific.less" />
-    </list>
+    <list default="true" id="08c3298d-d019-4401-abb2-96f78fb0689a" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -59,8 +55,8 @@
       <file leaf-file-name="FloorSpecific.less" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/user/index/firstFloor/floorSpecific/FloorSpecific.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-486">
-              <caret line="4" column="19" lean-forward="true" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+            <state relative-caret-position="330">
+              <caret line="11" column="17" lean-forward="true" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -571,12 +567,12 @@
       <workItem from="1522810742505" duration="13783000" />
       <workItem from="1523159466950" duration="12837000" />
       <workItem from="1523237322846" duration="1786000" />
-      <workItem from="1523321062545" duration="4978000" />
+      <workItem from="1523321062545" duration="5066000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154887000" />
+    <option name="totallyTimeSpent" value="154975000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -589,8 +585,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20021075" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20021075" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32826087" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20217392" sideWeight="0.5321391" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34347826" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -948,8 +945,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/user/index/firstFloor/floorSpecific/FloorSpecific.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-486">
-          <caret line="4" column="19" lean-forward="true" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+        <state relative-caret-position="330">
+          <caret line="11" column="17" lean-forward="true" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
           <folding />
         </state>
       </provider>
