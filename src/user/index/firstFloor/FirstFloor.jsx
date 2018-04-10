@@ -5,6 +5,7 @@
 import React, { PropTypes } from 'react';
 import { Row, Col } from 'antd';
 import { Link } from 'react-router';
+import FloorSpecific from './floorSpecific/FloorSpecific';
 import './FirstFloor.less';
 
 class FirstFloor extends React.Component {
@@ -32,6 +33,15 @@ class FirstFloor extends React.Component {
               <li className="firstfloor-title-ul-li"><Link onClick={() => { this.onSearch('material', 'champagneRose'); }} className={this.state.menuItem === 'champagneRose' ? 'firstfloor-title-ul-li-a active' : 'firstfloor-title-ul-li-a'} to="#">香槟玫瑰</Link></li>
               <li className="firstfloor-title-ul-li"><Link onClick={() => { this.onSearch('material', 'blueRose'); }} className={this.state.menuItem === 'blueRose' ? 'firstfloor-title-ul-li-a active' : 'firstfloor-title-ul-li-a'} to="#">蓝色妖姬</Link></li>
             </ul>
+          </Col>
+        </Row>
+        <Row>
+          <Col span={4}>
+            <FloorSpecific
+              top={null}
+              middle={null}
+              bottom={null}
+            />
           </Col>
         </Row>
       </div>
