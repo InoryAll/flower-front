@@ -8,6 +8,9 @@ import { Link } from 'react-router';
 import FloorSpecific from './floorSpecific/FloorSpecific';
 import FloorBasic from './floorBasic/FloorBasic';
 import img from '../../../../static/img/floorSpecific/1.jpg';
+import basic1 from '../../../../static/img/floorBasic/1.jpg';
+import basic2 from '../../../../static/img/floorBasic/2.jpg';
+
 import './FirstFloor.less';
 
 class FirstFloor extends React.Component {
@@ -67,7 +70,14 @@ class FirstFloor extends React.Component {
             />
           </Col>
           <Col span={4}>
-            <FloorBasic />
+            <FloorBasic
+              top={{ url: '#', img: basic1, text: '梦中有你' }}
+              bottom={{ nowPrice: '￥179.00', prePrice: '￥129.00' }}
+            />
+            <FloorBasic
+              top={{ url: '#', img: basic2, text: '花开月正圆' }}
+              bottom={{ nowPrice: '￥229.00', prePrice: '￥386.00' }}
+            />
           </Col>
         </Row>
       </div>

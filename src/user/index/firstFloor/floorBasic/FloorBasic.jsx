@@ -5,27 +5,30 @@
 import React, { PropTypes } from 'react';
 import { Row, Col } from 'antd';
 import { Link } from 'react-router';
-import img from '../../../../../static/img/floorBasic/1.jpg';
 import './FloorBasic.less';
 
 class FloorBasic extends React.Component {
-  static propTypes = {};
+  static propTypes = {
+    top: PropTypes.object.isRequired,
+    bottom: PropTypes.object.isRequired,
+  };
   render() {
+    const { top, bottom } = this.props;
     return (
       <div className="floorbasic">
         <Row>
           <Col>
-            <Link className="floorbasic-a" to="">
-              <img className="floorbasic-img" src={img} alt="花之韵" />
-              <p className="floorbasic-title">梦中有你</p>
+            <Link className="floorbasic-a" to={top.url}>
+              <img className="floorbasic-img" src={top.img} alt="花之韵" />
+              <p className="floorbasic-title">{top.text}</p>
             </Link>
           </Col>
         </Row>
         <Row>
           <Col>
             <div className="floorbasic-price">
-              <strong className="floorbasic-price-now">￥179.00</strong>
-              <span className="floorbasic-price-pre">￥209.00</span>
+              <strong className="floorbasic-price-now">{bottom.nowPrice}</strong>
+              <span className="floorbasic-price-pre">{bottom.prePrice}</span>
             </div>
           </Col>
         </Row>
