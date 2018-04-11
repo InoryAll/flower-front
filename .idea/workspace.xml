@@ -2,11 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08c3298d-d019-4401-abb2-96f78fb0689a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/floorBasic/2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/firstFloor/1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/firstFloor/floorBasic/3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/firstFloor/floorBasic/4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/firstFloor/floorBasic/5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/firstFloor/floorBasic/6.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/index/firstFloor/FirstFloor.jsx" afterPath="$PROJECT_DIR$/src/user/index/firstFloor/FirstFloor.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/index/firstFloor/floorBasic/FloorBasic.jsx" afterPath="$PROJECT_DIR$/src/user/index/firstFloor/floorBasic/FloorBasic.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/index/firstFloor/floorBasic/FloorBasic.less" afterPath="$PROJECT_DIR$/src/user/index/firstFloor/floorBasic/FloorBasic.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/index/firstFloor/FirstFloor.less" afterPath="$PROJECT_DIR$/src/user/index/firstFloor/FirstFloor.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/img/floorBasic/1.jpg" afterPath="$PROJECT_DIR$/static/img/firstFloor/floorBasic/1.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/img/floorBasic/2.jpg" afterPath="$PROJECT_DIR$/static/img/firstFloor/floorBasic/2.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/img/floorSpecific/1.jpg" afterPath="$PROJECT_DIR$/static/img/firstFloor/floorSpecific/1.jpg" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,8 +29,8 @@
       <file leaf-file-name="FirstFloor.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/user/index/firstFloor/FirstFloor.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="685">
-              <caret line="79" column="14" lean-forward="true" selection-start-line="79" selection-start-column="14" selection-end-line="79" selection-end-column="14" />
+            <state relative-caret-position="-570">
+              <caret line="45" column="16" lean-forward="true" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#60#101#0" expanded="true" />
@@ -85,8 +91,8 @@
       <file leaf-file-name="FloorBasic.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/user/index/firstFloor/floorBasic/FloorBasic.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="5" column="6" lean-forward="true" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+            <state relative-caret-position="120">
+              <caret line="4" column="33" lean-forward="true" selection-start-line="3" selection-start-column="2" selection-end-line="4" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -105,8 +111,8 @@
       <file leaf-file-name="FirstFloor.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/user/index/firstFloor/FirstFloor.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+            <state relative-caret-position="669">
+              <caret line="35" column="8" lean-forward="true" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -142,6 +148,7 @@
       <find>&lt;p</find>
       <find>&lt;img</find>
       <find>img</find>
+      <find>specific1</find>
     </findStrings>
     <replaceStrings>
       <replace>dl className=&quot;info-row-ul-li-dl&quot;</replace>
@@ -211,14 +218,14 @@
         <option value="$PROJECT_DIR$/src/user/index/hotSale/HotSale.less" />
         <option value="$PROJECT_DIR$/src/user/index/hotSale/HotSale.jsx" />
         <option value="$PROJECT_DIR$/src/user/index/Index.jsx" />
-        <option value="$PROJECT_DIR$/src/user/index/firstFloor/FirstFloor.less" />
         <option value="$PROJECT_DIR$/src/user/index/firstFloor/floorBasic/floorBasic.jsx" />
         <option value="$PROJECT_DIR$/src/user/index/firstFloor/floorSpecific/floorSpecific.jsx" />
         <option value="$PROJECT_DIR$/src/user/index/firstFloor/floorSpecific/FloorSpecific.less" />
         <option value="$PROJECT_DIR$/src/user/index/firstFloor/floorSpecific/FloorSpecific.jsx" />
         <option value="$PROJECT_DIR$/src/user/index/firstFloor/floorBasic/FloorBasic.jsx" />
-        <option value="$PROJECT_DIR$/src/user/index/firstFloor/FirstFloor.jsx" />
         <option value="$PROJECT_DIR$/src/user/index/firstFloor/floorBasic/FloorBasic.less" />
+        <option value="$PROJECT_DIR$/src/user/index/firstFloor/FirstFloor.less" />
+        <option value="$PROJECT_DIR$/src/user/index/firstFloor/FirstFloor.jsx" />
       </list>
     </option>
   </component>
@@ -410,6 +417,14 @@
               <item name="flower-front" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="img" type="462c0819:PsiDirectoryNode" />
+              <item name="firstFloor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flower-front" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flower-front" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+              <item name="firstFloor" type="462c0819:PsiDirectoryNode" />
               <item name="floorBasic" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -417,6 +432,7 @@
               <item name="flower-front" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="img" type="462c0819:PsiDirectoryNode" />
+              <item name="firstFloor" type="462c0819:PsiDirectoryNode" />
               <item name="floorSpecific" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -442,18 +458,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\flower-front\static\img\floorBasic" />
       <recent name="E:\flower-front\static\img\floorSpecific" />
+      <recent name="E:\flower-front\static\img\firstFloor" />
+      <recent name="E:\flower-front\static\img\floorBasic" />
       <recent name="E:\flower-front\static\img\hotsale" />
       <recent name="E:\flower-front\static\img\promote" />
-      <recent name="E:\flower-front\static\img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\flower-front\static\img\firstFloor" />
+      <recent name="E:\flower-front\static\img\floorBasic" />
       <recent name="E:\flower-front\static\img\sudoku" />
       <recent name="E:\flower-front\static\img" />
       <recent name="E:\flower-front\static\img\hotline" />
-      <recent name="E:\flower-front\src\user\index" />
-      <recent name="E:\trj\front" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -571,12 +587,12 @@
       <workItem from="1523159466950" duration="12837000" />
       <workItem from="1523237322846" duration="1786000" />
       <workItem from="1523321062545" duration="6457000" />
-      <workItem from="1523413027868" duration="7291000" />
+      <workItem from="1523413027868" duration="12964000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="163657000" />
+    <option name="totallyTimeSpent" value="169330000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -593,7 +609,7 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19810326" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32826087" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18586956" sideWeight="0.53424656" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18586956" sideWeight="0.53424656" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.77683955" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34347826" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -624,7 +640,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/user/index/banner/sudoku/announcement/board/Board.jsx" />
     <entry file="file://$PROJECT_DIR$/.babelrc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -896,17 +911,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/img/floorSpecific/1.jpg">
+    <entry file="file://$PROJECT_DIR$/static/img/firstFloor/floorSpecific/1.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/index/firstFloor/FirstFloor.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/user/index/firstFloor/floorSpecific/FloorSpecific.less">
@@ -930,12 +937,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/img/floorBasic/1.jpg">
+    <entry file="file://$PROJECT_DIR$/static/img/firstFloor/floorBasic/1.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/img/floorBasic/2.jpg">
+    <entry file="file://$PROJECT_DIR$/static/img/firstFloor/floorBasic/2.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
@@ -952,16 +959,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/user/index/firstFloor/floorBasic/FloorBasic.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="5" column="6" lean-forward="true" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        <state relative-caret-position="120">
+          <caret line="4" column="33" lean-forward="true" selection-start-line="3" selection-start-column="2" selection-end-line="4" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/user/index/firstFloor/FirstFloor.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="669">
+          <caret line="35" column="8" lean-forward="true" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/img/firstFloor/floorBasic/3.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/user/index/firstFloor/FirstFloor.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="685">
-          <caret line="79" column="14" lean-forward="true" selection-start-line="79" selection-start-column="14" selection-end-line="79" selection-end-column="14" />
+        <state relative-caret-position="-570">
+          <caret line="45" column="16" lean-forward="true" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#60#101#0" expanded="true" />
