@@ -33,15 +33,15 @@ class SecondFloor extends React.Component {
     return (
       <div className="secondfloor">
         <Row>
-          <Col>
-            <h3 className="secondfloor-h">1F 玫瑰花</h3>
+          <Col className="clearfix secondfloor-title">
+            <h3 className="secondfloor-h">2F 新品上市</h3>
             <ul className="secondfloor-title-ul">
               <li className="secondfloor-title-ul-li"><Link onClick={() => { this.onSearch('material', 'default'); }} className={this.state.menuItem === 'default' ? 'secondfloor-title-ul-li-a active' : 'secondfloor-title-ul-li-a'} to="#">精选热卖</Link></li>
-              <li className="secondfloor-title-ul-li"><Link onClick={() => { this.onSearch('material', 'redRose'); }} className={this.state.menuItem === 'redRose' ? 'secondfloor-title-ul-li-a active' : 'secondfloor-title-ul-li-a'} to="#">红玫瑰</Link></li>
-              <li className="secondfloor-title-ul-li"><Link onClick={() => { this.onSearch('material', 'whiteRose'); }} className={this.state.menuItem === 'whiteRose' ? 'secondfloor-title-ul-li-a active' : 'secondfloor-title-ul-li-a'} to="#">白玫瑰</Link></li>
-              <li className="secondfloor-title-ul-li"><Link onClick={() => { this.onSearch('material', 'pinkRose'); }} className={this.state.menuItem === 'pinkRose' ? 'secondfloor-title-ul-li-a active' : 'secondfloor-title-ul-li-a'} to="#">粉玫瑰</Link></li>
-              <li className="secondfloor-title-ul-li"><Link onClick={() => { this.onSearch('material', 'champagneRose'); }} className={this.state.menuItem === 'champagneRose' ? 'secondfloor-title-ul-li-a active' : 'secondfloor-title-ul-li-a'} to="#">香槟玫瑰</Link></li>
-              <li className="secondfloor-title-ul-li"><Link onClick={() => { this.onSearch('material', 'blueRose'); }} className={this.state.menuItem === 'blueRose' ? 'secondfloor-title-ul-li-a active' : 'secondfloor-title-ul-li-a'} to="#">蓝色妖姬</Link></li>
+              <li className="secondfloor-title-ul-li"><Link onClick={() => { this.onSearch('material', 'redRose'); }} className={this.state.menuItem === 'redRose' ? 'secondfloor-title-ul-li-a active' : 'secondfloor-title-ul-li-a'} to="#">白百何</Link></li>
+              <li className="secondfloor-title-ul-li"><Link onClick={() => { this.onSearch('material', 'whiteRose'); }} className={this.state.menuItem === 'whiteRose' ? 'secondfloor-title-ul-li-a active' : 'secondfloor-title-ul-li-a'} to="#">粉百合</Link></li>
+              <li className="secondfloor-title-ul-li"><Link onClick={() => { this.onSearch('material', 'pinkRose'); }} className={this.state.menuItem === 'pinkRose' ? 'secondfloor-title-ul-li-a active' : 'secondfloor-title-ul-li-a'} to="#">康乃馨</Link></li>
+              <li className="secondfloor-title-ul-li"><Link onClick={() => { this.onSearch('material', 'champagneRose'); }} className={this.state.menuItem === 'champagneRose' ? 'secondfloor-title-ul-li-a active' : 'secondfloor-title-ul-li-a'} to="#">向日葵</Link></li>
+              <li className="secondfloor-title-ul-li"><Link onClick={() => { this.onSearch('material', 'blueRose'); }} className={this.state.menuItem === 'blueRose' ? 'secondfloor-title-ul-li-a active' : 'secondfloor-title-ul-li-a'} to="#">郁金香</Link></li>
             </ul>
           </Col>
         </Row>
