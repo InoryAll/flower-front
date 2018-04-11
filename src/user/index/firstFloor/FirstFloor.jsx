@@ -6,6 +6,7 @@ import React, { PropTypes } from 'react';
 import { Row, Col } from 'antd';
 import { Link } from 'react-router';
 import FloorSpecific from './floorSpecific/FloorSpecific';
+import FloorBasic from './floorBasic/FloorBasic';
 import img from '../../../../static/img/floorSpecific/1.jpg';
 import './FirstFloor.less';
 
@@ -64,6 +65,9 @@ class FirstFloor extends React.Component {
                   value: 'blueRose',
                 }] }}
             />
+          </Col>
+          <Col span={4}>
+            <FloorBasic />
           </Col>
         </Row>
       </div>

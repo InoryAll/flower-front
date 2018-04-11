@@ -1,0 +1,40 @@
+.floorbasic{
+  width: 100%;
+  height: 270px;
+  border-bottom: 1px solid #e9e9e9;
+  border-left: 1px solid #e9e9e9;
+  &-a{
+    display: block;
+    &:hover{
+      .floorbasic-title{
+        color: #fe6a00;
+        text-decoration: underline;
+      }
+    }
+  }
+  &-img{
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+  &-title{
+    text-align: center;
+    color: #737373;
+    padding: 10px 0;
+  }
+  &-price{
+    width: 120px;
+    margin: 0 auto;
+    &-now{
+      color: #C00;
+      font-size: 16px;
+      padding-right: 5px;
+    }
+    &-pre{
+      padding-left: 5px;
+      text-decoration: line-through;
+      color: #999;
+    }
+  }
+}
