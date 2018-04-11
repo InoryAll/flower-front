@@ -6,6 +6,7 @@ import React, { PropTypes } from 'react';
 import { Row, Col } from 'antd';
 import { Link } from 'react-router';
 import FloorSpecific from './floorSpecific/FloorSpecific';
+import img from '../../../../static/img/floorSpecific/1.jpg';
 import './FirstFloor.less';
 
 class FirstFloor extends React.Component {
@@ -38,9 +39,30 @@ class FirstFloor extends React.Component {
         <Row>
           <Col span={4}>
             <FloorSpecific
-              top={null}
-              middle={null}
-              bottom={null}
+              top={{ img }}
+              middle={{ bg: '#a6ddc9', url: '#', text: '新品上市' }}
+              bottom={{ bg: '#caf4e5',
+                data: [{
+                  text: '红玫瑰',
+                  attribute: 'material',
+                  value: 'redRose',
+                }, {
+                  text: '白玫瑰',
+                  attribute: 'material',
+                  value: 'whiteRose',
+                }, {
+                  text: '粉玫瑰',
+                  attribute: 'material',
+                  value: 'pinkRose',
+                }, {
+                  text: '香槟玫瑰',
+                  attribute: 'material',
+                  value: 'champagneRose',
+                }, {
+                  text: '蓝色妖姬',
+                  attribute: 'material',
+                  value: 'blueRose',
+                }] }}
             />
           </Col>
         </Row>

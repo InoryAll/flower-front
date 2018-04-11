@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08c3298d-d019-4401-abb2-96f78fb0689a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/index/firstFloor/FirstFloor.jsx" afterPath="$PROJECT_DIR$/src/user/index/firstFloor/FirstFloor.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/index/firstFloor/floorSpecific/FloorSpecific.jsx" afterPath="$PROJECT_DIR$/src/user/index/firstFloor/floorSpecific/FloorSpecific.jsx" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FirstFloor.jsx" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FirstFloor.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/user/index/firstFloor/FirstFloor.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1110">
-              <caret line="44" column="16" lean-forward="false" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
+            <state relative-caret-position="-515">
+              <caret line="40" column="26" lean-forward="true" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#60#101#0" expanded="true" />
@@ -32,11 +33,13 @@
       <file leaf-file-name="FloorSpecific.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/user/index/firstFloor/floorSpecific/FloorSpecific.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1050">
-              <caret line="42" column="16" lean-forward="false" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
+            <state relative-caret-position="420">
+              <caret line="14" column="4" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#61#102#0" expanded="true" />
+                <marker date="1523414041119" expanded="true" signature="1176:1351" ph="..." />
+                <marker date="1523414041119" expanded="true" signature="1282:1319" ph="..." />
               </folding>
             </state>
           </provider>
@@ -54,10 +57,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FloorSpecific.less" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FloorSpecific.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/user/index/firstFloor/floorSpecific/FloorSpecific.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
+            <state relative-caret-position="270">
               <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
               <folding />
             </state>
@@ -106,16 +109,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Header.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/user/index/header/Header.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="17" column="41" lean-forward="false" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Navigation.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/user/index/navigation/Navigation.jsx">
           <provider selected="true" editor-type-id="text-editor">
@@ -155,6 +148,7 @@
       <find>&lt;Link</find>
       <find>&lt;p</find>
       <find>&lt;img</find>
+      <find>img</find>
     </findStrings>
     <replaceStrings>
       <replace>dl className=&quot;info-row-ul-li-dl&quot;</replace>
@@ -229,8 +223,8 @@
         <option value="$PROJECT_DIR$/src/user/index/firstFloor/FirstFloor.less" />
         <option value="$PROJECT_DIR$/src/user/index/firstFloor/floorBasic/floorBasic.jsx" />
         <option value="$PROJECT_DIR$/src/user/index/firstFloor/floorSpecific/floorSpecific.jsx" />
-        <option value="$PROJECT_DIR$/src/user/index/firstFloor/FirstFloor.jsx" />
         <option value="$PROJECT_DIR$/src/user/index/firstFloor/floorSpecific/FloorSpecific.less" />
+        <option value="$PROJECT_DIR$/src/user/index/firstFloor/FirstFloor.jsx" />
         <option value="$PROJECT_DIR$/src/user/index/firstFloor/floorSpecific/FloorSpecific.jsx" />
       </list>
     </option>
@@ -418,6 +412,13 @@
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="img" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="flower-front" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flower-front" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+              <item name="floorSpecific" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -570,12 +571,12 @@
       <workItem from="1523159466950" duration="12837000" />
       <workItem from="1523237322846" duration="1786000" />
       <workItem from="1523321062545" duration="6457000" />
-      <workItem from="1523413027868" duration="162000" />
+      <workItem from="1523413027868" duration="1025000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="156528000" />
+    <option name="totallyTimeSpent" value="157391000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -623,7 +624,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/img/carousel/1.jpg" />
     <entry file="file://$PROJECT_DIR$/static/img/carousel/2.jpg" />
     <entry file="file://$PROJECT_DIR$/src/user/index/banner/sudoku/announcement/board/Board.less" />
     <entry file="file://$PROJECT_DIR$/src/user/index/banner/sudoku/announcement/board/Board.jsx" />
@@ -857,6 +857,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="25" column="17" lean-forward="false" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#56#97#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -920,33 +924,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/index/firstFloor/FirstFloor.jsx">
+    <entry file="file://$PROJECT_DIR$/src/user/index/firstFloor/floorSpecific/FloorSpecific.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1110">
-          <caret line="44" column="16" lean-forward="false" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#60#101#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="270">
+          <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+          <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/img/floorSpecific/1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/user/index/firstFloor/floorSpecific/FloorSpecific.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="42" column="16" lean-forward="false" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
+        <state relative-caret-position="420">
+          <caret line="14" column="4" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#61#102#0" expanded="true" />
+            <marker date="1523414041119" expanded="true" signature="1176:1351" ph="..." />
+            <marker date="1523414041119" expanded="true" signature="1282:1319" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/index/firstFloor/floorSpecific/FloorSpecific.less">
+    <entry file="file://$PROJECT_DIR$/src/user/index/firstFloor/FirstFloor.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-          <folding />
+        <state relative-caret-position="-515">
+          <caret line="40" column="26" lean-forward="true" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#60#101#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
