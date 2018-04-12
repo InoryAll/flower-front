@@ -7,7 +7,7 @@ import { Row, Col } from 'antd';
 import { Link } from 'react-router';
 import FloorSpecific from '../firstFloor/floorSpecific/FloorSpecific';
 import FloorBasic from '../firstFloor/floorBasic/FloorBasic';
-import own from '../../../../static/img/secondFloor/1.jpg';
+import own from '../../../../static/img/thirdFloor/1.jpg';
 import specific1 from '../../../../static/img/secondFloor/floorSpecific/1.jpg';
 import basic1 from '../../../../static/img/secondFloor/floorBasic/1.jpg';
 import basic2 from '../../../../static/img/secondFloor/floorBasic/2.jpg';
