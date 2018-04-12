@@ -11,6 +11,7 @@ import Promote from './promote/Promote';
 import HotSale from './hotSale/HotSale';
 import FirstFloor from './firstFloor/FirstFloor';
 import SecondFloor from './secondFloor/SecondFloor';
+import ThirdFloor from './thirdFloor/ThirdFloor';
 import Footer from './footer/Footer';
 
 class Index extends React.Component {
@@ -26,6 +27,7 @@ class Index extends React.Component {
         <HotSale />
         <FirstFloor />
         <SecondFloor />
+        <ThirdFloor />
         <Footer />
       </div>
     );
