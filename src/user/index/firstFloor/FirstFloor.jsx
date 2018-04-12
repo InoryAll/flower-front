@@ -49,8 +49,8 @@ class FirstFloor extends React.Component {
           <Col span={4}>
             <FloorSpecific
               top={{ img: specific1 }}
-              middle={{ bg: '#a6ddc9', url: '#', text: '新品上市' }}
-              bottom={{ bg: '#caf4e5',
+              middle={{ bg: '#f588af', url: '#', text: '玫瑰花' }}
+              bottom={{ bg: '#ffeef4',
                 data: [{
                   text: '红玫瑰',
                   attribute: 'material',
