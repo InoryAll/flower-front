@@ -37,11 +37,11 @@ class SecondFloor extends React.Component {
             <h3 className="secondfloor-h">2F 新品上市</h3>
             <ul className="secondfloor-title-ul">
               <li className="secondfloor-title-ul-li"><Link onClick={() => { this.onSearch('material', 'default'); }} className={this.state.menuItem === 'default' ? 'secondfloor-title-ul-li-a active' : 'secondfloor-title-ul-li-a'} to="#">精选热卖</Link></li>
-              <li className="secondfloor-title-ul-li"><Link onClick={() => { this.onSearch('material', 'redRose'); }} className={this.state.menuItem === 'redRose' ? 'secondfloor-title-ul-li-a active' : 'secondfloor-title-ul-li-a'} to="#">白百何</Link></li>
-              <li className="secondfloor-title-ul-li"><Link onClick={() => { this.onSearch('material', 'whiteRose'); }} className={this.state.menuItem === 'whiteRose' ? 'secondfloor-title-ul-li-a active' : 'secondfloor-title-ul-li-a'} to="#">粉百合</Link></li>
-              <li className="secondfloor-title-ul-li"><Link onClick={() => { this.onSearch('material', 'pinkRose'); }} className={this.state.menuItem === 'pinkRose' ? 'secondfloor-title-ul-li-a active' : 'secondfloor-title-ul-li-a'} to="#">康乃馨</Link></li>
-              <li className="secondfloor-title-ul-li"><Link onClick={() => { this.onSearch('material', 'champagneRose'); }} className={this.state.menuItem === 'champagneRose' ? 'secondfloor-title-ul-li-a active' : 'secondfloor-title-ul-li-a'} to="#">向日葵</Link></li>
-              <li className="secondfloor-title-ul-li"><Link onClick={() => { this.onSearch('material', 'blueRose'); }} className={this.state.menuItem === 'blueRose' ? 'secondfloor-title-ul-li-a active' : 'secondfloor-title-ul-li-a'} to="#">郁金香</Link></li>
+              <li className="secondfloor-title-ul-li"><Link onClick={() => { this.onSearch('material', 'whiteLily'); }} className={this.state.menuItem === 'whiteLily' ? 'secondfloor-title-ul-li-a active' : 'secondfloor-title-ul-li-a'} to="#">白百何</Link></li>
+              <li className="secondfloor-title-ul-li"><Link onClick={() => { this.onSearch('material', 'pinkLily'); }} className={this.state.menuItem === 'pinkLily' ? 'secondfloor-title-ul-li-a active' : 'secondfloor-title-ul-li-a'} to="#">粉百合</Link></li>
+              <li className="secondfloor-title-ul-li"><Link onClick={() => { this.onSearch('material', 'carnations'); }} className={this.state.menuItem === 'carnations' ? 'secondfloor-title-ul-li-a active' : 'secondfloor-title-ul-li-a'} to="#">康乃馨</Link></li>
+              <li className="secondfloor-title-ul-li"><Link onClick={() => { this.onSearch('material', 'sunflower'); }} className={this.state.menuItem === 'sunflower' ? 'secondfloor-title-ul-li-a active' : 'secondfloor-title-ul-li-a'} to="#">向日葵</Link></li>
+              <li className="secondfloor-title-ul-li"><Link onClick={() => { this.onSearch('material', 'tulip'); }} className={this.state.menuItem === 'tulip' ? 'secondfloor-title-ul-li-a active' : 'secondfloor-title-ul-li-a'} to="#">郁金香</Link></li>
             </ul>
           </Col>
         </Row>
@@ -52,36 +52,36 @@ class SecondFloor extends React.Component {
               middle={{ bg: '#a6ddc9', url: '#', text: '新品上市' }}
               bottom={{ bg: '#caf4e5',
                 data: [{
-                  text: '红玫瑰',
+                  text: '白百何',
                   attribute: 'material',
-                  value: 'redRose',
+                  value: 'whiteLily',
                 }, {
-                  text: '白玫瑰',
+                  text: '粉百合',
                   attribute: 'material',
-                  value: 'whiteRose',
+                  value: 'pinkLily',
                 }, {
-                  text: '粉玫瑰',
+                  text: '康乃馨',
                   attribute: 'material',
-                  value: 'pinkRose',
+                  value: 'carnations',
                 }, {
-                  text: '香槟玫瑰',
+                  text: '向日葵',
                   attribute: 'material',
-                  value: 'champagneRose',
+                  value: 'sunflower',
                 }, {
-                  text: '蓝色妖姬',
+                  text: '郁金香',
                   attribute: 'material',
-                  value: 'blueRose',
+                  value: 'tulip',
                 }] }}
             />
           </Col>
           <Col span={5}>
             <FloorBasic
-              top={{ url: '#', img: basic1, text: '梦中有你' }}
-              bottom={{ nowPrice: '￥179.00', prePrice: '￥129.00' }}
+              top={{ url: '#', img: basic1, text: '相依相携' }}
+              bottom={{ nowPrice: '￥229.00', prePrice: '￥359.00' }}
             />
             <FloorBasic
-              top={{ url: '#', img: basic2, text: '花开月正圆' }}
-              bottom={{ nowPrice: '￥229.00', prePrice: '￥386.00' }}
+              top={{ url: '#', img: basic2, text: '天使之心' }}
+              bottom={{ nowPrice: '￥249.00', prePrice: '￥379.00' }}
             />
           </Col>
           <Col span={7}>
@@ -89,22 +89,22 @@ class SecondFloor extends React.Component {
           </Col>
           <Col span={4}>
             <FloorBasic
-              top={{ url: '#', img: basic3, text: '谱写幸福' }}
-              bottom={{ nowPrice: '￥229.00', prePrice: '￥329.00' }}
+              top={{ url: '#', img: basic3, text: '专属天使' }}
+              bottom={{ nowPrice: '￥299.00', prePrice: '￥439.00' }}
             />
             <FloorBasic
-              top={{ url: '#', img: basic4, text: '完美爱人' }}
-              bottom={{ nowPrice: '￥249.00', prePrice: '￥369.00' }}
+              top={{ url: '#', img: basic4, text: '真爱旅程' }}
+              bottom={{ nowPrice: '￥293.00', prePrice: '￥426.00' }}
             />
           </Col>
           <Col span={4}>
             <FloorBasic
-              top={{ url: '#', img: basic5, text: '我的宠妃' }}
+              top={{ url: '#', img: basic5, text: '亲密无间' }}
               bottom={{ nowPrice: '￥300.00', prePrice: '￥436.00' }}
             />
             <FloorBasic
-              top={{ url: '#', img: basic6, text: '微微一笑很倾城' }}
-              bottom={{ nowPrice: '￥289.00', prePrice: '￥421.00' }}
+              top={{ url: '#', img: basic6, text: '唯爱一生' }}
+              bottom={{ nowPrice: '￥509.00', prePrice: '￥799.00' }}
             />
           </Col>
         </Row>
