@@ -7,14 +7,14 @@ import { Row, Col } from 'antd';
 import { Link } from 'react-router';
 import FloorSpecific from '../firstFloor/floorSpecific/FloorSpecific';
 import FloorBasic from '../firstFloor/floorBasic/FloorBasic';
-import own from '../../../../static/img/firstFloor/1.jpg';
-import specific1 from '../../../../static/img/firstFloor/floorSpecific/1.jpg';
-import basic1 from '../../../../static/img/firstFloor/floorBasic/1.jpg';
-import basic2 from '../../../../static/img/firstFloor/floorBasic/2.jpg';
-import basic3 from '../../../../static/img/firstFloor/floorBasic/3.jpg';
-import basic4 from '../../../../static/img/firstFloor/floorBasic/4.jpg';
-import basic5 from '../../../../static/img/firstFloor/floorBasic/5.jpg';
-import basic6 from '../../../../static/img/firstFloor/floorBasic/6.jpg';
+import own from '../../../../static/img/secondFloor/1.jpg';
+import specific1 from '../../../../static/img/secondFloor/floorSpecific/1.jpg';
+import basic1 from '../../../../static/img/secondFloor/floorBasic/1.jpg';
+import basic2 from '../../../../static/img/secondFloor/floorBasic/2.jpg';
+import basic3 from '../../../../static/img/secondFloor/floorBasic/3.jpg';
+import basic4 from '../../../../static/img/secondFloor/floorBasic/4.jpg';
+import basic5 from '../../../../static/img/secondFloor/floorBasic/5.jpg';
+import basic6 from '../../../../static/img/secondFloor/floorBasic/6.jpg';
 
 import './SecondFloor.less';
 
