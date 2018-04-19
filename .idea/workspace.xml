@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08c3298d-d019-4401-abb2-96f78fb0689a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/index/fifthFloor/FifthFloor.jsx" afterPath="$PROJECT_DIR$/src/user/index/fifthFloor/FifthFloor.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/index/fifthFloor/FifthFloor.less" afterPath="$PROJECT_DIR$/src/user/index/fifthFloor/FifthFloor.less" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -45,10 +43,11 @@
       <file leaf-file-name="FifthFloor.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/user/index/fifthFloor/FifthFloor.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="9" column="58" lean-forward="true" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
+            <state relative-caret-position="409">
+              <caret line="126" column="0" lean-forward="true" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
+                <element signature="e#62#103#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -801,12 +800,12 @@
       <workItem from="1523536487688" duration="888000" />
       <workItem from="1523537491146" duration="3018000" />
       <workItem from="1524031512641" duration="322000" />
-      <workItem from="1524118834915" duration="2033000" />
+      <workItem from="1524118834915" duration="2889000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="186902000" />
+    <option name="totallyTimeSpent" value="187758000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1189,10 +1188,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/user/index/fifthFloor/FifthFloor.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="9" column="58" lean-forward="true" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
+        <state relative-caret-position="409">
+          <caret line="126" column="0" lean-forward="true" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
+            <element signature="e#62#103#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -124,5 +124,3 @@ class FifthFloor extends React.Component {
 }
 
 export default FifthFloor;
-
-
