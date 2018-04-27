@@ -13,6 +13,7 @@ import FirstFloor from './firstFloor/FirstFloor';
 import SecondFloor from './secondFloor/SecondFloor';
 import ThirdFloor from './thirdFloor/ThirdFloor';
 import ForthFloor from './forthFloor/ForthFloor';
+import DailySale from './dailySale/DailySale';
 import Footer from './footer/Footer';
 
 class Index extends React.Component {
@@ -30,6 +31,7 @@ class Index extends React.Component {
         <SecondFloor />
         <ThirdFloor />
         <ForthFloor />
+        <DailySale />
         <Footer />
       </div>
     );
