@@ -1,4 +1,85 @@
 .loginbox{
+  min-width: 1280px;
   background: #fafafa;
   padding: 50px 0;
+  &-dialog{
+    width: 480px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    padding: 10px 10px 30px 10px;
+    &-title{
+      font-size: 20px;
+      color: #666666;
+      padding: 6px 0 10px 40px;
+      border-bottom: 1px solid #e6e6e6;
+      font-weight: 500;
+    }
+  }
+}
+.form-content{
+  padding: 20px 40px;
+  &-item{
+    border: 1px solid #e6e6e6;
+    padding: 16px 20px;
+    &:visited{
+      border: 1px solid #7abd54;
+    }
+    &-label{
+      font-size: 14px;
+      color: #666666;
+      display: block;
+      float: left;
+    }
+    &-input{
+      display: block;
+      width: 270px;
+      color: #000000;
+      font-size: 14px;
+    }
+  }
+  .form-content-item + .loginbox-btn{
+    margin-top: 20px;
+  }
+  .loginbox-btn{
+    padding: 5px 0;
+    &-login,&-regedit{
+      display: block;
+      width: 100%;
+      line-height: 42px;
+      font-size: 16px;
+      color: #fff;
+      font-weight: bold;
+      background: #f32613;
+      border-radius: 2px;
+      text-align: center;
+    }
+    &-login:hover{
+      cursor: pointer;
+    }
+  }
+  &-check-box{
+    padding: 10px 0;
+    color: #999;
+    &-label{
+      display: flex;
+      align-items: center;
+    }
+    .form-content-checkbox{
+      margin-right: 4px;
+    }
+  }
+}
+input::-webkit-input-placeholder {
+  color: #bbbbbb;
+}
+input:-moz-placeholder {
+  color: #bbbbbb;
+}
+input::-moz-placeholder {
+  color: #bbbbbb;
+}
+input:-ms-input-placeholder {
+  color: #bbbbbb;
 }
