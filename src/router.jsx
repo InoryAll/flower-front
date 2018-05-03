@@ -7,6 +7,7 @@ import { browserHistory, Router, Route, IndexRoute } from 'react-router';
 import Index from './user/index/Index';
 import Login from './user/login/Login';
 import Regedit from './user/regedit/Regedit';
+import ItemList from './user/itemList/ItemList';
 
 export const router = (
   <Router history={browserHistory}>
@@ -14,6 +15,7 @@ export const router = (
       <IndexRoute component={Index} />
       <Route path="login" component={Login} />
       <Route path="regedit" component={Regedit} />
+      <Route path="itemList" component={ItemList} />
     </Route>
   </Router>
 );
