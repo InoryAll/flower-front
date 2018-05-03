@@ -9,6 +9,7 @@ import bg from '.././../../../static/img/loginbox/bg.jpg';
 import './LoginBox.less';
 
 class LoginBox extends React.Component {
+  static propTypes = {};
   render() {
     return (
       <div className="loginbox">

@@ -14,6 +14,7 @@ import img6 from '../../../../static/img/loginFooter/6.jpg';
 import './Footer.less';
 
 class Footer extends React.Component {
+  static propTypes = {};
   render() {
     return (
       <div className="login-footer">
