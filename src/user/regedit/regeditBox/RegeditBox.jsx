@@ -3,6 +3,7 @@
  * Created by tianrenjie on 2018/5/3
  */
 import React, { PropTypes } from 'react';
+import { Link } from 'react-router';
 import { Row, Col, Tabs } from 'antd';
 import './RegeditBox.less';
 
@@ -53,7 +54,30 @@ class RegeditBox extends React.Component {
                           </div>
                         </form>
                       </TabPane>
-                      <TabPane tab="手机注册" key="2">Content of Tab Pane 2</TabPane>
+                      <TabPane tab="手机注册" key="2">
+                        <form>
+                          <div className="form-content">
+                            <div className="phone form-content-item">
+                              <label htmlFor="phone" className="form-content-item-label">手机号：</label>
+                              <input className="form-content-item-input" type="text" placeholder="请输入手机号码" name="phone" id="phone" />
+                            </div>
+                            <div className="validate form-content-item">
+                              <label htmlFor="validate" className="form-content-item-label">手机验证：</label>
+                              <input className="form-content-item-input" type="text" placeholder="请输入手机号码" name="validate" id="validate" />
+                            </div>
+                            <div className="form-content-text">
+                              <p className="text-p">确保上手机号输入正确，点击<Link className="text-btn" to="#">发送短信验证</Link>，并将您手机短信所接收到的“6位动态码”输入到上方短信验证</p>
+                            </div>
+                            <div className="password form-content-item">
+                              <label htmlFor="password" className="form-content-item-label">设置密码：</label>
+                              <input className="form-content-item-input" type="password" placeholder="6-20个大小写英文字母、符号或数字" name="password" id="password" />
+                            </div>
+                            <div className="regeditbox-btn">
+                              <button className="regeditbox-btn-regedit" type="button">立即注册</button>
+                            </div>
+                          </div>
+                        </form>
+                      </TabPane>
                     </Tabs>
                   </div>
                 </Col>
