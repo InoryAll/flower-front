@@ -17,8 +17,106 @@ class ItemPage extends React.Component {
     return (
       <div className="itempage">
         <div className="itempage-box">
-          <div className="itempage-box-list">
-            <ItemSelf />
+          <div className="itempage-box-list clearfix">
+            <ItemSelf
+              item={{
+                img: '',
+                title: '携手一生',
+                description: '11枝优质红玫瑰搭配绿叶，满天星，随机赠送2只小熊',
+                nowPrice: '￥179',
+                prePrice: '￥299',
+                sales: '6751',
+                comments: '8329',
+              }}
+            />
+            <ItemSelf
+              item={{
+                img: '',
+                title: '携手一生',
+                description: '11枝优质红玫瑰搭配绿叶，满天星，随机赠送2只小熊',
+                nowPrice: '￥179',
+                prePrice: '￥299',
+                sales: '6751',
+                comments: '8329',
+              }}
+            />
+            <ItemSelf
+              item={{
+                img: '',
+                title: '携手一生',
+                description: '11枝优质红玫瑰搭配绿叶，满天星，随机赠送2只小熊',
+                nowPrice: '￥179',
+                prePrice: '￥299',
+                sales: '6751',
+                comments: '8329',
+              }}
+            />
+            <ItemSelf
+              item={{
+                img: '',
+                title: '携手一生',
+                description: '11枝优质红玫瑰搭配绿叶，满天星，随机赠送2只小熊',
+                nowPrice: '￥179',
+                prePrice: '￥299',
+                sales: '6751',
+                comments: '8329',
+              }}
+            />
+            <ItemSelf
+              item={{
+                img: '',
+                title: '携手一生',
+                description: '11枝优质红玫瑰搭配绿叶，满天星，随机赠送2只小熊',
+                nowPrice: '￥179',
+                prePrice: '￥299',
+                sales: '6751',
+                comments: '8329',
+              }}
+            />
+            <ItemSelf
+              item={{
+                img: '',
+                title: '携手一生',
+                description: '11枝优质红玫瑰搭配绿叶，满天星，随机赠送2只小熊',
+                nowPrice: '￥179',
+                prePrice: '￥299',
+                sales: '6751',
+                comments: '8329',
+              }}
+            />
+            <ItemSelf
+              item={{
+                img: '',
+                title: '携手一生',
+                description: '11枝优质红玫瑰搭配绿叶，满天星，随机赠送2只小熊',
+                nowPrice: '￥179',
+                prePrice: '￥299',
+                sales: '6751',
+                comments: '8329',
+              }}
+            />
+            <ItemSelf
+              item={{
+                img: '',
+                title: '携手一生',
+                description: '11枝优质红玫瑰搭配绿叶，满天星，随机赠送2只小熊',
+                nowPrice: '￥179',
+                prePrice: '￥299',
+                sales: '6751',
+                comments: '8329',
+              }}
+            />
+            <ItemSelf
+              item={{
+                img: '',
+                title: '携手一生',
+                description: '11枝优质红玫瑰搭配绿叶，满天星，随机赠送2只小熊',
+                nowPrice: '￥179',
+                prePrice: '￥299',
+                sales: '6751',
+                comments: '8329',
+              }}
+            />
           </div>
           <div className="itempage-box-pagination">
             <Pagination showSizeChanger onShowSizeChange={this.onShowSizeChange} defaultCurrent={3} total={500} />
