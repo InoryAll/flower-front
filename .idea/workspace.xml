@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="08c3298d-d019-4401-abb2-96f78fb0689a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/animation/animation.less" afterPath="$PROJECT_DIR$/src/animation/animation.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/itemList/itemList/itemSelf/ItemSelf.jsx" afterPath="$PROJECT_DIR$/src/user/itemList/itemList/itemSelf/ItemSelf.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/itemList/itemList/ItemPage.less" afterPath="$PROJECT_DIR$/src/user/itemList/itemList/ItemPage.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/itemList/itemList/itemSelf/ItemSelf.less" afterPath="$PROJECT_DIR$/src/user/itemList/itemList/itemSelf/ItemSelf.less" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -22,8 +22,8 @@
       <file leaf-file-name="ItemPage.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/user/itemList/itemList/ItemPage.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="652">
-              <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+            <state relative-caret-position="57">
+              <caret line="13" column="35" lean-forward="true" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#63#104#0" expanded="true" />
@@ -59,8 +59,8 @@
       <file leaf-file-name="animation.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/animation/animation.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="54" column="3" lean-forward="true" selection-start-line="54" selection-start-column="3" selection-end-line="54" selection-end-column="3" />
+            <state relative-caret-position="202">
+              <caret line="48" column="25" lean-forward="true" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -79,8 +79,8 @@
       <file leaf-file-name="ItemSelf.less" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/user/itemList/itemList/itemSelf/ItemSelf.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="32" column="18" lean-forward="true" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+            <state relative-caret-position="350">
+              <caret line="127" column="14" lean-forward="true" selection-start-line="127" selection-start-column="14" selection-end-line="127" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -99,8 +99,8 @@
       <file leaf-file-name="ItemPage.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/user/itemList/itemList/ItemPage.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="4" column="15" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="15" />
+            <state relative-caret-position="245">
+              <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -246,9 +246,9 @@
         <option value="$PROJECT_DIR$/src/user/itemList/itemList/ItemList.jsx" />
         <option value="$PROJECT_DIR$/src/user/itemList/ItemList.jsx" />
         <option value="$PROJECT_DIR$/src/user/itemList/itemFilter/ItemFilter.less" />
-        <option value="$PROJECT_DIR$/src/user/itemList/itemList/ItemPage.less" />
         <option value="$PROJECT_DIR$/src/user/itemList/itemList/ItemPage.jsx" />
         <option value="$PROJECT_DIR$/src/user/itemList/itemList/itemSelf/ItemSelf.jsx" />
+        <option value="$PROJECT_DIR$/src/user/itemList/itemList/ItemPage.less" />
         <option value="$PROJECT_DIR$/src/animation/animation.less" />
         <option value="$PROJECT_DIR$/src/user/itemList/itemList/itemSelf/ItemSelf.less" />
       </list>
@@ -964,12 +964,12 @@
       <workItem from="1525316030506" duration="28038000" />
       <workItem from="1525406157254" duration="311000" />
       <workItem from="1525406492408" duration="6683000" />
-      <workItem from="1525428814180" duration="6539000" />
+      <workItem from="1525428814180" duration="6892000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="246730000" />
+    <option name="totallyTimeSpent" value="247083000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1334,25 +1334,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/itemList/itemList/ItemPage.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="652">
-          <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#63#104#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/itemList/itemList/ItemPage.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="4" column="15" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/user/itemList/itemList/itemSelf/ItemSelf.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="77">
@@ -1373,18 +1354,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/user/itemList/itemList/ItemPage.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="13" column="35" lean-forward="true" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#63#104#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/user/itemList/itemList/ItemPage.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/animation/animation.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="54" column="3" lean-forward="true" selection-start-line="54" selection-start-column="3" selection-end-line="54" selection-end-column="3" />
+        <state relative-caret-position="202">
+          <caret line="48" column="25" lean-forward="true" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/user/itemList/itemList/itemSelf/ItemSelf.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="32" column="18" lean-forward="true" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+        <state relative-caret-position="350">
+          <caret line="127" column="14" lean-forward="true" selection-start-line="127" selection-start-column="14" selection-end-line="127" selection-end-column="14" />
           <folding />
         </state>
       </provider>

@@ -1,6 +1,6 @@
 .itemself{
   width: 240px;
-  height: 370px;
+  height: 367px;
   overflow-y: hidden;
   box-sizing: border-box;
   border: 4px solid #ffffff;
@@ -27,9 +27,9 @@
     }
   }
   &-intro{
-    margin-top: 4px;
     animation: moveToBottom 0.3s linear 0s 1;
     animation-fill-mode: both;
+    background: #fff;
     .itemself-des{
       &-link{
         font-size: 13px;
@@ -125,6 +125,9 @@
       font-weight: 600;
       font-size: 14px;
       color: #fff;
+      &:hover{
+        cursor: pointer;
+      }
       &-icon{
         color: #fff;
         font-size: 18px;
