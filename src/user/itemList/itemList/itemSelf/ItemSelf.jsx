@@ -28,7 +28,7 @@ class ItemSelf extends React.Component {
               <Row>
                 <Col>
                   <div className="itemself-des">
-                    <Link to="">
+                    <Link to="" className="itemself-des-link">
                       <p className="itemself-des-title">携手一生</p>
                       <p className="itemself-des-detail">11枝优质红玫瑰搭配绿叶，满天星，随机赠送2只小熊</p>
                     </Link>
@@ -40,34 +40,34 @@ class ItemSelf extends React.Component {
                   <div className="itemself-price">
                     <span className="itemself-price-now">￥179</span>
                     <span className="itemself-price-pre">￥299</span>
-                    <div className="itemself-price-star">
-                      <Icon type="star" />
-                      <Icon type="star" />
-                      <Icon type="star" />
-                      <Icon type="star" />
-                      <Icon type="star" />
-                    </div>
+                    <span className="itemself-price-star">
+                      <Icon type="star" className="icon-star" />
+                      <Icon type="star" className="icon-star" />
+                      <Icon type="star" className="icon-star" />
+                      <Icon type="star" className="icon-star" />
+                      <Icon type="star" className="icon-star" />
+                    </span>
                   </div>
                 </Col>
               </Row>
-              <Row>
+              <Row className="itemself-intro-add">
                 <Col span={12}>
                   <div className="itemself-count">
-                    <p><Link to="">8156</Link></p>
-                    <p>商品销量</p>
+                    <p className="itemself-count-number"><Link className="itemself-count-number-link" to="">8156</Link></p>
+                    <p className="itemself-count-tip">商品销量</p>
                   </div>
                 </Col>
                 <Col span={12}>
                   <div className="itemself-comment">
-                    <p><Link to="">7318</Link></p>
-                    <p>用户评论</p>
+                    <p className="itemself-comment-number"><Link className="itemself-comment-number-link" to="">7318</Link></p>
+                    <p className="itemself-comment-tip">用户评论</p>
                   </div>
                 </Col>
               </Row>
               <Row>
                 <Col>
                   <div className="itemself-cart-add">
-                    <button><span><Icon type="shopping-cart" /></span>加入购物车</button>
+                    <button className="itemself-cart-add-btn"><span className="itemself-cart-add-btn-icon"><Icon type="shopping-cart" /></span>加入购物车</button>
                   </div>
                 </Col>
               </Row>
