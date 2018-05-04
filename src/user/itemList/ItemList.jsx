@@ -3,12 +3,12 @@
  * Created by tianrenjie on 2018/5/3
  */
 import React, { PropTypes } from 'react';
-import { Row, Col } from 'antd';
 import './ItemList.less';
 import Header from '../index/header/Header';
 import Search from '../index/search/Search';
 import Navigation from '../index/navigation/Navigation';
 import ItemFilter from './itemFilter/ItemFilter';
+import ItemPage from './itemList/ItemPage';
 import Footer from '../index/footer/Footer';
 
 class ItemList extends React.Component {
@@ -20,6 +20,7 @@ class ItemList extends React.Component {
         <Search />
         <Navigation />
         <ItemFilter />
+        <ItemPage />
         <Footer />
       </div>
     );
