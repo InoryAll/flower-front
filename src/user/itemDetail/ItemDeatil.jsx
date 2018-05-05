@@ -8,6 +8,7 @@ import Header from '../index/header/Header';
 import Search from '../index/search/Search';
 import Navigation from '../index/navigation/Navigation';
 import ItemInfo from './itemInfo/ItemInfo';
+import ItemOther from './itemOther/ItemOther';
 import Footer from '../index/footer/Footer';
 
 class ItemDeatil extends React.Component {
@@ -19,6 +20,7 @@ class ItemDeatil extends React.Component {
         <Search />
         <Navigation />
         <ItemInfo />
+        <ItemOther />
         <Footer />
       </div>
     );
