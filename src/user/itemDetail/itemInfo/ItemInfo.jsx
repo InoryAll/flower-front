@@ -30,12 +30,12 @@ class ItemInfo extends React.Component {
               </div>
               <div className="iteminfo-right-action">
                 <div className="iteminfo-right-action-price">
-                  <p>市场价：￥529.00</p>
-                  <p>优惠价：￥329.00</p>
+                  <p className="iteminfo-right-action-price-pre">市场价：￥529.00</p>
+                  <p className="iteminfo-right-action-price-now">优惠价：<span className="iteminfo-right-action-price-now-span">￥329.00</span></p>
                 </div>
                 <div className="iteminfo-right-action-btn">
                   <span className="iteminfo-right-action-btn-count">
-                    <InputNumber size="large" min={1} max={100000} defaultValue={3} />
+                    <InputNumber className="iteminfo-right-action-btn-count-input" size="large" min={1} max={100000} defaultValue={3} />
                   </span>
                   <button className="iteminfo-right-action-btn-buy">
                     <span className="iteminfo-right-action-btn-buy-icon">

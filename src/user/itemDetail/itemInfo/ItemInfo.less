@@ -3,12 +3,83 @@
   margin: 0 auto;
   padding: 20px 0 10px;
   &-left{
+    height: 427px;
     padding: 40px;
     border: 1px solid #eee;
+    border-right: none;
     &-img{
       display: block;
       width: 100%;
       height: 100%;
+    }
+  }
+  &-right{
+    height: 427px;
+    border: 1px solid #eee;
+    &-title{
+      color: #333;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 10px 0 10px 20px;
+      border-bottom: 1px solid #eee;
+    }
+    &-info{
+      padding: 10px 4px 10px 20px;
+      border-bottom: 1px solid #eee;
+      &-p{
+        font-size: 12px;
+        line-height: 30px;
+      }
+    }
+    &-action{
+      padding: 10px 4px 10px 20px;
+      &-price{
+        width: 230px;
+        border: 2px solid #F74346;
+        padding: 4px 10px;
+        line-height: 30px;
+        background: url("../../../../static/img/itemDetail/confirm.png") no-repeat right bottom;
+        &-pre{
+          color: #666;
+        }
+        &-now-span{
+          font-size: 16px;
+          color: red;
+        }
+      }
+      &-btn{
+        padding: 20px 0;
+        &-count{
+          padding-right: 10px;
+          &-input{
+            color: #333;
+            font-size: 16px;
+          }
+        }
+        &-buy{
+          padding: 8px 12px;
+          background: #f32613;
+          font-size: 16px;
+          font-weight: bold;
+          border-radius: 2px;
+          color: #fff;
+          cursor: pointer;
+          &-icon{
+            font-size: 16px;
+            padding-right: 10px;
+          }
+        }
+        &-add{
+          cursor: pointer;
+          padding: 8px 12px;
+          background: #f32613;
+          font-size: 16px;
+          font-weight: bold;
+          border-radius: 2px;
+          color: #fff;
+          margin-left: 10px;
+        }
+      }
     }
   }
 }
