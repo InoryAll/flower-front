@@ -5,7 +5,7 @@
 import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
 import { Row, Col, Icon } from 'antd';
-import img from '../../../../../static/img/item/1.jpg';
+import img from '../../../../../static/img/itemList/1.jpg';
 import './ItemSelf.less';
 
 class ItemSelf extends React.Component {
