@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08c3298d-d019-4401-abb2-96f78fb0689a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/user/itemDetail/itemOther/itemComment/ItemComment.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/user/itemDetail/itemOther/itemComment/ItemComment.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/itemDetail/itemOther/ItemOther.jsx" afterPath="$PROJECT_DIR$/src/user/itemDetail/itemOther/ItemOther.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/itemDetail/itemOther/itemComment/ItemComment.jsx" afterPath="$PROJECT_DIR$/src/user/itemDetail/itemOther/itemComment/ItemComment.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/itemDetail/itemOther/itemComment/ItemComment.less" afterPath="$PROJECT_DIR$/src/user/itemDetail/itemOther/itemComment/ItemComment.less" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,6 +19,62 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="ItemList.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/user/itemList/ItemList.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="212">
+              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="44" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ItemPage.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/user/itemList/itemList/ItemPage.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="53" column="17" lean-forward="true" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#63#104#0" expanded="true" />
+                <element signature="e#566#876#0" expanded="false" />
+                <element signature="e#889#1199#0" expanded="false" />
+                <element signature="e#1212#1522#0" expanded="false" />
+                <element signature="e#1858#2168#0" expanded="false" />
+                <element signature="e#2181#2491#0" expanded="false" />
+                <element signature="e#2504#2814#0" expanded="false" />
+                <element signature="e#2827#3137#0" expanded="false" />
+                <element signature="e#3150#3460#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ItemSelf.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/user/itemList/itemList/itemSelf/ItemSelf.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="397">
+              <caret line="48" column="34" lean-forward="true" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="34" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#63#104#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ItemList.less" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/user/itemList/ItemList.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="3" column="3" lean-forward="true" selection-start-line="1" selection-start-column="2" selection-end-line="3" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ItemDeatil.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/user/itemDetail/ItemDeatil.jsx">
           <provider selected="true" editor-type-id="text-editor">
@@ -31,21 +87,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ItemInfo.less" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/user/itemDetail/itemInfo/ItemInfo.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="70">
-              <caret line="2" column="17" lean-forward="true" selection-start-line="1" selection-start-column="2" selection-end-line="2" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ItemOther.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/user/itemDetail/itemOther/ItemOther.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="58" column="42" lean-forward="false" selection-start-line="58" selection-start-column="42" selection-end-line="58" selection-end-column="42" />
+            <state relative-caret-position="292">
+              <caret line="57" column="28" lean-forward="true" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#64#105#0" expanded="true" />
@@ -54,61 +100,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ItemComment.jsx" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ItemSelf.less" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/user/itemList/itemList/itemSelf/ItemSelf.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="298">
+              <caret line="75" column="23" lean-forward="true" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ItemComment.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/user/itemDetail/itemOther/itemComment/ItemComment.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="665">
+              <caret line="19" column="46" lean-forward="true" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#64#105#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ItemComment.less" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ItemComment.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/user/itemDetail/itemOther/itemComment/ItemComment.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RegeditBox.less" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/user/regedit/regeditBox/RegeditBox.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="74" column="3" lean-forward="true" selection-start-line="59" selection-start-column="2" selection-end-line="74" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Regedit.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/user/regedit/Regedit.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="18" column="12" lean-forward="true" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RegeditBox.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/user/regedit/regeditBox/RegeditBox.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="14" column="4" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="14" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ItemPage.less" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/user/itemList/itemList/ItemPage.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="70">
-              <caret line="2" column="17" lean-forward="true" selection-start-line="1" selection-start-column="2" selection-end-line="2" selection-end-column="17" />
+            <state relative-caret-position="272">
+              <caret line="23" column="35" lean-forward="true" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -117,7 +136,7 @@
       <file leaf-file-name="ItemOther.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/user/itemDetail/itemOther/ItemOther.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
+            <state relative-caret-position="2310">
               <caret line="66" column="22" lean-forward="true" selection-start-line="66" selection-start-column="22" selection-end-line="66" selection-end-column="22" />
               <folding />
             </state>
@@ -135,7 +154,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>webpack</find>
       <find>eslint-config-airbnb</find>
       <find>&lt;dl</find>
       <find>&lt;dl className=&quot;info-row-ul-li-dl&quot;&gt;</find>
@@ -143,7 +161,6 @@
       <find>&lt;dd</find>
       <find>info-row-ul-li-dl-dt-dd</find>
       <find>propsTypes</find>
-      <find>float</find>
       <find>inlin</find>
       <find>ver</find>
       <find>&lt;h4</find>
@@ -165,6 +182,8 @@
       <find>a</find>
       <find>anima</find>
       <find>animation</find>
+      <find>ItemComent</find>
+      <find>float</find>
     </findStrings>
     <replaceStrings>
       <replace>dl className=&quot;info-row-ul-li-dl&quot;</replace>
@@ -195,8 +214,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/user/index/firstFloor/floorBasic/FloorBasic.jsx" />
-        <option value="$PROJECT_DIR$/src/user/index/firstFloor/FirstFloor.less" />
         <option value="$PROJECT_DIR$/src/user/index/secondFloor/SecondFloor.less" />
         <option value="$PROJECT_DIR$/src/user/index/secondFloor/SecondFloor.jsx" />
         <option value="$PROJECT_DIR$/src/user/index/firstFloor/FirstFloor.jsx" />
@@ -246,6 +263,8 @@
         <option value="$PROJECT_DIR$/src/user/itemDetail/ItemDeatil.jsx" />
         <option value="$PROJECT_DIR$/src/user/itemDetail/itemOther/ItemOther.less" />
         <option value="$PROJECT_DIR$/src/user/itemDetail/itemOther/ItemOther.jsx" />
+        <option value="$PROJECT_DIR$/src/user/itemDetail/itemOther/itemComment/ItemComment.less" />
+        <option value="$PROJECT_DIR$/src/user/itemDetail/itemOther/itemComment/ItemComment.jsx" />
       </list>
     </option>
   </component>
@@ -956,12 +975,12 @@
       <workItem from="1525406157254" duration="311000" />
       <workItem from="1525406492408" duration="6683000" />
       <workItem from="1525428814180" duration="7869000" />
-      <workItem from="1525495482061" duration="13536000" />
+      <workItem from="1525495482061" duration="17265000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="261596000" />
+    <option name="totallyTimeSpent" value="265325000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1223,14 +1242,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/itemList/itemList/itemSelf/ItemSelf.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="18" column="8" lean-forward="true" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/router.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="282">
@@ -1248,14 +1259,6 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/itemList/ItemList.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="3" column="3" lean-forward="true" selection-start-line="1" selection-start-column="2" selection-end-line="3" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1285,57 +1288,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/itemList/ItemList.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="44" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/itemList/itemList/itemSelf/ItemSelf.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="72" column="136" lean-forward="false" selection-start-line="72" selection-start-column="107" selection-end-line="72" selection-end-column="136" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#63#104#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/itemDetail/itemInfo/ItemInfo.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="3" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#65#106#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/itemList/itemList/ItemPage.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="6" column="29" lean-forward="false" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="29" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#566#876#0" expanded="false" />
-            <element signature="e#889#1199#0" expanded="false" />
-            <element signature="e#1212#1522#0" expanded="false" />
-            <element signature="e#1535#1845#0" expanded="false" />
-            <element signature="e#1858#2168#0" expanded="false" />
-            <element signature="e#2181#2491#0" expanded="false" />
-            <element signature="e#2504#2814#0" expanded="false" />
-            <element signature="e#2827#3137#0" expanded="false" />
-            <element signature="e#3150#3460#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/user/itemList/itemList/ItemPage.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="70">
@@ -1349,16 +1301,6 @@
         <state relative-caret-position="70">
           <caret line="2" column="17" lean-forward="true" selection-start-line="1" selection-start-column="2" selection-end-line="2" selection-end-column="17" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/itemDetail/ItemDeatil.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35">
-          <caret line="10" column="46" lean-forward="true" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1386,9 +1328,67 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/user/itemDetail/itemInfo/ItemInfo.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="3" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#65#106#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/user/itemDetail/ItemDeatil.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="35">
+          <caret line="10" column="46" lean-forward="true" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/user/itemList/ItemList.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="3" column="3" lean-forward="true" selection-start-line="1" selection-start-column="2" selection-end-line="3" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/user/itemList/ItemList.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="44" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/user/itemList/itemList/ItemPage.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="53" column="17" lean-forward="true" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#63#104#0" expanded="true" />
+            <element signature="e#566#876#0" expanded="false" />
+            <element signature="e#889#1199#0" expanded="false" />
+            <element signature="e#1212#1522#0" expanded="false" />
+            <element signature="e#1858#2168#0" expanded="false" />
+            <element signature="e#2181#2491#0" expanded="false" />
+            <element signature="e#2504#2814#0" expanded="false" />
+            <element signature="e#2827#3137#0" expanded="false" />
+            <element signature="e#3150#3460#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/user/itemDetail/itemOther/ItemOther.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
+        <state relative-caret-position="2310">
           <caret line="66" column="22" lean-forward="true" selection-start-line="66" selection-start-column="22" selection-end-line="66" selection-end-column="22" />
           <folding />
         </state>
@@ -1396,8 +1396,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/user/itemDetail/itemOther/ItemOther.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="58" column="42" lean-forward="false" selection-start-line="58" selection-start-column="42" selection-end-line="58" selection-end-column="42" />
+        <state relative-caret-position="292">
+          <caret line="57" column="28" lean-forward="true" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#64#105#0" expanded="true" />
@@ -1405,19 +1405,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/itemDetail/itemOther/itemComment/ItemComment.jsx">
+    <entry file="file://$PROJECT_DIR$/src/user/itemList/itemList/itemSelf/ItemSelf.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="397">
+          <caret line="48" column="34" lean-forward="true" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="34" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#63#104#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/user/itemList/itemList/itemSelf/ItemSelf.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="75" column="23" lean-forward="true" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/user/itemDetail/itemOther/itemComment/ItemComment.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="272">
+          <caret line="23" column="35" lean-forward="true" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/user/itemDetail/itemOther/itemComment/ItemComment.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="665">
+          <caret line="19" column="46" lean-forward="true" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#64#105#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

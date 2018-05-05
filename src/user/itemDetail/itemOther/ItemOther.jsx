@@ -5,6 +5,7 @@
 import React, { PropTypes } from 'react';
 import { Row, Col, Tabs, Pagination, Progress, Icon } from 'antd';
 import './ItemOther.less';
+import ItemComment from './itemComment/ItemComment';
 
 const TabPane = Tabs.TabPane;
 class ItemOther extends React.Component {
@@ -51,7 +52,9 @@ class ItemOther extends React.Component {
               <div className="itemother-comment-list-tabs">
                 <Tabs defaultActiveKey="all" onChange={this.handleTabClick}>
                   <TabPane tab="商品评价" key="all">
-                    <div className="itemother-comment-list-content">...</div>
+                    <div className="itemother-comment-list-content">
+                      <ItemComment />
+                    </div>
                   </TabPane>
                   <TabPane tab="好评" key="good">
                     <div className="itemother-comment-list-content">...</div>
