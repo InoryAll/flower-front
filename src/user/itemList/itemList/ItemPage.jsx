@@ -119,7 +119,7 @@ class ItemPage extends React.Component {
             />
           </div>
           <div className="itempage-box-pagination">
-            <Pagination showSizeChanger onShowSizeChange={this.onShowSizeChange} defaultCurrent={3} total={500} />
+            <Pagination onShowSizeChange={this.onShowSizeChange} defaultCurrent={3} total={500} />
           </div>
         </div>
       </div>
