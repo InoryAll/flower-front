@@ -10,8 +10,8 @@ import ItemSelf from './itemSelf/ItemSelf';
 
 class ItemPage extends React.Component {
   static propTypes = {};
-  onShowSizeChange = (current, pageSize) => {
-    console.log(current, pageSize);
+  onSizeChange = (page, pageSize) => {
+    console.log(page, pageSize);
   };
   render() {
     return (
@@ -119,7 +119,12 @@ class ItemPage extends React.Component {
             />
           </div>
           <div className="itempage-box-pagination">
-            <Pagination onShowSizeChange={this.onShowSizeChange} defaultCurrent={3} total={500} />
+            <Pagination
+              onChange={this.onSizeChange}
+              defaultCurrent={1}
+              total={500}
+              pageSize={20}
+            />
           </div>
         </div>
       </div>

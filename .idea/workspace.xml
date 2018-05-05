@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08c3298d-d019-4401-abb2-96f78fb0689a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/itemList/itemList/ItemPage.jsx" afterPath="$PROJECT_DIR$/src/user/itemList/itemList/ItemPage.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/itemList/itemList/ItemPage.less" afterPath="$PROJECT_DIR$/src/user/itemList/itemList/ItemPage.less" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -35,20 +33,20 @@
       <file leaf-file-name="ItemPage.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/user/itemList/itemList/ItemPage.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="597">
-              <caret line="125" column="6" lean-forward="true" selection-start-line="125" selection-start-column="6" selection-end-line="125" selection-end-column="6" />
+            <state relative-caret-position="282">
+              <caret line="16" column="12" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#63#104#0" expanded="true" />
-                <element signature="e#576#886#0" expanded="false" />
-                <element signature="e#899#1209#0" expanded="false" />
-                <element signature="e#1222#1532#0" expanded="false" />
-                <element signature="e#1545#1855#0" expanded="false" />
-                <element signature="e#1868#2178#0" expanded="false" />
-                <element signature="e#2191#2501#0" expanded="false" />
-                <element signature="e#2514#2824#0" expanded="false" />
-                <element signature="e#2837#3147#0" expanded="false" />
-                <element signature="e#3160#3470#0" expanded="false" />
+                <element signature="e#566#876#0" expanded="false" />
+                <element signature="e#889#1199#0" expanded="false" />
+                <element signature="e#1212#1522#0" expanded="false" />
+                <element signature="e#1535#1845#0" expanded="false" />
+                <element signature="e#1858#2168#0" expanded="false" />
+                <element signature="e#2181#2491#0" expanded="false" />
+                <element signature="e#2504#2814#0" expanded="false" />
+                <element signature="e#2827#3137#0" expanded="false" />
+                <element signature="e#3150#3460#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -137,8 +135,8 @@
       <file leaf-file-name="ItemPage.less" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/user/itemList/itemList/ItemPage.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="31" column="7" lean-forward="true" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
+            <state relative-caret-position="140">
+              <caret line="4" column="18" lean-forward="true" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -264,8 +262,8 @@
         <option value="$PROJECT_DIR$/src/animation/animation.less" />
         <option value="$PROJECT_DIR$/src/user/itemList/itemList/itemSelf/ItemSelf.jsx" />
         <option value="$PROJECT_DIR$/src/user/itemList/itemList/itemSelf/ItemSelf.less" />
-        <option value="$PROJECT_DIR$/src/user/itemList/itemList/ItemPage.jsx" />
         <option value="$PROJECT_DIR$/src/user/itemList/itemList/ItemPage.less" />
+        <option value="$PROJECT_DIR$/src/user/itemList/itemList/ItemPage.jsx" />
       </list>
     </option>
   </component>
@@ -980,12 +978,12 @@
       <workItem from="1525406157254" duration="311000" />
       <workItem from="1525406492408" duration="6683000" />
       <workItem from="1525428814180" duration="7869000" />
-      <workItem from="1525495482061" duration="1035000" />
+      <workItem from="1525495482061" duration="1374000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="249095000" />
+    <option name="totallyTimeSpent" value="249434000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -997,7 +995,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1098" extended-state="7" />
+    <frame x="-9" y="-9" width="1938" height="1098" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19556025" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1389,28 +1387,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/user/itemList/itemList/ItemPage.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="597">
-          <caret line="125" column="6" lean-forward="true" selection-start-line="125" selection-start-column="6" selection-end-line="125" selection-end-column="6" />
+        <state relative-caret-position="282">
+          <caret line="16" column="12" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#63#104#0" expanded="true" />
-            <element signature="e#576#886#0" expanded="false" />
-            <element signature="e#899#1209#0" expanded="false" />
-            <element signature="e#1222#1532#0" expanded="false" />
-            <element signature="e#1545#1855#0" expanded="false" />
-            <element signature="e#1868#2178#0" expanded="false" />
-            <element signature="e#2191#2501#0" expanded="false" />
-            <element signature="e#2514#2824#0" expanded="false" />
-            <element signature="e#2837#3147#0" expanded="false" />
-            <element signature="e#3160#3470#0" expanded="false" />
+            <element signature="e#566#876#0" expanded="false" />
+            <element signature="e#889#1199#0" expanded="false" />
+            <element signature="e#1212#1522#0" expanded="false" />
+            <element signature="e#1535#1845#0" expanded="false" />
+            <element signature="e#1858#2168#0" expanded="false" />
+            <element signature="e#2181#2491#0" expanded="false" />
+            <element signature="e#2504#2814#0" expanded="false" />
+            <element signature="e#2827#3137#0" expanded="false" />
+            <element signature="e#3150#3460#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/user/itemList/itemList/ItemPage.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="31" column="7" lean-forward="true" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
+        <state relative-caret-position="140">
+          <caret line="4" column="18" lean-forward="true" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
           <folding />
         </state>
       </provider>
