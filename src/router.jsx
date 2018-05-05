@@ -8,6 +8,7 @@ import Index from './user/index/Index';
 import Login from './user/login/Login';
 import Regedit from './user/regedit/Regedit';
 import ItemList from './user/itemList/ItemList';
+import ItemDetail from './user/itemDetail/ItemDeatil';
 
 export const router = (
   <Router history={browserHistory}>
@@ -16,6 +17,7 @@ export const router = (
       <Route path="login" component={Login} />
       <Route path="regedit" component={Regedit} />
       <Route path="itemList" component={ItemList} />
+      <Route path="itemDetail" component={ItemDetail} />
     </Route>
   </Router>
 );
