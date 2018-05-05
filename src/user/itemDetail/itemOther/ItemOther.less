@@ -1,8 +1,8 @@
 .itemother{
   width: 1280px;
   margin: 0 auto 10px;
-  border: 1px solid #e6e6e6;
   &-comment-total{
+    border: 1px solid #e6e6e6;
     height: 80px;
     &-left{
       color: #f32613;
@@ -54,6 +54,28 @@
           padding-right: 6px;
         }
       }
+    }
+  }
+  &-comment-list{
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    .ant-tabs-nav .ant-tabs-tab{
+      color: #777;
+      width: 130px;
+      text-align: center;
+      padding: 8px 0;
+      font-size: 14px;
+      margin: 0;
+      border-right: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+    }
+    .ant-tabs-nav .ant-tabs-tab:hover {
+      color: #333;
+      font-weight: normal;
+    }
+    .ant-tabs-nav .ant-tabs-tab-active {
+      color: #333;
+      font-weight: normal;
     }
   }
 }
