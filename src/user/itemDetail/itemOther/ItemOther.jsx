@@ -31,9 +31,9 @@ class ItemOther extends React.Component {
                 </Col>
                 <Col span={4}>
                   <div className="itemother-comment-total-right">
-                    <p>您可对已购商品进行评价</p>
-                    <button>
-                      <span><Icon type="message" /></span>
+                    <p className="itemother-comment-total-right-title">您可对已购商品进行评价</p>
+                    <button className="itemother-comment-total-right-btn">
+                      <span className="itemother-comment-total-right-btn-span"><Icon type="message" /></span>
                       评价商品
                     </button>
                   </div>
