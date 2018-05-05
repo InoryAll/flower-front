@@ -50,10 +50,18 @@ class ItemOther extends React.Component {
             <div className="itemother-comment-list">
               <div className="itemother-comment-list-tabs">
                 <Tabs defaultActiveKey="all" onChange={this.handleTabClick}>
-                  <TabPane tab="商品评价" key="all">Content of Tab Pane 1</TabPane>
-                  <TabPane tab="好评" key="good">Content of Tab Pane 2</TabPane>
-                  <TabPane tab="中评" key="normal">Content of Tab Pane 3</TabPane>
-                  <TabPane tab="差评" key="low">Content of Tab Pane 3</TabPane>
+                  <TabPane tab="商品评价" key="all">
+                    <div className="itemother-comment-list-content">...</div>
+                  </TabPane>
+                  <TabPane tab="好评" key="good">
+                    <div className="itemother-comment-list-content">...</div>
+                  </TabPane>
+                  <TabPane tab="中评" key="normal">
+                    <div className="itemother-comment-list-content">...</div>
+                  </TabPane>
+                  <TabPane tab="差评" key="low">
+                    <div className="itemother-comment-list-content">...</div>
+                  </TabPane>
                 </Tabs>
               </div>
             </div>
