@@ -54,6 +54,17 @@ class ItemOther extends React.Component {
                   <TabPane tab="商品评价" key="all">
                     <div className="itemother-comment-list-content">
                       <ItemComment />
+                      <ItemComment />
+                      <ItemComment />
+                      <ItemComment />
+                    </div>
+                    <div className="itemother-comment-list-pagination">
+                      <Pagination
+                        onChange={this.onSizeChange}
+                        defaultCurrent={1}
+                        total={500}
+                        pageSize={20}
+                      />
                     </div>
                   </TabPane>
                   <TabPane tab="好评" key="good">
