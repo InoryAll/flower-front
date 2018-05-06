@@ -17,12 +17,12 @@ class ShoppingSteps extends React.Component {
     return (
       <div className="shoppingsteps">
         <Row>
-          <Col span={12}>
+          <Col span={8}>
             <div className="shoppingsteps-logo">
               <img src={img} alt="花之韵" className="shoppingsteps-logo-img" />
             </div>
           </Col>
-          <Col span={12}>
+          <Col span={16}>
             <div className="shoppingsteps-step">
               <Steps current={step}>
                 <Step title="我的购物车" icon={<Icon type="shopping-cart" />} />

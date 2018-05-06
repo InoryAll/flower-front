@@ -11,7 +11,17 @@ class ShoppingList extends React.Component {
   render() {
     return (
       <div className="shoppinglist">
-        shopping list
+        <Row>
+          <Col>
+            <div className="shoppinglist-title">
+              <h3 className="shoppinglist-title-h3">我的购物车</h3>
+              <p className="shoppinglist-title-p">查看购物车商品清单，增加减少商品数量，并勾选想要的商品进入下一步操作。</p>
+            </div>
+          </Col>
+        </Row>
+        <Row>
+          <Col></Col>
+        </Row>
       </div>
     );
   }

@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08c3298d-d019-4401-abb2-96f78fb0689a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/user/shoppingCart/shoppingList/ShoppingList.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/user/shoppingCart/shoppingList/ShoppingList.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/shoppingCart/ShoppingCart.jsx" afterPath="$PROJECT_DIR$/src/user/shoppingCart/ShoppingCart.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/shoppingCart/shoppingList/ShoppingList.jsx" afterPath="$PROJECT_DIR$/src/user/shoppingCart/shoppingList/ShoppingList.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/shoppingCart/shoppingList/ShoppingList.less" afterPath="$PROJECT_DIR$/src/user/shoppingCart/shoppingList/ShoppingList.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/shoppingCart/shoppingSteps/ShoppingSteps.jsx" afterPath="$PROJECT_DIR$/src/user/shoppingCart/shoppingSteps/ShoppingSteps.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/shoppingCart/shoppingSteps/ShoppingSteps.less" afterPath="$PROJECT_DIR$/src/user/shoppingCart/shoppingSteps/ShoppingSteps.less" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -43,10 +43,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ShoppingList.jsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ShoppingList.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/user/shoppingCart/shoppingList/ShoppingList.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
+            <state relative-caret-position="247">
               <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -56,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ShoppingList.less" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ShoppingList.less" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/user/shoppingCart/shoppingList/ShoppingList.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="350">
+              <caret line="10" column="8" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -69,8 +69,8 @@
       <file leaf-file-name="ShoppingSteps.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/user/shoppingCart/shoppingSteps/ShoppingSteps.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="3" />
+            <state relative-caret-position="210">
+              <caret line="15" column="32" lean-forward="true" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#60#101#0" expanded="true" />
@@ -82,8 +82,8 @@
       <file leaf-file-name="ShoppingSteps.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/user/shoppingCart/shoppingSteps/ShoppingSteps.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+            <state relative-caret-position="245">
+              <caret line="7" column="9" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -204,7 +204,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/user/index/thirdFloor/ThirdFloor.jsx" />
         <option value="$PROJECT_DIR$/src/user/index/forthFloor/ForthFloor.less" />
         <option value="$PROJECT_DIR$/src/user/index/forthFloor/ForthFloor.jsx" />
         <option value="$PROJECT_DIR$/src/user/index/firstFloor/floorBasic/FloorBasic.less" />
@@ -251,10 +250,11 @@
         <option value="$PROJECT_DIR$/src/user/itemDetail/itemInfo/ItemInfo.less" />
         <option value="$PROJECT_DIR$/src/user/itemList/itemList/itemSelf/ItemSelf.less" />
         <option value="$PROJECT_DIR$/src/router.jsx" />
-        <option value="$PROJECT_DIR$/src/user/shoppingCart/shoppingSteps/ShoppingSteps.jsx" />
-        <option value="$PROJECT_DIR$/src/user/shoppingCart/shoppingSteps/ShoppingSteps.less" />
-        <option value="$PROJECT_DIR$/src/user/shoppingCart/shoppingList/ShoppingList.jsx" />
         <option value="$PROJECT_DIR$/src/user/shoppingCart/ShoppingCart.jsx" />
+        <option value="$PROJECT_DIR$/src/user/shoppingCart/shoppingList/ShoppingList.jsx" />
+        <option value="$PROJECT_DIR$/src/user/shoppingCart/shoppingSteps/ShoppingSteps.less" />
+        <option value="$PROJECT_DIR$/src/user/shoppingCart/shoppingSteps/ShoppingSteps.jsx" />
+        <option value="$PROJECT_DIR$/src/user/shoppingCart/shoppingList/ShoppingList.less" />
       </list>
     </option>
   </component>
@@ -764,12 +764,12 @@
       <workItem from="1525406492408" duration="6683000" />
       <workItem from="1525428814180" duration="7869000" />
       <workItem from="1525495482061" duration="18407000" />
-      <workItem from="1525591379204" duration="2051000" />
+      <workItem from="1525591379204" duration="2647000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="268518000" />
+    <option name="totallyTimeSpent" value="269114000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -879,6 +879,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -986,6 +987,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="5" column="8" lean-forward="true" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1009,6 +1011,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="3" column="3" lean-forward="true" selection-start-line="1" selection-start-column="2" selection-end-line="3" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1172,33 +1175,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/shoppingCart/shoppingSteps/ShoppingSteps.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/shoppingCart/shoppingList/ShoppingList.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/shoppingCart/shoppingSteps/ShoppingSteps.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="3" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#60#101#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/user/shoppingCart/ShoppingCart.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="597">
@@ -1210,14 +1186,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/user/shoppingCart/shoppingSteps/ShoppingSteps.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="7" column="9" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/user/shoppingCart/shoppingSteps/ShoppingSteps.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="15" column="32" lean-forward="true" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#60#101#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/user/shoppingCart/shoppingList/ShoppingList.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
+        <state relative-caret-position="247">
           <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#59#100#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/user/shoppingCart/shoppingList/ShoppingList.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="10" column="8" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
