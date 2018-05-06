@@ -10,7 +10,16 @@ import './CheckForm.less';
 
 class CheckForm extends React.Component {
   static propTypes = {};
+  state = {
+    payWay: 'default',
+  };
+  handleWayChange = (value) => {
+    this.setState({
+      payWay: value,
+    });
+  };
   render() {
+    const { payWay } = this.state;
     const columns = [{
       title: '商品',
       dataIndex: 'item',
@@ -119,25 +128,29 @@ class CheckForm extends React.Component {
           <Row>
             <Col>
               <div className="checkform-pay">
-                <ul className="checkform-pay-ul">
+                <ul className="checkform-pay-ul clearfix">
                   <li className="checkform-pay-ul-li">
-                    <button className="checkform-pay-ul-li-btn">网银在线</button>
+                    <button type="button" className={ payWay === 'bank' ? 'checkform-pay-ul-li-btn active' : 'checkform-pay-ul-li-btn' } onClick={ () => { this.handleWayChange('bank'); } }>网银在线</button>
                   </li>
                   <li className="checkform-pay-ul-li">
-                    <button className="checkform-pay-ul-li-btn">微信支付</button>
+                    <button type="button" className={ payWay === 'wechat' ? 'checkform-pay-ul-li-btn active' : 'checkform-pay-ul-li-btn' } onClick={ () => { this.handleWayChange('wechat'); } }>微信支付</button>
                   </li>
                   <li className="checkform-pay-ul-li">
-                    <button className="checkform-pay-ul-li-btn">支付宝支付</button>
+                    <button type="button" className={ payWay === 'alipay' ? 'checkform-pay-ul-li-btn active' : 'checkform-pay-ul-li-btn' } onClick={ () => { this.handleWayChange('alipay'); } }>支付宝支付</button>
                   </li>
                   <li className="checkform-pay-ul-li">
-                    <button className="checkform-pay-ul-li-btn">货到付款</button>
+                    <button type="button" className={ payWay === 'default' ? 'checkform-pay-ul-li-btn active' : 'checkform-pay-ul-li-btn' } onClick={ () => { this.handleWayChange('default'); } }>货到付款</button>
                   </li>
                 </ul>
               </div>
             </Col>
           </Row>
           <Row>
-            <Col></Col>
+            <Col>
+              <div className="checkform-submit clearfix">
+                <button type="button" className="checkform-submit-btn">提交订单</button>
+              </div>
+            </Col>
           </Row>
         </form>
       </div>

@@ -79,4 +79,43 @@
       }
     }
   }
+  &-pay{
+    &-ul{
+      padding-bottom: 20px;
+      &-li{
+        float: right;
+        padding-left: 10px;
+        &-btn{
+          border: 1px #d2d2d2 solid;
+          height: 32px;
+          box-sizing: border-box;
+          font-size: 14px;
+          line-height: 18px;
+          padding: 5px 30px;
+          color: #333;
+          &:hover{
+            cursor: pointer;
+          }
+        }
+        .active{
+          border: 2px #e64447 solid;
+          background: url("../../../../static/img/itemDetail/confirm.png") no-repeat right bottom;
+        }
+      }
+    }
+  }
+  &-submit{
+    padding: 10px 0 30px;
+    &-btn{
+      float: right;
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+      background: #ff6c86;
+      padding: 10px 100px;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+  }
 }

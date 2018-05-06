@@ -69,11 +69,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CheckForm.jsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CheckForm.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/user/checkInfo/checkForm/CheckForm.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-105">
-              <caret line="111" column="47" lean-forward="true" selection-start-line="111" selection-start-column="47" selection-end-line="111" selection-end-column="47" />
+            <state relative-caret-position="439">
+              <caret line="148" column="17" lean-forward="true" selection-start-line="148" selection-start-column="17" selection-end-line="148" selection-end-column="17" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#60#101#0" expanded="true" />
@@ -82,14 +82,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CheckForm.less" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CheckForm.less" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/user/checkInfo/checkForm/CheckForm.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="70" column="10" lean-forward="true" selection-start-line="70" selection-start-column="10" selection-end-line="70" selection-end-column="10" />
+            <state relative-caret-position="342">
+              <caret line="112" column="18" lean-forward="true" selection-start-line="112" selection-start-column="18" selection-end-line="112" selection-end-column="18" />
               <folding>
                 <element signature="e#63#687#0" expanded="false" />
                 <element signature="e#704#1038#0" expanded="false" />
+                <element signature="e#1127#1467#0" expanded="false" />
+                <element signature="e#1475#2045#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -736,12 +738,12 @@
       <workItem from="1525406492408" duration="6683000" />
       <workItem from="1525428814180" duration="7869000" />
       <workItem from="1525495482061" duration="18407000" />
-      <workItem from="1525591379204" duration="10069000" />
+      <workItem from="1525591379204" duration="11394000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="276536000" />
+    <option name="totallyTimeSpent" value="277861000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -850,6 +852,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2345">
           <caret line="84" column="14" lean-forward="false" selection-start-line="77" selection-start-column="10" selection-end-line="84" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -901,6 +904,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2240">
           <caret line="81" column="18" lean-forward="false" selection-start-line="81" selection-start-column="18" selection-end-line="81" selection-end-column="18" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1214,24 +1220,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/checkInfo/checkForm/CheckForm.less">
+    <entry file="file://$PROJECT_DIR$/src/user/checkInfo/checkForm/CheckForm.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="70" column="10" lean-forward="true" selection-start-line="70" selection-start-column="10" selection-end-line="70" selection-end-column="10" />
+        <state relative-caret-position="439">
+          <caret line="148" column="17" lean-forward="true" selection-start-line="148" selection-start-column="17" selection-end-line="148" selection-end-column="17" />
           <folding>
-            <element signature="e#63#687#0" expanded="false" />
-            <element signature="e#704#1038#0" expanded="false" />
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#60#101#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/checkInfo/checkForm/CheckForm.jsx">
+    <entry file="file://$PROJECT_DIR$/src/user/checkInfo/checkForm/CheckForm.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-105">
-          <caret line="111" column="47" lean-forward="true" selection-start-line="111" selection-start-column="47" selection-end-line="111" selection-end-column="47" />
+        <state relative-caret-position="342">
+          <caret line="112" column="18" lean-forward="true" selection-start-line="112" selection-start-column="18" selection-end-line="112" selection-end-column="18" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#60#101#0" expanded="true" />
+            <element signature="e#63#687#0" expanded="false" />
+            <element signature="e#704#1038#0" expanded="false" />
+            <element signature="e#1127#1467#0" expanded="false" />
+            <element signature="e#1475#2045#0" expanded="false" />
           </folding>
         </state>
       </provider>
