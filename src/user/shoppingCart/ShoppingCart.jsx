@@ -4,6 +4,7 @@
  */
 import React, { PropTypes } from 'react';
 import Header from '../index/header/Header';
+import ShoppingSteps from './shoppingSteps/ShoppingSteps';
 import Footer from '../index/footer/Footer';
 
 class ShoppingCart extends React.Component {
@@ -12,6 +13,7 @@ class ShoppingCart extends React.Component {
     return (
       <div>
         <Header />
+        <ShoppingSteps step={0} />
         <Footer />
       </div>
     );
