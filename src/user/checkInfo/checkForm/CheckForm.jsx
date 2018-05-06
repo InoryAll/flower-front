@@ -110,9 +110,9 @@ class CheckForm extends React.Component {
           <Row>
             <Col>
               <div className="checkform-check">
-                <p>总商品金额： <span>179.00元</span></p>
+                <p className="checkform-check-total">总商品金额： <span className="checkform-check-total-span">179.00元</span></p>
                 <hr />
-                <p>应付总额： <span>179.00</span></p>
+                <p className="checkform-check-pay">应付总额： <span className="checkform-check-pay-span">179.00</span></p>
               </div>
             </Col>
           </Row>
