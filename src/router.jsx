@@ -10,6 +10,7 @@ import Regedit from './user/regedit/Regedit';
 import ItemList from './user/itemList/ItemList';
 import ItemDetail from './user/itemDetail/ItemDeatil';
 import ShoppingCart from './user/shoppingCart/ShoppingCart';
+import CheckInfo from './user/checkInfo/CheckInfo';
 
 export const router = (
   <Router history={browserHistory}>
@@ -20,6 +21,7 @@ export const router = (
       <Route path="itemList" component={ItemList} />
       <Route path="itemDetail" component={ItemDetail} />
       <Route path="cart" component={ShoppingCart} />
+      <Route path="checkInfo" component={CheckInfo} />
     </Route>
   </Router>
 );
