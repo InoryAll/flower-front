@@ -5,6 +5,7 @@
 import React, { PropTypes } from 'react';
 import Header from '../index/header/Header';
 import ShoppingSteps from '../shoppingCart/shoppingSteps/ShoppingSteps';
+import CheckForm from './checkForm/CheckForm';
 import Footer from '../index/footer/Footer';
 
 class CheckInfo extends React.Component {
@@ -14,6 +15,7 @@ class CheckInfo extends React.Component {
       <div>
         <Header />
         <ShoppingSteps step={1} />
+        <CheckForm />
         <Footer />
       </div>
     );

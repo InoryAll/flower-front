@@ -50,7 +50,6 @@ class ShoppingList extends React.Component {
         <Link className="shoppinglist-table-delete" onClick={this.handleDelete}>删除</Link>
       ),
     }];
-
     const data = [{
       key: '1',
       url: img,
