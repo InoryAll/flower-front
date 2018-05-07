@@ -45,6 +45,20 @@ class UserContent extends React.Component {
       title: '小计(元)',
       dataIndex: 'singleTotal',
       key: 'singleTotal',
+    }, {
+      title: '交易状态',
+      dataIndex: 'status',
+      key: 'status',
+    }, {
+      title: '操作',
+      key: 'action',
+      render: (text, record) => {
+        return (
+          <div className="usercontent-pannel-order-table-action">
+            <button className="usercontent-pannel-order-table-action-btn">取消订单</button>
+          </div>
+        );
+      },
     }];
     const data = [{
       key: '1',
@@ -52,6 +66,7 @@ class UserContent extends React.Component {
       name: '思念是一种病',
       price: '169.00',
       count: 1,
+      status: '待付款',
     }];
     return (
       <div className="usercontent">
@@ -158,7 +173,6 @@ class UserContent extends React.Component {
                         <Table
                           columns={columns}
                           dataSource={data}
-                          pagination={false}
                         />
                       </div>
                     </Col>
