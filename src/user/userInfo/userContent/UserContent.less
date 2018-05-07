@@ -2,6 +2,14 @@
   width: 1280px;
   margin: 0 auto;
   padding: 10px 0;
+  &-row{
+    overflow: hidden;
+  }
+  &-slider{
+    padding-bottom: 9999px;
+    margin-bottom: -9999px;
+    background: #f7f7f7;
+  }
   &-info{
     width: 210px;
     background: #fd6760;
@@ -56,6 +64,9 @@
     padding: 10px 0;
     font-size: 12px;
   }
+  .ant-tabs-vertical.ant-tabs-left > .ant-tabs-bar{
+    border-right: none;
+  }
   .ant-tabs-vertical.ant-tabs-left > .ant-tabs-bar .ant-tabs-tab {
     text-align: center;
   }
@@ -70,7 +81,7 @@
     font-weight: normal;
   }
   &-tabs{
-    margin: 10px 0;
+    padding-top: 10px;
     .ant-tabs-bar{
       background: #f7f7f7;
       color: #777;
@@ -133,6 +144,18 @@
               line-height: 28px;
               margin-right: 10px;
             }
+          }
+        }
+        &-btn{
+          padding-bottom: 10px;
+          &-update{
+            display: block;
+            margin-left: 400px;
+            font-size: 14px;
+            color: #fff;
+            background: #5bb75b;
+            padding: 10px 30px;
+            border-radius: 2px;
           }
         }
       }

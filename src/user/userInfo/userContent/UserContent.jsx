@@ -21,8 +21,8 @@ class UserContent extends React.Component {
   render() {
     return (
       <div className="usercontent">
-        <Row>
-          <Col span={4}>
+        <Row className="usercontent-row">
+          <Col span={4} className="usercontent-slider">
             <div className="usercontent-info">
               <h3 className="usercontent-info-h3">我的商城</h3>
               <div className="usercontent-info-avatar">

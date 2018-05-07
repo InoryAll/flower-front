@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08c3298d-d019-4401-abb2-96f78fb0689a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/index/navigation/category/Category.less" afterPath="$PROJECT_DIR$/src/user/index/navigation/category/Category.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/userInfo/userContent/UserContent.jsx" afterPath="$PROJECT_DIR$/src/user/userInfo/userContent/UserContent.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/userInfo/userContent/UserContent.less" afterPath="$PROJECT_DIR$/src/user/userInfo/userContent/UserContent.less" />
     </list>
@@ -24,7 +22,7 @@
         <entry file="file://$PROJECT_DIR$/src/user/userInfo/userContent/UserContent.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="175">
-              <caret line="77" column="118" lean-forward="false" selection-start-line="77" selection-start-column="97" selection-end-line="77" selection-end-column="118" />
+              <caret line="23" column="39" lean-forward="false" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#62#103#0" expanded="true" />
@@ -72,8 +70,8 @@
       <file leaf-file-name="UserContent.less" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/user/userInfo/userContent/UserContent.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="127" column="35" lean-forward="true" selection-start-line="127" selection-start-column="35" selection-end-line="127" selection-end-column="35" />
+            <state relative-caret-position="130">
+              <caret line="63" column="20" lean-forward="true" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -143,7 +141,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>&lt;dl className=&quot;info-row-ul-li-dl&quot;&gt;</find>
       <find>&lt;dt</find>
       <find>&lt;dd</find>
       <find>info-row-ul-li-dl-dt-dd</find>
@@ -173,6 +170,7 @@
       <find>ItemComent</find>
       <find>ow</find>
       <find>text-align:</find>
+      <find>.ant-tabs-vertical.ant-tabs-left &gt; .ant-tabs-bar</find>
     </findStrings>
     <replaceStrings>
       <replace>dl className=&quot;info-row-ul-li-dl&quot;</replace>
@@ -1104,12 +1102,12 @@
       <workItem from="1525428814180" duration="7869000" />
       <workItem from="1525495482061" duration="18407000" />
       <workItem from="1525591379204" duration="20491000" />
-      <workItem from="1525666208364" duration="8789000" />
+      <workItem from="1525666208364" duration="10362000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="295747000" />
+    <option name="totallyTimeSpent" value="297320000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1558,7 +1556,7 @@
     <entry file="file://$PROJECT_DIR$/src/user/userInfo/userContent/UserContent.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
-          <caret line="77" column="118" lean-forward="false" selection-start-line="77" selection-start-column="97" selection-end-line="77" selection-end-column="118" />
+          <caret line="23" column="39" lean-forward="false" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#62#103#0" expanded="true" />
@@ -1568,8 +1566,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/user/userInfo/userContent/UserContent.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="127" column="35" lean-forward="true" selection-start-line="127" selection-start-column="35" selection-end-line="127" selection-end-column="35" />
+        <state relative-caret-position="130">
+          <caret line="63" column="20" lean-forward="true" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="20" />
           <folding />
         </state>
       </provider>
