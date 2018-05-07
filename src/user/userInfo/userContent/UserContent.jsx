@@ -3,8 +3,10 @@
  * Created by tianrenjie on 2018/5/6
  */
 import React, { PropTypes } from 'react';
-import { Row, Col, Tabs, Avatar, DatePicker } from 'antd';
+import { Row, Col, Tabs, Avatar, DatePicker, Table } from 'antd';
 import { If } from 'jsx-control-statements';
+import { Link } from 'react-router';
+import img from '../../../../static/img/itemList/1.jpg';
 import './UserContent.less';
 
 const TabPane = Tabs.TabPane;
@@ -19,6 +21,38 @@ class UserContent extends React.Component {
     });
   };
   render() {
+    const columns = [{
+      title: '商品',
+      dataIndex: 'item',
+      key: 'item',
+      render: (text, record) => {
+        return (
+          <div className="shoppinglist-table-item clearfix">
+            <img src={record.url} alt="花之韵" className="shoppinglist-table-item-img" />
+            <Link to="" className="shoppinglist-table-item-link">{record.name}</Link>
+          </div>
+        );
+      },
+    }, {
+      title: '单价(元)',
+      dataIndex: 'price',
+      key: 'price',
+    }, {
+      title: '数量',
+      dataIndex: 'count',
+      key: 'count',
+    }, {
+      title: '小计(元)',
+      dataIndex: 'singleTotal',
+      key: 'singleTotal',
+    }];
+    const data = [{
+      key: '1',
+      url: img,
+      name: '思念是一种病',
+      price: '169.00',
+      count: 1,
+    }];
     return (
       <div className="usercontent">
         <Row className="usercontent-row">
@@ -111,7 +145,25 @@ class UserContent extends React.Component {
                 </div>
               </If>
               <If condition={ this.state.activeKey === 'order' }>
-                <div className="usercontent-pannel-order">....</div>
+                <div className="usercontent-pannel-order">
+                  <Row>
+                    <Col>
+                      <h3 className="usercontent-pannel-order-h3">订单列表</h3>
+                      <div className="usercontent-pannel-order-split" />
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col>
+                      <div className="usercontent-pannel-order-table">
+                        <Table
+                          columns={columns}
+                          dataSource={data}
+                          pagination={false}
+                        />
+                      </div>
+                    </Col>
+                  </Row>
+                </div>
               </If>
             </div>
           </Col>
