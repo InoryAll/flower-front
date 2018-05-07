@@ -19,18 +19,10 @@ class UserContent extends React.Component {
               <h3 className="usercontent-info-h3">我的商城</h3>
               <div className="usercontent-info-avatar">
                 <Row>
-                  <Col span={12}>
+                  <Col>
                     <span className="usercontent-info-avatar-icon">
                       <Avatar size="large" icon="user" />
                     </span>
-                  </Col>
-                  <Col span={12}>
-                    <Link className="usercontent-info-avatar-edit">
-                      <span className="usercontent-info-avatar-edit-icon">
-                        <Icon type="edit" />
-                      </span>
-                      修改资料
-                    </Link>
                   </Col>
                 </Row>
               </div>
