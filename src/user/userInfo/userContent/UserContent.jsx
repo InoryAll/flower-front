@@ -4,17 +4,25 @@
  */
 import React, { PropTypes } from 'react';
 import { Row, Col, Tabs, Avatar, Icon } from 'antd';
-import { Link } from 'react-router';
+import { If } from 'jsx-control-statements';
 import './UserContent.less';
 
 const TabPane = Tabs.TabPane;
 class UserContent extends React.Component {
   static propTypes = {};
+  state = {
+    activeKey: 'basic',
+  };
+  handleTabChange = (value) => {
+    this.setState({
+      activeKey: value,
+    });
+  };
   render() {
     return (
       <div className="usercontent">
         <Row>
-          <Col>
+          <Col span={6}>
             <div className="usercontent-info">
               <h3 className="usercontent-info-h3">我的商城</h3>
               <div className="usercontent-info-avatar">
@@ -31,10 +39,20 @@ class UserContent extends React.Component {
               </div>
             </div>
             <div className="usercontent-tabs">
-              <Tabs tabPosition={'left'}>
-                <TabPane tab="基本信息" key="basic">基本信息</TabPane>
-                <TabPane tab="订单列表" key="order">订单列表</TabPane>
+              <Tabs tabPosition={'left'} onChange={this.handleTabChange}>
+                <TabPane tab="基本信息" key="basic" />
+                <TabPane tab="订单列表" key="order" />
               </Tabs>
+            </div>
+          </Col>
+          <Col span={18}>
+            <div className="usercontent-pannel">
+              <If condition={ this.state.activeKey === 'basic' }>
+                <div className="usercontent-pannel-basic">....</div>
+              </If>
+              <If condition={ this.state.activeKey === 'order' }>
+                <div className="usercontent-pannel-order">....</div>
+              </If>
             </div>
           </Col>
         </Row>
