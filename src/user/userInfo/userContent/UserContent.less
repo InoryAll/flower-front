@@ -183,6 +183,30 @@
       &-table{
         min-height: 400px;
         padding: 20px 0 0;
+        .ant-table-thead > tr > th, .ant-table-tbody > tr > td {
+          padding: 16px 8px;
+          word-break: break-all;
+          text-align: center;
+        }
+        .ant-pagination-item-active:focus, .ant-pagination-item-active:hover {
+          background-color: #ed5564;
+          border-color: #db4453;
+        }
+        .ant-pagination-item-active {
+          background-color: #ed5564;
+          border-color: #db4453;
+        }
+        &-action{
+          &-btn{
+            background: #da4f49;
+            padding: 6px 16px;
+            color: #fff;
+            &:hover{
+              background: #bd362f;
+              cursor: pointer;
+            }
+          }
+        }
       }
     }
   }
