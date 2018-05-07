@@ -6,6 +6,7 @@ import React, { PropTypes } from 'react';
 import Header from '../index/header/Header';
 import Search from '../index/search/Search';
 import Navigation from '../index/navigation/Navigation';
+import UserContent from './userContent/UserContent';
 import Footer from '../index/footer/Footer';
 import './UserInfo.less';
 
@@ -17,6 +18,7 @@ class UserInfo extends React.Component {
         <Header />
         <Search />
         <Navigation />
+        <UserContent />
         <Footer />
       </div>
     );
