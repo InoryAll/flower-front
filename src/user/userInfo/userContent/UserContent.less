@@ -1,5 +1,5 @@
 .usercontent{
-  width: 1000px;
+  width: 1280px;
   margin: 0 auto;
   padding: 10px 0;
   &-info{
@@ -75,8 +75,67 @@
       background: #f7f7f7;
       color: #777;
     }
+  }
+  &-pannel{
+    padding-left: 10px;
     &-basic{
       background: #fff;
+      &-h3{
+        display: block;
+        width: 90px;
+        font-size: 14px;
+        font-weight: 600;
+        color: #e60012;
+        background: #fff;
+        border: 1px solid #e7e7e7;
+        padding: 7px 0 9px;
+        text-align: center;
+        border-bottom: none;
+        float: left;
+      }
+      &-split{
+        overflow: hidden;
+        height: 38px;
+        border-bottom: 1px solid #e7e7e7;
+      }
+      &-form{
+        .form-content{
+          padding: 20px 0;
+          .form-item{
+            width: 420px;
+            padding: 10px 0;
+            margin-left: 300px;
+            border-bottom: 1px dotted #e6e6e6;
+            &-label{
+              display: block;
+              width: 100px;
+              text-align: right;
+              float: left;
+              line-height: 28px;
+              color: #333;
+              padding-right: 10px;
+            }
+            &-input{
+              height: 28px;
+              border: solid 1px #ccc;
+              background: #fff;
+              line-height: 28px;
+              text-indent: 4px;
+            }
+            .address{
+              width: 300px;
+            }
+            .form-item-radio-label{
+              line-height: 28px;
+              margin-right: 10px;
+            }
+            .form-item-radio-input{
+              line-height: 28px;
+              margin-right: 10px;
+            }
+          }
+        }
+      }
     }
     &-order{
       background: #fff;
