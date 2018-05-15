@@ -7,9 +7,26 @@ import _ from 'lodash';
 import { message } from 'antd';
 import {
   INDEX_VIEW_INIT,
+  GET_ITEM,
+  GET_HOT_SALE,
+  GET_FIRST_FLOOR,
+  GET_SECOND_FLOOR,
+  GET_THIRD_FLOOR,
+  GET_FORTH_FLOOR,
+  GET_DAILY_SALE,
 } from '../constant/constant';
+import {
+  getItemApi,
+} from '../../../api/indexApi';
 
 const onViewInitAction = createAction(INDEX_VIEW_INIT);
+const getItemAction = createAction(GET_ITEM);
+const getHotSaleAction = createAction(GET_HOT_SALE);
+const getFirstAction = createAction(GET_FIRST_FLOOR);
+const getSecondAction = createAction(GET_SECOND_FLOOR);
+const getThirdAction = createAction(GET_THIRD_FLOOR);
+const getForthAction = createAction(GET_FORTH_FLOOR);
+const getDailySaleAction = createAction(GET_DAILY_SALE);
 
 /**
  * 视图初始化
@@ -17,5 +34,35 @@ const onViewInitAction = createAction(INDEX_VIEW_INIT);
 export const onViewInit = () => {
   return (dispatch) => {
     dispatch(onViewInitAction());
+  };
+};
+
+/**
+ * 获取到所有的商品
+ * return {*}
+ */
+export const getItem = () => {
+  return (dispatch) => {
+    getItemApi({}, (data) => {
+      if (data.code === 1) {
+        const hotSale = { ...data, data: data.data.filter((item) => { return item.position === 'hotSale'; }) };
+        const firstFloor = { ...data, data: data.data.filter((item) => { return item.position === 'firstFloor'; }) };
+        const secondFloor = { ...data, data: data.data.filter((item) => { return item.position === 'secondFloor'; }) };
+        const thirdFloor = { ...data, data: data.data.filter((item) => { return item.position === 'thirdFloor'; }) };
+        const forthFloor = { ...data, data: data.data.filter((item) => { return item.position === 'forthFloor'; }) };
+        const dailySale = { ...data, data: data.data.filter((item) => { return item.position === 'dailySale'; }) };
+        dispatch(getItemAction({ data }));
+        dispatch(getHotSaleAction({ data: hotSale }));
+        dispatch(getFirstAction({ data: firstFloor }));
+        dispatch(getSecondAction({ data: secondFloor }));
+        dispatch(getThirdAction({ data: thirdFloor }));
+        dispatch(getForthAction({ data: forthFloor }));
+        dispatch(getDailySaleAction({ data: dailySale }));
+      } else {
+        message.error('获取商品信息失败！');
+      }
+    }, (err) => {
+      message.error(err);
+    });
   };
 };
