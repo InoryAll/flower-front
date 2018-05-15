@@ -5,7 +5,7 @@
 class Cookie {
   static getCookie(name) {
     let arr;
-    const reg = new RegExp('(^| )"+name+"=([^;]*)(;|$)');
+    const reg = new RegExp('(^| )'+name+'=([^;]*)(;|$)');
     if (arr = document.cookie.match(reg)) {
       return decodeURIComponent(arr[2]);
     }
