@@ -14,9 +14,11 @@ import {
   GET_THIRD_FLOOR,
   GET_FORTH_FLOOR,
   GET_DAILY_SALE,
+  GET_CART,
 } from '../constant/constant';
 import {
   getItemApi,
+  getCartApi,
 } from '../../../api/indexApi';
 
 const onViewInitAction = createAction(INDEX_VIEW_INIT);
@@ -27,6 +29,7 @@ const getSecondAction = createAction(GET_SECOND_FLOOR);
 const getThirdAction = createAction(GET_THIRD_FLOOR);
 const getForthAction = createAction(GET_FORTH_FLOOR);
 const getDailySaleAction = createAction(GET_DAILY_SALE);
+const getCartAction = createAction(GET_CART);
 
 /**
  * 视图初始化
@@ -60,6 +63,25 @@ export const getItem = () => {
         dispatch(getDailySaleAction({ data: dailySale }));
       } else {
         message.error('获取商品信息失败！');
+      }
+    }, (err) => {
+      message.error(err);
+    });
+  };
+};
+
+/**
+ * 获取到购物车所有商品
+ * @param params 条件参数
+ * return {*}
+ */
+export const getCart = (params) => {
+  return (dispatch) => {
+    getCartApi({ userId: params._id }, (data) => {
+      if (data.code === 1) {
+        dispatch(getCartAction({ data }));
+      } else {
+        message.error('获取购物车信息失败！');
       }
     }, (err) => {
       message.error(err);

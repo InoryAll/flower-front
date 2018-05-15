@@ -17,6 +17,7 @@ import {
 import {
   onViewInit,
   getItem,
+  getCart,
 } from './action/action';
 import {
   validateLoginState,
@@ -40,6 +41,7 @@ class Index extends React.Component {
     onViewInit: PropTypes.func.isRequired,
     getItem: PropTypes.func.isRequired,
     validateLoginState: PropTypes.func.isRequired,
+    getCart: PropTypes.func.isRequired,
     items: PropTypes.object.isRequired,
     hotSale: PropTypes.object.isRequired,
     firstFloor: PropTypes.object.isRequired,
@@ -90,6 +92,7 @@ const mapDispatchToProps = {
   onViewInit,
   getItem,
   validateLoginState,
+  getCart,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Index);

@@ -12,6 +12,7 @@ import {
   GET_THIRD_FLOOR,
   GET_FORTH_FLOOR,
   GET_DAILY_SALE,
+  GET_CART,
 } from '../constant/constant';
 
 const initState = {
@@ -91,6 +92,17 @@ export function dailySale(state = initState, action) {
     case INDEX_VIEW_INIT:
       return state;
     case GET_DAILY_SALE:
+      return { ...state, ...action.payload };
+    default:
+      return state;
+  }
+}
+
+export function cart(state = initState, action) {
+  switch (action.type) {
+    case INDEX_VIEW_INIT:
+      return state;
+    case GET_CART:
       return { ...state, ...action.payload };
     default:
       return state;

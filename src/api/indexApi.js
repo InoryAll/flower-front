@@ -8,3 +8,8 @@ export const getItemApi = ajaxRequest.createAjax({
   method: 'GET',
   url: 'http://localhost:3000/item/getItem',
 });
+
+export const getCartApi = ajaxRequest.createAjax({
+  method: 'GET',
+  url: 'http://localhost:3000/cart/getCart',
+});

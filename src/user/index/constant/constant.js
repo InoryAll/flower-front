@@ -11,4 +11,4 @@ export const GET_SECOND_FLOOR = 'GET_SECOND_FLOOR';
 export const GET_THIRD_FLOOR = 'GET_THIRD_FLOOR';
 export const GET_FORTH_FLOOR = 'GET_FORTH_FLOOR';
 export const GET_DAILY_SALE = 'GET_DAILY_SALE';
-export const GET_CARTS = 'GET_CARTS';
+export const GET_CART = 'GET_CART';
