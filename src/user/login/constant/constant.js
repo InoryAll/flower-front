@@ -1,5 +1,5 @@
 /**
- * 鲜花销售系统constant类
+ * 鲜花销售系统登录constant类
  * Created by tianrenjie on 2018/5/15
  */
 

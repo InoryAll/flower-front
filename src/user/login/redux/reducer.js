@@ -1,5 +1,5 @@
 /**
- * 鲜花销售系统reducer类
+ * 鲜花销售系统登录reducer类
  * Created by tianrenjie on 2018/5/15
  */
 import {

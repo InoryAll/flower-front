@@ -1,5 +1,5 @@
 /**
- * 鲜花销售系统action类
+ * 鲜花销售系统登录action类
  * Created by tianrenjie on 2018/5/15
  */
 import { createAction } from 'redux-actions';
@@ -34,9 +34,7 @@ export const onViewInit = () => {
  */
 export const validateLoginState = () => {
   return (dispatch) => {
-    console.log(Cookie.getCookie('username'));
     if (!_.isEmpty(Cookie.getCookie('username'))) {
-      console.log(111);
       loginApi({ username: Cookie.getCookie('username') }, (data) => {
         dispatch(onValidateLoginStateAction({ data }));
       }, (err) => {

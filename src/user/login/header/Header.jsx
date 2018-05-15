@@ -22,7 +22,7 @@ class Header extends React.Component {
           <Col span={10} className="clearfix">
             <span className="login-header-tip">
               您好，欢迎来到花市鲜花网<br />还不是本站会员？立即
-              <Link to="" className="login-header-register">注册</Link>
+              <Link to="/regedit" className="login-header-register">注册</Link>
             </span>
           </Col>
         </Row>

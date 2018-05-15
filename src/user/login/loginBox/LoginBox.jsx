@@ -18,10 +18,12 @@ class LoginBox extends React.Component {
   state = {
     user: undefined,
   };
-  componentWillMount() {
-    this.setState({
-      user: this.props.user,
-    });
+  componentWillReceiveProps(nextProps) {
+    if (!_.isEqual(nextProps.user, this.props.user)) {
+      this.setState({
+        user: nextProps.user,
+      });
+    }
   }
   handleLogin = () => {
     const errors = [];
@@ -57,11 +59,11 @@ class LoginBox extends React.Component {
                 <div className="form-content">
                   <div className="username form-content-item">
                     <label htmlFor="username" className="form-content-item-label">账&emsp;号：</label>
-                    <input className="form-content-item-input" type="text" placeholder="使用已注册的用户名登录" name="username" id="username" value={user.username} />
+                    <input className="form-content-item-input" type="text" placeholder="使用已注册的用户名登录" name="username" id="username" value={user && user.username} />
                   </div>
                   <div className="password form-content-item">
                     <label htmlFor="password" className="form-content-item-label">密&emsp;码：</label>
-                    <input className="form-content-item-input" type="password" placeholder="6-20个大小写英文字母、符号或数字" name="password" id="password" value={user.password} />
+                    <input className="form-content-item-input" type="password" placeholder="6-20个大小写英文字母、符号或数字" name="password" id="password" value={user && user.password} />
                   </div>
                   <div className="form-content-check-box">
                     <label htmlFor="remember" className="form-content-check-box-label">

@@ -1,5 +1,5 @@
 /**
- * 鲜花销售系统selector类
+ * 鲜花销售系统登录selector类
  * Created by tianrenjie on 2018/5/15
  */
 
