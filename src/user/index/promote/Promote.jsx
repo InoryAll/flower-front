@@ -20,10 +20,10 @@ class Promote extends React.Component {
     return (
       <div className="promote">
         <ul className="promote-ul">
-          <li className="promote-ul-li"><Link className="promote-a" to="#"><img className="promote-a-img" src={this.state.imgArr[0]} alt="花之韵" /></Link></li>
-          <li className="promote-ul-li"><Link className="promote-a" to="#"><img className="promote-a-img" src={this.state.imgArr[1]} alt="花之韵" /></Link></li>
-          <li className="promote-ul-li"><Link className="promote-a" to="#"><img className="promote-a-img" src={this.state.imgArr[2]} alt="花之韵" /></Link></li>
-          <li className="promote-ul-li"><Link className="promote-a" to="#"><img className="promote-a-img" src={this.state.imgArr[3]} alt="花之韵" /></Link></li>
+          <li className="promote-ul-li"><Link className="promote-a"><img className="promote-a-img" src={this.state.imgArr[0]} alt="花之韵" /></Link></li>
+          <li className="promote-ul-li"><Link className="promote-a"><img className="promote-a-img" src={this.state.imgArr[1]} alt="花之韵" /></Link></li>
+          <li className="promote-ul-li"><Link className="promote-a"><img className="promote-a-img" src={this.state.imgArr[2]} alt="花之韵" /></Link></li>
+          <li className="promote-ul-li"><Link className="promote-a"><img className="promote-a-img" src={this.state.imgArr[3]} alt="花之韵" /></Link></li>
         </ul>
       </div>
     );

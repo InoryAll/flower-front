@@ -16,11 +16,14 @@ import img8 from '../../../../static/img/hotsale/2_2.jpg';
 import './HotSale.less';
 
 class HotSale extends React.Component {
-  static propTypes = {};
+  static propTypes = {
+    hotSale: PropTypes.object.isRequired,
+  };
   state = {
     imgArr: [img1, img2, img3, img4, img5, img6, img7, img8],
   };
   render() {
+    const { hotSale } = this.props;
     return (
       <div className="hotsale">
         <Row>
@@ -30,51 +33,51 @@ class HotSale extends React.Component {
         </Row>
         <Row className="hotsale-detail-row">
           <Col span={4}>
-            <Link className="hotsale-special-link" to="#"><img className="hotsale-special-link-img" src={this.state.imgArr[0]} alt="花之韵" /></Link>
+            <Link className="hotsale-special-link" to={`/itemDetail?id=${hotSale.data && hotSale.data.data[0]._id}`}><img className="hotsale-special-link-img" src={hotSale.data && hotSale.data.data[0].url} alt="花之韵" /></Link>
           </Col>
           <Col span={11}>
             <ul className="hotsale-ul">
               <li className="hotsale-ul-li">
-                <Link className="hotsale-link" to="#" >
-                  <p className="hotsale-link-p">携手一生</p>
-                  <img className="hotsale-link-img" src={this.state.imgArr[1]} alt="花之韵" />
+                <Link className="hotsale-link" to={`/itemDetail?id=${hotSale.data && hotSale.data.data[1]._id}`} >
+                  <p className="hotsale-link-p">{hotSale.data && hotSale.data.data[1].name}</p>
+                  <img className="hotsale-link-img" src={hotSale.data && hotSale.data.data[1].url} alt="花之韵" />
                 </Link>
               </li>
               <li className="hotsale-ul-li">
-                <Link className="hotsale-link" to="#" >
-                  <p className="hotsale-link-p">思念是一种病</p>
-                  <img className="hotsale-link-img" src={this.state.imgArr[2]} alt="花之韵" />
+                <Link className="hotsale-link" to={`/itemDetail?id=${hotSale.data && hotSale.data.data[2]._id}`} >
+                  <p className="hotsale-link-p">{hotSale.data && hotSale.data.data[2].name}</p>
+                  <img className="hotsale-link-img" src={hotSale.data && hotSale.data.data[2].url} alt="花之韵" />
                 </Link>
               </li>
               <li className="hotsale-ul-li">
-                <Link className="hotsale-link" to="#" >
-                  <p className="hotsale-link-p">爱的守护神</p>
-                  <img className="hotsale-link-img" src={this.state.imgArr[3]} alt="花之韵" />
+                <Link className="hotsale-link" to={`/itemDetail?id=${hotSale.data && hotSale.data.data[3]._id}`} >
+                  <p className="hotsale-link-p">{hotSale.data && hotSale.data.data[3].name}</p>
+                  <img className="hotsale-link-img" src={hotSale.data && hotSale.data.data[3].url} alt="花之韵" />
                 </Link>
               </li>
               <li className="hotsale-ul-li">
-                <Link className="hotsale-link" to="#" >
-                  <p className="hotsale-link-p">你是我的璀璨星光</p>
-                  <img className="hotsale-link-img" src={this.state.imgArr[4]} alt="花之韵" />
+                <Link className="hotsale-link" to={`/itemDetail?id=${hotSale.data && hotSale.data.data[4]._id}`} >
+                  <p className="hotsale-link-p">{hotSale.data && hotSale.data.data[4].name}</p>
+                  <img className="hotsale-link-img" src={hotSale.data && hotSale.data.data[4].url} alt="花之韵" />
                 </Link>
               </li>
             </ul>
           </Col>
           <Col span={4}>
-            <Link className="hotsale-special-link" to="#"><img className="hotsale-special-link-img" src={this.state.imgArr[5]} alt="花之韵" /></Link>
+            <Link className="hotsale-special-link" to={`/itemDetail?id=${hotSale.data && hotSale.data.data[5]._id}`}><img className="hotsale-special-link-img" src={hotSale.data && hotSale.data.data[5].url} alt="花之韵" /></Link>
           </Col>
           <Col span={5}>
             <ul className="hotsale-ul hotsale-ul-vertical">
               <li className="hotsale-ul-li">
-                <Link className="hotsale-link" to="#" >
-                  <p className="hotsale-link-p">风的光阴</p>
-                  <img className="hotsale-link-img" src={this.state.imgArr[6]} alt="花之韵" />
+                <Link className="hotsale-link" to={`/itemDetail?id=${hotSale.data && hotSale.data.data[6]._id}`} >
+                  <p className="hotsale-link-p">{hotSale.data && hotSale.data.data[6].name}</p>
+                  <img className="hotsale-link-img" src={hotSale.data && hotSale.data.data[6].url} alt="花之韵" />
                 </Link>
               </li>
               <li className="hotsale-ul-li">
-                <Link className="hotsale-link" to="#" >
-                  <p className="hotsale-link-p">梦中婚礼</p>
-                  <img className="hotsale-link-img" src={this.state.imgArr[7]} alt="花之韵" />
+                <Link className="hotsale-link" to={`/itemDetail?id=${hotSale.data && hotSale.data.data[7]._id}`} >
+                  <p className="hotsale-link-p">{hotSale.data && hotSale.data.data[7].name}</p>
+                  <img className="hotsale-link-img" src={hotSale.data && hotSale.data.data[7].url} alt="花之韵" />
                 </Link>
               </li>
             </ul>
