@@ -7,6 +7,10 @@ import {
   VALIDATE_LOGIN_STATE,
   DO_LOGIN,
 } from '../constant/constant';
+import {
+  REGEDIT_VIEW_INIT,
+  DO_REGEDIT,
+} from '../../regedit/constant/constant';
 
 const initState = {
   _id: undefined,
@@ -26,11 +30,14 @@ const initState = {
 export function user(state = initState, action) {
   switch (action.type) {
     case LOGIN_VIEW_INIT:
+    case REGEDIT_VIEW_INIT:
       return state;
     case VALIDATE_LOGIN_STATE :
-      return { ...state, ...action.payload.data.data[0] };
+      return { ...state, ...initState, ...action.payload.data.data[0] };
     case DO_LOGIN:
-      return { ...state, ...action.payload.data.data[0] };
+      return { ...state, ...initState, ...action.payload.data.data[0] };
+    case DO_REGEDIT:
+      return { ...state, ...initState, ...action.payload.data.data[0] };
     default:
       return state;
   }

@@ -4,3 +4,4 @@
  */
 
 export const REGEDIT_VIEW_INIT = 'REGEDIT_VIEW_INIT';
+export const DO_REGEDIT = 'DO_REGEDIT';

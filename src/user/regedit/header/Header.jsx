@@ -22,7 +22,7 @@ class Header extends React.Component {
           <Col span={10} className="clearfix">
             <span className="regedit-header-tip">
             我已经注册，现在就
-            <Link to="" className="regedit-header-login">登录</Link>
+            <Link to="/login" className="regedit-header-login">登录</Link>
             </span>
           </Col>
         </Row>

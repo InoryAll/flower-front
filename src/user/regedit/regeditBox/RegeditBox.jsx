@@ -4,14 +4,63 @@
  */
 import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
-import { Row, Col, Tabs } from 'antd';
+import $ from 'jquery';
+import { Row, Col, Tabs, message } from 'antd';
+import _ from 'lodash';
 import './RegeditBox.less';
 
 const TabPane = Tabs.TabPane;
 class RegeditBox extends React.Component {
-  static propTypes = {};
+  static propTypes = {
+    onRegedit: PropTypes.func.isRequired,
+  };
   handleTabClick = (key) => {
     console.log(key);
+  };
+  handleRegeditNormal = () => {
+    const errors = [];
+    var userObj = {
+      username: $('#form-1 #username').val(),
+      password: $('#form-1 #password').val(),
+      repassword: $('#form-1 #repassword').val(),
+      email: $('#form-1 #email').val(),
+      remember: $('#form-1 #remember').prop('checked'),
+    };
+    if (_.isEmpty(userObj.username)) {
+      errors.push('用户名不能为空！');
+    } else if (_.isEmpty(userObj.password)) {
+      errors.push('密码不能为空！');
+    } else if (!_.isEqual(userObj.password, userObj.repassword)) {
+      errors.push('两次输入的密码不一致！');
+    } else if (!/^\w+@[a-z0-9]+\.[a-z]{2,4}$/g.test(userObj.email)) {
+      errors.push('邮箱格式不正确！');
+    } else if (!userObj.remember) {
+      errors.push('请先同意协议！');
+    }
+    if (errors.length > 0) {
+      message.error(errors.join(','));
+    } else {
+      this.props.onRegedit(userObj);
+    }
+  };
+  handleRegeditQuick = () => {
+    const errors = [];
+    var userObj = {
+      username: $('#form-2 #phone').val(),
+      password: $('#form-2 #password').val(),
+      tel: $('#form-2 #phone').val(),
+      validate: $('#form-2 #validate').val(),
+    };
+    if (_.isEmpty(userObj.username)) {
+      errors.push('手机号不能为空！');
+    } else if (_.isEmpty(userObj.validate)) {
+      errors.push('手机验证码不能为空！');
+    }
+    if (errors.length > 0) {
+      message.error(errors.join(','));
+    } else {
+      this.props.onRegedit(userObj);
+    }
   };
   render() {
     return (
@@ -24,7 +73,7 @@ class RegeditBox extends React.Component {
                   <div className="regeditbox-dialog-left">
                     <Tabs defaultActiveKey="1" onChange={this.handleTabClick}>
                       <TabPane tab="账号注册" key="1">
-                        <form>
+                        <form id="form-1">
                           <div className="form-content">
                             <div className="username form-content-item">
                               <label htmlFor="username" className="form-content-item-label">用户名：</label>
@@ -49,13 +98,13 @@ class RegeditBox extends React.Component {
                               </label>
                             </div>
                             <div className="regeditbox-btn">
-                              <button className="regeditbox-btn-regedit" type="button">立即注册</button>
+                              <button className="regeditbox-btn-regedit" type="button" onClick={this.handleRegeditNormal}>立即注册</button>
                             </div>
                           </div>
                         </form>
                       </TabPane>
                       <TabPane tab="手机注册" key="2">
-                        <form>
+                        <form id="form-2">
                           <div className="form-content">
                             <div className="phone form-content-item">
                               <label htmlFor="phone" className="form-content-item-label">手机号：</label>
@@ -73,7 +122,7 @@ class RegeditBox extends React.Component {
                               <input className="form-content-item-input" type="password" placeholder="6-20个大小写英文字母、符号或数字" name="password" id="password" />
                             </div>
                             <div className="regeditbox-btn">
-                              <button className="regeditbox-btn-regedit" type="button">立即注册</button>
+                              <button className="regeditbox-btn-regedit" type="button" onClick={this.handleRegeditQuick}>立即注册</button>
                             </div>
                           </div>
                         </form>

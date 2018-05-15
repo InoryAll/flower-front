@@ -46,10 +46,10 @@ export const validateLoginState = () => {
 
 /**
  * 用户登录
- * @params 用户参数
+ * @param params 用户参数
  * return {*}
  */
-export const onLogin = ((params) => {
+export const onLogin = (params) => {
   return (dispatch) => {
     loginApi({ username: params.username }, (data) => {
       if (data.code === 1) {
@@ -60,9 +60,8 @@ export const onLogin = ((params) => {
             dispatch(onLoginAction({ data }));
             message.success('登陆成功！');
             setTimeout(() => {
-              dispatch(push({
-                pathname: '/',
-              }));
+            // eslint-disable-next-line
+             location.href = '/';
             }, 300);
           } else {
             message.error('密码错误，请重试！');
@@ -77,4 +76,4 @@ export const onLogin = ((params) => {
       message.error(err.message);
     });
   };
-});
+};
