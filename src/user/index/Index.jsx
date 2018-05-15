@@ -3,6 +3,11 @@
  * Created by tianrenjie on 2018/3/19
  */
 import React, { PropTypes } from 'react';
+import { connect } from 'react-redux';
+import { userSelector } from '../../user/login/selector/selector';
+import {
+  onViewInit,
+} from './action/action';
 import Header from './header/Header';
 import Search from './search/Search';
 import Navigation from './navigation/Navigation';
@@ -17,25 +22,41 @@ import DailySale from './dailySale/DailySale';
 import Footer from './footer/Footer';
 
 class Index extends React.Component {
-  static propTypes = {};
+  static propTypes = {
+    user: PropTypes.object.isRequired,
+    onViewInit: PropTypes.func.isRequired,
+  };
+  componentWillMount() {
+    this.props.onViewInit();
+  }
   render() {
     return (
       <div>
-        <Header />
-        <Search />
-        <Navigation />
-        <Banner />
-        <Promote />
-        <HotSale />
-        <FirstFloor />
-        <SecondFloor />
-        <ThirdFloor />
-        <ForthFloor />
-        <DailySale />
-        <Footer />
+        <Header {...this.props} />
+        <Search {...this.props} />
+        <Navigation {...this.props} />
+        <Banner {...this.props} />
+        <Promote {...this.props} />
+        <HotSale {...this.props} />
+        <FirstFloor {...this.props} />
+        <SecondFloor {...this.props} />
+        <ThirdFloor {...this.props} />
+        <ForthFloor {...this.props} />
+        <DailySale {...this.props} />
+        <Footer {...this.props} />
       </div>
     );
   }
 }
 
-export default Index;
+const mapStateToProps = (state) => {
+  return {
+    user: userSelector(state),
+  };
+};
+
+const mapDispatchToProps = {
+  onViewInit,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Index);

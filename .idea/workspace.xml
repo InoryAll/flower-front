@@ -2,18 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08c3298d-d019-4401-abb2-96f78fb0689a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/api/regeditApi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/api/indexApi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/common/setting.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/user/index/action/action.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/user/index/constant/constant.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/user/index/reducer/reducer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/user/index/selector/selector.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/login/action/action.js" afterPath="$PROJECT_DIR$/src/user/login/action/action.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/login/redux/reducer.js" afterPath="$PROJECT_DIR$/src/user/login/redux/reducer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/regedit/Regedit.jsx" afterPath="$PROJECT_DIR$/src/user/regedit/Regedit.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/regedit/action/action.js" afterPath="$PROJECT_DIR$/src/user/regedit/action/action.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/regedit/constant/constant.js" afterPath="$PROJECT_DIR$/src/user/regedit/constant/constant.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/regedit/header/Header.jsx" afterPath="$PROJECT_DIR$/src/user/regedit/header/Header.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/regedit/reducer/reducer.js" afterPath="$PROJECT_DIR$/src/user/regedit/reducer/reducer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/regedit/regeditBox/RegeditBox.jsx" afterPath="$PROJECT_DIR$/src/user/regedit/regeditBox/RegeditBox.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/regedit/regeditBox/RegeditBox.less" afterPath="$PROJECT_DIR$/src/user/regedit/regeditBox/RegeditBox.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/regedit/selector/selector.js" afterPath="$PROJECT_DIR$/src/user/regedit/selector/selector.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/index/Index.jsx" afterPath="$PROJECT_DIR$/src/user/index/Index.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/index/header/Header.jsx" afterPath="$PROJECT_DIR$/src/user/index/header/Header.jsx" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,11 +25,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="action.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/user/regedit/action/action.js">
+      <file leaf-file-name="action.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/user/index/action/action.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="44" column="43" lean-forward="false" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="43" />
+            <state relative-caret-position="245">
+              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#65#110#0" expanded="true" />
@@ -41,37 +38,34 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="constant.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/user/index/constant/constant.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="reducer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/user/login/redux/reducer.js">
+        <entry file="file://$PROJECT_DIR$/src/user/index/reducer/reducer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="38" column="20" lean-forward="true" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
+            <state relative-caret-position="336">
+              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <element signature="e#66#160#0" expanded="true" />
+                <element signature="e#66#124#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="store.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/store.js">
+      <file leaf-file-name="selector.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/user/index/selector/selector.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="13" column="21" lean-forward="true" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="e#55#87#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="webpack.config.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webpack.config.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+            <state relative-caret-position="245">
+              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -79,11 +73,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Regedit.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/user/regedit/Regedit.jsx">
+      <file leaf-file-name="Index.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/user/index/Index.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-35">
-              <caret line="20" column="41" lean-forward="true" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+            <state relative-caret-position="231">
+              <caret line="27" column="4" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#56#97#0" expanded="true" />
@@ -92,61 +86,174 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RegeditBox.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/user/regedit/regeditBox/RegeditBox.jsx">
+      <file leaf-file-name="setting.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/common/setting.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="18" column="4" lean-forward="true" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+            <state relative-caret-position="280">
+              <caret line="344" column="24" lean-forward="true" selection-start-line="344" selection-start-column="24" selection-end-line="344" selection-end-column="24" />
               <folding>
-                <element signature="e#58#99#0" expanded="true" />
+                <element signature="n#!!doc;n#Settings#0" expanded="false" />
+                <element signature="n#!!block;n#initSettings#0;n#Settings#0" expanded="false" />
+                <element signature="e#116#664#0" expanded="false" />
+                <element signature="e#117#166#0" expanded="false" />
+                <element signature="e#168#221#0" expanded="false" />
+                <element signature="e#223#276#0" expanded="false" />
+                <element signature="e#278#333#0" expanded="false" />
+                <element signature="e#335#389#0" expanded="false" />
+                <element signature="e#391#443#0" expanded="false" />
+                <element signature="e#445#497#0" expanded="false" />
+                <element signature="e#499#552#0" expanded="false" />
+                <element signature="e#554#613#0" expanded="false" />
+                <element signature="e#615#663#0" expanded="false" />
+                <element signature="e#686#1164#0" expanded="false" />
+                <element signature="e#687#734#0" expanded="false" />
+                <element signature="e#736#783#0" expanded="false" />
+                <element signature="e#785#838#0" expanded="false" />
+                <element signature="e#840#894#0" expanded="false" />
+                <element signature="e#896#945#0" expanded="false" />
+                <element signature="e#947#997#0" expanded="false" />
+                <element signature="e#999#1049#0" expanded="false" />
+                <element signature="e#1051#1106#0" expanded="false" />
+                <element signature="e#1108#1163#0" expanded="false" />
+                <element signature="e#1183#1486#0" expanded="false" />
+                <element signature="e#1184#1241#0" expanded="false" />
+                <element signature="e#1243#1302#0" expanded="false" />
+                <element signature="e#1304#1364#0" expanded="false" />
+                <element signature="e#1366#1426#0" expanded="false" />
+                <element signature="e#1428#1485#0" expanded="false" />
+                <element signature="e#1506#1916#0" expanded="false" />
+                <element signature="e#1507#1555#0" expanded="false" />
+                <element signature="e#1557#1606#0" expanded="false" />
+                <element signature="e#1608#1657#0" expanded="false" />
+                <element signature="e#1659#1708#0" expanded="false" />
+                <element signature="e#1710#1760#0" expanded="false" />
+                <element signature="e#1762#1813#0" expanded="false" />
+                <element signature="e#1815#1863#0" expanded="false" />
+                <element signature="e#1865#1915#0" expanded="false" />
+                <element signature="e#1937#2492#0" expanded="false" />
+                <element signature="e#1938#1998#0" expanded="false" />
+                <element signature="e#2000#2053#0" expanded="false" />
+                <element signature="e#2055#2104#0" expanded="false" />
+                <element signature="e#2106#2156#0" expanded="false" />
+                <element signature="e#2158#2210#0" expanded="false" />
+                <element signature="e#2212#2265#0" expanded="false" />
+                <element signature="e#2267#2328#0" expanded="false" />
+                <element signature="e#2330#2386#0" expanded="false" />
+                <element signature="e#2388#2438#0" expanded="false" />
+                <element signature="e#2440#2491#0" expanded="false" />
+                <element signature="e#2512#3136#0" expanded="false" />
+                <element signature="e#2513#2557#0" expanded="false" />
+                <element signature="e#2559#2605#0" expanded="false" />
+                <element signature="e#2607#2653#0" expanded="false" />
+                <element signature="e#2655#2701#0" expanded="false" />
+                <element signature="e#2703#2749#0" expanded="false" />
+                <element signature="e#2751#2797#0" expanded="false" />
+                <element signature="e#2799#2845#0" expanded="false" />
+                <element signature="e#2847#2893#0" expanded="false" />
+                <element signature="e#2895#2941#0" expanded="false" />
+                <element signature="e#2943#2989#0" expanded="false" />
+                <element signature="e#2991#3037#0" expanded="false" />
+                <element signature="e#3039#3085#0" expanded="false" />
+                <element signature="e#3087#3135#0" expanded="false" />
+                <element signature="e#3154#3682#0" expanded="false" />
+                <element signature="e#3155#3203#0" expanded="false" />
+                <element signature="e#3205#3254#0" expanded="false" />
+                <element signature="e#3256#3306#0" expanded="false" />
+                <element signature="e#3308#3359#0" expanded="false" />
+                <element signature="e#3361#3416#0" expanded="false" />
+                <element signature="e#3418#3466#0" expanded="false" />
+                <element signature="e#3468#3520#0" expanded="false" />
+                <element signature="e#3522#3578#0" expanded="false" />
+                <element signature="e#3580#3631#0" expanded="false" />
+                <element signature="e#3633#3681#0" expanded="false" />
+                <element signature="e#3701#4157#0" expanded="false" />
+                <element signature="e#3702#3748#0" expanded="false" />
+                <element signature="e#3750#3797#0" expanded="false" />
+                <element signature="e#3799#3848#0" expanded="false" />
+                <element signature="e#3850#3899#0" expanded="false" />
+                <element signature="e#3901#3949#0" expanded="false" />
+                <element signature="e#3951#3998#0" expanded="false" />
+                <element signature="e#4000#4053#0" expanded="false" />
+                <element signature="e#4055#4106#0" expanded="false" />
+                <element signature="e#4108#4156#0" expanded="false" />
+                <element signature="n#!!block;n#mapLabelToValue#0;n#Settings#0" expanded="false" />
+                <element signature="e#4256#4353#0" expanded="false" />
+                <element signature="e#4290#4328#0" expanded="false" />
+                <element signature="e#4395#4492#0" expanded="false" />
+                <element signature="e#4429#4467#0" expanded="false" />
+                <element signature="e#4531#4628#0" expanded="false" />
+                <element signature="e#4565#4603#0" expanded="false" />
+                <element signature="e#4668#4765#0" expanded="false" />
+                <element signature="e#4702#4740#0" expanded="false" />
+                <element signature="e#4806#4903#0" expanded="false" />
+                <element signature="e#4840#4878#0" expanded="false" />
+                <element signature="e#4943#5040#0" expanded="false" />
+                <element signature="e#4977#5015#0" expanded="false" />
+                <element signature="e#5078#5175#0" expanded="false" />
+                <element signature="e#5112#5150#0" expanded="false" />
+                <element signature="e#5214#5311#0" expanded="false" />
+                <element signature="e#5248#5286#0" expanded="false" />
+                <element signature="n#!!block;n#mapValueToLabel#0;n#Settings#0" expanded="false" />
+                <element signature="e#5430#5527#0" expanded="false" />
+                <element signature="e#5464#5502#0" expanded="false" />
+                <element signature="e#5569#5666#0" expanded="false" />
+                <element signature="e#5603#5641#0" expanded="false" />
+                <element signature="e#5705#5802#0" expanded="false" />
+                <element signature="e#5739#5777#0" expanded="false" />
+                <element signature="e#5842#5939#0" expanded="false" />
+                <element signature="e#5876#5914#0" expanded="false" />
+                <element signature="e#5980#6077#0" expanded="false" />
+                <element signature="e#6014#6052#0" expanded="false" />
+                <element signature="e#6117#6214#0" expanded="false" />
+                <element signature="e#6151#6189#0" expanded="false" />
+                <element signature="e#6252#6349#0" expanded="false" />
+                <element signature="e#6286#6324#0" expanded="false" />
+                <element signature="e#6388#6485#0" expanded="false" />
+                <element signature="e#6422#6460#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RegeditBox.less" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/user/regedit/regeditBox/RegeditBox.less">
+      <file leaf-file-name="ItemFilter.less" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/user/itemList/itemFilter/ItemFilter.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="92" column="23" lean-forward="false" selection-start-line="92" selection-start-column="23" selection-end-line="92" selection-end-column="23" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="router.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/router.jsx">
+      <file leaf-file-name="ItemFilter.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/user/itemList/itemFilter/ItemFilter.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+            <state relative-caret-position="280">
+              <caret line="77" column="251" lean-forward="false" selection-start-line="77" selection-start-column="248" selection-end-line="77" selection-end-column="251" />
               <folding>
-                <element signature="e#54#80#0" expanded="true" />
+                <element signature="n#!!doc" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="action.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/user/login/action/action.js">
+      <file leaf-file-name="cookie.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/common/cookie.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
-              <caret line="63" column="33" lean-forward="true" selection-start-line="62" selection-start-column="11" selection-end-line="63" selection-end-column="33" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="e#65#110#0" expanded="true" />
-              </folding>
+              <caret line="11" column="16" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/index.jsx">
+      <file leaf-file-name="Header.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/user/index/header/Header.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="11" column="16" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+            <state relative-caret-position="350">
+              <caret line="29" column="51" lean-forward="true" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <element signature="e#54#80#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -223,14 +330,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/user/itemDetail/ItemDeatil.jsx" />
-        <option value="$PROJECT_DIR$/src/user/itemDetail/itemOther/itemComment/ItemComment.jsx" />
-        <option value="$PROJECT_DIR$/src/user/itemDetail/itemOther/ItemOther.jsx" />
-        <option value="$PROJECT_DIR$/src/user/itemDetail/itemOther/ItemOther.less" />
-        <option value="$PROJECT_DIR$/src/user/itemDetail/itemOther/itemComment/ItemComment.less" />
-        <option value="$PROJECT_DIR$/src/user/itemDetail/itemInfo/ItemInfo.less" />
-        <option value="$PROJECT_DIR$/src/user/itemList/itemList/itemSelf/ItemSelf.less" />
-        <option value="$PROJECT_DIR$/src/user/shoppingCart/ShoppingCart.jsx" />
         <option value="$PROJECT_DIR$/src/user/shoppingCart/shoppingSteps/ShoppingSteps.less" />
         <option value="$PROJECT_DIR$/src/user/shoppingCart/shoppingSteps/ShoppingSteps.jsx" />
         <option value="$PROJECT_DIR$/src/user/shoppingCart/shoppingList/ShoppingList.less" />
@@ -274,6 +373,14 @@
         <option value="$PROJECT_DIR$/src/store.js" />
         <option value="$PROJECT_DIR$/src/user/login/action/action.js" />
         <option value="$PROJECT_DIR$/src/user/regedit/action/action.js" />
+        <option value="$PROJECT_DIR$/src/user/index/constant/constant.js" />
+        <option value="$PROJECT_DIR$/src/api/indexApi.js" />
+        <option value="$PROJECT_DIR$/src/user/index/reducer/reducer.js" />
+        <option value="$PROJECT_DIR$/src/user/index/selector/selector.js" />
+        <option value="$PROJECT_DIR$/src/user/index/action/action.js" />
+        <option value="$PROJECT_DIR$/src/user/index/header/Header.jsx" />
+        <option value="$PROJECT_DIR$/src/user/index/Index.jsx" />
+        <option value="$PROJECT_DIR$/src/common/setting.js" />
       </list>
     </option>
   </component>
@@ -300,9 +407,9 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
+    <option name="x" value="-110" />
+    <option name="y" value="3" />
+    <option name="width" value="1625" />
     <option name="height" value="1098" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -421,7 +528,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="regedit" />
+              <option name="myItemId" value="itemList" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -443,267 +550,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="regedit" />
+              <option name="myItemId" value="itemList" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="selector" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flower-front" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flower-front" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="user" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="regedit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="regeditBox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flower-front" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flower-front" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="user" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="regedit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reducer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flower-front" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flower-front" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="user" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="regedit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="header" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flower-front" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flower-front" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="user" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="regedit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="constant" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flower-front" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flower-front" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="user" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="regedit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="action" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flower-front" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flower-front" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="user" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="login" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flower-front" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flower-front" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="user" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="login" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="selector" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flower-front" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flower-front" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="user" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="login" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redux" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flower-front" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flower-front" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="user" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="login" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loginBox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flower-front" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flower-front" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="user" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="login" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="action" />
+              <option name="myItemId" value="itemFilter" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -912,12 +763,12 @@
       <workItem from="1526377956691" duration="1454000" />
       <workItem from="1526379423759" duration="22000" />
       <workItem from="1526379514825" duration="1119000" />
-      <workItem from="1526383860098" duration="8859000" />
+      <workItem from="1526383860098" duration="15359000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="325390000" />
+    <option name="totallyTimeSpent" value="331890000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -929,17 +780,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1098" extended-state="6" />
+    <frame x="-110" y="3" width="1625" height="1098" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26479915" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3172894" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3279743" sideWeight="0.49788582" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34619507" sideWeight="0.2975687" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34619507" sideWeight="0.50422835" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3279743" sideWeight="0.49577168" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34297964" sideWeight="0.4936575" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.77683955" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34619507" sideWeight="0.70243126" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34619507" sideWeight="0.70243126" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -948,7 +800,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3279743" sideWeight="0.49788582" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -965,83 +816,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/user/itemList/ItemList.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="3" column="3" lean-forward="false" selection-start-line="1" selection-start-column="2" selection-end-line="3" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/itemList/itemFilter/ItemFilter.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="5" column="8" lean-forward="true" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/shoppingPay/ShoppingPay.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/shoppingPay/shoppingCode/ShoppingCode.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="11" column="21" lean-forward="false" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/shoppingCart/shoppingSteps/ShoppingSteps.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="7" column="9" lean-forward="false" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/index/navigation/category/Category.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="9" column="3" lean-forward="false" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/react.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1902">
-          <caret line="2017" column="38" lean-forward="true" selection-start-line="2017" selection-start-column="38" selection-end-line="2017" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/checkInfo/CheckInfo.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/checkInfo/checkForm/CheckForm.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1470">
-          <caret line="42" column="26" lean-forward="false" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/checkInfo/checkForm/CheckForm.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/shoppingCart/ShoppingCart.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="17" column="18" lean-forward="false" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/user/itemList/ItemList.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="455">
@@ -1147,8 +921,8 @@
         <state relative-caret-position="140">
           <caret line="8" column="7" lean-forward="false" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#58#98#0" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#58#98#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1161,21 +935,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/cookie.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="11" column="16" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/user/login/header/Header.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="3" column="3" lean-forward="true" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#59#100#0" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#59#100#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1193,18 +959,8 @@
         <state relative-caret-position="544">
           <caret line="33" column="13" lean-forward="false" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#57#98#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/api/loginApi.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="8" column="47" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="47" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#57#98#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1214,7 +970,7 @@
         <state relative-caret-position="210">
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1267,8 +1023,8 @@
         <state relative-caret-position="372">
           <caret line="44" column="12" lean-forward="true" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="12" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#61#102#0" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#61#102#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1278,7 +1034,7 @@
         <state relative-caret-position="105">
           <caret line="19" column="18" lean-forward="true" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1288,8 +1044,8 @@
         <state relative-caret-position="-35">
           <caret line="20" column="41" lean-forward="true" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#56#97#0" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#56#97#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1318,7 +1074,7 @@
         <state relative-caret-position="266">
           <caret line="18" column="4" lean-forward="true" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
           <folding>
-            <element signature="e#58#99#0" expanded="true" />
+            <element signature="e#58#99#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1328,7 +1084,7 @@
         <state relative-caret-position="560">
           <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
           <folding>
-            <element signature="e#54#80#0" expanded="true" />
+            <element signature="e#54#80#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1338,7 +1094,7 @@
         <state relative-caret-position="280">
           <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1348,8 +1104,8 @@
         <state relative-caret-position="175">
           <caret line="11" column="16" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#54#80#0" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#54#80#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1359,30 +1115,272 @@
         <state relative-caret-position="350">
           <caret line="13" column="21" lean-forward="true" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#55#87#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/login/action/action.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="63" column="33" lean-forward="true" selection-start-line="62" selection-start-column="11" selection-end-line="63" selection-end-column="33" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#65#110#0" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#55#87#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/user/regedit/action/action.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="44" column="43" lean-forward="false" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="43" />
+        <state relative-caret-position="280">
+          <caret line="47" column="34" lean-forward="true" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#65#110#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/user/login/action/action.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-35">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="31" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/loginApi.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="3" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/indexApi.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="12" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#54#95#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/user/index/header/Header.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="29" column="51" lean-forward="true" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/user/index/reducer/reducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#66#124#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/user/index/selector/selector.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/user/index/action/action.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#65#110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/user/index/constant/constant.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/user/index/Index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="27" column="4" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#56#97#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/user/itemList/itemFilter/ItemFilter.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/cookie.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="11" column="16" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/user/itemList/itemFilter/ItemFilter.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="77" column="251" lean-forward="false" selection-start-line="77" selection-start-column="248" selection-end-line="77" selection-end-column="251" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/setting.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="344" column="24" lean-forward="true" selection-start-line="344" selection-start-column="24" selection-end-line="344" selection-end-column="24" />
+          <folding>
+            <element signature="n#!!doc;n#Settings#0" expanded="false" />
+            <element signature="n#!!block;n#initSettings#0;n#Settings#0" expanded="false" />
+            <element signature="e#116#664#0" expanded="false" />
+            <element signature="e#117#166#0" expanded="false" />
+            <element signature="e#168#221#0" expanded="false" />
+            <element signature="e#223#276#0" expanded="false" />
+            <element signature="e#278#333#0" expanded="false" />
+            <element signature="e#335#389#0" expanded="false" />
+            <element signature="e#391#443#0" expanded="false" />
+            <element signature="e#445#497#0" expanded="false" />
+            <element signature="e#499#552#0" expanded="false" />
+            <element signature="e#554#613#0" expanded="false" />
+            <element signature="e#615#663#0" expanded="false" />
+            <element signature="e#686#1164#0" expanded="false" />
+            <element signature="e#687#734#0" expanded="false" />
+            <element signature="e#736#783#0" expanded="false" />
+            <element signature="e#785#838#0" expanded="false" />
+            <element signature="e#840#894#0" expanded="false" />
+            <element signature="e#896#945#0" expanded="false" />
+            <element signature="e#947#997#0" expanded="false" />
+            <element signature="e#999#1049#0" expanded="false" />
+            <element signature="e#1051#1106#0" expanded="false" />
+            <element signature="e#1108#1163#0" expanded="false" />
+            <element signature="e#1183#1486#0" expanded="false" />
+            <element signature="e#1184#1241#0" expanded="false" />
+            <element signature="e#1243#1302#0" expanded="false" />
+            <element signature="e#1304#1364#0" expanded="false" />
+            <element signature="e#1366#1426#0" expanded="false" />
+            <element signature="e#1428#1485#0" expanded="false" />
+            <element signature="e#1506#1916#0" expanded="false" />
+            <element signature="e#1507#1555#0" expanded="false" />
+            <element signature="e#1557#1606#0" expanded="false" />
+            <element signature="e#1608#1657#0" expanded="false" />
+            <element signature="e#1659#1708#0" expanded="false" />
+            <element signature="e#1710#1760#0" expanded="false" />
+            <element signature="e#1762#1813#0" expanded="false" />
+            <element signature="e#1815#1863#0" expanded="false" />
+            <element signature="e#1865#1915#0" expanded="false" />
+            <element signature="e#1937#2492#0" expanded="false" />
+            <element signature="e#1938#1998#0" expanded="false" />
+            <element signature="e#2000#2053#0" expanded="false" />
+            <element signature="e#2055#2104#0" expanded="false" />
+            <element signature="e#2106#2156#0" expanded="false" />
+            <element signature="e#2158#2210#0" expanded="false" />
+            <element signature="e#2212#2265#0" expanded="false" />
+            <element signature="e#2267#2328#0" expanded="false" />
+            <element signature="e#2330#2386#0" expanded="false" />
+            <element signature="e#2388#2438#0" expanded="false" />
+            <element signature="e#2440#2491#0" expanded="false" />
+            <element signature="e#2512#3136#0" expanded="false" />
+            <element signature="e#2513#2557#0" expanded="false" />
+            <element signature="e#2559#2605#0" expanded="false" />
+            <element signature="e#2607#2653#0" expanded="false" />
+            <element signature="e#2655#2701#0" expanded="false" />
+            <element signature="e#2703#2749#0" expanded="false" />
+            <element signature="e#2751#2797#0" expanded="false" />
+            <element signature="e#2799#2845#0" expanded="false" />
+            <element signature="e#2847#2893#0" expanded="false" />
+            <element signature="e#2895#2941#0" expanded="false" />
+            <element signature="e#2943#2989#0" expanded="false" />
+            <element signature="e#2991#3037#0" expanded="false" />
+            <element signature="e#3039#3085#0" expanded="false" />
+            <element signature="e#3087#3135#0" expanded="false" />
+            <element signature="e#3154#3682#0" expanded="false" />
+            <element signature="e#3155#3203#0" expanded="false" />
+            <element signature="e#3205#3254#0" expanded="false" />
+            <element signature="e#3256#3306#0" expanded="false" />
+            <element signature="e#3308#3359#0" expanded="false" />
+            <element signature="e#3361#3416#0" expanded="false" />
+            <element signature="e#3418#3466#0" expanded="false" />
+            <element signature="e#3468#3520#0" expanded="false" />
+            <element signature="e#3522#3578#0" expanded="false" />
+            <element signature="e#3580#3631#0" expanded="false" />
+            <element signature="e#3633#3681#0" expanded="false" />
+            <element signature="e#3701#4157#0" expanded="false" />
+            <element signature="e#3702#3748#0" expanded="false" />
+            <element signature="e#3750#3797#0" expanded="false" />
+            <element signature="e#3799#3848#0" expanded="false" />
+            <element signature="e#3850#3899#0" expanded="false" />
+            <element signature="e#3901#3949#0" expanded="false" />
+            <element signature="e#3951#3998#0" expanded="false" />
+            <element signature="e#4000#4053#0" expanded="false" />
+            <element signature="e#4055#4106#0" expanded="false" />
+            <element signature="e#4108#4156#0" expanded="false" />
+            <element signature="n#!!block;n#mapLabelToValue#0;n#Settings#0" expanded="false" />
+            <element signature="e#4256#4353#0" expanded="false" />
+            <element signature="e#4290#4328#0" expanded="false" />
+            <element signature="e#4395#4492#0" expanded="false" />
+            <element signature="e#4429#4467#0" expanded="false" />
+            <element signature="e#4531#4628#0" expanded="false" />
+            <element signature="e#4565#4603#0" expanded="false" />
+            <element signature="e#4668#4765#0" expanded="false" />
+            <element signature="e#4702#4740#0" expanded="false" />
+            <element signature="e#4806#4903#0" expanded="false" />
+            <element signature="e#4840#4878#0" expanded="false" />
+            <element signature="e#4943#5040#0" expanded="false" />
+            <element signature="e#4977#5015#0" expanded="false" />
+            <element signature="e#5078#5175#0" expanded="false" />
+            <element signature="e#5112#5150#0" expanded="false" />
+            <element signature="e#5214#5311#0" expanded="false" />
+            <element signature="e#5248#5286#0" expanded="false" />
+            <element signature="n#!!block;n#mapValueToLabel#0;n#Settings#0" expanded="false" />
+            <element signature="e#5430#5527#0" expanded="false" />
+            <element signature="e#5464#5502#0" expanded="false" />
+            <element signature="e#5569#5666#0" expanded="false" />
+            <element signature="e#5603#5641#0" expanded="false" />
+            <element signature="e#5705#5802#0" expanded="false" />
+            <element signature="e#5739#5777#0" expanded="false" />
+            <element signature="e#5842#5939#0" expanded="false" />
+            <element signature="e#5876#5914#0" expanded="false" />
+            <element signature="e#5980#6077#0" expanded="false" />
+            <element signature="e#6014#6052#0" expanded="false" />
+            <element signature="e#6117#6214#0" expanded="false" />
+            <element signature="e#6151#6189#0" expanded="false" />
+            <element signature="e#6252#6349#0" expanded="false" />
+            <element signature="e#6286#6324#0" expanded="false" />
+            <element signature="e#6388#6485#0" expanded="false" />
+            <element signature="e#6422#6460#0" expanded="false" />
           </folding>
         </state>
       </provider>

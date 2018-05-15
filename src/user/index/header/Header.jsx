@@ -29,7 +29,6 @@ class Header extends React.Component {
               <li className="menu-row-ul-li"><Link to="" className="menu-row-ul-li-a menu-row-ul-li-a-active">登录</Link></li>
               <li className="menu-row-ul-li"><Link to="" className="menu-row-ul-li-a">投诉建议</Link></li>
               <li className="menu-row-ul-li"><Link to="" className="menu-row-ul-li-a">我的订单</Link></li>
-              <li className="menu-row-ul-li"><Link to="" className="menu-row-ul-li-a">商品收藏</Link></li>
             </ul>
           </Col>
         </Row>
