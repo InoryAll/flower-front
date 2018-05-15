@@ -15,11 +15,14 @@ import img6 from '../../../../static/img/dailySale/6.jpg';
 import './DailySale.less';
 
 class DailySale extends React.Component {
-  static propTypes = {};
+  static propTypes = {
+    dailySale: PropTypes.object.isRequired,
+  };
   state = {
     imgArr: [],
   };
   render() {
+    const { dailySale } = this.props;
     return (
       <div className="dailysale">
         <Row>
@@ -30,38 +33,38 @@ class DailySale extends React.Component {
         <Row className="dailysale-list">
           <Col span={4}>
             <FloorBasic
-              top={{ url: '#', img: img1, text: '最美的时光' }}
-              bottom={{ nowPrice: '￥169.00', prePrice: '' }}
+              top={{ url: `/itemDetail?id=${dailySale.data && dailySale.data.data[0]._id}`, img: dailySale.data && dailySale.data.data[0].url, text: dailySale.data && dailySale.data.data[0].name }}
+              bottom={{ nowPrice: dailySale.data && dailySale.data.data[0].nowPrice, prePrice: dailySale.data && dailySale.data.data[0].prePrice }}
             />
           </Col>
           <Col span={4}>
             <FloorBasic
-              top={{ url: '#', img: img2, text: '思念不悟' }}
-              bottom={{ nowPrice: '￥160.00', prePrice: '' }}
+              top={{ url: `/itemDetail?id=${dailySale.data && dailySale.data.data[1]._id}`, img: dailySale.data && dailySale.data.data[1].url, text: dailySale.data && dailySale.data.data[1].name }}
+              bottom={{ nowPrice: dailySale.data && dailySale.data.data[1].nowPrice, prePrice: dailySale.data && dailySale.data.data[1].prePrice }}
             />
           </Col>
           <Col span={4}>
             <FloorBasic
-              top={{ url: '#', img: img3, text: '盛世独宠' }}
-              bottom={{ nowPrice: '￥239.00', prePrice: '' }}
+              top={{ url: `/itemDetail?id=${dailySale.data && dailySale.data.data[2]._id}`, img: dailySale.data && dailySale.data.data[2].url, text: dailySale.data && dailySale.data.data[2].name }}
+              bottom={{ nowPrice: dailySale.data && dailySale.data.data[2].nowPrice, prePrice: dailySale.data && dailySale.data.data[2].prePrice }}
             />
           </Col>
           <Col span={4}>
             <FloorBasic
-              top={{ url: '#', img: img6, text: '恋恋勿忘' }}
-              bottom={{ nowPrice: '￥308.00', prePrice: '' }}
+              top={{ url: `/itemDetail?id=${dailySale.data && dailySale.data.data[3]._id}`, img: dailySale.data && dailySale.data.data[3].url, text: dailySale.data && dailySale.data.data[3].name }}
+              bottom={{ nowPrice: dailySale.data && dailySale.data.data[3].nowPrice, prePrice: dailySale.data && dailySale.data.data[3].prePrice }}
             />
           </Col>
           <Col span={4}>
             <FloorBasic
-              top={{ url: '#', img: img4, text: '真诚不变的爱' }}
-              bottom={{ nowPrice: '￥295.00', prePrice: '' }}
+              top={{ url: `/itemDetail?id=${dailySale.data && dailySale.data.data[4]._id}`, img: dailySale.data && dailySale.data.data[4].url, text: dailySale.data && dailySale.data.data[4].name }}
+              bottom={{ nowPrice: dailySale.data && dailySale.data.data[4].nowPrice, prePrice: dailySale.data && dailySale.data.data[4].prePrice }}
             />
           </Col>
           <Col span={4}>
             <FloorBasic
-              top={{ url: '#', img: img5, text: '心跳的感觉' }}
-              bottom={{ nowPrice: '￥359.00', prePrice: '' }}
+              top={{ url: `/itemDetail?id=${dailySale.data && dailySale.data.data[5]._id}`, img: dailySale.data && dailySale.data.data[5].url, text: dailySale.data && dailySale.data.data[5].name }}
+              bottom={{ nowPrice: dailySale.data && dailySale.data.data[5].nowPrice, prePrice: dailySale.data && dailySale.data.data[5].prePrice }}
             />
           </Col>
         </Row>

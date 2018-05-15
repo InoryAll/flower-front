@@ -20,7 +20,9 @@ import basic7 from '../../../../static/img/forthFloor/floorBasic/7.jpg';
 import './ForthFloor.less';
 
 class ForthFloor extends React.Component {
-  static propTypes = {};
+  static propTypes = {
+    forthFloor: PropTypes.object.isRequired,
+  };
   state = {
     menuItem: 'default',
   };
@@ -31,6 +33,7 @@ class ForthFloor extends React.Component {
     });
   };
   render() {
+    const { forthFloor } = this.props;
     return (
       <div className="forthfloor">
         <Row>
@@ -49,7 +52,7 @@ class ForthFloor extends React.Component {
           <Col span={4}>
             <FloorSpecific
               top={{ img: specific1 }}
-              middle={{ bg: '#a6c7ec', url: '#', text: '花篮绿植' }}
+              middle={{ bg: '#a6c7ec', url: '/itemList', text: '花篮绿植' }}
               bottom={{ bg: '#d4e9ff',
                 data: [{
                   text: '开业花篮',
@@ -79,42 +82,42 @@ class ForthFloor extends React.Component {
             <Row>
               <Col span={8}>
                 <FloorBasic
-                  top={{ url: '#', img: basic1, text: '金玉满堂 单个' }}
-                  bottom={{ nowPrice: '￥209.00', prePrice: '￥468.00' }}
+                  top={{ url: `/itemDetail?id=${forthFloor.data && forthFloor.data.data[0]._id}`, img: forthFloor.data && forthFloor.data.data[0].url, text: forthFloor.data && forthFloor.data.data[0].name }}
+                  bottom={{ nowPrice: forthFloor.data && forthFloor.data.data[0].nowPrice, prePrice: forthFloor.data && forthFloor.data.data[0].prePrice }}
                 />
               </Col>
               <Col span={8}>
                 <FloorBasic
-                  top={{ url: '#', img: basic2, text: '鸿途非凡 单个' }}
-                  bottom={{ nowPrice: '￥278.00', prePrice: '￥399.00' }}
+                  top={{ url: `/itemDetail?id=${forthFloor.data && forthFloor.data.data[1]._id}`, img: forthFloor.data && forthFloor.data.data[1].url, text: forthFloor.data && forthFloor.data.data[1].name }}
+                  bottom={{ nowPrice: forthFloor.data && forthFloor.data.data[1].nowPrice, prePrice: forthFloor.data && forthFloor.data.data[1].prePrice }}
                 />
               </Col>
               <Col span={8}>
                 <FloorBasic
-                  top={{ url: '#', img: basic3, text: '生意永盛 单个' }}
-                  bottom={{ nowPrice: '￥278.00', prePrice: '￥407.00' }}
+                  top={{ url: `/itemDetail?id=${forthFloor.data && forthFloor.data.data[2]._id}`, img: forthFloor.data && forthFloor.data.data[2].url, text: forthFloor.data && forthFloor.data.data[2].name }}
+                  bottom={{ nowPrice: forthFloor.data && forthFloor.data.data[2].nowPrice, prePrice: forthFloor.data && forthFloor.data.data[2].prePrice }}
                 />
               </Col>
             </Row>
           </Col>
           <Col span={4}>
             <FloorBasic
-              top={{ url: '#', img: basic4, text: '开业吉祥 单个' }}
-              bottom={{ nowPrice: '￥129.00', prePrice: '￥202.00' }}
+              top={{ url: `/itemDetail?id=${forthFloor.data && forthFloor.data.data[3]._id}`, img: forthFloor.data && forthFloor.data.data[3].url, text: forthFloor.data && forthFloor.data.data[3].name }}
+              bottom={{ nowPrice: forthFloor.data && forthFloor.data.data[3].nowPrice, prePrice: forthFloor.data && forthFloor.data.data[3].prePrice }}
             />
             <FloorBasic
-              top={{ url: '#', img: basic5, text: '顾客盈门（开业 花篮）' }}
-              bottom={{ nowPrice: '￥177.00', prePrice: '￥280.00' }}
+              top={{ url: `/itemDetail?id=${forthFloor.data && forthFloor.data.data[4]._id}`, img: forthFloor.data && forthFloor.data.data[4].url, text: forthFloor.data && forthFloor.data.data[4].name }}
+              bottom={{ nowPrice: forthFloor.data && forthFloor.data.data[4].nowPrice, prePrice: forthFloor.data && forthFloor.data.data[4].prePrice }}
             />
           </Col>
           <Col span={4}>
             <FloorBasic
-              top={{ url: '#', img: basic6, text: '万事如意 单个' }}
-              bottom={{ nowPrice: '￥338.00', prePrice: '￥499.00' }}
+              top={{ url: `/itemDetail?id=${forthFloor.data && forthFloor.data.data[5]._id}`, img: forthFloor.data && forthFloor.data.data[5].url, text: forthFloor.data && forthFloor.data.data[5].name }}
+              bottom={{ nowPrice: forthFloor.data && forthFloor.data.data[5].nowPrice, prePrice: forthFloor.data && forthFloor.data.data[5].prePrice }}
             />
             <FloorBasic
-              top={{ url: '#', img: basic7, text: '大富启源 单个' }}
-              bottom={{ nowPrice: '￥368.00', prePrice: '￥589.00' }}
+              top={{ url: `/itemDetail?id=${forthFloor.data && forthFloor.data.data[6]._id}`, img: forthFloor.data && forthFloor.data.data[6].url, text: forthFloor.data && forthFloor.data.data[6].name }}
+              bottom={{ nowPrice: forthFloor.data && forthFloor.data.data[6].nowPrice, prePrice: forthFloor.data && forthFloor.data.data[6].prePrice }}
             />
           </Col>
         </Row>
