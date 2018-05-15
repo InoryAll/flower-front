@@ -19,7 +19,9 @@ import basic6 from '../../../../static/img/thirdFloor/floorBasic/6.jpg';
 import './ThirdFloor.less';
 
 class ThirdFloor extends React.Component {
-  static propTypes = {};
+  static propTypes = {
+    thirdFloor: PropTypes.object.isRequired,
+  };
   state = {
     menuItem: 'default',
   };
@@ -30,6 +32,7 @@ class ThirdFloor extends React.Component {
     });
   };
   render() {
+    const { thirdFloor } = this.props;
     return (
       <div className="thirdfloor">
         <Row>
@@ -49,7 +52,7 @@ class ThirdFloor extends React.Component {
           <Col span={4}>
             <FloorSpecific
               top={{ img: specific1 }}
-              middle={{ bg: '#cda5e6', url: '#', text: '礼盒鲜花' }}
+              middle={{ bg: '#cda5e6', url: '/itemList', text: '礼盒鲜花' }}
               bottom={{ bg: '#f4e3ff',
                 data: [{
                   text: '七夕',
@@ -76,12 +79,12 @@ class ThirdFloor extends React.Component {
           </Col>
           <Col span={5}>
             <FloorBasic
-              top={{ url: '#', img: basic1, text: '清水茉莉' }}
-              bottom={{ nowPrice: '￥189.00', prePrice: '￥289.00' }}
+              top={{ url: `/itemDetail?id=${thirdFloor.data && thirdFloor.data.data[0]._id}`, img: thirdFloor.data && thirdFloor.data.data[0].url, text: thirdFloor.data && thirdFloor.data.data[0].name }}
+              bottom={{ nowPrice: thirdFloor.data && thirdFloor.data.data[0].nowPrice, prePrice: thirdFloor.data && thirdFloor.data.data[0].prePrice }}
             />
             <FloorBasic
-              top={{ url: '#', img: basic2, text: '爱入佳境' }}
-              bottom={{ nowPrice: '￥308.00', prePrice: '￥446.00' }}
+              top={{ url: `/itemDetail?id=${thirdFloor.data && thirdFloor.data.data[1]._id}`, img: thirdFloor.data && thirdFloor.data.data[1].url, text: thirdFloor.data && thirdFloor.data.data[1].name }}
+              bottom={{ nowPrice: thirdFloor.data && thirdFloor.data.data[1].nowPrice, prePrice: thirdFloor.data && thirdFloor.data.data[1].prePrice }}
             />
           </Col>
           <Col span={7}>
@@ -89,22 +92,22 @@ class ThirdFloor extends React.Component {
           </Col>
           <Col span={4}>
             <FloorBasic
-              top={{ url: '#', img: basic3, text: '这样爱你' }}
-              bottom={{ nowPrice: '￥249.00', prePrice: '￥369.00' }}
+              top={{ url: `/itemDetail?id=${thirdFloor.data && thirdFloor.data.data[2]._id}`, img: thirdFloor.data && thirdFloor.data.data[2].url, text: thirdFloor.data && thirdFloor.data.data[2].name }}
+              bottom={{ nowPrice: thirdFloor.data && thirdFloor.data.data[2].nowPrice, prePrice: thirdFloor.data && thirdFloor.data.data[2].prePrice }}
             />
             <FloorBasic
-              top={{ url: '#', img: basic4, text: '浪漫爱' }}
-              bottom={{ nowPrice: '￥300.00', prePrice: '￥399.00' }}
+              top={{ url: `/itemDetail?id=${thirdFloor.data && thirdFloor.data.data[3]._id}`, img: thirdFloor.data && thirdFloor.data.data[3].url, text: thirdFloor.data && thirdFloor.data.data[3].name }}
+              bottom={{ nowPrice: thirdFloor.data && thirdFloor.data.data[3].nowPrice, prePrice: thirdFloor.data && thirdFloor.data.data[3].prePrice }}
             />
           </Col>
           <Col span={4}>
             <FloorBasic
-              top={{ url: '#', img: basic5, text: '签约幸福' }}
-              bottom={{ nowPrice: '￥318.00', prePrice: '￥459.00' }}
+              top={{ url: `/itemDetail?id=${thirdFloor.data && thirdFloor.data.data[4]._id}`, img: thirdFloor.data && thirdFloor.data.data[4].url, text: thirdFloor.data && thirdFloor.data.data[4].name }}
+              bottom={{ nowPrice: thirdFloor.data && thirdFloor.data.data[4].nowPrice, prePrice: thirdFloor.data && thirdFloor.data.data[4].prePrice }}
             />
             <FloorBasic
-              top={{ url: '#', img: basic6, text: '曼妙时光' }}
-              bottom={{ nowPrice: '￥698.00', prePrice: '￥999.00' }}
+              top={{ url: `/itemDetail?id=${thirdFloor.data && thirdFloor.data.data[5]._id}`, img: thirdFloor.data && thirdFloor.data.data[5].url, text: thirdFloor.data && thirdFloor.data.data[5].name }}
+              bottom={{ nowPrice: thirdFloor.data && thirdFloor.data.data[5].nowPrice, prePrice: thirdFloor.data && thirdFloor.data.data[5].prePrice }}
             />
           </Col>
         </Row>
