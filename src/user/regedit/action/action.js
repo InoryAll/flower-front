@@ -3,6 +3,7 @@
  * Created by tianrenjie on 2018/5/15
  */
 import { createAction } from 'redux-actions';
+import { browserHistory } from 'react-router';
 import _ from 'lodash';
 import { message } from 'antd';
 import { push } from 'react-router-redux';
@@ -46,8 +47,7 @@ export const onRegedit = (params) => {
                 dispatch(onRegeditAction({ data: back }));
                 message.success('注册成功!');
                 setTimeout(() => {
-                  // eslint-disable-next-line
-                  location.href = '/login';
+                  browserHistory.push('/login');
                 }, 300);
               } else {
                 message.error('注册失败，请重试!');

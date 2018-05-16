@@ -4,7 +4,7 @@
  */
 import React, { PropTypes } from 'react';
 import { Row, Col } from 'antd';
-import { Link } from 'react-router';
+import { Link, browserHistory } from 'react-router';
 import Category from './category/Category';
 import './Navigation.less';
 
@@ -20,16 +20,16 @@ class Navigation extends React.Component {
     });
     switch (menuItem) {
       case 'allFlower':
-        location.href = '/itemList';
+        browserHistory.push('/itemList');
         break;
       case 'loveFlower':
-        location.href = './itemList?condition=love';
+        browserHistory.push('./itemList?condition=love');
         break;
       case 'holidayFlower':
-        location.href = './itemList?condition=holiday';
+        browserHistory.push('./itemList?condition=holiday');
         break;
       case 'cheapFlower':
-        location.href = './itemList?condition=oneToTwo';
+        browserHistory.push('./itemList?condition=oneToTwo');
         break;
       default:
         return;

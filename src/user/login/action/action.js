@@ -3,6 +3,7 @@
  * Created by tianrenjie on 2018/5/15
  */
 import { createAction } from 'redux-actions';
+import { browserHistory } from 'react-router';
 import _ from 'lodash';
 import { message } from 'antd';
 import { push } from 'react-router-redux';
@@ -60,8 +61,7 @@ export const onLogin = (params) => {
             dispatch(onLoginAction({ data }));
             message.success('登陆成功！');
             setTimeout(() => {
-            // eslint-disable-next-line
-             location.href = '/';
+             browserHistory.push('/');
             }, 300);
           } else {
             message.error('密码错误，请重试！');
