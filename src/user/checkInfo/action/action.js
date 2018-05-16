@@ -4,6 +4,7 @@
  * */
 import { createAction } from 'redux-actions';
 import { message } from 'antd';
+import { browserHistory } from 'react-router';
 import {
   CHECK_INFO_VIEW_INIT,
   GET_ORDER,
@@ -50,6 +51,7 @@ export const addOrder = (params) => {
         delete params.itemList;
         getOrder({ ...params })(dispatch);
         message.success('订单提交成功！');
+        browserHistory.push('/pay');
       } else {
         message.error('订单添加失败！');
       }
@@ -64,11 +66,12 @@ export const addOrder = (params) => {
  */
 export const updateOrder = (params) => {
   return (dispatch) => {
-    updateOrderApi(JSON.stringify({ ...params }), (data) => {
+    updateOrderApi(JSON.stringify({ condition: { _id: params._id }, obj: { status: 1 } }), (data) => {
       if (data.code === 1) {
         dispatch(updateOrderAction({ data }));
         getOrder({ _id: params._id })(dispatch);
-        message.success('订单生成成功！');
+        message.success('订单付款成功！');
+        browserHistory.push('/result');
       } else {
         message.error('订单更新失败！');
       }

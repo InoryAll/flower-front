@@ -4,11 +4,20 @@
  */
 import React, { PropTypes } from 'react';
 import { Row, Col } from 'antd';
+import _ from 'lodash';
 import img from '../../../../static/img/shoppingCode/1.png';
 import './ShoppingCode.less';
 
 class ShoppingCode extends React.Component {
-  static propTypes = {};
+  static propTypes = {
+    order: PropTypes.object.isRequired,
+    updateOrder: PropTypes.func.isRequired,
+  };
+  handleFinish = () => {
+    if (!_.isEmpty(this.props.order) && !_.isEmpty(this.props.order.data)) {
+      this.props.updateOrder({ _id: this.props.order.data[0]._id });
+    }
+  };
   render() {
     return (
       <div className="shoppingcode">
@@ -24,7 +33,7 @@ class ShoppingCode extends React.Component {
           <Row>
             <Col>
               <div className="shoppingcode-content-next">
-                <button className="shoppingcode-content-next-btn">完成付款</button>
+                <button className="shoppingcode-content-next-btn" onClick={this.handleFinish}>完成付款</button>
               </div>
             </Col>
           </Row>

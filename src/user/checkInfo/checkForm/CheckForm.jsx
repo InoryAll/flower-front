@@ -70,7 +70,6 @@ class CheckForm extends React.Component {
       message.error(errors.join(','));
     } else {
       this.props.addOrder(params);
-      browserHistory.push('/pay');
     }
   };
   render() {
