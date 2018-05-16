@@ -6,8 +6,8 @@ import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import _ from 'lodash';
 import { If } from 'jsx-control-statements';
-import { onViewInit, getSingleItem } from './action/action';
-import { itemSelector } from './selector/selector';
+import { onViewInit, getSingleItem, getItemComment } from './action/action';
+import { itemSelector, commentSelector } from './selector/selector';
 import { validateLoginState } from '../../user/login/action/action';
 import { getCart, deleteGood, addGood } from '../../user/index/action/action';
 import { userSelector } from '../../user/login/selector/selector';
@@ -33,6 +33,7 @@ class ItemDeatil extends React.Component {
     deleteGood: PropTypes.func.isRequired,
     addGood: PropTypes.func.isRequired,
     getSingleItem: PropTypes.func.isRequired,
+    getItemComment: PropTypes.func.isRequired,
   };
   componentWillMount() {
     this.props.onViewInit();
@@ -40,6 +41,7 @@ class ItemDeatil extends React.Component {
     this.props.getCart({ _id: Cookie.getCookie('_id') });
     if (!_.isEmpty(this.props.location.query.id)) {
       this.props.getSingleItem({ _id: this.props.location.query.id });
+      this.props.getItemComment(this.props.item.data);
     }
   }
   render() {
@@ -66,6 +68,7 @@ const mapStateToProps = (state) => {
     user: userSelector(state),
     cart: cartSelector(state),
     item: itemSelector(state),
+    comment: commentSelector(state),
   };
 };
 
@@ -76,6 +79,7 @@ const mapDispatchToProps = {
   deleteGood,
   addGood,
   getSingleItem,
+  getItemComment,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ItemDeatil);

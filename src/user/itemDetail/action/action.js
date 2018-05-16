@@ -10,6 +10,7 @@ import {
   GET_ITEM_COMMENT,
 } from '../constant/constant';
 import { getItemApi } from '../../../api/indexApi';
+import { getCommentApi } from '../../../api/itemApi';
 
 const onViewInitAction = createAction(ITEM_DETAIL_VIEW_INIT);
 const getSingleItemAction = createAction(GET_SINGLE_ITEM);
@@ -44,5 +45,16 @@ export const getSingleItem = (params) => {
 /**
  * 获取商品评价
  */
-export const getItemComment = () => {
+export const getItemComment = (params) => {
+  return (dispatch) => {
+    getCommentApi({ ...params }, (data) => {
+      if (data.code === 1) {
+        dispatch(getItemCommentAction({ data }));
+      } else {
+        message.error('获取商品评价信息失败！');
+      }
+    }, (err) => {
+      message.error(err);
+    });
+  };
 };

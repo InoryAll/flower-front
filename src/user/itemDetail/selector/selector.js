@@ -4,3 +4,4 @@
  * */
 
 export const itemSelector = state => state.item;
+export const commentSelector = state => state.comment;

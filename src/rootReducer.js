@@ -6,7 +6,7 @@ import { combineReducers } from 'redux';
 import { user } from './user/login/reducer/reducer';
 import { shoppingItems, cart } from './user/index/reducer/reducer';
 import { itemList } from './user/itemList/reducer/reducer';
-import { item } from './user/itemDetail/reducer/reducer';
+import { item, comment } from './user/itemDetail/reducer/reducer';
 
 export const rootReducer = combineReducers({
   user,
@@ -14,4 +14,5 @@ export const rootReducer = combineReducers({
   cart,
   itemList,
   item,
+  comment,
 });

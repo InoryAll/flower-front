@@ -3,13 +3,24 @@
  * Created by tianrenjie on 2018/5/5
  */
 import React, { PropTypes } from 'react';
+import moment from 'moment';
+import _ from 'lodash';
 import { Row, Col, Avatar, Icon } from 'antd';
 import { Link } from 'react-router';
 import './ItemComment.less';
 
-class ItemComment extends React.Component {
-  static propTypes = {};
+class ItemcommentItem extends React.Component {
+  static propTypes = {
+    commentItem: PropTypes.object.isRequired,
+  };
   render() {
+    const { commentItem } = this.props;
+    const stars = [];
+    if (!_.isEmpty(commentItem.level)) {
+      for (let i = 0; i < commentItem.level; i++) {
+        stars.push(<Icon type="star" className="icon-star" />);
+      }
+    }
     return (
       <div className="itemcomment">
         <Row>
@@ -18,8 +29,8 @@ class ItemComment extends React.Component {
               <Avatar icon="user" />
             </div>
             <div className="itemcomment-info">
-              <Link className="itemcomment-info-name">李**</Link>
-              <span className="itemcomment-info-date">[2018-05-04]</span>
+              <Link className="itemcomment-info-name">{commentItem.userName}</Link>
+              <span className="itemcomment-info-date">[{moment(parseInt(commentItem.timestamp)).format('YYYY-MM-DD HH:mm:ss')}]</span>
             </div>
           </Col>
         </Row>
@@ -28,14 +39,10 @@ class ItemComment extends React.Component {
             <div className="itemcomment-detail">
               <p className="itemcomment-detail-p">用户评分：
                 <span className="itemcomment-detail-p-star">
-                  <Icon type="star" className="icon-star" />
-                  <Icon type="star" className="icon-star" />
-                  <Icon type="star" className="icon-star" />
-                  <Icon type="star" className="icon-star" />
-                  <Icon type="star" className="icon-star" />
+                  {stars}
                 </span>
               </p>
-              <p className="itemcomment-detail-p">评价详情：很贴心送的很快，麻麻生日很开心</p>
+              <p className="itemcomment-detail-p">评价详情：{commentItem.content}</p>
             </div>
           </Col>
         </Row>
@@ -44,4 +51,4 @@ class ItemComment extends React.Component {
   }
 }
 
-export default ItemComment;
+export default ItemcommentItem;
