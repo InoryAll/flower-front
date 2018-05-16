@@ -35,7 +35,7 @@ export const onViewInit = () => {
 export const validateLoginState = () => {
   return (dispatch) => {
     if (!_.isEmpty(Cookie.getCookie('username'))) {
-      loginApi({ username: Cookie.getCookie('username') }, (data) => {
+      loginApi({ username: Cookie.getCookie('username'), deleteFlag: 0 }, (data) => {
         dispatch(onValidateLoginStateAction({ data }));
       }, (err) => {
         message.error(err);
@@ -51,7 +51,7 @@ export const validateLoginState = () => {
  */
 export const onLogin = (params) => {
   return (dispatch) => {
-    loginApi({ username: params.username }, (data) => {
+    loginApi({ username: params.username, deleteFlag: 0 }, (data) => {
       if (data.code === 1) {
         if (!_.isEmpty(data.data)) {
           if (data.data[0].password === params.password) {

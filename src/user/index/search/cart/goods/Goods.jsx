@@ -10,9 +10,10 @@ import './Goods.less';
 class Goods extends React.Component {
   static propTypes = {
     goods: PropTypes.object.isRequired,
+    deleteGood: PropTypes.func.isRequired,
   };
   handleCartDelete = (good) => {
-    // 删除商品
+    this.props.deleteGood(good);
   };
   render() {
     const { goods } = this.props;

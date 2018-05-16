@@ -39,7 +39,7 @@ export const onRegedit = (params) => {
       } else {
         regeditApi(JSON.stringify({ ...params }), (res) => {
           if (res.code === 1) {
-            loginApi({ username: params.username }, (back) => {
+            loginApi({ username: params.username, deleteFlag: 0 }, (back) => {
               if (back.code === 1 && !_.isEmpty(back.data)) {
                 Cookie.setCookie('_id', back.data[0]._id);
                 Cookie.setCookie('username', back.data[0].username);

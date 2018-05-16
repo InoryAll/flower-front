@@ -19,10 +19,12 @@ import {
   onViewInit,
   getItem,
   getCart,
+  deleteGood,
 } from './action/action';
 import {
   validateLoginState,
 } from '../../user/login/action/action';
+import Cookie from '../../common/cookie';
 import Header from './header/Header';
 import Search from './search/Search';
 import Navigation from './navigation/Navigation';
@@ -43,6 +45,7 @@ class Index extends React.Component {
     getItem: PropTypes.func.isRequired,
     validateLoginState: PropTypes.func.isRequired,
     getCart: PropTypes.func.isRequired,
+    deleteGood: PropTypes.func.isRequired,
     items: PropTypes.object.isRequired,
     hotSale: PropTypes.object.isRequired,
     firstFloor: PropTypes.object.isRequired,
@@ -56,7 +59,7 @@ class Index extends React.Component {
     this.props.onViewInit();
     this.props.validateLoginState();
     this.props.getItem();
-    this.props.getCart({ ...this.props.user });
+    this.props.getCart({ _id: Cookie.getCookie('_id') });
   }
   render() {
     return (
@@ -97,6 +100,7 @@ const mapDispatchToProps = {
   getItem,
   validateLoginState,
   getCart,
+  deleteGood,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Index);

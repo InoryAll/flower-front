@@ -5,6 +5,7 @@
 import { createAction } from 'redux-actions';
 import _ from 'lodash';
 import { message } from 'antd';
+import  Cookie from '../../../common/cookie';
 import {
   INDEX_VIEW_INIT,
   GET_ITEM,
@@ -15,10 +16,12 @@ import {
   GET_FORTH_FLOOR,
   GET_DAILY_SALE,
   GET_CART,
+  DELETE_GOOD,
 } from '../constant/constant';
 import {
   getItemApi,
   getCartApi,
+  deleteCartApi,
 } from '../../../api/indexApi';
 
 const onViewInitAction = createAction(INDEX_VIEW_INIT);
@@ -30,6 +33,7 @@ const getThirdAction = createAction(GET_THIRD_FLOOR);
 const getForthAction = createAction(GET_FORTH_FLOOR);
 const getDailySaleAction = createAction(GET_DAILY_SALE);
 const getCartAction = createAction(GET_CART);
+const deleteGoodAction = createAction(DELETE_GOOD);
 
 /**
  * 视图初始化
@@ -46,7 +50,7 @@ export const onViewInit = () => {
  */
 export const getItem = () => {
   return (dispatch) => {
-    getItemApi({}, (data) => {
+    getItemApi({ deleteFlag: 0 }, (data) => {
       if (data.code === 1) {
         const hotSale = { ...data, data: data.data.filter((item) => { return item.position === 'hotSale'; }) };
         const firstFloor = { ...data, data: data.data.filter((item) => { return item.position === 'firstFloor'; }) };
@@ -77,7 +81,7 @@ export const getItem = () => {
  */
 export const getCart = (params) => {
   return (dispatch) => {
-    getCartApi({ userId: params._id }, (data) => {
+    getCartApi({ userId: params._id, deleteFlag: 0 }, (data) => {
       if (data.code === 1) {
         dispatch(getCartAction({ data }));
       } else {
@@ -88,3 +92,24 @@ export const getCart = (params) => {
     });
   };
 };
+
+/**
+ * 删除购物车的商品
+ * @param params 条件参数
+ * return {*}
+ */
+export function deleteGood(params) {
+  return (dispatch) => {
+    deleteCartApi(JSON.stringify({ condition: { ...params }, obj: { deleteFlag: 1 } }), (data) => {
+      if (data.code === 1) {
+        message.success('从购物车中删除成功！');
+        getCart({ _id: Cookie.getCookie('_id') })(dispatch);
+        dispatch(deleteGoodAction({ data }));
+      } else {
+        message.error('从购物车中删除失败！');
+      }
+    }, (err) => {
+      message.error(err);
+    });
+  };
+}

@@ -34,7 +34,7 @@ class Cart extends React.Component {
     let totalPrice = 0;
     if (!_.isEmpty(cart.data)) {
       cart.data.data.map((item, index) => {
-        goods.push(<Goods goods={{ ...item }} />);
+        goods.push(<Goods goods={{ ...item }} {...this.props} />);
         totalPrice += parseFloat(item.itemTotalPrice.split('￥')[1]);
         return true;
       });
@@ -62,12 +62,12 @@ class Cart extends React.Component {
                 <Row className="cart-row-content-box-row-list">
                   <Col>
                     <div className="cart-row-content-box-row-list-box">
-                      <If condition={ 0 || false }>
+                      <If condition={ goods.length < 1 }>
                         <div className="no-items">
                           <span>您的购物车中暂无商品，赶快选择心爱的商品吧！</span>
                         </div>
                       </If>
-                      <If condition={ 1 || true }>
+                      <If condition={ goods.length > 0 }>
                         { goods }
                       </If>
                     </div>
