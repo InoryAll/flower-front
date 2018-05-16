@@ -8,7 +8,7 @@ import Cookie from '../../common/cookie';
 import { onViewInit } from './action/action';
 import { validateLoginState } from '../../user/login/action/action';
 import { userSelector } from '../../user/login/selector/selector';
-import { getCart } from '../../user/index/action/action';
+import { getCart, deleteGood } from '../../user/index/action/action';
 import { cartSelector } from '../../user/index/selector/selector';
 import Header from '../index/header/Header';
 import ShoppingSteps from './shoppingSteps/ShoppingSteps';
@@ -22,6 +22,7 @@ class ShoppingCart extends React.Component {
     validateLoginState: PropTypes.func.isRequired,
     getCart: PropTypes.func.isRequired,
     onViewInit: PropTypes.func.isRequired,
+    deleteGood: PropTypes.func.isRequired,
   };
   componentWillMount() {
     this.props.onViewInit();
@@ -51,6 +52,7 @@ const mapDispatchToProps = {
   validateLoginState,
   getCart,
   onViewInit,
+  deleteGood,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ShoppingCart);

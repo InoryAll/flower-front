@@ -4,18 +4,37 @@
  */
 import React, { PropTypes } from 'react';
 import { Row, Col, Table, InputNumber } from 'antd';
+import _ from 'lodash';
 import { Link } from 'react-router';
 import img from '../../../../static/img/itemList/1.jpg';
 import './ShoppingList.less';
 
 class ShoppingList extends React.Component {
-  static propTypes = {};
+  static propTypes = {
+    cart: PropTypes.object.isRequired,
+    deleteGood: PropTypes.func.isRequired,
+  };
+  state = {
+    value: 1,
+  };
   onNumberChange = (value) => {
     console.log(value);
+    this.setState({
+      value,
+    });
   };
-  handleDelete = () => {
+  handleDelete = (item) => {
+    this.props.deleteGood({ ...item });
   };
   render() {
+    const { cart } = this.props;
+    let totalPrice = 0;
+    if (!_.isEmpty(cart.data)) {
+      cart.data.map((item, index) => {
+        totalPrice += parseFloat(item.itemPrice.split('￥')[1]) * parseInt(item.count);
+        return true;
+      });
+    }
     const columns = [{
       title: '商品',
       dataIndex: 'item',
@@ -24,38 +43,37 @@ class ShoppingList extends React.Component {
         return (
           <div className="shoppinglist-table-item clearfix">
             <img src={record.url} alt="花之韵" className="shoppinglist-table-item-img" />
-            <Link to="" className="shoppinglist-table-item-link">{record.name}</Link>
+            <Link to="" className="shoppinglist-table-item-link">{record.itemName}</Link>
           </div>
         );
       },
     }, {
       title: '单价(元)',
-      dataIndex: 'price',
-      key: 'price',
+      dataIndex: 'itemPrice',
+      key: 'itemPrice',
+      render: (text) => {
+        return parseFloat(text.split('￥')[1]).toFixed(2);
+      },
     }, {
       title: '数量',
       dataIndex: 'count',
       key: 'count',
       render: (text, record) => {
-        return (<InputNumber min={1} max={10} defaultValue={record.count} onChange={this.onNumberChange} />);
+        return (<InputNumber min={1} max={10} readOnly={true} defaultValue={record.count} onChange={this.onNumberChange} />);
       },
     }, {
       title: '小计(元)',
-      dataIndex: 'singleTotal',
-      key: 'singleTotal',
+      dataIndex: 'itemTotalPrice',
+      key: 'itemTotalPrice',
+      render: (text) => {
+        return parseFloat(text.split('￥')[1]).toFixed(2);
+      },
     }, {
       title: '操作',
       key: 'action',
       render: (text, record) => (
-        <Link className="shoppinglist-table-delete" onClick={this.handleDelete}>删除</Link>
+        <Link className="shoppinglist-table-delete" onClick={() => { this.handleDelete(record); }}>删除</Link>
       ),
-    }];
-    const data = [{
-      key: '1',
-      url: img,
-      name: '思念是一种病',
-      price: '169.00',
-      count: 1,
     }];
     return (
       <div className="shoppinglist">
@@ -72,11 +90,11 @@ class ShoppingList extends React.Component {
             <div className="shoppinglist-table">
               <Table
                 columns={columns}
-                dataSource={data}
+                dataSource={cart.data || []}
                 pagination={false}
               />
               <div className="shoppinglist-table-total">
-                商品总价（不含运费）<span className="shoppinglist-table-total-price">169.00</span>元
+                商品总价（不含运费）<span className="shoppinglist-table-total-price">{totalPrice.toFixed(2)}</span>元
               </div>
             </div>
           </Col>
