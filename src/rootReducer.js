@@ -8,6 +8,7 @@ import { shoppingItems, cart } from './user/index/reducer/reducer';
 import { itemList } from './user/itemList/reducer/reducer';
 import { item, comment } from './user/itemDetail/reducer/reducer';
 import { order } from './user/checkInfo/reducer/reducer';
+import { recommend } from './user/shoppingFinish/reducer/reducer';
 
 export const rootReducer = combineReducers({
   user,
@@ -17,4 +18,5 @@ export const rootReducer = combineReducers({
   item,
   comment,
   order,
+  recommend,
 });
