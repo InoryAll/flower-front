@@ -43,7 +43,6 @@ class ItemDeatil extends React.Component {
     }
   }
   render() {
-    console.log(this.props.item);
     return (
       <div className="itemdetail">
         <Header {...this.props} />

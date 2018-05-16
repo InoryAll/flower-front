@@ -67,15 +67,6 @@ class ItemOther extends React.Component {
                       />
                     </div>
                   </TabPane>
-                  <TabPane tab="好评" key="good">
-                    <div className="itemother-comment-list-content">...</div>
-                  </TabPane>
-                  <TabPane tab="中评" key="normal">
-                    <div className="itemother-comment-list-content">...</div>
-                  </TabPane>
-                  <TabPane tab="差评" key="low">
-                    <div className="itemother-comment-list-content">...</div>
-                  </TabPane>
                 </Tabs>
               </div>
             </div>

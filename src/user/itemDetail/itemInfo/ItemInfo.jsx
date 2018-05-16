@@ -4,52 +4,71 @@
  */
 import React, { PropTypes } from 'react';
 import { Row, Col, InputNumber, Icon } from 'antd';
-import _ from 'lodash';
+import Settings from '../../../common/setting';
+import Cookie from '../../../common/cookie';
 import './ItemInfo.less';
 import img from '../../../../static/img/itemDetail/1.jpg';
 
 class ItemInfo extends React.Component {
   static propTypes = {
     location: PropTypes.object.isRequired,
-    getSingleItem: PropTypes.func.isRequired,
+    addGood: PropTypes.func.isRequired,
     item: PropTypes.object.isRequired,
   };
+  handleBuy = (item) => {
+  };
+  handleAddToCart = (item) => {
+    const params = {
+      itemId: item._id,
+      itemName: item.name,
+      itemPrice: item.nowPrice,
+      url: item.url,
+      count: 1,
+      itemTotalPrice: item.nowPrice,
+      userId: Cookie.getCookie('_id'),
+      userName: Cookie.getCookie('username'),
+      deleteFlag: 0,
+    };
+    this.props.addGood(params);
+  };
   render() {
+    const { item } = this.props;
+    Settings.initSettings();
     return (
       <div className="iteminfo">
         <Row>
           <Col span={8}>
             <div className="iteminfo-left">
-              <img src={img} alt="花之韵" className="iteminfo-left-img" />
+              <img src={item.data[0].url} alt="花之韵" className="iteminfo-left-img" />
             </div>
           </Col>
           <Col span={16}>
             <div className="iteminfo-right">
-              <h3 className="iteminfo-right-title">相恋一生</h3>
+              <h3 className="iteminfo-right-title">{item.data[0].name}</h3>
               <div className="iteminfo-right-info">
-                <p className="iteminfo-right-info-p">材料：19枝蓝色妖姬，搭配桔梗、高山积雪</p>
-                <p className="iteminfo-right-info-p">包装：米白色韩式卡纸圆形包装，配香槟色缎带系蝴蝶结束扎。</p>
-                <p className="iteminfo-right-info-p">花语：把我最好的爱给你，是我全部的温柔</p>
-                <p className="iteminfo-right-info-p">附送：免费附送精美贺卡，代写您的祝福。(您下单时可填写留言栏)</p>
-                <p className="iteminfo-right-info-p">配送：本地区各市县、乡镇、街道（市区内免费配送）</p>
-                <p className="iteminfo-right-info-p">说明：由于鲜花包扎各地的花艺师不同，可能在花束的形式和搭配上与图片不完全一致，但我们保证鲜花的主花材品种、新鲜程度、数量、颜色与说明一致，谢谢。</p>
+                <p className="iteminfo-right-info-p">材料：{Settings.mapValueToLabel(item.data[0].material)}</p>
+                <p className="iteminfo-right-info-p">包装：{item.data[0].pack}</p>
+                <p className="iteminfo-right-info-p">花语：{item.data[0].meaning}</p>
+                <p className="iteminfo-right-info-p">附送：{item.data[0].attach}</p>
+                <p className="iteminfo-right-info-p">配送：{item.data[0].send}</p>
+                <p className="iteminfo-right-info-p">说明：{item.data[0].detail}</p>
               </div>
               <div className="iteminfo-right-action">
                 <div className="iteminfo-right-action-price">
-                  <p className="iteminfo-right-action-price-pre">市场价：￥529.00</p>
-                  <p className="iteminfo-right-action-price-now">优惠价：<span className="iteminfo-right-action-price-now-span">￥329.00</span></p>
+                  <p className="iteminfo-right-action-price-pre">市场价：{item.data[0].prePrice}</p>
+                  <p className="iteminfo-right-action-price-now">优惠价：<span className="iteminfo-right-action-price-now-span">{item.data[0].nowPrice}</span></p>
                 </div>
                 <div className="iteminfo-right-action-btn">
                   <span className="iteminfo-right-action-btn-count">
-                    <InputNumber className="iteminfo-right-action-btn-count-input" size="large" min={1} max={100000} defaultValue={3} />
+                    <InputNumber className="iteminfo-right-action-btn-count-input" size="large" min={1} max={100000} defaultValue={1} />
                   </span>
-                  <button className="iteminfo-right-action-btn-buy">
+                  <button className="iteminfo-right-action-btn-buy" onClick={() => { this.handleBuy(item.data[0]); }}>
                     <span className="iteminfo-right-action-btn-buy-icon">
                       <Icon type="shopping-cart" />
                     </span>
                     立即购买
                   </button>
-                  <button className="iteminfo-right-action-btn-add">
+                  <button className="iteminfo-right-action-btn-add" onClick={() => { this.handleAddToCart(item.data[0]); }}>
                     加入购物车
                   </button>
                 </div>
