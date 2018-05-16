@@ -47,9 +47,9 @@ export const addOrder = (params) => {
     addOrderApi(JSON.stringify({ ...params }), (data) => {
       if (data.code === 1) {
         dispatch(addOrderAction({ data }));
+        delete params.itemList;
         getOrder({ ...params })(dispatch);
         message.success('订单提交成功！');
-        location.href = '/pay';
       } else {
         message.error('订单添加失败！');
       }

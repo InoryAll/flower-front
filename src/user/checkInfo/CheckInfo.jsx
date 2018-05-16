@@ -10,6 +10,7 @@ import { validateLoginState } from '../../user/login/action/action';
 import { getCart } from '../../user/index/action/action';
 import { userSelector } from '../../user/login/selector/selector';
 import { cartSelector } from '../../user/index/selector/selector';
+import { orderSelector } from './selector/selector';
 import Header from '../index/header/Header';
 import ShoppingSteps from '../shoppingCart/shoppingSteps/ShoppingSteps';
 import CheckForm from './checkForm/CheckForm';
@@ -45,6 +46,7 @@ const mapStateToProps = (state) => {
   return {
     user: userSelector(state),
     cart: cartSelector(state),
+    order: orderSelector(state),
   };
 };
 

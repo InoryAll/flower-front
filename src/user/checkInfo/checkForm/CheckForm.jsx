@@ -6,7 +6,7 @@ import React, { PropTypes } from 'react';
 import { Row, Col, DatePicker, Table, message } from 'antd';
 import _ from 'lodash';
 import moment from 'moment';
-import { Link } from 'react-router';
+import { Link, browserHistory } from 'react-router';
 import $ from 'jquery';
 import Cookie from '../../../common/cookie';
 import img from '../../../../static/img/itemList/1.jpg';
@@ -15,6 +15,7 @@ import './CheckForm.less';
 class CheckForm extends React.Component {
   static propTypes = {
     cart: PropTypes.object.isRequired,
+    order: PropTypes.object.isRequired,
     addOrder: PropTypes.func.isRequired,
   };
   state = {
@@ -69,6 +70,7 @@ class CheckForm extends React.Component {
       message.error(errors.join(','));
     } else {
       this.props.addOrder(params);
+      browserHistory.push('/pay');
     }
   };
   render() {
