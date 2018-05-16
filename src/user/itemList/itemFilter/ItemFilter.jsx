@@ -28,7 +28,6 @@ class ItemFilter extends React.Component {
     }
   }
   onSearch = (attribute, value) => {
-    console.log(attribute, value);
     this.state.filter = [...new Set([...this.state.filter, value])];
     this.setState({
       filter: [...new Set([...this.state.filter, value])],
@@ -36,9 +35,11 @@ class ItemFilter extends React.Component {
     this.props.filtItemList(this.state.filter);
   };
   handleDeleteClick = (value) => {
+    this.state.filter = this.state.filter.filter(item => item !== value);
     this.setState({
       filter: this.state.filter.filter(item => item !== value),
     });
+    this.props.filtItemList(this.state.filter);
   };
   render() {
     const { filter } = this.state;

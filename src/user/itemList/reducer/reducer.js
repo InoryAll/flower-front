@@ -17,10 +17,11 @@ const initState = {
 export function itemList(state = initState, action) {
   switch (action.type) {
     case ITEM_VIEW_INIT:
+      return state;
     case GET_ITEM:
-      return { ...state, ...initState, ...action.payload };
+      return { ...state, ...initState, ...action.payload.data };
     case FILT_ITEM_LIST:
-      return { ...state, ...initState, ...action.payload };
+      return { ...state, ...initState, ...action.payload.data };
     default:
       return state;
   }
