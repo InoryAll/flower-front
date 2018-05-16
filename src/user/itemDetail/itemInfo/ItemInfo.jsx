@@ -4,10 +4,16 @@
  */
 import React, { PropTypes } from 'react';
 import { Row, Col, InputNumber, Icon } from 'antd';
+import _ from 'lodash';
 import './ItemInfo.less';
 import img from '../../../../static/img/itemDetail/1.jpg';
 
 class ItemInfo extends React.Component {
+  static propTypes = {
+    location: PropTypes.object.isRequired,
+    getSingleItem: PropTypes.func.isRequired,
+    item: PropTypes.object.isRequired,
+  };
   render() {
     return (
       <div className="iteminfo">
