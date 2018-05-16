@@ -85,7 +85,7 @@ class Cart extends React.Component {
                       </Row>
                       <Row>
                         <Col className="clearfix">
-                          <Link to="" className="checkout-cart">结算购物车中的商品</Link>
+                          <Link to="/cart" className="checkout-cart">结算购物车中的商品</Link>
                         </Col>
                       </Row>
                     </div>

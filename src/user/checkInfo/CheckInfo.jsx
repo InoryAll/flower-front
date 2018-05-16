@@ -5,7 +5,7 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import Cookie from '../../common/cookie';
-import { onViewInit } from './action/action';
+import { onViewInit, addOrder } from './action/action';
 import { validateLoginState } from '../../user/login/action/action';
 import { getCart } from '../../user/index/action/action';
 import { userSelector } from '../../user/login/selector/selector';
@@ -22,6 +22,7 @@ class CheckInfo extends React.Component {
     validateLoginState: PropTypes.func.isRequired,
     onViewInit: PropTypes.func.isRequired,
     getCart: PropTypes.func.isRequired,
+    addOrder: PropTypes.func.isRequired,
   };
   componentWillMount() {
     this.props.onViewInit();
@@ -51,6 +52,7 @@ const mapDispatchToProps = {
   onViewInit,
   validateLoginState,
   getCart,
+  addOrder,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(CheckInfo);
