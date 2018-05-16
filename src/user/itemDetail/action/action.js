@@ -7,11 +7,13 @@ import { message } from 'antd';
 import {
   ITEM_DETAIL_VIEW_INIT,
   GET_SINGLE_ITEM,
+  GET_ITEM_COMMENT,
 } from '../constant/constant';
 import { getItemApi } from '../../../api/indexApi';
 
 const onViewInitAction = createAction(ITEM_DETAIL_VIEW_INIT);
 const getSingleItemAction = createAction(GET_SINGLE_ITEM);
+const getItemCommentAction = createAction(GET_ITEM_COMMENT);
 
 /**
  * 视图初始化
@@ -37,4 +39,10 @@ export const getSingleItem = (params) => {
       message.error(err);
     });
   };
+};
+
+/**
+ * 获取商品评价
+ */
+export const getItemComment = () => {
 };

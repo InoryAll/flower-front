@@ -15,6 +15,14 @@ class ItemInfo extends React.Component {
     addGood: PropTypes.func.isRequired,
     item: PropTypes.object.isRequired,
   };
+  state = {
+    count: 1,
+  };
+  onNumbeChange = (value) => {
+    this.setState({
+      count: value,
+    });
+  };
   handleBuy = (item) => {
   };
   handleAddToCart = (item) => {
@@ -23,8 +31,8 @@ class ItemInfo extends React.Component {
       itemName: item.name,
       itemPrice: item.nowPrice,
       url: item.url,
-      count: 1,
-      itemTotalPrice: item.nowPrice,
+      count: this.state.count,
+      itemTotalPrice: `￥${this.state.count * parseFloat(item.nowPrice.split('￥')[1]).toFixed(2)}`,
       userId: Cookie.getCookie('_id'),
       userName: Cookie.getCookie('username'),
       deleteFlag: 0,
@@ -60,7 +68,7 @@ class ItemInfo extends React.Component {
                 </div>
                 <div className="iteminfo-right-action-btn">
                   <span className="iteminfo-right-action-btn-count">
-                    <InputNumber className="iteminfo-right-action-btn-count-input" size="large" min={1} max={100000} defaultValue={1} />
+                    <InputNumber onChange={this.onNumbeChange} className="iteminfo-right-action-btn-count-input" size="large" min={1} max={100000} defaultValue={1} />
                   </span>
                   <button className="iteminfo-right-action-btn-buy" onClick={() => { this.handleBuy(item.data[0]); }}>
                     <span className="iteminfo-right-action-btn-buy-icon">
