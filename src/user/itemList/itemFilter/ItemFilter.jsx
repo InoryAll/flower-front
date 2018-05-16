@@ -3,20 +3,37 @@
  * Created by tianrenjie on 2018/5/3
  */
 import React, { PropTypes } from 'react';
+import _ from 'lodash';
 import { Link } from 'react-router';
 import { Row, Col, Icon } from 'antd';
+import Setting from '../../../common/setting';
 import './ItemFilter.less';
 
 class ItemFilter extends React.Component {
-  static propTypes = {};
+  static propTypes = {
+    location: PropTypes.object.isRequired,
+    items: PropTypes.object.isRequired,
+    filtItemList: PropTypes.func.isRequired,
+  };
   state = {
     filter: [],
   };
+  componentWillMount() {
+    if (!_.isUndefined(this.props.location.query.condition)) {
+      this.setState({
+        filter: [...this.state.filter, this.props.location.query.condition],
+      });
+      this.state.filter = [...new Set([...this.state.filter, this.props.location.query.condition])];
+      this.props.filtItemList(this.state.filter);
+    }
+  }
   onSearch = (attribute, value) => {
     console.log(attribute, value);
+    this.state.filter = [...new Set([...this.state.filter, value])];
     this.setState({
       filter: [...new Set([...this.state.filter, value])],
     });
+    this.props.filtItemList(this.state.filter);
   };
   handleDeleteClick = (value) => {
     this.setState({
@@ -25,9 +42,10 @@ class ItemFilter extends React.Component {
   };
   render() {
     const { filter } = this.state;
+    Setting.initSettings();
     const selectItem = [];
     this.state.filter.map((item, index) => {
-      selectItem.push(<li className="itemfilter-selected-ul-li" key={index}><Link onClick={() => { this.handleDeleteClick(item); }} className="itemfilter-selected-link">{item}<span className="itemfilter-selected-icon"><Icon type="close" /></span></Link></li>);
+      selectItem.push(<li className="itemfilter-selected-ul-li" key={index}><Link onClick={() => { this.handleDeleteClick(item); }} className="itemfilter-selected-link">{Setting.mapValueToLabel(item)}<span className="itemfilter-selected-icon"><Icon type="close" /></span></Link></li>);
       return true;
     });
     return (

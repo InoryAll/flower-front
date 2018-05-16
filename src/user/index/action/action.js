@@ -5,7 +5,7 @@
 import { createAction } from 'redux-actions';
 import _ from 'lodash';
 import { message } from 'antd';
-import  Cookie from '../../../common/cookie';
+import Cookie from '../../../common/cookie';
 import {
   INDEX_VIEW_INIT,
   GET_ITEM,

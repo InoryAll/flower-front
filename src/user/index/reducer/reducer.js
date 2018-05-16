@@ -15,6 +15,9 @@ import {
   GET_CART,
   DELETE_GOOD,
 } from '../constant/constant';
+import {
+  ITEM_VIEW_INIT,
+} from '../../itemList/constant/constant';
 
 const initState = {
   code: undefined,
@@ -25,6 +28,7 @@ const initState = {
 export function items(state = initState, action) {
   switch (action.type) {
     case INDEX_VIEW_INIT:
+    case ITEM_VIEW_INIT:
       return state;
     case GET_ITEM:
       return { ...state, ...initState, ...action.payload };
@@ -36,6 +40,7 @@ export function items(state = initState, action) {
 export function hotSale(state = initState, action) {
   switch (action.type) {
     case INDEX_VIEW_INIT:
+    case ITEM_VIEW_INIT:
       return state;
     case GET_HOT_SALE:
       return { ...state, ...initState, ...action.payload };
@@ -47,6 +52,7 @@ export function hotSale(state = initState, action) {
 export function firstFloor(state = initState, action) {
   switch (action.type) {
     case INDEX_VIEW_INIT:
+    case ITEM_VIEW_INIT:
       return state;
     case GET_FIRST_FLOOR:
       return { ...state, ...initState, ...action.payload };
@@ -58,6 +64,7 @@ export function firstFloor(state = initState, action) {
 export function secondFloor(state = initState, action) {
   switch (action.type) {
     case INDEX_VIEW_INIT:
+    case ITEM_VIEW_INIT:
       return state;
     case GET_SECOND_FLOOR:
       return { ...state, ...initState, ...action.payload };
@@ -69,6 +76,7 @@ export function secondFloor(state = initState, action) {
 export function thirdFloor(state = initState, action) {
   switch (action.type) {
     case INDEX_VIEW_INIT:
+    case ITEM_VIEW_INIT:
       return state;
     case GET_THIRD_FLOOR:
       return { ...state, ...initState, ...action.payload };
@@ -80,6 +88,7 @@ export function thirdFloor(state = initState, action) {
 export function forthFloor(state = initState, action) {
   switch (action.type) {
     case INDEX_VIEW_INIT:
+    case ITEM_VIEW_INIT:
       return state;
     case GET_FORTH_FLOOR:
       return { ...state, ...initState, ...action.payload };
@@ -91,6 +100,7 @@ export function forthFloor(state = initState, action) {
 export function dailySale(state = initState, action) {
   switch (action.type) {
     case INDEX_VIEW_INIT:
+    case ITEM_VIEW_INIT:
       return state;
     case GET_DAILY_SALE:
       return { ...state, ...initState, ...action.payload };
@@ -102,6 +112,7 @@ export function dailySale(state = initState, action) {
 export function cart(state = initState, action) {
   switch (action.type) {
     case INDEX_VIEW_INIT:
+    case ITEM_VIEW_INIT:
       return state;
     case GET_CART:
       return { ...state, ...initState, ...action.payload };
