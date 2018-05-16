@@ -102,7 +102,7 @@ class ShoppingList extends React.Component {
         <Row>
           <Col>
             <div className="shoppinglist-next clearfix">
-              <Link className="shoppinglist-next-btn">
+              <Link className="shoppinglist-next-btn" to="/checkInfo">
                 下一步，填写核对购物信息
               </Link>
             </div>
