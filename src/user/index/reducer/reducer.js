@@ -31,7 +31,7 @@ export function items(state = initState, action) {
     case ITEM_VIEW_INIT:
       return state;
     case GET_ITEM:
-      return { ...state, ...initState, ...action.payload };
+      return { ...state, ...initState, ...action.payload.data };
     default:
       return state;
   }
@@ -43,7 +43,7 @@ export function hotSale(state = initState, action) {
     case ITEM_VIEW_INIT:
       return state;
     case GET_HOT_SALE:
-      return { ...state, ...initState, ...action.payload };
+      return { ...state, ...initState, ...action.payload.data };
     default:
       return state;
   }
@@ -55,7 +55,7 @@ export function firstFloor(state = initState, action) {
     case ITEM_VIEW_INIT:
       return state;
     case GET_FIRST_FLOOR:
-      return { ...state, ...initState, ...action.payload };
+      return { ...state, ...initState, ...action.payload.data };
     default:
       return state;
   }
@@ -67,7 +67,7 @@ export function secondFloor(state = initState, action) {
     case ITEM_VIEW_INIT:
       return state;
     case GET_SECOND_FLOOR:
-      return { ...state, ...initState, ...action.payload };
+      return { ...state, ...initState, ...action.payload.data };
     default:
       return state;
   }
@@ -79,7 +79,7 @@ export function thirdFloor(state = initState, action) {
     case ITEM_VIEW_INIT:
       return state;
     case GET_THIRD_FLOOR:
-      return { ...state, ...initState, ...action.payload };
+      return { ...state, ...initState, ...action.payload.data };
     default:
       return state;
   }
@@ -91,7 +91,7 @@ export function forthFloor(state = initState, action) {
     case ITEM_VIEW_INIT:
       return state;
     case GET_FORTH_FLOOR:
-      return { ...state, ...initState, ...action.payload };
+      return { ...state, ...initState, ...action.payload.data };
     default:
       return state;
   }
@@ -103,7 +103,7 @@ export function dailySale(state = initState, action) {
     case ITEM_VIEW_INIT:
       return state;
     case GET_DAILY_SALE:
-      return { ...state, ...initState, ...action.payload };
+      return { ...state, ...initState, ...action.payload.data };
     default:
       return state;
   }
@@ -115,7 +115,7 @@ export function cart(state = initState, action) {
     case ITEM_VIEW_INIT:
       return state;
     case GET_CART:
-      return { ...state, ...initState, ...action.payload };
+      return { ...state, ...initState, ...action.payload.data };
     case DELETE_GOOD:
     default:
       return state;

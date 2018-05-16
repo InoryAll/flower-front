@@ -79,12 +79,12 @@ class SecondFloor extends React.Component {
           </Col>
           <Col span={5}>
             <FloorBasic
-              top={{ url: `/itemDetail?id=${secondFloor.data && secondFloor.data.data[0]._id}`, img: secondFloor.data && secondFloor.data.data[0].url, text: secondFloor.data && secondFloor.data.data[0].name }}
-              bottom={{ nowPrice: secondFloor.data && secondFloor.data.data[0].nowPrice, prePrice: secondFloor.data && secondFloor.data.data[0].prePrice }}
+              top={{ url: `/itemDetail?id=${secondFloor.data && secondFloor.data[0]._id}`, img: secondFloor.data && secondFloor.data[0].url, text: secondFloor.data && secondFloor.data[0].name }}
+              bottom={{ nowPrice: secondFloor.data && secondFloor.data[0].nowPrice, prePrice: secondFloor.data && secondFloor.data[0].prePrice }}
             />
             <FloorBasic
-              top={{ url: `/itemDetail?id=${secondFloor.data && secondFloor.data.data[1]._id}`, img: secondFloor.data && secondFloor.data.data[1].url, text: secondFloor.data && secondFloor.data.data[1].name }}
-              bottom={{ nowPrice: secondFloor.data && secondFloor.data.data[1].nowPrice, prePrice: secondFloor.data && secondFloor.data.data[1].prePrice }}
+              top={{ url: `/itemDetail?id=${secondFloor.data && secondFloor.data[1]._id}`, img: secondFloor.data && secondFloor.data[1].url, text: secondFloor.data && secondFloor.data[1].name }}
+              bottom={{ nowPrice: secondFloor.data && secondFloor.data[1].nowPrice, prePrice: secondFloor.data && secondFloor.data[1].prePrice }}
             />
           </Col>
           <Col span={7}>
@@ -92,22 +92,22 @@ class SecondFloor extends React.Component {
           </Col>
           <Col span={4}>
             <FloorBasic
-              top={{ url: `/itemDetail?id=${secondFloor.data && secondFloor.data.data[2]._id}`, img: secondFloor.data && secondFloor.data.data[2].url, text: secondFloor.data && secondFloor.data.data[2].name }}
-              bottom={{ nowPrice: secondFloor.data && secondFloor.data.data[2].nowPrice, prePrice: secondFloor.data && secondFloor.data.data[2].prePrice }}
+              top={{ url: `/itemDetail?id=${secondFloor.data && secondFloor.data[2]._id}`, img: secondFloor.data && secondFloor.data[2].url, text: secondFloor.data && secondFloor.data[2].name }}
+              bottom={{ nowPrice: secondFloor.data && secondFloor.data[2].nowPrice, prePrice: secondFloor.data && secondFloor.data[2].prePrice }}
             />
             <FloorBasic
-              top={{ url: `/itemDetail?id=${secondFloor.data && secondFloor.data.data[3]._id}`, img: secondFloor.data && secondFloor.data.data[3].url, text: secondFloor.data && secondFloor.data.data[3].name }}
-              bottom={{ nowPrice: secondFloor.data && secondFloor.data.data[3].nowPrice, prePrice: secondFloor.data && secondFloor.data.data[3].prePrice }}
+              top={{ url: `/itemDetail?id=${secondFloor.data && secondFloor.data[3]._id}`, img: secondFloor.data && secondFloor.data[3].url, text: secondFloor.data && secondFloor.data[3].name }}
+              bottom={{ nowPrice: secondFloor.data && secondFloor.data[3].nowPrice, prePrice: secondFloor.data && secondFloor.data[3].prePrice }}
             />
           </Col>
           <Col span={4}>
             <FloorBasic
-              top={{ url: `/itemDetail?id=${secondFloor.data && secondFloor.data.data[4]._id}`, img: secondFloor.data && secondFloor.data.data[4].url, text: secondFloor.data && secondFloor.data.data[4].name }}
-              bottom={{ nowPrice: secondFloor.data && secondFloor.data.data[4].nowPrice, prePrice: secondFloor.data && secondFloor.data.data[4].prePrice }}
+              top={{ url: `/itemDetail?id=${secondFloor.data && secondFloor.data[4]._id}`, img: secondFloor.data && secondFloor.data[4].url, text: secondFloor.data && secondFloor.data[4].name }}
+              bottom={{ nowPrice: secondFloor.data && secondFloor.data[4].nowPrice, prePrice: secondFloor.data && secondFloor.data[4].prePrice }}
             />
             <FloorBasic
-              top={{ url: `/itemDetail?id=${secondFloor.data && secondFloor.data.data[5]._id}`, img: secondFloor.data && secondFloor.data.data[5].url, text: secondFloor.data && secondFloor.data.data[5].name }}
-              bottom={{ nowPrice: secondFloor.data && secondFloor.data.data[5].nowPrice, prePrice: secondFloor.data && secondFloor.data.data[5].prePrice }}
+              top={{ url: `/itemDetail?id=${secondFloor.data && secondFloor.data[5]._id}`, img: secondFloor.data && secondFloor.data[5].url, text: secondFloor.data && secondFloor.data[5].name }}
+              bottom={{ nowPrice: secondFloor.data && secondFloor.data[5].nowPrice, prePrice: secondFloor.data && secondFloor.data[5].prePrice }}
             />
           </Col>
         </Row>

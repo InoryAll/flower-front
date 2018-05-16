@@ -82,42 +82,42 @@ class ForthFloor extends React.Component {
             <Row>
               <Col span={8}>
                 <FloorBasic
-                  top={{ url: `/itemDetail?id=${forthFloor.data && forthFloor.data.data[0]._id}`, img: forthFloor.data && forthFloor.data.data[0].url, text: forthFloor.data && forthFloor.data.data[0].name }}
-                  bottom={{ nowPrice: forthFloor.data && forthFloor.data.data[0].nowPrice, prePrice: forthFloor.data && forthFloor.data.data[0].prePrice }}
+                  top={{ url: `/itemDetail?id=${forthFloor.data && forthFloor.data[0]._id}`, img: forthFloor.data && forthFloor.data[0].url, text: forthFloor.data && forthFloor.data[0].name }}
+                  bottom={{ nowPrice: forthFloor.data && forthFloor.data[0].nowPrice, prePrice: forthFloor.data && forthFloor.data[0].prePrice }}
                 />
               </Col>
               <Col span={8}>
                 <FloorBasic
-                  top={{ url: `/itemDetail?id=${forthFloor.data && forthFloor.data.data[1]._id}`, img: forthFloor.data && forthFloor.data.data[1].url, text: forthFloor.data && forthFloor.data.data[1].name }}
-                  bottom={{ nowPrice: forthFloor.data && forthFloor.data.data[1].nowPrice, prePrice: forthFloor.data && forthFloor.data.data[1].prePrice }}
+                  top={{ url: `/itemDetail?id=${forthFloor.data && forthFloor.data[1]._id}`, img: forthFloor.data && forthFloor.data[1].url, text: forthFloor.data && forthFloor.data[1].name }}
+                  bottom={{ nowPrice: forthFloor.data && forthFloor.data[1].nowPrice, prePrice: forthFloor.data && forthFloor.data[1].prePrice }}
                 />
               </Col>
               <Col span={8}>
                 <FloorBasic
-                  top={{ url: `/itemDetail?id=${forthFloor.data && forthFloor.data.data[2]._id}`, img: forthFloor.data && forthFloor.data.data[2].url, text: forthFloor.data && forthFloor.data.data[2].name }}
-                  bottom={{ nowPrice: forthFloor.data && forthFloor.data.data[2].nowPrice, prePrice: forthFloor.data && forthFloor.data.data[2].prePrice }}
+                  top={{ url: `/itemDetail?id=${forthFloor.data && forthFloor.data[2]._id}`, img: forthFloor.data && forthFloor.data[2].url, text: forthFloor.data && forthFloor.data[2].name }}
+                  bottom={{ nowPrice: forthFloor.data && forthFloor.data[2].nowPrice, prePrice: forthFloor.data && forthFloor.data[2].prePrice }}
                 />
               </Col>
             </Row>
           </Col>
           <Col span={4}>
             <FloorBasic
-              top={{ url: `/itemDetail?id=${forthFloor.data && forthFloor.data.data[3]._id}`, img: forthFloor.data && forthFloor.data.data[3].url, text: forthFloor.data && forthFloor.data.data[3].name }}
-              bottom={{ nowPrice: forthFloor.data && forthFloor.data.data[3].nowPrice, prePrice: forthFloor.data && forthFloor.data.data[3].prePrice }}
+              top={{ url: `/itemDetail?id=${forthFloor.data && forthFloor.data[3]._id}`, img: forthFloor.data && forthFloor.data[3].url, text: forthFloor.data && forthFloor.data[3].name }}
+              bottom={{ nowPrice: forthFloor.data && forthFloor.data[3].nowPrice, prePrice: forthFloor.data && forthFloor.data[3].prePrice }}
             />
             <FloorBasic
-              top={{ url: `/itemDetail?id=${forthFloor.data && forthFloor.data.data[4]._id}`, img: forthFloor.data && forthFloor.data.data[4].url, text: forthFloor.data && forthFloor.data.data[4].name }}
-              bottom={{ nowPrice: forthFloor.data && forthFloor.data.data[4].nowPrice, prePrice: forthFloor.data && forthFloor.data.data[4].prePrice }}
+              top={{ url: `/itemDetail?id=${forthFloor.data && forthFloor.data[4]._id}`, img: forthFloor.data && forthFloor.data[4].url, text: forthFloor.data && forthFloor.data[4].name }}
+              bottom={{ nowPrice: forthFloor.data && forthFloor.data[4].nowPrice, prePrice: forthFloor.data && forthFloor.data[4].prePrice }}
             />
           </Col>
           <Col span={4}>
             <FloorBasic
-              top={{ url: `/itemDetail?id=${forthFloor.data && forthFloor.data.data[5]._id}`, img: forthFloor.data && forthFloor.data.data[5].url, text: forthFloor.data && forthFloor.data.data[5].name }}
-              bottom={{ nowPrice: forthFloor.data && forthFloor.data.data[5].nowPrice, prePrice: forthFloor.data && forthFloor.data.data[5].prePrice }}
+              top={{ url: `/itemDetail?id=${forthFloor.data && forthFloor.data[5]._id}`, img: forthFloor.data && forthFloor.data[5].url, text: forthFloor.data && forthFloor.data[5].name }}
+              bottom={{ nowPrice: forthFloor.data && forthFloor.data[5].nowPrice, prePrice: forthFloor.data && forthFloor.data[5].prePrice }}
             />
             <FloorBasic
-              top={{ url: `/itemDetail?id=${forthFloor.data && forthFloor.data.data[6]._id}`, img: forthFloor.data && forthFloor.data.data[6].url, text: forthFloor.data && forthFloor.data.data[6].name }}
-              bottom={{ nowPrice: forthFloor.data && forthFloor.data.data[6].nowPrice, prePrice: forthFloor.data && forthFloor.data.data[6].prePrice }}
+              top={{ url: `/itemDetail?id=${forthFloor.data && forthFloor.data[6]._id}`, img: forthFloor.data && forthFloor.data[6].url, text: forthFloor.data && forthFloor.data[6].name }}
+              bottom={{ nowPrice: forthFloor.data && forthFloor.data[6].nowPrice, prePrice: forthFloor.data && forthFloor.data[6].prePrice }}
             />
           </Col>
         </Row>

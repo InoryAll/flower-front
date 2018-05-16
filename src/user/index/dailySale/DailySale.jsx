@@ -33,38 +33,38 @@ class DailySale extends React.Component {
         <Row className="dailysale-list">
           <Col span={4}>
             <FloorBasic
-              top={{ url: `/itemDetail?id=${dailySale.data && dailySale.data.data[0]._id}`, img: dailySale.data && dailySale.data.data[0].url, text: dailySale.data && dailySale.data.data[0].name }}
-              bottom={{ nowPrice: dailySale.data && dailySale.data.data[0].nowPrice, prePrice: dailySale.data && dailySale.data.data[0].prePrice }}
+              top={{ url: `/itemDetail?id=${dailySale.data && dailySale.data[0]._id}`, img: dailySale.data && dailySale.data[0].url, text: dailySale.data && dailySale.data[0].name }}
+              bottom={{ nowPrice: dailySale.data && dailySale.data[0].nowPrice, prePrice: dailySale.data && dailySale.data[0].prePrice }}
             />
           </Col>
           <Col span={4}>
             <FloorBasic
-              top={{ url: `/itemDetail?id=${dailySale.data && dailySale.data.data[1]._id}`, img: dailySale.data && dailySale.data.data[1].url, text: dailySale.data && dailySale.data.data[1].name }}
-              bottom={{ nowPrice: dailySale.data && dailySale.data.data[1].nowPrice, prePrice: dailySale.data && dailySale.data.data[1].prePrice }}
+              top={{ url: `/itemDetail?id=${dailySale.data && dailySale.data[1]._id}`, img: dailySale.data && dailySale.data[1].url, text: dailySale.data && dailySale.data[1].name }}
+              bottom={{ nowPrice: dailySale.data && dailySale.data[1].nowPrice, prePrice: dailySale.data && dailySale.data[1].prePrice }}
             />
           </Col>
           <Col span={4}>
             <FloorBasic
-              top={{ url: `/itemDetail?id=${dailySale.data && dailySale.data.data[2]._id}`, img: dailySale.data && dailySale.data.data[2].url, text: dailySale.data && dailySale.data.data[2].name }}
-              bottom={{ nowPrice: dailySale.data && dailySale.data.data[2].nowPrice, prePrice: dailySale.data && dailySale.data.data[2].prePrice }}
+              top={{ url: `/itemDetail?id=${dailySale.data && dailySale.data[2]._id}`, img: dailySale.data && dailySale.data[2].url, text: dailySale.data && dailySale.data[2].name }}
+              bottom={{ nowPrice: dailySale.data && dailySale.data[2].nowPrice, prePrice: dailySale.data && dailySale.data[2].prePrice }}
             />
           </Col>
           <Col span={4}>
             <FloorBasic
-              top={{ url: `/itemDetail?id=${dailySale.data && dailySale.data.data[3]._id}`, img: dailySale.data && dailySale.data.data[3].url, text: dailySale.data && dailySale.data.data[3].name }}
-              bottom={{ nowPrice: dailySale.data && dailySale.data.data[3].nowPrice, prePrice: dailySale.data && dailySale.data.data[3].prePrice }}
+              top={{ url: `/itemDetail?id=${dailySale.data && dailySale.data[3]._id}`, img: dailySale.data && dailySale.data[3].url, text: dailySale.data && dailySale.data[3].name }}
+              bottom={{ nowPrice: dailySale.data && dailySale.data[3].nowPrice, prePrice: dailySale.data && dailySale.data[3].prePrice }}
             />
           </Col>
           <Col span={4}>
             <FloorBasic
-              top={{ url: `/itemDetail?id=${dailySale.data && dailySale.data.data[4]._id}`, img: dailySale.data && dailySale.data.data[4].url, text: dailySale.data && dailySale.data.data[4].name }}
-              bottom={{ nowPrice: dailySale.data && dailySale.data.data[4].nowPrice, prePrice: dailySale.data && dailySale.data.data[4].prePrice }}
+              top={{ url: `/itemDetail?id=${dailySale.data && dailySale.data[4]._id}`, img: dailySale.data && dailySale.data[4].url, text: dailySale.data && dailySale.data[4].name }}
+              bottom={{ nowPrice: dailySale.data && dailySale.data[4].nowPrice, prePrice: dailySale.data && dailySale.data[4].prePrice }}
             />
           </Col>
           <Col span={4}>
             <FloorBasic
-              top={{ url: `/itemDetail?id=${dailySale.data && dailySale.data.data[5]._id}`, img: dailySale.data && dailySale.data.data[5].url, text: dailySale.data && dailySale.data.data[5].name }}
-              bottom={{ nowPrice: dailySale.data && dailySale.data.data[5].nowPrice, prePrice: dailySale.data && dailySale.data.data[5].prePrice }}
+              top={{ url: `/itemDetail?id=${dailySale.data && dailySale.data[5]._id}`, img: dailySale.data && dailySale.data[5].url, text: dailySale.data && dailySale.data[5].name }}
+              bottom={{ nowPrice: dailySale.data && dailySale.data[5].nowPrice, prePrice: dailySale.data && dailySale.data[5].prePrice }}
             />
           </Col>
         </Row>
