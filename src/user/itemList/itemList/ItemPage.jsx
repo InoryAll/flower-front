@@ -45,6 +45,7 @@ class ItemPage extends React.Component {
       itemList.currentPage * itemList.pageSize).map((item, index) => {
         items.push(<ItemSelf
           item={{
+            link: `/itemDetail?id=${item._id}`,
             img: item.url,
             title: item.name,
             description: item.description || '暂无描述*************************************',

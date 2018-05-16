@@ -19,7 +19,7 @@ class ItemSelf extends React.Component {
         <Row>
           <Col>
             <div className="itemself-pic">
-              <Link to="" className="itemself-pic-link">
+              <Link to={item.link} className="itemself-pic-link">
                 <img src={item.img} alt="花之韵" className="itemself-pic-link-img" />
               </Link>
             </div>
@@ -31,7 +31,7 @@ class ItemSelf extends React.Component {
               <Row>
                 <Col>
                   <div className="itemself-des">
-                    <Link to="" className="itemself-des-link">
+                    <Link to={item.link} className="itemself-des-link">
                       <p className="itemself-des-title">{item.title}</p>
                       <p className="itemself-des-detail">{item.description}</p>
                     </Link>
