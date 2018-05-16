@@ -13,6 +13,7 @@ import {
   thirdFloorSelector,
   forthFloorSelector,
   dailySaleSelector,
+  cartSelector,
 } from './selector/selector';
 import {
   onViewInit,
@@ -49,11 +50,13 @@ class Index extends React.Component {
     thirdFloor: PropTypes.object.isRequired,
     forthFloor: PropTypes.object.isRequired,
     dailySale: PropTypes.object.isRequired,
+    cart: PropTypes.object.isRequired,
   };
   componentWillMount() {
     this.props.onViewInit();
     this.props.validateLoginState();
     this.props.getItem();
+    this.props.getCart({ ...this.props.user });
   }
   render() {
     return (
@@ -85,6 +88,7 @@ const mapStateToProps = (state) => {
     thirdFloor: thirdFloorSelector(state),
     forthFloor: forthFloorSelector(state),
     dailySale: dailySaleSelector(state),
+    cart: cartSelector(state),
   };
 };
 

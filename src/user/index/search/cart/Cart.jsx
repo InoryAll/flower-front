@@ -3,6 +3,7 @@
  * Created by tianrenjie on 2018/3/23
  */
 import React, { PropTypes } from 'react';
+import _ from 'lodash';
 import { Row, Col, Icon } from 'antd';
 import { If } from 'jsx-control-statements';
 import { Link } from 'react-router';
@@ -11,7 +12,9 @@ import '../../../../animation/animation.less';
 import './Cart.less';
 
 class Cart extends React.Component {
-  static propTypes = {};
+  static propTypes = {
+    cart: PropTypes.object.isRequired,
+  };
   state = {
     visible: false,
   };
@@ -26,6 +29,16 @@ class Cart extends React.Component {
     });
   };
   render() {
+    const { cart } = this.props;
+    const goods = [];
+    let totalPrice = 0;
+    if (!_.isEmpty(cart.data)) {
+      cart.data.data.map((item, index) => {
+        goods.push(<Goods goods={{ ...item }} />);
+        totalPrice += parseFloat(item.itemTotalPrice.split('￥')[1]);
+        return true;
+      });
+    }
     return (
       <div className="cart clearfix">
         <Row className="cart-row-button">
@@ -55,9 +68,7 @@ class Cart extends React.Component {
                         </div>
                       </If>
                       <If condition={ 1 || true }>
-                        <Goods />
-                        <Goods />
-                        <Goods />
+                        { goods }
                       </If>
                     </div>
                   </Col>
@@ -68,7 +79,7 @@ class Cart extends React.Component {
                       <Row>
                         <Col className="clearfix">
                           <If condition={ 1 || true }>
-                            <p className="check-items">共<span className="check-items-count">2</span>种商品  总计金额：<strong className="check-items-price">¥439.00</strong></p>
+                            <p className="check-items">共<span className="check-items-count">{cart.data && cart.data.data.length}</span>种商品  总计金额：<strong className="check-items-price">¥{totalPrice.toFixed(2)}</strong></p>
                           </If>
                         </Col>
                       </Row>

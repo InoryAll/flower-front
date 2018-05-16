@@ -27,7 +27,7 @@ class Search extends React.Component {
           </Col>
           <Col span={5}>
             <div className="logo-row-cart">
-              <Cart />
+              <Cart {...this.props} />
             </div>
           </Col>
         </Row>

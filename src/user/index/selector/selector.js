@@ -5,6 +5,7 @@
 import { createSelector } from 'reselect';
 
 export const shoppingItemsSelector = state => state.shoppingItems;
+export const cartSelector = state => state.cart;
 export const itemsSelector = createSelector(shoppingItemsSelector, shoppingItmes => shoppingItmes.items);
 export const hotSaleSelector = createSelector(shoppingItemsSelector, shoppingItmes => shoppingItmes.hotSale);
 export const firstFloorSelector = createSelector(shoppingItemsSelector, shoppingItmes => shoppingItmes.firstFloor);

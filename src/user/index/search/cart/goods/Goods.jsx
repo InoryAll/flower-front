@@ -8,26 +8,32 @@ import { Link } from 'react-router';
 import './Goods.less';
 
 class Goods extends React.Component {
-  static propTypes = {};
+  static propTypes = {
+    goods: PropTypes.object.isRequired,
+  };
+  handleCartDelete = (good) => {
+    // 删除商品
+  };
   render() {
+    const { goods } = this.props;
     return (
       <div className="goods">
         <Row className="goods-row">
           <Col span={4}>
-            <img className="goods-row-img" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1521802962199&di=c2d5ad8dcedcda2ec0ee8ca79361110b&imgtype=0&src=http%3A%2F%2Ffile.youboy.com%2Fa%2F88%2F65%2F19%2F1%2F547021s.jpg" alt="花之韵" />
+            <img className="goods-row-img" src={goods.url} alt="花之韵" />
           </Col>
           <Col span={16}>
-            <span className="goods-row-name"><Link to="" className="goods-row-name-a">鲜花名称</Link></span>
+            <span className="goods-row-name"><Link to={`/itemDetail?id=${goods._id}`} className="goods-row-name-a">{goods.itemName}</Link></span>
           </Col>
           <Col span={4}>
             <Row>
               <Col className="clearfix">
-                <p className="goods-row-des"><span className="goods-row-des-price">¥220.00</span>x<span className="goods-row-des-count">1</span></p>
+                <p className="goods-row-des"><span className="goods-row-des-price">{goods.itemPrice}</span>x<span className="goods-row-des-count">{goods.count}</span></p>
               </Col>
             </Row>
             <Row>
               <Col className="clearfix">
-                <Link to="" className="goods-row-delete">删除</Link>
+                <Link onClick={() => { this.handleCartDelete(goods); }} className="goods-row-delete">删除</Link>
               </Col>
             </Row>
           </Col>
