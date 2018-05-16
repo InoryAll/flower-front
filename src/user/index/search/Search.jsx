@@ -22,7 +22,7 @@ class Search extends React.Component {
           </Col>
           <Col span={10}>
             <div className="logo-row-search">
-              <SearchInput />
+              <SearchInput {...this.props} />
             </div>
           </Col>
           <Col span={5}>

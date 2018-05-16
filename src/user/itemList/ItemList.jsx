@@ -4,9 +4,9 @@
  */
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { onViewInit, filtItemList } from './action/action';
+import { onViewInit, filtItemList, pagenationItemList } from './action/action';
 import { validateLoginState } from '../../user/login/action/action';
-import { getItem, getCart } from '../../user/index/action/action';
+import { getItem, getCart, deleteGood } from '../../user/index/action/action';
 import { userSelector } from '../../user/login/selector/selector';
 import { itemsSelector, cartSelector } from '../../user/index/selector/selector';
 import { itemListSelector } from './selector/selector';
@@ -31,6 +31,8 @@ class ItemList extends React.Component {
     validateLoginState: PropTypes.func.isRequired,
     getItem: PropTypes.func.isRequired,
     getCart: PropTypes.func.isRequired,
+    pagenationItemList: PropTypes.func.isRequired,
+    deleteGood: PropTypes.func.isRequired,
   };
   componentWillMount() {
     this.props.onViewInit();
@@ -67,6 +69,8 @@ const mapDispatchToProps = {
   getItem,
   getCart,
   filtItemList,
+  pagenationItemList,
+  deleteGood,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ItemList);

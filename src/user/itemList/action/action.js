@@ -7,10 +7,12 @@ import _ from 'lodash';
 import {
   ITEM_VIEW_INIT,
   FILT_ITEM_LIST,
+  PAGENATION_ITEM_LIST,
 } from '../constant/constant';
 
 const onViewInitAction = createAction(ITEM_VIEW_INIT);
 const onFiltItemListAction = createAction(FILT_ITEM_LIST);
+const onPageItemListAction = createAction(PAGENATION_ITEM_LIST);
 
 /**
  * 视图初始化
@@ -32,6 +34,22 @@ export const filtItemList = (params) => {
     if (!_.isEmpty(items.data)) {
       filterData = items.data.filter(item => params.every(param => JSON.stringify(item).indexOf(param) > -1));
       dispatch(onFiltItemListAction({ data: { ...items, data: filterData } }));
+    }
+  };
+};
+
+/**
+ * 翻页变化
+ */
+export const pagenationItemList = (params) => {
+  return (dispatch, getState) => {
+    const state = getState();
+    const itemList = state.itemList;
+    if (!_.isEmpty(itemList.data)) {
+      dispatch(onPageItemListAction({ data: { ...itemList,
+        totalPage: Math.ceil(itemList.data.length / params.pageSize),
+        currentPage: params.currentPage,
+        pageSize: params.pageSize } }));
     }
   };
 };

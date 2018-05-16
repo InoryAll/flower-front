@@ -5,3 +5,4 @@
 
 export const ITEM_VIEW_INIT = 'ITEM_VIEW_INIT';
 export const FILT_ITEM_LIST = 'FILT_ITEM_LIST';
+export const PAGENATION_ITEM_LIST = 'PAGENATION_ITEM_LIST';

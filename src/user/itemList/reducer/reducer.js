@@ -5,6 +5,7 @@
 import {
   ITEM_VIEW_INIT,
   FILT_ITEM_LIST,
+  PAGENATION_ITEM_LIST,
 } from '../constant/constant';
 import { GET_ITEM } from '../../../user/index/constant/constant';
 
@@ -21,6 +22,8 @@ export function itemList(state = initState, action) {
     case GET_ITEM:
       return { ...state, ...initState, ...action.payload.data };
     case FILT_ITEM_LIST:
+      return { ...state, ...initState, ...action.payload.data };
+    case PAGENATION_ITEM_LIST:
       return { ...state, ...initState, ...action.payload.data };
     default:
       return state;
