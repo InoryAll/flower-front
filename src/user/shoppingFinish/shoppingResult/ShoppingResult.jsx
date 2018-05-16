@@ -3,13 +3,39 @@
  * Created by tianrenjie on 2018/5/6
  */
 import React, { PropTypes } from 'react';
+import { Link } from 'react-router';
 import { Row, Col, Icon } from 'antd';
+import _ from 'lodash';
 import ItemSelf from '../../itemList/itemList/itemSelf/ItemSelf';
 import './ShoppingResult.less';
 
 class ShoppingResult extends React.Component {
-  static propTypes = {};
+  static propTypes = {
+    recommend: PropTypes.object.isRequired,
+    addGood: PropTypes.func.isRequired,
+  };
   render() {
+    const { recommend } = this.props;
+    const items = [];
+    if (!_.isEmpty(recommend.data)) {
+      recommend.data.map((item, index) => {
+        items.push(<ItemSelf
+          item={{
+            data: { ...item },
+            link: `/itemDetail?id=${item._id}`,
+            img: item.url,
+            title: item.name,
+            description: item.description || '暂无描述*************************************',
+            nowPrice: item.nowPrice,
+            prePrice: item.prePrice,
+            sales: item.count || '暂无',
+            comments: item.comment || '暂无',
+          }}
+          { ...this.props }
+        />);
+        return true;
+      });
+    }
     return (
       <div className="shoppingresult">
         <div className="shoppingresult-content">
@@ -26,7 +52,7 @@ class ShoppingResult extends React.Component {
           <Row>
             <Col>
               <div className="shoppingresult-content-next">
-                <button className="shoppingresult-content-next-btn">返回首页</button>
+                <Link to="/" className="shoppingresult-content-next-btn">返回首页</Link>
               </div>
             </Col>
           </Row>
@@ -34,39 +60,7 @@ class ShoppingResult extends React.Component {
             <Col>
               <h3 className="shoppingresult-more">—&emsp;更多推荐&emsp;—</h3>
               <div className="shoppingresult-list clearfix">
-                <ItemSelf
-                  item={{
-                    img: '',
-                    title: '携手一生',
-                    description: '11枝优质红玫瑰搭配绿叶，满天星，随机赠送2只小熊',
-                    nowPrice: '￥179',
-                    prePrice: '￥299',
-                    sales: '6751',
-                    comments: '8329',
-                  }}
-                />
-                <ItemSelf
-                  item={{
-                    img: '',
-                    title: '携手一生',
-                    description: '11枝优质红玫瑰搭配绿叶，满天星，随机赠送2只小熊',
-                    nowPrice: '￥179',
-                    prePrice: '￥299',
-                    sales: '6751',
-                    comments: '8329',
-                  }}
-                />
-                <ItemSelf
-                  item={{
-                    img: '',
-                    title: '携手一生',
-                    description: '11枝优质红玫瑰搭配绿叶，满天星，随机赠送2只小熊',
-                    nowPrice: '￥179',
-                    prePrice: '￥299',
-                    sales: '6751',
-                    comments: '8329',
-                  }}
-                />
+                {items}
               </div>
             </Col>
           </Row>
