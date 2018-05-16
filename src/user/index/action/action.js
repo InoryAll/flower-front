@@ -17,11 +17,13 @@ import {
   GET_DAILY_SALE,
   GET_CART,
   DELETE_GOOD,
+  ADD_GOOD,
 } from '../constant/constant';
 import {
   getItemApi,
   getCartApi,
   deleteCartApi,
+  addCartApi,
 } from '../../../api/indexApi';
 
 const onViewInitAction = createAction(INDEX_VIEW_INIT);
@@ -34,6 +36,7 @@ const getForthAction = createAction(GET_FORTH_FLOOR);
 const getDailySaleAction = createAction(GET_DAILY_SALE);
 const getCartAction = createAction(GET_CART);
 const deleteGoodAction = createAction(DELETE_GOOD);
+const addGoodAction = createAction(ADD_GOOD);
 
 /**
  * 视图初始化
@@ -113,3 +116,24 @@ export function deleteGood(params) {
     });
   };
 }
+
+/**
+ * 添加商品到购物车
+ * @param params 条件参数
+ * return {*}
+ */
+export const addGood = (params) => {
+  return (dispatch) => {
+    addCartApi(JSON.stringify({ ...params }), (data) => {
+      if (data.code === 1) {
+        message.success('添加到购物车成功！');
+        getCart({ _id: Cookie.getCookie('_id') })(dispatch);
+        dispatch(addGoodAction({ data }));
+      } else {
+        message.error('添加到购物车失败，请重试！');
+      }
+    }, (err) => {
+      message.error(err);
+    });
+  };
+};

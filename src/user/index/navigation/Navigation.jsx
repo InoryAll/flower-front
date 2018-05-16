@@ -18,6 +18,22 @@ class Navigation extends React.Component {
     this.setState({
       menuItem,
     });
+    switch (menuItem) {
+      case 'allFlower':
+        location.href = '/itemList';
+        break;
+      case 'loveFlower':
+        location.href = './itemList?condition=love';
+        break;
+      case 'holidayFlower':
+        location.href = './itemList?condition=holiday';
+        break;
+      case 'cheapFlower':
+        location.href = './itemList?condition=oneToTwo';
+        break;
+      default:
+        return;
+    }
   };
   render() {
     return (

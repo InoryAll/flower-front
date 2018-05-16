@@ -18,3 +18,8 @@ export const deleteCartApi = ajaxRequest.createAjax({
   method: 'POST',
   url: 'http://localhost:3000/cart/updateCart',
 });
+
+export const addCartApi = ajaxRequest.createAjax({
+  method: 'POST',
+  url: 'http://localhost:3000/cart/addCart',
+});

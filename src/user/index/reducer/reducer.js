@@ -14,6 +14,7 @@ import {
   GET_DAILY_SALE,
   GET_CART,
   DELETE_GOOD,
+  ADD_GOOD,
 } from '../constant/constant';
 import {
   ITEM_VIEW_INIT,
@@ -117,6 +118,7 @@ export function cart(state = initState, action) {
     case GET_CART:
       return { ...state, ...initState, ...action.payload.data };
     case DELETE_GOOD:
+    case ADD_GOOD:
     default:
       return state;
   }

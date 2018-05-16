@@ -5,12 +5,28 @@
 import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
 import { Row, Col, Icon } from 'antd';
+import Cookie from '../../../../common/cookie';
 import img from '../../../../../static/img/itemList/1.jpg';
 import './ItemSelf.less';
 
 class ItemSelf extends React.Component {
   static propTypes = {
     item: PropTypes.object.isRequired,
+    addGood: PropTypes.func.isRequired,
+  };
+  handleAddCart = (item) => {
+    const params = {
+      itemId: item._id,
+      itemName: item.name,
+      itemPrice: item.nowPrice,
+      url: item.url,
+      count: 1,
+      itemTotalPrice: item.nowPrice,
+      userId: Cookie.getCookie('_id'),
+      userName: Cookie.getCookie('username'),
+      deleteFlag: 0,
+    };
+    this.props.addGood(params);
   };
   render() {
     const { item } = this.props;
@@ -70,7 +86,7 @@ class ItemSelf extends React.Component {
               <Row>
                 <Col>
                   <div className="itemself-cart-add">
-                    <button className="itemself-cart-add-btn"><span className="itemself-cart-add-btn-icon"><Icon type="shopping-cart" /></span>加入购物车</button>
+                    <button className="itemself-cart-add-btn" onClick={() => { this.handleAddCart(item.data); }}><span className="itemself-cart-add-btn-icon"><Icon type="shopping-cart" /></span>加入购物车</button>
                   </div>
                 </Col>
               </Row>

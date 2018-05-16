@@ -13,3 +13,4 @@ export const GET_FORTH_FLOOR = 'GET_FORTH_FLOOR';
 export const GET_DAILY_SALE = 'GET_DAILY_SALE';
 export const GET_CART = 'GET_CART';
 export const DELETE_GOOD = 'DELETE_GOOD';
+export const ADD_GOOD = 'ADD_GOOD';

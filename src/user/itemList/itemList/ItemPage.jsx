@@ -45,6 +45,7 @@ class ItemPage extends React.Component {
       itemList.currentPage * itemList.pageSize).map((item, index) => {
         items.push(<ItemSelf
           item={{
+            data: { ...item },
             link: `/itemDetail?id=${item._id}`,
             img: item.url,
             title: item.name,
@@ -54,6 +55,7 @@ class ItemPage extends React.Component {
             sales: item.count || '暂无',
             comments: item.comment || '暂无',
           }}
+          { ...this.props }
         />);
         return true;
       });
