@@ -6,7 +6,8 @@ import {
   CHECK_INFO_VIEW_INIT,
   GET_ORDER,
   ADD_ORDER,
-  UPDATE_ORDER
+  UPDATE_ORDER,
+  DELETE_ORDER,
 } from '../constant/constant';
 
 const initState = {
@@ -20,6 +21,7 @@ export function order(state = initState, action) {
     case CHECK_INFO_VIEW_INIT:
     case ADD_ORDER:
     case UPDATE_ORDER:
+    case DELETE_ORDER:
       return state;
     case GET_ORDER:
       return { ...state, ...initState, ...action.payload.data };

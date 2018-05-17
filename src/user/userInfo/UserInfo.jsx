@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 import Cookie from '../../common/cookie';
 import { validateLoginState, updateUser } from '../../user/login/action/action';
 import { getCart, deleteGood } from '../../user/index/action/action';
+import { deleteOrder } from '../../user/checkInfo/action/action';
 import { onViewInit, getAllOrders } from './action/action';
 import { userSelector } from '../../user/login/selector/selector';
 import { cartSelector } from '../../user/index/selector/selector';
@@ -29,6 +30,7 @@ class UserInfo extends React.Component {
     getCart: PropTypes.func.isRequired,
     updateUser: PropTypes.func.isRequired,
     getAllOrders: PropTypes.func.isRequired,
+    deleteOrder: PropTypes.func.isRequired,
   };
   componentWillMount() {
     this.props.onViewInit();
@@ -64,6 +66,7 @@ const mapDispatchToProps = {
   deleteGood,
   updateUser,
   getAllOrders,
+  deleteOrder,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserInfo);

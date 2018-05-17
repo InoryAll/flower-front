@@ -17,6 +17,7 @@ class UserContent extends React.Component {
   static propTypes = {
     user: PropTypes.object.isRequired,
     updateUser: PropTypes.func.isRequired,
+    deleteOrder: PropTypes.func.isRequired,
     orderList: PropTypes.object.isRequired,
   };
   state = {
@@ -40,6 +41,9 @@ class UserContent extends React.Component {
     });
     params = { ...params, birthday: moment(this.state.date).format('YYYY-MM-DD HH:mm:ss') };
     this.props.updateUser({ ...params });
+  };
+  handleOrderDelete = (order) => {
+    this.props.deleteOrder({ ...order });
   };
   handleDateChange = (value) => {
     this.setState({
@@ -133,7 +137,7 @@ class UserContent extends React.Component {
       render: (text, record) => {
         return (
           <div className="usercontent-pannel-order-table-action">
-            <button className="usercontent-pannel-order-table-action-btn">取消订单</button>
+            <button onClick={() => { this.handleOrderDelete(record); }} className="usercontent-pannel-order-table-action-btn">删除订单</button>
           </div>
         );
       },
