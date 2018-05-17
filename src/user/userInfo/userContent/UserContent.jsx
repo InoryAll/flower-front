@@ -60,7 +60,7 @@ class UserContent extends React.Component {
     }
   };
   render() {
-    const { user } = this.props;
+    const { user, orderList } = this.props;
     $('#username').val(user.username);
     $('#email').val(user.email);
     $('#name').val(user.name);
@@ -71,7 +71,7 @@ class UserContent extends React.Component {
     }
     $('#address').val(user.address);
     $('#qq').val(user.qq);
-    const columns = [{
+    const itemColumns = [{
       title: '商品',
       dataIndex: 'item',
       key: 'item',
@@ -79,26 +79,54 @@ class UserContent extends React.Component {
         return (
           <div className="shoppinglist-table-item clearfix">
             <img src={record.url} alt="花之韵" className="shoppinglist-table-item-img" />
-            <Link to="" className="shoppinglist-table-item-link">{record.name}</Link>
+            <Link to="" className="shoppinglist-table-item-link">{record.itemName}</Link>
           </div>
         );
       },
     }, {
       title: '单价(元)',
-      dataIndex: 'price',
-      key: 'price',
+      dataIndex: 'itemPrice',
+      key: 'itemPrice',
     }, {
       title: '数量',
       dataIndex: 'count',
       key: 'count',
     }, {
       title: '小计(元)',
-      dataIndex: 'singleTotal',
-      key: 'singleTotal',
+      dataIndex: 'itemTotalPrice',
+      key: 'itemTotalPrice',
+      render: (text, record) => {
+        return `￥${parseFloat((text).split('￥')[1]).toFixed(2)}`;
+      },
+    }];
+    const columns = [{
+      title: '商品',
+      dataIndex: 'item',
+      key: 'item',
+      render: (text, record) => {
+        return (
+          <div className="shoppinglist-table-item clearfix">
+            <Table
+              columns={itemColumns}
+              dataSource={record.itemList || []}
+              showHeader={true}
+              pagination={false}
+            />
+          </div>
+        );
+      },
     }, {
       title: '交易状态',
       dataIndex: 'status',
       key: 'status',
+      render: (text, record) => {
+        switch (text) {
+          case 1:
+            return '已付款';
+          default:
+            return '未知状态';
+        }
+      },
     }, {
       title: '操作',
       key: 'action',
@@ -109,14 +137,6 @@ class UserContent extends React.Component {
           </div>
         );
       },
-    }];
-    const data = [{
-      key: '1',
-      url: img,
-      name: '思念是一种病',
-      price: '169.00',
-      count: 1,
-      status: '待付款',
     }];
     return (
       <div className="usercontent">
@@ -218,7 +238,11 @@ class UserContent extends React.Component {
                     <div className="usercontent-pannel-order-table">
                       <Table
                         columns={columns}
-                        dataSource={data}
+                        dataSource={orderList.data || []}
+                        pagination={{
+                          defaultCurrent: 1,
+                          pageSize: 1,
+                        }}
                       />
                     </div>
                   </Col>

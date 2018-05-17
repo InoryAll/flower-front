@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08c3298d-d019-4401-abb2-96f78fb0689a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rootReducer.js" afterPath="$PROJECT_DIR$/src/rootReducer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/userInfo/UserInfo.jsx" afterPath="$PROJECT_DIR$/src/user/userInfo/UserInfo.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/userInfo/action/action.js" afterPath="$PROJECT_DIR$/src/user/userInfo/action/action.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/userInfo/constant/constant.js" afterPath="$PROJECT_DIR$/src/user/userInfo/constant/constant.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/userInfo/reducer/reducer.js" afterPath="$PROJECT_DIR$/src/user/userInfo/reducer/reducer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/userInfo/selector/selector.js" afterPath="$PROJECT_DIR$/src/user/userInfo/selector/selector.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/userInfo/userContent/UserContent.jsx" afterPath="$PROJECT_DIR$/src/user/userInfo/userContent/UserContent.jsx" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -26,13 +20,24 @@
       <file leaf-file-name="UserContent.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/user/userInfo/userContent/UserContent.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="56" column="12" lean-forward="true" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="12" />
+            <state relative-caret-position="1282">
+              <caret line="236" column="23" lean-forward="true" selection-start-line="236" selection-start-column="23" selection-end-line="236" selection-end-column="23" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#62#103#0" expanded="true" />
-                <element signature="e#4363#7877#0" expanded="false" />
-                <element signature="e#7892#8522#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CheckForm.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/user/checkInfo/checkForm/CheckForm.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1801">
+              <caret line="71" column="17" lean-forward="false" selection-start-line="71" selection-start-column="17" selection-end-line="71" selection-end-column="17" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#60#101#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -121,16 +126,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="selector.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/user/userInfo/selector/selector.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="3" column="3" lean-forward="true" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="orderApi.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/api/orderApi.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -152,12 +147,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>addGo</find>
-      <find>addGood</find>
-      <find>totalPrice</find>
-      <find>this.props.addGood(params)</find>
-      <find>l</find>
-      <find>location</find>
       <find>location.href</find>
       <find>delete</find>
       <find>deleteGoood</find>
@@ -182,6 +171,12 @@
       <find>updateOr</find>
       <find>updateOrd</find>
       <find>updateOrder</find>
+      <find>a</find>
+      <find>add</find>
+      <find>addO</find>
+      <find>addOr</find>
+      <find>addOrd</find>
+      <find>addOrder</find>
     </findStrings>
     <replaceStrings>
       <replace>dl className=&quot;info-row-ul-li-dl&quot;</replace>
@@ -267,10 +262,10 @@
         <option value="$PROJECT_DIR$/src/user/userInfo/constant/constant.js" />
         <option value="$PROJECT_DIR$/src/user/userInfo/reducer/reducer.js" />
         <option value="$PROJECT_DIR$/src/user/userInfo/selector/selector.js" />
-        <option value="$PROJECT_DIR$/src/user/userInfo/userContent/UserContent.jsx" />
         <option value="$PROJECT_DIR$/src/user/userInfo/UserInfo.jsx" />
         <option value="$PROJECT_DIR$/src/rootReducer.js" />
         <option value="$PROJECT_DIR$/src/user/userInfo/action/action.js" />
+        <option value="$PROJECT_DIR$/src/user/userInfo/userContent/UserContent.jsx" />
       </list>
     </option>
   </component>
@@ -1028,12 +1023,12 @@
       <workItem from="1526379423759" duration="22000" />
       <workItem from="1526379514825" duration="1119000" />
       <workItem from="1526383860098" duration="82453000" />
-      <workItem from="1526527863208" duration="11185000" />
+      <workItem from="1526527863208" duration="12499000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="410169000" />
+    <option name="totallyTimeSpent" value="411483000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1332,17 +1327,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/checkInfo/checkForm/CheckForm.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="150" column="19" lean-forward="false" selection-start-line="150" selection-start-column="19" selection-end-line="150" selection-end-column="19" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#60#101#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/api/itemApi.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="245">
@@ -1515,15 +1499,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/user/checkInfo/checkForm/CheckForm.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1801">
+          <caret line="71" column="17" lean-forward="false" selection-start-line="71" selection-start-column="17" selection-end-line="71" selection-end-column="17" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#60#101#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/user/userInfo/userContent/UserContent.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="56" column="12" lean-forward="true" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="12" />
+        <state relative-caret-position="1282">
+          <caret line="236" column="23" lean-forward="true" selection-start-line="236" selection-start-column="23" selection-end-line="236" selection-end-column="23" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#62#103#0" expanded="true" />
-            <element signature="e#4363#7877#0" expanded="false" />
-            <element signature="e#7892#8522#0" expanded="false" />
           </folding>
         </state>
       </provider>
