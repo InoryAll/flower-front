@@ -36,7 +36,7 @@ class Info extends React.Component {
     this.props.onViewInit();
     this.props.getCart({ _id: Cookie.getCookie('_id') });
     if (!_.isEmpty(this.props.params.id)) {
-      this.props.getInfo(this.props.params.id);
+      this.props.getInfo({ _id: this.props.params.id });
     }
   }
   render() {
