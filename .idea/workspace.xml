@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08c3298d-d019-4401-abb2-96f78fb0689a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/admin/timg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/admin/console/Console.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/admin/console/Console.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/admin/login/Login.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/admin/login/Login.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/admin/index/Index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/admin/index/Index.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/admin/console/Console.less" afterPath="$PROJECT_DIR$/src/admin/console/Console.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/router.jsx" afterPath="$PROJECT_DIR$/src/router.jsx" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -24,21 +21,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ItemOther.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/user/itemDetail/itemOther/ItemOther.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="62" column="38" lean-forward="true" selection-start-line="62" selection-start-column="38" selection-end-line="62" selection-end-column="38" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="e#64#105#0" expanded="true" />
-                <element signature="e#2254#4514#0" expanded="false" />
-                <element signature="e#4523#5489#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="rootReducer.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/rootReducer.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -52,12 +34,45 @@
       <file leaf-file-name="router.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/router.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="34" column="12" lean-forward="true" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="12" />
+            <state relative-caret-position="199">
+              <caret line="38" column="48" lean-forward="true" selection-start-line="38" selection-start-column="48" selection-end-line="38" selection-end-column="48" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#54#80#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Index.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/admin/index/Index.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="245">
+              <caret line="76" column="49" lean-forward="false" selection-start-line="76" selection-start-column="49" selection-end-line="76" selection-end-column="49" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#63#104#0" expanded="true" />
+                <element signature="e#314#758#0" expanded="false" />
+                <element signature="e#315#430#0" expanded="false" />
+                <element signature="e#432#501#0" expanded="false" />
+                <element signature="e#503#584#0" expanded="false" />
+                <element signature="e#586#757#0" expanded="false" />
+                <element signature="e#674#742#0" expanded="false" />
+                <element signature="e#777#1098#0" expanded="false" />
+                <element signature="e#778#885#0" expanded="false" />
+                <element signature="e#887#991#0" expanded="false" />
+                <element signature="e#993#1097#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Index.less" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/admin/index/Index.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -95,11 +110,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Console.jsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Console.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/admin/console/Console.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="88" column="21" lean-forward="true" selection-start-line="88" selection-start-column="21" selection-end-line="88" selection-end-column="21" />
+            <state relative-caret-position="-1575">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="3" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#63#104#0" expanded="true" />
@@ -108,11 +123,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Console.less" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Console.less" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/admin/console/Console.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="40" column="18" lean-forward="true" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
+            <state relative-caret-position="189">
+              <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -211,8 +226,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/user/index/header/Header.jsx" />
-        <option value="$PROJECT_DIR$/src/user/itemList/itemList/ItemPage.jsx" />
         <option value="$PROJECT_DIR$/src/user/checkInfo/checkForm/CheckForm.jsx" />
         <option value="$PROJECT_DIR$/src/api/loginApi.js" />
         <option value="$PROJECT_DIR$/src/user/login/constant/constant.js" />
@@ -259,9 +272,11 @@
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/admin/login/Login.less" />
         <option value="$PROJECT_DIR$/src/admin/login/Login.jsx" />
-        <option value="$PROJECT_DIR$/src/router.jsx" />
-        <option value="$PROJECT_DIR$/src/admin/console/Console.less" />
         <option value="$PROJECT_DIR$/src/admin/console/Console.jsx" />
+        <option value="$PROJECT_DIR$/src/router.jsx" />
+        <option value="$PROJECT_DIR$/src/admin/index/Index.jsx" />
+        <option value="$PROJECT_DIR$/src/admin/index/Index.less" />
+        <option value="$PROJECT_DIR$/src/admin/console/Console.less" />
       </list>
     </option>
   </component>
@@ -412,6 +427,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="index" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="flower-front" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="flower-front" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="console" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -450,11 +487,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\flower-front\src\admin\index" />
       <recent name="E:\flower-front\static\img\firstFloor" />
       <recent name="E:\flower-front\static\img\floorBasic" />
       <recent name="E:\flower-front\static\img\sudoku" />
       <recent name="E:\flower-front\static\img" />
-      <recent name="E:\flower-front\static\img\hotline" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\flower-front\static\img\admin" />
@@ -601,12 +638,12 @@
       <workItem from="1526379423759" duration="22000" />
       <workItem from="1526379514825" duration="1119000" />
       <workItem from="1526383860098" duration="82453000" />
-      <workItem from="1526527863208" duration="46266000" />
+      <workItem from="1526527863208" duration="48137000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="445250000" />
+    <option name="totallyTimeSpent" value="447121000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -655,27 +692,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/user/userInfo/action/action.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="34" column="46" lean-forward="true" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="46" />
-          <folding>
-            <element signature="e#66#111#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/userInfo/UserInfo.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="34" column="24" lean-forward="true" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="e#58#99#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/user/index/navigation/category/Category.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
@@ -1049,8 +1065,8 @@
         <state relative-caret-position="250">
           <caret line="62" column="38" lean-forward="true" selection-start-line="62" selection-start-column="38" selection-end-line="62" selection-end-column="38" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#64#105#0" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#64#105#0" expanded="false" />
             <element signature="e#2254#4514#0" expanded="false" />
             <element signature="e#4523#5489#0" expanded="false" />
           </folding>
@@ -1068,30 +1084,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/rootReducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="20" column="7" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="27" column="8" lean-forward="true" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/router.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="34" column="12" lean-forward="true" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="12" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#54#80#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1122,22 +1119,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/admin/console/Console.less">
+    <entry file="file://$PROJECT_DIR$/src/rootReducer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="40" column="18" lean-forward="true" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
+        <state relative-caret-position="197">
+          <caret line="20" column="7" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/admin/console/Console.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="88" column="21" lean-forward="true" selection-start-line="88" selection-start-column="21" selection-end-line="88" selection-end-column="21" />
+        <state relative-caret-position="-1575">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="3" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#63#104#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/router.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="38" column="48" lean-forward="true" selection-start-line="38" selection-start-column="48" selection-end-line="38" selection-end-column="48" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#54#80#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/admin/index/Index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="76" column="49" lean-forward="false" selection-start-line="76" selection-start-column="49" selection-end-line="76" selection-end-column="49" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#63#104#0" expanded="true" />
+            <element signature="e#314#758#0" expanded="false" />
+            <element signature="e#315#430#0" expanded="false" />
+            <element signature="e#432#501#0" expanded="false" />
+            <element signature="e#503#584#0" expanded="false" />
+            <element signature="e#586#757#0" expanded="false" />
+            <element signature="e#674#742#0" expanded="false" />
+            <element signature="e#777#1098#0" expanded="false" />
+            <element signature="e#778#885#0" expanded="false" />
+            <element signature="e#887#991#0" expanded="false" />
+            <element signature="e#993#1097#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/admin/index/Index.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/admin/console/Console.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
