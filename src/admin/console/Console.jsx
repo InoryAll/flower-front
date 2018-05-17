@@ -3,7 +3,7 @@
  * Created by tianrenjie on 2018/5/17
  */
 import React, { PropTypes } from 'react';
-import { Layout, Menu, Icon, Dropdown, Button } from 'antd';
+import { Layout, Menu, Icon, Dropdown } from 'antd';
 import { Link } from 'react-router';
 import './Console.less';
 
@@ -44,30 +44,42 @@ class Console extends React.Component {
               <Icon type="home" className="admin-logo-icon" />
               <span className="admin-logo-title">{this.state.collapsed ? '' : '鲜花销售管理控制台'}</span>
             </div>
-            <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
+            <Menu theme="dark" mode="inline">
               <Menu.Item key="1">
-                <Icon type="user" />
-                <span>用户管理</span>
+                <Link to="/admin/console/user">
+                  <Icon type="user" />
+                  <span>用户管理</span>
+                </Link>
               </Menu.Item>
               <Menu.Item key="2">
-                <Icon type="inbox" />
-                <span>产品管理</span>
+                <Link to="/admin/console/item">
+                  <Icon type="inbox" />
+                  <span>产品管理</span>
+                </Link>
               </Menu.Item>
               <Menu.Item key="3">
-                <Icon type="red-envelope" />
-                <span>订单管理</span>
+                <Link to="/admin/console/order">
+                  <Icon type="red-envelope" />
+                  <span>订单管理</span>
+                </Link>
               </Menu.Item>
               <Menu.Item key="4">
-                <Icon type="message" />
-                <span>文案管理</span>
+                <Link to="/admin/console/info">
+                  <Icon type="message" />
+                  <span>文案管理</span>
+                </Link>
               </Menu.Item>
               <Menu.Item key="5">
-                <Icon type="edit" />
-                <span>工作记录</span>
+                <Link to="/admin/console/worksheet">
+                  <Icon type="edit" />
+                  <span>工作记录</span>
+                </Link>
               </Menu.Item>
               <Menu.Item key="6">
-                <Icon type="ellipsis" />
-                <span>操作记录</span>
+                <Link to="/admin/console/action">
+                  <Icon type="ellipsis" />
+                  <span>操作记录</span>
+                </Link>
               </Menu.Item>
             </Menu>
           </Sider>

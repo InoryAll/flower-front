@@ -18,6 +18,7 @@ import Info from './user/info/Info';
 import AdminLogin from './admin/login/Login';
 import Console from './admin/console/Console';
 import ConsoleIndex from './admin/index/Index';
+import ConsoleUser from './admin/user/User';
 
 export const router = (
   <Router history={browserHistory}>
@@ -38,6 +39,7 @@ export const router = (
       <Route path="login" component={AdminLogin} />
       <Route path="console" component={Console}>
         <IndexRoute component={ConsoleIndex} />
+        <Route path="user" component={ConsoleUser} />
       </Route>
     </Route>
   </Router>
