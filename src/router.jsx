@@ -14,6 +14,7 @@ import CheckInfo from './user/checkInfo/CheckInfo';
 import ShoppingPay from './user/shoppingPay/ShoppingPay';
 import ShoppingFinish from './user/shoppingFinish/ShoppingFinish';
 import UserInfo from './user/userInfo/UserInfo';
+import Info from './user/info/Info';
 
 export const router = (
   <Router history={browserHistory}>
@@ -28,6 +29,7 @@ export const router = (
       <Route path="pay" component={ShoppingPay} />
       <Route path="result" component={ShoppingFinish} />
       <Route path="user" component={UserInfo} />
+      <Route path="info" component={Info} />
     </Route>
   </Router>
 );

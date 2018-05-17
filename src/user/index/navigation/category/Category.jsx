@@ -4,13 +4,14 @@
  */
 import React, { PropTypes } from 'react';
 import { Row, Col, Icon } from 'antd';
-import { Link } from 'react-router';
+import { Link, browserHistory } from 'react-router';
 import './Category.less';
 
 class Category extends React.Component {
   static propTypes = {};
   onSearch = (attribute, value) => {
     console.log(attribute, value);
+    browserHistory.push('/itemList?condition='.concat(value));
   };
   render() {
     return (
@@ -44,42 +45,42 @@ class Category extends React.Component {
               <li className="category-menu">
                 <h4 className="category-menu-title"><Link className="category-menu-title-a" to="">鲜花用途</Link></h4>
                 <ul>
-                  <li className="category-menu-item"><Link onClick={() => { this.onSearch('usage', 'love'); }} className="category-menu-item-a" to="">爱情鲜花</Link></li>
-                  <li className="category-menu-item"><Link onClick={() => { this.onSearch('usage', 'friendship'); }} className="category-menu-item-a" to="">友情鲜花</Link></li>
-                  <li className="category-menu-item"><Link onClick={() => { this.onSearch('usage', 'birthday'); }} className="category-menu-item-a" to="">生日鲜花</Link></li>
-                  <li className="category-menu-item"><Link onClick={() => { this.onSearch('usage', 'greetings'); }} className="category-menu-item-a" to="">问候长辈</Link></li>
-                  <li className="category-menu-item"><Link onClick={() => { this.onSearch('usage', 'sympathy'); }} className="category-menu-item-a" to="">探病慰问</Link></li>
-                  <li className="category-menu-item"><Link onClick={() => { this.onSearch('usage', 'apology'); }} className="category-menu-item-a" to="">道歉鲜花</Link></li>
-                  <li className="category-menu-item"><Link onClick={() => { this.onSearch('usage', 'congratulation'); }} className="category-menu-item-a" to="">祝贺鲜花</Link></li>
-                  <li className="category-menu-item"><Link onClick={() => { this.onSearch('usage', 'business'); }} className="category-menu-item-a" to="">商务用花</Link></li>
-                  <li className="category-menu-item"><Link onClick={() => { this.onSearch('usage', 'wedding'); }} className="category-menu-item-a" to="">婚庆鲜花</Link></li>
+                  <li className="category-menu-item"><Link onClick={() => { this.onSearch('usage', 'love'); }} className="category-menu-item-a" >爱情鲜花</Link></li>
+                  <li className="category-menu-item"><Link onClick={() => { this.onSearch('usage', 'friendship'); }} className="category-menu-item-a" >友情鲜花</Link></li>
+                  <li className="category-menu-item"><Link onClick={() => { this.onSearch('usage', 'birthday'); }} className="category-menu-item-a" >生日鲜花</Link></li>
+                  <li className="category-menu-item"><Link onClick={() => { this.onSearch('usage', 'greetings'); }} className="category-menu-item-a" >问候长辈</Link></li>
+                  <li className="category-menu-item"><Link onClick={() => { this.onSearch('usage', 'sympathy'); }} className="category-menu-item-a" >探病慰问</Link></li>
+                  <li className="category-menu-item"><Link onClick={() => { this.onSearch('usage', 'apology'); }} className="category-menu-item-a" >道歉鲜花</Link></li>
+                  <li className="category-menu-item"><Link onClick={() => { this.onSearch('usage', 'congratulation'); }} className="category-menu-item-a" >祝贺鲜花</Link></li>
+                  <li className="category-menu-item"><Link onClick={() => { this.onSearch('usage', 'business'); }} className="category-menu-item-a" >商务用花</Link></li>
+                  <li className="category-menu-item"><Link onClick={() => { this.onSearch('usage', 'wedding'); }} className="category-menu-item-a" >婚庆鲜花</Link></li>
                 </ul>
               </li>
               <li className="category-menu">
-                <h4 className="category-menu-title"><Link className="category-menu-title-a" to="">鲜花类别</Link></h4>
+                <h4 className="category-menu-title"><Link className="category-menu-title-a" >鲜花类别</Link></h4>
                 <ul>
-                  <li className="category-menu-item"><Link onClick={() => { this.onSearch('kind', 'bouquet'); }} className="category-menu-item-a" to="">花束</Link></li>
-                  <li className="category-menu-item"><Link onClick={() => { this.onSearch('kind', 'gift'); }} className="category-menu-item-a" to="">鲜花礼盒</Link></li>
-                  <li className="category-menu-item"><Link onClick={() => { this.onSearch('kind', 'basket'); }} className="category-menu-item-a" to="">开业花篮</Link></li>
-                  <li className="category-menu-item"><Link onClick={() => { this.onSearch('kind', 'table'); }} className="category-menu-item-a" to="">桌花</Link></li>
-                  <li className="category-menu-item"><Link onClick={() => { this.onSearch('kind', 'death'); }} className="category-menu-item-a" to="">祭奠花篮</Link></li>
+                  <li className="category-menu-item"><Link onClick={() => { this.onSearch('kind', 'bouquet'); }} className="category-menu-item-a" >花束</Link></li>
+                  <li className="category-menu-item"><Link onClick={() => { this.onSearch('kind', 'gift'); }} className="category-menu-item-a" >鲜花礼盒</Link></li>
+                  <li className="category-menu-item"><Link onClick={() => { this.onSearch('kind', 'basket'); }} className="category-menu-item-a" >开业花篮</Link></li>
+                  <li className="category-menu-item"><Link onClick={() => { this.onSearch('kind', 'table'); }} className="category-menu-item-a" >桌花</Link></li>
+                  <li className="category-menu-item"><Link onClick={() => { this.onSearch('kind', 'death'); }} className="category-menu-item-a" >祭奠花篮</Link></li>
                 </ul>
               </li>
               <li className="category-menu">
-                <h4 className="category-menu-title"><Link className="category-menu-title-a" to="">鲜花价值</Link></h4>
+                <h4 className="category-menu-title"><Link className="category-menu-title-a" >鲜花价值</Link></h4>
                 <ul>
-                  <li className="category-menu-item"><Link onClick={() => { this.onSearch('price', 'oneToTwo'); }} className="category-menu-item-a" to="">100-200元</Link></li>
-                  <li className="category-menu-item"><Link onClick={() => { this.onSearch('price', 'twoToThree'); }} className="category-menu-item-a" to="">200-300元</Link></li>
-                  <li className="category-menu-item"><Link onClick={() => { this.onSearch('price', 'threeToFive'); }} className="category-menu-item-a" to="">300-500元</Link></li>
-                  <li className="category-menu-item"><Link onClick={() => { this.onSearch('price', 'fiveToEight'); }} className="category-menu-item-a" to="">500-800元</Link></li>
-                  <li className="category-menu-item"><Link onClick={() => { this.onSearch('price', 'aboveEight'); }} className="category-menu-item-a" to="">800元以上</Link></li>
+                  <li className="category-menu-item"><Link onClick={() => { this.onSearch('price', 'oneToTwo'); }} className="category-menu-item-a" >100-200元</Link></li>
+                  <li className="category-menu-item"><Link onClick={() => { this.onSearch('price', 'twoToThree'); }} className="category-menu-item-a" >200-300元</Link></li>
+                  <li className="category-menu-item"><Link onClick={() => { this.onSearch('price', 'threeToFive'); }} className="category-menu-item-a" >300-500元</Link></li>
+                  <li className="category-menu-item"><Link onClick={() => { this.onSearch('price', 'fiveToEight'); }} className="category-menu-item-a" >500-800元</Link></li>
+                  <li className="category-menu-item"><Link onClick={() => { this.onSearch('price', 'aboveEight'); }} className="category-menu-item-a" >800元以上</Link></li>
                 </ul>
               </li>
               <li className="category-menu">
-                <h4 className="category-menu-title"><Link className="category-menu-title-a" to="">特别花束馆</Link></h4>
+                <h4 className="category-menu-title"><Link className="category-menu-title-a" >特别花束馆</Link></h4>
                 <ul>
-                  <li className="category-menu-item"><Link onClick={() => { this.onSearch('feature', 'cartoon'); }} className="category-menu-item-a" to="">卡通花束</Link></li>
-                  <li className="category-menu-item"><Link onClick={() => { this.onSearch('feature', 'chocolate'); }} className="category-menu-item-a" to="">巧克力花束</Link></li>
+                  <li className="category-menu-item"><Link onClick={() => { this.onSearch('feature', 'cartoon'); }} className="category-menu-item-a" >卡通花束</Link></li>
+                  <li className="category-menu-item"><Link onClick={() => { this.onSearch('feature', 'chocolate'); }} className="category-menu-item-a" >巧克力花束</Link></li>
                 </ul>
               </li>
             </ul>
