@@ -17,8 +17,8 @@ class Banner extends React.Component {
           <Col span={24} offset={0}>
             <Row>
               <Col span={19} offset={5} className="clearfix">
-                <Carousel />
-                <Sudoku />
+                <Carousel {...this.props} />
+                <Sudoku {...this.props} />
               </Col>
             </Row>
           </Col>

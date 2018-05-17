@@ -4,3 +4,4 @@
  * */
 
 export const infoSelector = state => state.infos;
+export const infoSingleSelector = state => state.info;

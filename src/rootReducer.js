@@ -10,7 +10,7 @@ import { item, comment } from './user/itemDetail/reducer/reducer';
 import { order } from './user/checkInfo/reducer/reducer';
 import { recommend } from './user/shoppingFinish/reducer/reducer';
 import { orderList } from './user/userInfo/reducer/reducer';
-import { infos } from './user/info/reducer/reducer';
+import { infos, info } from './user/info/reducer/reducer';
 
 export const rootReducer = combineReducers({
   user,
@@ -23,4 +23,5 @@ export const rootReducer = combineReducers({
   recommend,
   orderList,
   infos,
+  info,
 });

@@ -4,9 +4,10 @@
  */
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
+import _ from 'lodash';
 import Cookie from '../../common/cookie';
-import { onViewInit, getInfoList } from './action/action';
-import { infoSelector } from './selector/selector';
+import { onViewInit, getInfoList, getInfo } from './action/action';
+import { infoSelector, infoSingleSelector } from './selector/selector';
 import { validateLoginState } from '../../user/login/action/action';
 import { getCart, deleteGood } from '../../user/index/action/action';
 import { userSelector } from '../../user/login/selector/selector';
@@ -21,16 +22,22 @@ import './Info.less';
 class Info extends React.Component {
   static propTypes = {
     user: PropTypes.object.isRequired,
+    params: PropTypes.object.isRequired,
     cart: PropTypes.object.isRequired,
     infos: PropTypes.object.isRequired,
+    info: PropTypes.object.isRequired,
     validateLoginState: PropTypes.func.isRequired,
     getCart: PropTypes.func.isRequired,
     onViewInit: PropTypes.func.isRequired,
     getInfoList: PropTypes.func.isRequired,
+    getInfo: PropTypes.func.isRequired,
   };
   componentWillMount() {
     this.props.onViewInit();
     this.props.getCart({ _id: Cookie.getCookie('_id') });
+    if (!_.isEmpty(this.props.params.id)) {
+      this.props.getInfo(this.props.params.id);
+    }
   }
   render() {
     return (
@@ -50,6 +57,7 @@ const mapStateToProps = (state) => {
     user: userSelector(state),
     cart: cartSelector(state),
     infos: infoSelector(state),
+    info: infoSingleSelector(state),
   };
 };
 
@@ -59,6 +67,7 @@ const mapDispatchToProps = {
   onViewInit,
   getInfoList,
   deleteGood,
+  getInfo,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Info);

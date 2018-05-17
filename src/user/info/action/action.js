@@ -7,11 +7,13 @@ import { message } from 'antd';
 import {
   INFO_VIEW_INIT,
   GET_INFO_LIST,
+  GET_SINGLE_INFO,
 } from '../constant/constant';
 import { getInfoListApi } from '../../../api/infoApi';
 
 const onViewInitAction = createAction(INFO_VIEW_INIT);
 const getInfoAction = createAction(GET_INFO_LIST);
+const getSingleInfoAction = createAction(GET_SINGLE_INFO);
 
 /**
  * 视图初始化
@@ -30,6 +32,23 @@ export const getInfoList = (params) => {
     getInfoListApi({ ...params, deleteFlag: 0 }, (data) => {
       if (data.code === 1) {
         dispatch(getInfoAction({ data }));
+      } else {
+        message.error('获取文章失败！');
+      }
+    }, (err) => {
+      message.error(err);
+    });
+  };
+};
+
+/**
+ * 获取文章
+ */
+export const getInfo = (params) => {
+  return (dispatch) => {
+    getInfoListApi({ ...params, deleteFlag: 0 }, (data) => {
+      if (data.code === 1) {
+        dispatch(getSingleInfoAction({ data }));
       } else {
         message.error('获取文章失败！');
       }

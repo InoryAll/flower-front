@@ -24,6 +24,8 @@ import {
 import {
   validateLoginState,
 } from '../../user/login/action/action';
+import { getInfoList } from '../../user/info/action/action';
+import { infoSelector } from '../../user/info/selector/selector';
 import Cookie from '../../common/cookie';
 import Header from './header/Header';
 import Search from './search/Search';
@@ -45,6 +47,7 @@ class Index extends React.Component {
     getItem: PropTypes.func.isRequired,
     validateLoginState: PropTypes.func.isRequired,
     getCart: PropTypes.func.isRequired,
+    getInfoList: PropTypes.func.isRequired,
     deleteGood: PropTypes.func.isRequired,
     items: PropTypes.object.isRequired,
     hotSale: PropTypes.object.isRequired,
@@ -54,12 +57,14 @@ class Index extends React.Component {
     forthFloor: PropTypes.object.isRequired,
     dailySale: PropTypes.object.isRequired,
     cart: PropTypes.object.isRequired,
+    infos: PropTypes.object.isRequired,
   };
   componentWillMount() {
     this.props.onViewInit();
     this.props.validateLoginState();
     this.props.getItem();
     this.props.getCart({ _id: Cookie.getCookie('_id') });
+    this.props.getInfoList();
   }
   render() {
     return (
@@ -92,6 +97,7 @@ const mapStateToProps = (state) => {
     forthFloor: forthFloorSelector(state),
     dailySale: dailySaleSelector(state),
     cart: cartSelector(state),
+    infos: infoSelector(state),
   };
 };
 
@@ -101,6 +107,7 @@ const mapDispatchToProps = {
   validateLoginState,
   getCart,
   deleteGood,
+  getInfoList,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Index);

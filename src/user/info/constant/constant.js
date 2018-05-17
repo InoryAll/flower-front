@@ -5,3 +5,4 @@
 
 export const INFO_VIEW_INIT = 'INFO_VIEW_INIT';
 export const GET_INFO_LIST = 'GET_INFO_LIST';
+export const GET_SINGLE_INFO = 'GET_SINGLE_INFO';

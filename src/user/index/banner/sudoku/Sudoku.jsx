@@ -16,17 +16,17 @@ class Sudoku extends React.Component {
       <div className="sudoku">
         <Row>
           <Col>
-            <Announcement />
+            <Announcement {...this.props} />
           </Col>
         </Row>
         <Row>
           <Col>
-            <HotLine />
+            <HotLine {...this.props} />
           </Col>
         </Row>
         <Row>
           <Col>
-            <Choice />
+            <Choice {...this.props} />
           </Col>
         </Row>
       </div>

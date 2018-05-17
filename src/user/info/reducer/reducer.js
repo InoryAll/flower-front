@@ -5,6 +5,7 @@
 import {
   INFO_VIEW_INIT,
   GET_INFO_LIST,
+  GET_SINGLE_INFO,
 } from '../constant/constant';
 
 const initState = {
@@ -18,6 +19,17 @@ export function infos(state = initState, action) {
     case INFO_VIEW_INIT:
       return state;
     case GET_INFO_LIST:
+      return { ...state, ...initState, ...action.payload.data };
+    default:
+      return state;
+  }
+}
+
+export function info(state = initState, action) {
+  switch (action.type) {
+    case INFO_VIEW_INIT:
+      return state;
+    case GET_SINGLE_INFO:
       return { ...state, ...initState, ...action.payload.data };
     default:
       return state;

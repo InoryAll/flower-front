@@ -29,7 +29,7 @@ export const router = (
       <Route path="pay" component={ShoppingPay} />
       <Route path="result" component={ShoppingFinish} />
       <Route path="user" component={UserInfo} />
-      <Route path="info" component={Info} />
+      <Route path="info(/:id)" component={Info} />
     </Route>
   </Router>
 );
