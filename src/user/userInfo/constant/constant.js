@@ -4,3 +4,4 @@
  */
 
 export const USER_INFO_VIEW_INIT = 'USER_INFO_VIEW_INIT';
+export const GET_ALL_ORDERS = 'GET_ALL_ORDERS';

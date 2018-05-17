@@ -17,6 +17,7 @@ class UserContent extends React.Component {
   static propTypes = {
     user: PropTypes.object.isRequired,
     updateUser: PropTypes.func.isRequired,
+    orderList: PropTypes.object.isRequired,
   };
   state = {
     activeKey: 'basic',
