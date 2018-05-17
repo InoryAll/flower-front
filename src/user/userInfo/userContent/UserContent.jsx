@@ -23,6 +23,8 @@ class UserContent extends React.Component {
     date: undefined,
   };
   componentWillReceiveProps() {
+    $('.usercontent-pannel-basic').show();
+    $('.usercontent-pannel-order').hide();
     if (!_.isUndefined(this.props.user.birthday)) {
       this.setState({
         date: moment(parseInt(this.props.user.birthday)),
@@ -47,6 +49,14 @@ class UserContent extends React.Component {
     this.setState({
       activeKey: value,
     });
+    this.state.activeKey = value;
+    if (value === 'basic') {
+      $('.usercontent-pannel-basic').show();
+      $('.usercontent-pannel-order').hide();
+    } else {
+      $('.usercontent-pannel-basic').hide();
+      $('.usercontent-pannel-order').show();
+    }
   };
   render() {
     const { user } = this.props;
@@ -56,7 +66,7 @@ class UserContent extends React.Component {
     if (user.sex === 'male') {
       $('#male').prop('checked', true);
     } else {
-      $('#female').prop('checked', true) ;
+      $('#female').prop('checked', true);
     }
     $('#address').val(user.address);
     $('#qq').val(user.qq);
@@ -135,88 +145,84 @@ class UserContent extends React.Component {
           </Col>
           <Col span={20}>
             <div className="usercontent-pannel">
-              <If condition={ this.state.activeKey === 'basic' }>
-                <div className="usercontent-pannel-basic">
-                  <Row>
-                    <Col>
-                      <h3 className="usercontent-pannel-basic-h3">基本信息</h3>
-                      <div className="usercontent-pannel-basic-split" />
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Col>
-                      <form id="userform">
-                        <div className="usercontent-pannel-basic-form">
-                          <div className="form-content">
-                            <div className="form-item">
-                              <label className="form-item-label" htmlFor="username">用户名称：</label>
-                              <input className="form-item-input" readOnly="true" type="text" id="username" name="username" />
-                            </div>
-                            <div className="form-item">
-                              <label className="form-item-label" htmlFor="email">邮箱：</label>
-                              <input className="form-item-input" type="text" id="email" name="email" />
-                            </div>
-                            <div className="form-item">
-                              <label className="form-item-label" htmlFor="name">真实姓名：</label>
-                              <input className="form-item-input" type="text" id="name" name="name" />
-                            </div>
-                            <div className="form-item">
-                              <label className="form-item-label" htmlFor="sex">性别：</label>
-                              <label htmlFor="male" className="form-item-radio-label">
-                                <input id="male" type="radio" name="sex" value="male" className="form-item-radio-input" />男
-                              </label>
-                              <label htmlFor="female" className="form-item-radio-label">
-                                <input id="female" type="radio" name="sex" value="female" className="form-item-radio-input" />女
-                              </label>
-                            </div>
-                            <div className="form-item">
-                              <label className="form-item-label" htmlFor="birthday">生日：</label>
-                              <DatePicker
-                                id="birthday"
-                                showTime
-                                format="YYYY-MM-DD HH:mm:ss"
-                                value={this.state.date}
-                                onChange={this.handleDateChange}
-                              />
-                            </div>
-                            <div className="form-item">
-                              <label className="form-item-label" htmlFor="address">所在地区：</label>
-                              <input className="form-item-input address" type="text" id="address" name="address" />
-                            </div>
-                            <div className="form-item">
-                              <label className="form-item-label" htmlFor="qq">QQ：</label>
-                              <input className="form-item-input" type="text" id="qq" name="qq" />
-                            </div>
+              <div className="usercontent-pannel-basic">
+                <Row>
+                  <Col>
+                    <h3 className="usercontent-pannel-basic-h3">基本信息</h3>
+                    <div className="usercontent-pannel-basic-split" />
+                  </Col>
+                </Row>
+                <Row>
+                  <Col>
+                    <form id="userform">
+                      <div className="usercontent-pannel-basic-form">
+                        <div className="form-content">
+                          <div className="form-item">
+                            <label className="form-item-label" htmlFor="username">用户名称：</label>
+                            <input className="form-item-input" readOnly="true" type="text" id="username" name="username" />
                           </div>
-                          <div className="usercontent-pannel-basic-form-btn">
-                            <button onClick={this.handleUpdate} className="usercontent-pannel-basic-form-btn-update" type="button">保存修改</button>
+                          <div className="form-item">
+                            <label className="form-item-label" htmlFor="email">邮箱：</label>
+                            <input className="form-item-input" type="text" id="email" name="email" />
+                          </div>
+                          <div className="form-item">
+                            <label className="form-item-label" htmlFor="name">真实姓名：</label>
+                            <input className="form-item-input" type="text" id="name" name="name" />
+                          </div>
+                          <div className="form-item">
+                            <label className="form-item-label" htmlFor="sex">性别：</label>
+                            <label htmlFor="male" className="form-item-radio-label">
+                              <input id="male" type="radio" name="sex" value="male" className="form-item-radio-input" />男
+                            </label>
+                            <label htmlFor="female" className="form-item-radio-label">
+                              <input id="female" type="radio" name="sex" value="female" className="form-item-radio-input" />女
+                            </label>
+                          </div>
+                          <div className="form-item">
+                            <label className="form-item-label" htmlFor="birthday">生日：</label>
+                            <DatePicker
+                              id="birthday"
+                              showTime
+                              format="YYYY-MM-DD HH:mm:ss"
+                              value={this.state.date}
+                              onChange={this.handleDateChange}
+                            />
+                          </div>
+                          <div className="form-item">
+                            <label className="form-item-label" htmlFor="address">所在地区：</label>
+                            <input className="form-item-input address" type="text" id="address" name="address" />
+                          </div>
+                          <div className="form-item">
+                            <label className="form-item-label" htmlFor="qq">QQ：</label>
+                            <input className="form-item-input" type="text" id="qq" name="qq" />
                           </div>
                         </div>
-                      </form>
-                    </Col>
-                  </Row>
-                </div>
-              </If>
-              <If condition={ this.state.activeKey === 'order' }>
-                <div className="usercontent-pannel-order">
-                  <Row>
-                    <Col>
-                      <h3 className="usercontent-pannel-order-h3">订单列表</h3>
-                      <div className="usercontent-pannel-order-split" />
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Col>
-                      <div className="usercontent-pannel-order-table">
-                        <Table
-                          columns={columns}
-                          dataSource={data}
-                        />
+                        <div className="usercontent-pannel-basic-form-btn">
+                          <button onClick={this.handleUpdate} className="usercontent-pannel-basic-form-btn-update" type="button">保存修改</button>
+                        </div>
                       </div>
-                    </Col>
-                  </Row>
-                </div>
-              </If>
+                    </form>
+                  </Col>
+                </Row>
+              </div>
+              <div className="usercontent-pannel-order">
+                <Row>
+                  <Col>
+                    <h3 className="usercontent-pannel-order-h3">订单列表</h3>
+                    <div className="usercontent-pannel-order-split" />
+                  </Col>
+                </Row>
+                <Row>
+                  <Col>
+                    <div className="usercontent-pannel-order-table">
+                      <Table
+                        columns={columns}
+                        dataSource={data}
+                      />
+                    </div>
+                  </Col>
+                </Row>
+              </div>
             </div>
           </Col>
         </Row>

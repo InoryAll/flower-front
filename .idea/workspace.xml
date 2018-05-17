@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08c3298d-d019-4401-abb2-96f78fb0689a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/constant/constant.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/api/loginApi.js" afterPath="$PROJECT_DIR$/src/api/loginApi.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/checkInfo/checkForm/CheckForm.jsx" afterPath="$PROJECT_DIR$/src/user/checkInfo/checkForm/CheckForm.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/index/header/Header.jsx" afterPath="$PROJECT_DIR$/src/user/index/header/Header.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/index/navigation/Navigation.jsx" afterPath="$PROJECT_DIR$/src/user/index/navigation/Navigation.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/itemList/itemList/ItemPage.jsx" afterPath="$PROJECT_DIR$/src/user/itemList/itemList/ItemPage.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/login/action/action.js" afterPath="$PROJECT_DIR$/src/user/login/action/action.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/login/constant/constant.js" afterPath="$PROJECT_DIR$/src/user/login/constant/constant.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/login/reducer/reducer.js" afterPath="$PROJECT_DIR$/src/user/login/reducer/reducer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/userInfo/UserInfo.jsx" afterPath="$PROJECT_DIR$/src/user/userInfo/UserInfo.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/userInfo/userContent/UserContent.jsx" afterPath="$PROJECT_DIR$/src/user/userInfo/userContent/UserContent.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/userInfo/userContent/UserContent.less" afterPath="$PROJECT_DIR$/src/user/userInfo/userContent/UserContent.less" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -90,11 +78,13 @@
       <file leaf-file-name="UserContent.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/user/userInfo/userContent/UserContent.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="223" column="6" lean-forward="true" selection-start-line="223" selection-start-column="6" selection-end-line="223" selection-end-column="6" />
+            <state relative-caret-position="367">
+              <caret line="27" column="4" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#62#103#0" expanded="true" />
+                <element signature="e#4319#7833#0" expanded="false" />
+                <element signature="e#7848#8478#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -830,12 +820,12 @@
       <workItem from="1526379423759" duration="22000" />
       <workItem from="1526379514825" duration="1119000" />
       <workItem from="1526383860098" duration="82453000" />
-      <workItem from="1526527863208" duration="8977000" />
+      <workItem from="1526527863208" duration="9797000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="407961000" />
+    <option name="totallyTimeSpent" value="408781000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1314,11 +1304,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/user/userInfo/userContent/UserContent.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="223" column="6" lean-forward="true" selection-start-line="223" selection-start-column="6" selection-end-line="223" selection-end-column="6" />
+        <state relative-caret-position="367">
+          <caret line="27" column="4" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#62#103#0" expanded="true" />
+            <element signature="e#4319#7833#0" expanded="false" />
+            <element signature="e#7848#8478#0" expanded="false" />
           </folding>
         </state>
       </provider>
