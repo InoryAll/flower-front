@@ -3,4 +3,5 @@
  * Created by tianrenjie on 2018/5/16
  * */
 
-
+export const INFO_VIEW_INIT = 'INFO_VIEW_INIT';
+export const GET_INFO_LIST = 'GET_INFO_LIST';

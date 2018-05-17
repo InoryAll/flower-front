@@ -3,4 +3,4 @@
  * Created by tianrenjie on 2018/5/16
  * */
 
-
+export const infoSelector = state => state.infos;
