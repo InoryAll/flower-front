@@ -6,7 +6,7 @@ import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import _ from 'lodash';
 import { If } from 'jsx-control-statements';
-import { onViewInit, getSingleItem, getItemComment } from './action/action';
+import { onViewInit, getSingleItem, getItemComment, addItemComment } from './action/action';
 import { itemSelector, commentSelector } from './selector/selector';
 import { validateLoginState } from '../../user/login/action/action';
 import { getCart, deleteGood, addGood } from '../../user/index/action/action';
@@ -34,6 +34,7 @@ class ItemDeatil extends React.Component {
     addGood: PropTypes.func.isRequired,
     getSingleItem: PropTypes.func.isRequired,
     getItemComment: PropTypes.func.isRequired,
+    addItemComment: PropTypes.func.isRequired,
   };
   componentWillMount() {
     this.props.onViewInit();
@@ -80,6 +81,7 @@ const mapDispatchToProps = {
   addGood,
   getSingleItem,
   getItemComment,
+  addItemComment,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ItemDeatil);

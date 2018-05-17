@@ -8,3 +8,8 @@ export const getCommentApi = ajaxRequest.createAjax({
   method: 'GET',
   url: 'http://localhost:3000/comment/getComment',
 });
+
+export const addCommentApi = ajaxRequest.createAjax({
+  method: 'POST',
+  url: 'http://localhost:3000/comment/addComment',
+});

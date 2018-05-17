@@ -6,6 +6,7 @@ import {
   ITEM_DETAIL_VIEW_INIT,
   GET_SINGLE_ITEM,
   GET_ITEM_COMMENT,
+  ADD_ITEM_COMMENT,
 } from '../constant/constant';
 
 const initState = {
@@ -28,6 +29,7 @@ export function item(state = initState, action) {
 export function comment(state = initState, action) {
   switch (action.type) {
     case ITEM_DETAIL_VIEW_INIT:
+    case ADD_ITEM_COMMENT:
       return state;
     case GET_ITEM_COMMENT:
       return { ...state, ...initState, ...action.payload.data };

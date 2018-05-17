@@ -4,19 +4,26 @@
  */
 import React, { PropTypes } from 'react';
 import _ from 'lodash';
-import { Row, Col, Tabs, Pagination, Progress, Icon } from 'antd';
+import { Row, Col, Tabs, Pagination, Progress, Icon, Modal, Button, Rate, Input } from 'antd';
 import './ItemOther.less';
 import ItemComment from './itemComment/ItemComment';
 
 const TabPane = Tabs.TabPane;
+const { TextArea } = Input;
 class ItemOther extends React.Component {
   static propTypes = {
     comment: PropTypes.object.isRequired,
+    item: PropTypes.object.isRequired,
+    user: PropTypes.object.isRequired,
+    addItemComment: PropTypes.func.isRequired,
   };
   state = {
     currentPage: 1,
     pageSize: 10,
     totalPage: undefined,
+    visible: false,
+    level: 0,
+    content: '',
   };
   onSizeChange = (page, pageSize) => {
     this.setState({
@@ -28,6 +35,47 @@ class ItemOther extends React.Component {
     console.log(key);
   };
   handleComment = (item) => {
+    this.setState({
+      visible: true,
+    });
+  };
+  handleCancel = () => {
+    this.setState({
+      visible: false,
+      level: 0,
+      content: '',
+    });
+  };
+  handleOk = () => {
+    const { item, user } = this.props;
+    const params = {
+      level: this.state.level,
+      content: this.state.content,
+      itemId: item.data[0]._id,
+      itemName: item.data[0].name,
+      userId: user._id,
+      userName: user.username,
+      adminId: undefined,
+      adminName: undefined,
+      timestamp: new Date().getTime(),
+      deleteFlag: 0,
+    };
+    this.props.addItemComment(params);
+    this.setState({
+      visible: false,
+      level: 0,
+      content: '',
+    });
+  };
+  onRateChange = (value) => {
+    this.setState({
+      level: value,
+    });
+  };
+  onTextAreaChange = (event) => {
+    this.setState({
+      content: event.target.value,
+    });
   };
   render() {
     const { comment } = this.props;
@@ -95,6 +143,37 @@ class ItemOther extends React.Component {
             </div>
           </Col>
         </Row>
+        <div className="itemother-modal">
+          <Modal
+            title="评价商品"
+            visible={this.state.visible}
+            onOk={this.handleOk}
+            onCancel={this.handleCancel}
+            footer={[
+              <Button key="back" onClick={this.handleCancel}>返回</Button>,
+              <Button key="submit" type="danger" onClick={this.handleOk}>
+                提交
+              </Button>,
+            ]}
+          >
+            <div>
+              <form className="itemother-modal-form">
+                <div className="form-content">
+                  <div className="form-item">
+                    <label className="form-item-label" htmlFor="username">评价等级：</label>
+                    <div className="form-item-rate">
+                      <Rate onChange={this.onRateChange} value={this.state.level} className="form-item-rate-detail" />
+                    </div>
+                  </div>
+                  <div className="form-item">
+                    <label className="form-item-label" htmlFor="username">具体细节：</label>
+                    <TextArea onChange={this.onTextAreaChange} value={this.state.content} className="form-item-textarea" rows={8} />
+                  </div>
+                </div>
+              </form>
+            </div>
+          </Modal>
+        </div>
       </div>
     );
   }
