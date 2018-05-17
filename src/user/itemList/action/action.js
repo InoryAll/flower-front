@@ -33,8 +33,8 @@ export const filtItemList = (params) => {
     let filterData = [];
     if (!_.isEmpty(items.data)) {
       filterData = items.data.filter(item => params.every(param => JSON.stringify(item).indexOf(param) > -1));
-      dispatch(onFiltItemListAction({ data: { ...items, data: filterData } }));
     }
+    dispatch(onFiltItemListAction({ data: { ...items, data: filterData } }));
   };
 };
 
