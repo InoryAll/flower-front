@@ -15,6 +15,8 @@ import ShoppingPay from './user/shoppingPay/ShoppingPay';
 import ShoppingFinish from './user/shoppingFinish/ShoppingFinish';
 import UserInfo from './user/userInfo/UserInfo';
 import Info from './user/info/Info';
+import AdminLogin from './admin/login/Login';
+import Console from './admin/console/Console';
 
 export const router = (
   <Router history={browserHistory}>
@@ -30,6 +32,10 @@ export const router = (
       <Route path="result" component={ShoppingFinish} />
       <Route path="user" component={UserInfo} />
       <Route path="info(/:id)" component={Info} />
+    </Route>
+    <Route path="/admin">
+      <Route path="login" component={AdminLogin} />
+      <Route path="console" component={Console} />
     </Route>
   </Router>
 );
