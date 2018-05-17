@@ -8,3 +8,8 @@ export const loginApi = ajaxRequest.createAjax({
   method: 'GET',
   url: 'http://localhost:3000/user/validateUser',
 });
+
+export const updateUserApi = ajaxRequest.createAjax({
+  method: 'POST',
+  url: 'http://localhost:3000/user/updateUser',
+});

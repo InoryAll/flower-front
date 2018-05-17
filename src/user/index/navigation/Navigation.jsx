@@ -23,13 +23,13 @@ class Navigation extends React.Component {
         browserHistory.push('/itemList');
         break;
       case 'loveFlower':
-        browserHistory.push('./itemList?condition=love');
+        browserHistory.push('/itemList?condition=love');
         break;
       case 'holidayFlower':
-        browserHistory.push('./itemList?condition=holiday');
+        browserHistory.push('/itemList?condition=holiday');
         break;
       case 'cheapFlower':
-        browserHistory.push('./itemList?condition=oneToTwo');
+        browserHistory.push('/itemList?condition=oneToTwo');
         break;
       default:
         return;
@@ -47,12 +47,12 @@ class Navigation extends React.Component {
                 </Col>
                 <Col span={19}>
                   <ul className="menu-list clearfix">
-                    <li className="menu-item"><Link onClick={() => { this.handleMenuClick('index'); }} className={this.state.menuItem === 'index' ? 'menu-item-a active' : 'menu-item-a' } to="">首页</Link></li>
-                    <li className="menu-item"><Link onClick={() => { this.handleMenuClick('allFlower'); }} className={this.state.menuItem === 'allFlower' ? 'menu-item-a active' : 'menu-item-a' } to="">全部鲜花</Link></li>
-                    <li className="menu-item"><Link onClick={() => { this.handleMenuClick('loveFlower'); }} className={this.state.menuItem === 'loveFlower' ? 'menu-item-a active' : 'menu-item-a' } to="">爱情鲜花</Link></li>
-                    <li className="menu-item"><Link onClick={() => { this.handleMenuClick('holidayFlower'); }} className={this.state.menuItem === 'holidayFlower' ? 'menu-item-a active' : 'menu-item-a' } to="">生日鲜花</Link></li>
-                    <li className="menu-item"><Link onClick={() => { this.handleMenuClick('businessFlower'); }} className={this.state.menuItem === 'businessFlower' ? 'menu-item-a active' : 'menu-item-a' } to="">开业花篮</Link></li>
-                    <li className="menu-item"><Link onClick={() => { this.handleMenuClick('cheapFlower'); }} className={this.state.menuItem === 'cheapFlower' ? 'menu-item-a active' : 'menu-item-a' } to="">特价鲜花</Link></li>
+                    <li className="menu-item"><Link onClick={() => { this.handleMenuClick('index'); }} className={this.state.menuItem === 'index' ? 'menu-item-a active' : 'menu-item-a' } to="/">首页</Link></li>
+                    <li className="menu-item"><Link onClick={() => { this.handleMenuClick('allFlower'); }} className={this.state.menuItem === 'allFlower' ? 'menu-item-a active' : 'menu-item-a' } to="/itemList">全部鲜花</Link></li>
+                    <li className="menu-item"><Link onClick={() => { this.handleMenuClick('loveFlower'); }} className={this.state.menuItem === 'loveFlower' ? 'menu-item-a active' : 'menu-item-a' } to="/itemList?condition=love">爱情鲜花</Link></li>
+                    <li className="menu-item"><Link onClick={() => { this.handleMenuClick('holidayFlower'); }} className={this.state.menuItem === 'holidayFlower' ? 'menu-item-a active' : 'menu-item-a' } to="/itemList?condition=birthday">生日鲜花</Link></li>
+                    <li className="menu-item"><Link onClick={() => { this.handleMenuClick('businessFlower'); }} className={this.state.menuItem === 'businessFlower' ? 'menu-item-a active' : 'menu-item-a' } to="/itemList?condition=basket">开业花篮</Link></li>
+                    <li className="menu-item"><Link onClick={() => { this.handleMenuClick('cheapFlower'); }} className={this.state.menuItem === 'cheapFlower' ? 'menu-item-a active' : 'menu-item-a' } to="/itemList?condition=oneToTwo">特价鲜花</Link></li>
                   </ul>
                 </Col>
               </Row>

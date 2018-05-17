@@ -12,14 +12,17 @@ import {
   LOGIN_VIEW_INIT,
   VALIDATE_LOGIN_STATE,
   DO_LOGIN,
+  UPDATE_USER,
 } from '../constant/constant';
 import {
   loginApi,
+  updateUserApi,
 } from '../../../api/loginApi';
 
 const onViewInitAction = createAction(LOGIN_VIEW_INIT);
 const onValidateLoginStateAction = createAction(VALIDATE_LOGIN_STATE);
 const onLoginAction = createAction(DO_LOGIN);
+const onUpdateUserAction = createAction(UPDATE_USER);
 
 /**
  * 视图初始化
@@ -74,6 +77,25 @@ export const onLogin = (params) => {
       }
     }, (err) => {
       message.error(err.message);
+    });
+  };
+};
+
+/**
+ * 更新用户
+ */
+export const updateUser = (params) => {
+  return (dispatch) => {
+    updateUserApi(JSON.stringify({ condition: { _id: Cookie.getCookie('_id') }, obj: { ...params } }), (data) => {
+      if (data.code === 1) {
+        dispatch(onUpdateUserAction({ data }));
+        validateLoginState()(dispatch);
+        message.success('用户信息更新成功！');
+      } else {
+        message.error('用户信息更新失败！');
+      }
+    }, (err) => {
+      message.error(err);
     });
   };
 };

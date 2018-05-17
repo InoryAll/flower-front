@@ -6,6 +6,7 @@ import {
   LOGIN_VIEW_INIT,
   VALIDATE_LOGIN_STATE,
   DO_LOGIN,
+  UPDATE_USER,
 } from '../constant/constant';
 import {
   REGEDIT_VIEW_INIT,
@@ -31,6 +32,7 @@ export function user(state = initState, action) {
   switch (action.type) {
     case LOGIN_VIEW_INIT:
     case REGEDIT_VIEW_INIT:
+    case UPDATE_USER:
       return state;
     case VALIDATE_LOGIN_STATE :
       return { ...state, ...initState, ...action.payload.data.data[0] };

@@ -158,11 +158,6 @@ class CheckForm extends React.Component {
                         date: value,
                       });
                     }}
-                    onOk={(value) => {
-                      this.setState({
-                        date: value,
-                      });
-                    }}
                   />
                 </div>
               </div>

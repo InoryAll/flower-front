@@ -6,3 +6,4 @@
 export const LOGIN_VIEW_INIT = 'LOGIN_VIEW_INIT';
 export const VALIDATE_LOGIN_STATE = 'VALIDATE_LOGIN_STATE';
 export const DO_LOGIN = 'DO_LOGIN';
+export const UPDATE_USER = 'UPDATE_USER';

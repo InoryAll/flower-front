@@ -4,6 +4,9 @@
  */
 import React, { PropTypes } from 'react';
 import { Row, Col, Tabs, Avatar, DatePicker, Table } from 'antd';
+import moment from 'moment';
+import $ from 'jquery';
+import _ from 'lodash';
 import { If } from 'jsx-control-statements';
 import { Link } from 'react-router';
 import img from '../../../../static/img/itemList/1.jpg';
@@ -11,9 +14,34 @@ import './UserContent.less';
 
 const TabPane = Tabs.TabPane;
 class UserContent extends React.Component {
-  static propTypes = {};
+  static propTypes = {
+    user: PropTypes.object.isRequired,
+    updateUser: PropTypes.func.isRequired,
+  };
   state = {
     activeKey: 'basic',
+    date: undefined,
+  };
+  componentWillReceiveProps() {
+    if (!_.isUndefined(this.props.user.birthday)) {
+      this.setState({
+        date: moment(parseInt(this.props.user.birthday)),
+      });
+    }
+  }
+  handleUpdate = () => {
+    let params = {};
+    $('#userform').serializeArray().map((item, index) => {
+      params[item.name] = item.value;
+      return true;
+    });
+    params = { ...params, birthday: moment(this.state.date).format('YYYY-MM-DD HH:mm:ss') };
+    this.props.updateUser({ ...params });
+  };
+  handleDateChange = (value) => {
+    this.setState({
+      date: value,
+    });
   };
   handleTabChange = (value) => {
     this.setState({
@@ -21,6 +49,17 @@ class UserContent extends React.Component {
     });
   };
   render() {
+    const { user } = this.props;
+    $('#username').val(user.username);
+    $('#email').val(user.email);
+    $('#name').val(user.name);
+    if (user.sex === 'male') {
+      $('#male').prop('checked', true);
+    } else {
+      $('#female').prop('checked', true) ;
+    }
+    $('#address').val(user.address);
+    $('#qq').val(user.qq);
     const columns = [{
       title: '商品',
       dataIndex: 'item',
@@ -84,7 +123,7 @@ class UserContent extends React.Component {
                 </Row>
               </div>
               <div className="usercontent-info-name">
-                <span className="usercontent-info-name-span">H20180507121612</span>
+                <span className="usercontent-info-name-span">{user.username}</span>
               </div>
             </div>
             <div className="usercontent-tabs">
@@ -106,20 +145,20 @@ class UserContent extends React.Component {
                   </Row>
                   <Row>
                     <Col>
-                      <form>
+                      <form id="userform">
                         <div className="usercontent-pannel-basic-form">
                           <div className="form-content">
                             <div className="form-item">
-                              <label className="form-item-label" htmlFor="name">用户名称：</label>
-                              <input className="form-item-input" value="test" readOnly="true" type="text" id="name" name="name" />
+                              <label className="form-item-label" htmlFor="username">用户名称：</label>
+                              <input className="form-item-input" readOnly="true" type="text" id="username" name="username" />
                             </div>
                             <div className="form-item">
                               <label className="form-item-label" htmlFor="email">邮箱：</label>
                               <input className="form-item-input" type="text" id="email" name="email" />
                             </div>
                             <div className="form-item">
-                              <label className="form-item-label" htmlFor="realName">真实姓名：</label>
-                              <input className="form-item-input" type="text" id="realName" name="realName" />
+                              <label className="form-item-label" htmlFor="name">真实姓名：</label>
+                              <input className="form-item-input" type="text" id="name" name="name" />
                             </div>
                             <div className="form-item">
                               <label className="form-item-label" htmlFor="sex">性别：</label>
@@ -136,9 +175,8 @@ class UserContent extends React.Component {
                                 id="birthday"
                                 showTime
                                 format="YYYY-MM-DD HH:mm:ss"
-                                placeholder=""
-                                onChange={(value, dateString) => {}}
-                                onOk={(value) => {}}
+                                value={this.state.date}
+                                onChange={this.handleDateChange}
                               />
                             </div>
                             <div className="form-item">
@@ -151,7 +189,7 @@ class UserContent extends React.Component {
                             </div>
                           </div>
                           <div className="usercontent-pannel-basic-form-btn">
-                            <button className="usercontent-pannel-basic-form-btn-update" type="button">保存修改</button>
+                            <button onClick={this.handleUpdate} className="usercontent-pannel-basic-form-btn-update" type="button">保存修改</button>
                           </div>
                         </div>
                       </form>

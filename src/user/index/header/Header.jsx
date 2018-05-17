@@ -37,7 +37,7 @@ class Header extends React.Component {
               <If condition={!_.isEmpty(user._id)}>
                 <li className="menu-row-ul-li">欢迎您，{user.username}用户！<Link to="/login" className="menu-row-ul-li-a menu-row-ul-li-a-active">注销</Link></li>
               </If>
-              <li className="menu-row-ul-li"><Link to="/user" className="menu-row-ul-li-a">我的订单</Link></li>
+              <li className="menu-row-ul-li"><Link to="/user" className="menu-row-ul-li-a">个人中心</Link></li>
             </ul>
           </Col>
         </Row>
