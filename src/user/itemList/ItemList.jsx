@@ -38,7 +38,9 @@ class ItemList extends React.Component {
   componentWillMount() {
     this.props.onViewInit();
     this.props.validateLoginState();
-    this.props.getItem();
+    this.props.getItem(() => {
+      this.props.filtItemList([this.props.location.query.condition]);
+    });
     this.props.getCart({ _id: Cookie.getCookie('_id') });
   }
   render() {

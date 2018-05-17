@@ -51,7 +51,7 @@ export const onViewInit = () => {
  * 获取到所有的商品
  * return {*}
  */
-export const getItem = () => {
+export const getItem = (callback) => {
   return (dispatch) => {
     getItemApi({ deleteFlag: 0 }, (data) => {
       if (data.code === 1) {
@@ -68,6 +68,7 @@ export const getItem = () => {
         dispatch(getThirdAction({ data: thirdFloor }));
         dispatch(getForthAction({ data: forthFloor }));
         dispatch(getDailySaleAction({ data: dailySale }));
+        callback && callback();
       } else {
         message.error('获取商品信息失败！');
       }
