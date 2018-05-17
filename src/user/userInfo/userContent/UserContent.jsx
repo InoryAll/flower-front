@@ -24,9 +24,14 @@ class UserContent extends React.Component {
     activeKey: 'basic',
     date: undefined,
   };
-  componentWillReceiveProps() {
-    $('.usercontent-pannel-basic').show();
-    $('.usercontent-pannel-order').hide();
+  componentWillReceiveProps(nextProps) {
+    if (!_.isUndefined(this.props.orderList.data) && !_.isEqual(this.props.orderList.data, nextProps.orderList.data)) {
+      $('.usercontent-pannel-basic').hide();
+      $('.usercontent-pannel-order').show();
+    } else {
+      $('.usercontent-pannel-basic').show();
+      $('.usercontent-pannel-order').hide();
+    }
     if (!_.isUndefined(this.props.user.birthday)) {
       this.setState({
         date: moment(parseInt(this.props.user.birthday)),
