@@ -3,15 +3,28 @@
  * Created by tianrenjie on 2018/5/17
  */
 import React, { PropTypes } from 'react';
+import { connect } from 'react-redux';
 import { Link } from 'react-router';
+import _ from 'lodash';
 import { Row, Col, Card, Form, Input, Button, Table } from 'antd';
+import Setting from '../../common/setting';
+import { onViewInit } from './action/action';
+import { getItem } from '../../user/index/action/action';
+import { itemListSelector } from '../../user/itemList/selector/selector';
 import './Item.less';
 
 const FormItem = Form.Item;
 class Item extends React.Component {
   static propTypes = {
     form: PropTypes.object.isRequired,
+    itemList: PropTypes.object.isRequired,
+    getItem: PropTypes.func.isRequired,
+    onViewInit: PropTypes.func.isRequired,
   };
+  componentWillMount() {
+    this.props.onViewInit();
+    this.props.getItem();
+  }
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
@@ -22,44 +35,96 @@ class Item extends React.Component {
   };
   render() {
     const { getFieldDecorator } = this.props.form;
-    const columns = [{
-      title: 'Name',
+    const { itemList } = this.props;
+    Setting.initSettings();
+    const itemColumns = [{
+      title: '产品id',
+      dataIndex: '_id',
+      key: '_id',
+    }, {
+      title: '预览图',
+      dataIndex: 'url',
+      key: 'url',
+      render: (text, record) => {
+        return <img src={text} alt="花之韵" className="console-index-img" />;
+      },
+    }, {
+      title: '产品名称',
       dataIndex: 'name',
       key: 'name',
-      render: text => <Link>{text}</Link>,
     }, {
-      title: 'Age',
-      dataIndex: 'age',
-      key: 'age',
+      title: '价格',
+      dataIndex: 'nowPrice',
+      key: 'nowPrice',
     }, {
-      title: 'Address',
-      dataIndex: 'address',
-      key: 'address',
+      title: '用途',
+      dataIndex: 'usage',
+      key: 'usage',
+      render: (text, record) => {
+        return Setting.mapValueToLabel(text);
+      },
     }, {
-      title: 'Action',
+      title: '材料',
+      dataIndex: 'material',
+      key: 'material',
+      render: (text, record) => {
+        return Setting.mapValueToLabel(text);
+      },
+    }, {
+      title: '对象',
+      dataIndex: 'object',
+      key: 'object',
+      render: (text, record) => {
+        return Setting.mapValueToLabel(text);
+      },
+    }, {
+      title: '节日',
+      dataIndex: 'holiday',
+      key: 'holiday',
+      render: (text, record) => {
+        return Setting.mapValueToLabel(text);
+      },
+    }, {
+      title: '枝数',
+      dataIndex: 'branch',
+      key: 'branch',
+      render: (text, record) => {
+        return Setting.mapValueToLabel(text);
+      },
+    }, {
+      title: '种类',
+      dataIndex: 'kind',
+      key: 'kind',
+      render: (text, record) => {
+        return Setting.mapValueToLabel(text);
+      },
+    }, {
+      title: '颜色',
+      dataIndex: 'color',
+      key: 'color',
+      render: (text, record) => {
+        return Setting.mapValueToLabel(text);
+      },
+    }, {
+      title: '标志',
+      dataIndex: 'deleteFlag',
+      key: 'deleteFlag',
+      render: (text, record) => {
+        return parseInt(text) === 0 ? '正常' : '已删除';
+      },
+    }, {
+      title: '操作',
       key: 'action',
       render: (text, record) => (
         <span>
-          <Link>Action 一 {record.name}</Link>
+          <Link>查看</Link>
         </span>
       ),
     }];
-    const data = [{
-      key: '1',
-      name: 'John Brown',
-      age: 32,
-      address: 'New York No. 1 Lake Park',
-    }, {
-      key: '2',
-      name: 'Jim Green',
-      age: 42,
-      address: 'London No. 1 Lake Park',
-    }, {
-      key: '3',
-      name: 'Joe Black',
-      age: 32,
-      address: 'Sidney No. 1 Lake Park',
-    }];
+    let itemData = [];
+    if (!_.isEmpty(itemList) && !_.isEmpty(itemList.data)) {
+      itemData = itemList.data;
+    }
     const formItemLayout = {
       labelCol: {
         sm: { span: 8 },
@@ -110,8 +175,8 @@ class Item extends React.Component {
             <Col>
               <div className="table-fields">
                 <Table
-                  columns={columns}
-                  dataSource={data}
+                  columns={itemColumns}
+                  dataSource={itemData}
                 />
               </div>
             </Col>
@@ -121,5 +186,17 @@ class Item extends React.Component {
     );
   }
 }
+
+const mapStateToProps = (state) => {
+  return {
+    itemList: itemListSelector(state),
+  };
+};
+
+const mapDispatchToProps = {
+  getItem,
+  onViewInit,
+};
+
 const ItemForm = Form.create()(Item);
-export default ItemForm;
+export default connect(mapStateToProps, mapDispatchToProps)(ItemForm);
