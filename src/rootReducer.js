@@ -13,6 +13,7 @@ import { orderList } from './user/userInfo/reducer/reducer';
 import { infos, info } from './user/info/reducer/reducer';
 import { admin } from './admin/login/reducer/reducer';
 import { userList, adminList } from './admin/index/reducer/reducer';
+import { worksheets } from './admin/worksheet/reducer/reducer';
 
 export const rootReducer = combineReducers({
   user,
@@ -29,4 +30,5 @@ export const rootReducer = combineReducers({
   admin,
   userList,
   adminList,
+  worksheets,
 });

@@ -4,14 +4,26 @@
  */
 import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
+import { connect } from 'react-redux';
+import _ from 'lodash';
+import moment from 'moment';
 import { Row, Col, Card, Form, Input, Button, Table } from 'antd';
+import { onViewInit, getWorksheet } from './action/action';
+import { worksheetSelector } from './selector/selector';
 import './Worksheet.less';
 
 const FormItem = Form.Item;
 class Worksheet extends React.Component {
   static propTypes = {
     form: PropTypes.object.isRequired,
+    worksheets: PropTypes.object.isRequired,
+    getWorksheet: PropTypes.func.isRequired,
+    onViewInit: PropTypes.func.isRequired,
   };
+  componentWillMount() {
+    this.props.onViewInit();
+    this.props.getWorksheet();
+  }
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
@@ -22,43 +34,45 @@ class Worksheet extends React.Component {
   };
   render() {
     const { getFieldDecorator } = this.props.form;
+    const { worksheets } = this.props;
+    let worksheetData = [];
+    if (!_.isEmpty(worksheets) && !_.isEmpty(worksheets.data)) {
+      worksheetData = worksheets.data;
+    }
     const columns = [{
-      title: 'Name',
+      title: '工作记录id',
+      dataIndex: '_id',
+      key: '_id',
+    }, {
+      title: '添加人姓名',
+      dataIndex: 'adminName',
+      key: 'adminName',
+    }, {
+      title: '工作记录主题',
       dataIndex: 'name',
       key: 'name',
-      render: text => <Link>{text}</Link>,
     }, {
-      title: 'Age',
-      dataIndex: 'age',
-      key: 'age',
+      title: '工作记录内容',
+      dataIndex: 'content',
+      key: 'content',
+      render: (text, record) => {
+        return text.length > 20 ? text.substring(0, 20).concat('...') : text;
+      },
     }, {
-      title: 'Address',
-      dataIndex: 'address',
-      key: 'address',
+      title: '最后修改时间',
+      dataIndex: 'timestamp',
+      key: 'timestamp',
+      render: (text, record) => {
+        return !_.isUndefined(text) && moment(parseInt(text)).format('YYYY-MM-DD HH:mm:ss');
+      },
     }, {
-      title: 'Action',
+      title: '操作',
       key: 'action',
       render: (text, record) => (
         <span>
-          <Link>Action 一 {record.name}</Link>
+          <Link>操作</Link>
         </span>
       ),
-    }];
-    const data = [{
-      key: '1',
-      name: 'John Brown',
-      age: 32,
-      address: 'New York No. 1 Lake Park',
-    }, {
-      key: '2',
-      name: 'Jim Green',
-      age: 42,
-      address: 'London No. 1 Lake Park',
-    }, {
-      key: '3',
-      name: 'Joe Black',
-      age: 32,
-      address: 'Sidney No. 1 Lake Park',
     }];
     const formItemLayout = {
       labelCol: {
@@ -111,7 +125,7 @@ class Worksheet extends React.Component {
               <div className="table-fields">
                 <Table
                   columns={columns}
-                  dataSource={data}
+                  dataSource={worksheetData}
                 />
               </div>
             </Col>
@@ -121,5 +135,17 @@ class Worksheet extends React.Component {
     );
   }
 }
+
+const mapStateToProps  = (state) => {
+  return {
+    worksheets: worksheetSelector(state),
+  };
+};
+
+const mapDispatchToProps = {
+  onViewInit,
+  getWorksheet,
+};
+
 const WorksheetForm = Form.create()(Worksheet);
-export default WorksheetForm;
+export default connect(mapStateToProps, mapDispatchToProps)(WorksheetForm);

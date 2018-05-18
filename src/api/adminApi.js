@@ -8,3 +8,8 @@ export const getAdminApi = ajaxRequest.createAjax({
   method: 'GET',
   url: 'http://localhost:3000/admin/getAdmin',
 });
+
+export const getQuestionApi = ajaxRequest.createAjax({
+  method: 'GET',
+  url: 'http://localhost:3000/question/getQuestion',
+});
