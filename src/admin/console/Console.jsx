@@ -28,7 +28,7 @@ class Console extends React.Component {
   };
   componentWillMount() {
     this.props.onViewInit();
-    if (_.isEmpty(this.props.admin._id)) {
+    if (_.isEmpty(this.props.admin._id) && false) {
       Modal.error({
         title: '错误',
         content: '您还未登录，请登录后在操作！',
@@ -123,7 +123,7 @@ class Console extends React.Component {
               <div className="header-right">
                 <Dropdown overlay={menu}>
                   <Link className="ant-dropdown-link header-right-link">
-                    欢迎你，***用户
+                    欢迎你，{this.props.admin.username}用户
                   </Link>
                 </Dropdown>
               </div>
