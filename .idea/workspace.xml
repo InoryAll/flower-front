@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08c3298d-d019-4401-abb2-96f78fb0689a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/admin/login/action/action.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/admin/login/constant/constant.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/admin/login/reducer/reducer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/admin/login/selector/selector.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/api/adminApi.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/admin/login/Login.jsx" afterPath="$PROJECT_DIR$/src/admin/login/Login.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rootReducer.js" afterPath="$PROJECT_DIR$/src/rootReducer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/admin/console/action/action.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/admin/console/constant/constant.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/admin/console/reducer/reducer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/admin/console/selector/selector.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/admin/console/Console.jsx" afterPath="$PROJECT_DIR$/src/admin/console/Console.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/admin/login/reducer/reducer.js" afterPath="$PROJECT_DIR$/src/admin/login/reducer/reducer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/admin/login/selector/selector.js" afterPath="$PROJECT_DIR$/src/admin/login/selector/selector.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,50 +23,34 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="rootReducer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/rootReducer.js">
+      <file leaf-file-name="Index.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/admin/index/Index.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="23" column="12" lean-forward="true" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+            <state relative-caret-position="420">
+              <caret line="70" column="21" lean-forward="true" selection-start-line="65" selection-start-column="13" selection-end-line="70" selection-end-column="21" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <element signature="e#58#98#0" expanded="true" />
+                <element signature="e#63#104#0" expanded="true" />
+                <element signature="e#314#758#0" expanded="false" />
+                <element signature="e#315#430#0" expanded="false" />
+                <element signature="e#432#501#0" expanded="false" />
+                <element signature="e#503#584#0" expanded="false" />
+                <element signature="e#586#757#0" expanded="false" />
+                <element signature="e#674#742#0" expanded="false" />
+                <element signature="e#777#1098#0" expanded="false" />
+                <element signature="e#778#885#0" expanded="false" />
+                <element signature="e#887#991#0" expanded="false" />
+                <element signature="e#993#1097#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Login.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/admin/login/Login.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="23" column="23" lean-forward="true" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="e#61#102#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="action.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="action.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/admin/login/action/action.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="94">
-              <caret line="27" column="8" lean-forward="true" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="e#70#115#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="adminApi.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/api/adminApi.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+            <state relative-caret-position="175">
+              <caret line="5" column="31" lean-forward="true" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -75,13 +58,45 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="indexApi.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/api/indexApi.js">
+      <file leaf-file-name="Console.jsx" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/admin/console/Console.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="140">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="9" selection-end-column="3" />
+              <caret line="4" column="41" lean-forward="true" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
+                <marker date="1526627730488" expanded="true" signature="1396:1683" ph="..." />
+                <marker date="1526627730488" expanded="true" signature="1416:1520" ph="..." />
+                <marker date="1526627730488" expanded="true" signature="1565:1669" ph="..." />
+                <marker date="1526627730488" expanded="true" signature="1735:4236" ph="..." />
+                <marker date="1526627730488" expanded="true" signature="1779:4223" ph="..." />
+                <marker date="1526627730488" expanded="true" signature="1797:3549" ph="..." />
+                <marker date="1526627730488" expanded="true" signature="1945:2192" ph="..." />
+                <marker date="1526627730488" expanded="true" signature="2238:3530" ph="..." />
+                <marker date="1526627730488" expanded="true" signature="2272:2446" ph="..." />
+                <marker date="1526627730488" expanded="true" signature="2480:2655" ph="..." />
+                <marker date="1526627730488" expanded="true" signature="2689:2872" ph="..." />
+                <marker date="1526627730488" expanded="true" signature="2906:3083" ph="..." />
+                <marker date="1526627730488" expanded="true" signature="3117:3296" ph="..." />
+                <marker date="1526627730488" expanded="true" signature="3330:3510" ph="..." />
+                <marker date="1526627730488" expanded="true" signature="3568:4205" ph="..." />
+                <marker date="1526627730488" expanded="true" signature="3653:3733" ph="..." />
+                <marker date="1526627730488" expanded="true" signature="3862:4082" ph="..." />
+                <marker date="1526627730488" expanded="true" signature="3904:4061" ph="..." />
+                <marker date="1526627730488" expanded="true" signature="4126:4185" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="action.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/admin/console/action/action.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="5" column="57" lean-forward="true" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#71#116#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -97,23 +112,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="action.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/user/checkInfo/action/action.js">
+      <file leaf-file-name="reducer.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/admin/login/reducer/reducer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="5" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state relative-caret-position="35">
+              <caret line="1" column="21" lean-forward="false" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="selector.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/admin/login/selector/selector.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="35">
+              <caret line="1" column="22" lean-forward="false" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="reducer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/admin/login/reducer/reducer.js">
+        <entry file="file://$PROJECT_DIR$/src/admin/console/reducer/reducer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="35">
-              <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+            <state relative-caret-position="140">
+              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -122,24 +145,23 @@
         </entry>
       </file>
       <file leaf-file-name="selector.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/admin/login/selector/selector.js">
+        <entry file="file://$PROJECT_DIR$/src/admin/console/selector/selector.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="140">
               <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-              <folding />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Worksheet.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/admin/worksheet/Worksheet.jsx">
+      <file leaf-file-name="constant.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/admin/console/constant/constant.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="104" column="51" lean-forward="false" selection-start-line="104" selection-start-column="51" selection-end-line="104" selection-end-column="51" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="e#61#102#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="175">
+              <caret line="5" column="53" lean-forward="false" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -225,10 +247,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/user/info/Info.less" />
-        <option value="$PROJECT_DIR$/src/api/infoApi.js" />
-        <option value="$PROJECT_DIR$/src/user/index/Index.jsx" />
-        <option value="$PROJECT_DIR$/src/user/index/banner/Banner.jsx" />
         <option value="$PROJECT_DIR$/src/user/index/banner/sudoku/Sudoku.jsx" />
         <option value="$PROJECT_DIR$/src/user/index/banner/sudoku/announcement/Announcement.jsx" />
         <option value="$PROJECT_DIR$/src/user/info/constant/constant.js" />
@@ -257,7 +275,6 @@
         <option value="$PROJECT_DIR$/src/admin/console/Console.less" />
         <option value="$PROJECT_DIR$/src/admin/user/User.less" />
         <option value="$PROJECT_DIR$/src/admin/user/User.jsx" />
-        <option value="$PROJECT_DIR$/src/admin/console/Console.jsx" />
         <option value="$PROJECT_DIR$/src/admin/action/Action.less" />
         <option value="$PROJECT_DIR$/src/admin/action/Action.jsx" />
         <option value="$PROJECT_DIR$/src/admin/item/Item.less" />
@@ -271,11 +288,16 @@
         <option value="$PROJECT_DIR$/src/admin/worksheet/Worksheet.jsx" />
         <option value="$PROJECT_DIR$/src/admin/login/constant/constant.js" />
         <option value="$PROJECT_DIR$/src/api/adminApi.js" />
-        <option value="$PROJECT_DIR$/src/admin/login/reducer/reducer.js" />
-        <option value="$PROJECT_DIR$/src/admin/login/selector/selector.js" />
         <option value="$PROJECT_DIR$/src/rootReducer.js" />
         <option value="$PROJECT_DIR$/src/admin/login/Login.jsx" />
         <option value="$PROJECT_DIR$/src/admin/login/action/action.js" />
+        <option value="$PROJECT_DIR$/src/admin/login/reducer/reducer.js" />
+        <option value="$PROJECT_DIR$/src/admin/login/selector/selector.js" />
+        <option value="$PROJECT_DIR$/src/admin/console/reducer/reducer.js" />
+        <option value="$PROJECT_DIR$/src/admin/console/selector/selector.js" />
+        <option value="$PROJECT_DIR$/src/admin/console/constant/constant.js" />
+        <option value="$PROJECT_DIR$/src/admin/console/action/action.js" />
+        <option value="$PROJECT_DIR$/src/admin/console/Console.jsx" />
       </list>
     </option>
   </component>
@@ -786,6 +808,110 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="console" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="selector" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="flower-front" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="flower-front" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="console" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reducer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="flower-front" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="flower-front" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="console" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="constant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="flower-front" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="flower-front" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="console" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="action" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="flower-front" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="flower-front" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="action" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -976,12 +1102,12 @@
       <workItem from="1526379514825" duration="1119000" />
       <workItem from="1526383860098" duration="82453000" />
       <workItem from="1526527863208" duration="50157000" />
-      <workItem from="1526614197121" duration="9470000" />
+      <workItem from="1526614197121" duration="11151000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="458611000" />
+    <option name="totallyTimeSpent" value="460292000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1030,44 +1156,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/user/info/infoContent/InfoContent.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1225">
-          <caret line="35" column="12" lean-forward="true" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="e#58#99#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/index/banner/sudoku/Sudoku.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="18" column="19" lean-forward="false" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/index/banner/sudoku/choice/Choice.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="26" column="229" lean-forward="false" selection-start-line="26" selection-start-column="229" selection-end-line="26" selection-end-column="229" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/itemList/reducer/reducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-420">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/user/itemList/constant/constant.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1228,8 +1316,8 @@
         <state relative-caret-position="199">
           <caret line="69" column="28" lean-forward="true" selection-start-line="69" selection-start-column="28" selection-end-line="69" selection-end-column="28" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#68#113#0" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#68#113#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1270,38 +1358,6 @@
         <state relative-caret-position="245">
           <caret line="7" column="37" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="7" selection-end-column="37" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/admin/index/Index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="70" column="21" lean-forward="true" selection-start-line="65" selection-start-column="13" selection-end-line="70" selection-end-column="21" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#63#104#0" expanded="true" />
-            <element signature="e#314#758#0" expanded="false" />
-            <element signature="e#315#430#0" expanded="false" />
-            <element signature="e#432#501#0" expanded="false" />
-            <element signature="e#503#584#0" expanded="false" />
-            <element signature="e#586#757#0" expanded="false" />
-            <element signature="e#674#742#0" expanded="false" />
-            <element signature="e#777#1098#0" expanded="false" />
-            <element signature="e#778#885#0" expanded="false" />
-            <element signature="e#887#991#0" expanded="false" />
-            <element signature="e#993#1097#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/admin/console/Console.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="3" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#63#104#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1468,32 +1524,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/admin/login/constant/constant.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="6" column="27" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/admin/login/reducer/reducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35">
-          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/admin/login/selector/selector.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/rootReducer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -1516,13 +1546,125 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/admin/login/action/action.js">
+    <entry file="file://$PROJECT_DIR$/src/admin/index/Index.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="27" column="8" lean-forward="true" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+        <state relative-caret-position="420">
+          <caret line="70" column="21" lean-forward="true" selection-start-line="65" selection-start-column="13" selection-end-line="70" selection-end-column="21" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#70#115#0" expanded="true" />
+            <element signature="e#63#104#0" expanded="true" />
+            <element signature="e#314#758#0" expanded="false" />
+            <element signature="e#315#430#0" expanded="false" />
+            <element signature="e#432#501#0" expanded="false" />
+            <element signature="e#503#584#0" expanded="false" />
+            <element signature="e#586#757#0" expanded="false" />
+            <element signature="e#674#742#0" expanded="false" />
+            <element signature="e#777#1098#0" expanded="false" />
+            <element signature="e#778#885#0" expanded="false" />
+            <element signature="e#887#991#0" expanded="false" />
+            <element signature="e#993#1097#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/admin/login/selector/selector.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="35">
+          <caret line="1" column="22" lean-forward="false" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/admin/login/reducer/reducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="35">
+          <caret line="1" column="21" lean-forward="false" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/admin/login/constant/constant.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="6" column="27" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/admin/login/action/action.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="5" column="31" lean-forward="true" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/admin/console/reducer/reducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/admin/console/selector/selector.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/admin/console/constant/constant.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="5" column="53" lean-forward="false" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/admin/console/action/action.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="5" column="57" lean-forward="true" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#71#116#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/admin/console/Console.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="4" column="41" lean-forward="true" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <marker date="1526627730488" expanded="true" signature="1396:1683" ph="..." />
+            <marker date="1526627730488" expanded="true" signature="1416:1520" ph="..." />
+            <marker date="1526627730488" expanded="true" signature="1565:1669" ph="..." />
+            <marker date="1526627730488" expanded="true" signature="1735:4236" ph="..." />
+            <marker date="1526627730488" expanded="true" signature="1779:4223" ph="..." />
+            <marker date="1526627730488" expanded="true" signature="1797:3549" ph="..." />
+            <marker date="1526627730488" expanded="true" signature="1945:2192" ph="..." />
+            <marker date="1526627730488" expanded="true" signature="2238:3530" ph="..." />
+            <marker date="1526627730488" expanded="true" signature="2272:2446" ph="..." />
+            <marker date="1526627730488" expanded="true" signature="2480:2655" ph="..." />
+            <marker date="1526627730488" expanded="true" signature="2689:2872" ph="..." />
+            <marker date="1526627730488" expanded="true" signature="2906:3083" ph="..." />
+            <marker date="1526627730488" expanded="true" signature="3117:3296" ph="..." />
+            <marker date="1526627730488" expanded="true" signature="3330:3510" ph="..." />
+            <marker date="1526627730488" expanded="true" signature="3568:4205" ph="..." />
+            <marker date="1526627730488" expanded="true" signature="3653:3733" ph="..." />
+            <marker date="1526627730488" expanded="true" signature="3862:4082" ph="..." />
+            <marker date="1526627730488" expanded="true" signature="3904:4061" ph="..." />
+            <marker date="1526627730488" expanded="true" signature="4126:4185" ph="..." />
           </folding>
         </state>
       </provider>

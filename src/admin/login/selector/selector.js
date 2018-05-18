@@ -1,5 +1,5 @@
 /**
- * 鲜花销售系统后台登录页action类
+ * 鲜花销售系统后台登录页selector类
  * Created by tianrenjie on 2018/5/16
  * */
 

@@ -1,5 +1,5 @@
 /**
- * 鲜花销售系统后台登录页action类
+ * 鲜花销售系统后台登录页reducer类
  * Created by tianrenjie on 2018/5/16
  * */
 import { GET_ADMIN_USER, ADMIN_LOGIN_VIEW_INIT } from '../constant/constant';
