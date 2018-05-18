@@ -60,6 +60,14 @@ class User extends React.Component {
       age: 32,
       address: 'Sidney No. 1 Lake Park',
     }];
+    const formItemLayout = {
+      labelCol: {
+        sm: { span: 8 },
+      },
+      wrapperCol: {
+        sm: { span: 16 },
+      },
+    };
     return (
       <div className="console-user">
         <Card className="console-user-card" title="用户管理">
@@ -67,19 +75,72 @@ class User extends React.Component {
             <Col>
               <div className="form-search-fields">
                 <Form onSubmit={this.handleSubmit} layout="inline">
-                  <FormItem
-                    label="Field A"
-                  >
-                    <Input placeholder="input placeholder" />
-                  </FormItem>
-                  <FormItem
-                    label="Field B"
-                  >
-                    <Input placeholder="input placeholder" />
-                  </FormItem>
-                  <FormItem>
-                    <Button type="primary">搜索</Button>
-                  </FormItem>
+                  <Row className="form-search-fields-row">
+                    <Col span={8}>
+                      <FormItem
+                        label="用户名"
+                        {...formItemLayout}
+                      >
+                        {getFieldDecorator('username', {
+                        })(
+                          <Input placeholder="输入用户名" />
+                        )}
+                      </FormItem>
+                    </Col>
+                    <Col span={8}>
+                      <FormItem
+                        label="姓名"
+                        {...formItemLayout}
+                      >
+                        {getFieldDecorator('name', {
+                        })(
+                          <Input placeholder="输入姓名" />
+                        )}
+                      </FormItem>
+                    </Col>
+                    <Col span={8}>
+                      <FormItem
+                        label="手机号"
+                        {...formItemLayout}
+                      >
+                        {getFieldDecorator('tel', {
+                        })(
+                          <Input placeholder="输入手机号" />
+                        )}
+                      </FormItem>
+                    </Col>
+                  </Row>
+                  <Row className="form-search-fields-row">
+                    <Col span={8}>
+                      <FormItem
+                        label="邮箱"
+                        {...formItemLayout}
+                      >
+                        {getFieldDecorator('email', {
+                        })(
+                          <Input placeholder="输入邮箱" />
+                        )}
+                      </FormItem>
+                    </Col>
+                    <Col span={8}>
+                      <FormItem
+                        label="QQ"
+                        {...formItemLayout}
+                      >
+                        {getFieldDecorator('qq', {
+                        })(
+                          <Input placeholder="输入QQ号" />
+                        )}
+                      </FormItem>
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col span={8} offset={16}>
+                      <FormItem className="form-search-fields-search">
+                        <Button className="form-search-fields-search-btn" htmlType="submit" type="primary" icon="search">搜索</Button>
+                      </FormItem>
+                    </Col>
+                  </Row>
                 </Form>
               </div>
             </Col>

@@ -36,6 +36,7 @@ export const router = (
       <Route path="info(/:id)" component={Info} />
     </Route>
     <Route path="/admin">
+      <IndexRoute component={AdminLogin} />
       <Route path="login" component={AdminLogin} />
       <Route path="console" component={Console}>
         <IndexRoute component={ConsoleIndex} />
