@@ -5,13 +5,27 @@
 import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
 import { Row, Col, Card, Form, Input, Button, Table } from 'antd';
+import _ from 'lodash';
+import moment from 'moment';
+import { connect } from 'react-redux';
+import Settings from '../../common/setting';
+import { onViewInit } from './action/action';
+import { getInfoList } from '../../user/info/action/action';
+import { infoSelector } from '../../user/info/selector/selector';
 import './Info.less';
 
 const FormItem = Form.Item;
 class Info extends React.Component {
   static propTypes = {
     form: PropTypes.object.isRequired,
+    infos: PropTypes.object.isRequired,
+    onViewInit: PropTypes.func.isRequired,
+    getInfoList: PropTypes.func.isRequired,
   };
+  componentWillMount() {
+    this.props.onViewInit();
+    this.props.getInfoList();
+  }
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
@@ -22,43 +36,58 @@ class Info extends React.Component {
   };
   render() {
     const { getFieldDecorator } = this.props.form;
+    const { infos } = this.props;
+    Settings.initSettings();
+    let infoData = [];
+    if (!_.isEmpty(infos) && !_.isEmpty(infos.data)) {
+      infoData = infos.data;
+    }
     const columns = [{
-      title: 'Name',
+      title: '文章主题',
       dataIndex: 'name',
       key: 'name',
-      render: text => <Link>{text}</Link>,
     }, {
-      title: 'Age',
-      dataIndex: 'age',
-      key: 'age',
+      title: '文章作者',
+      dataIndex: 'author',
+      key: 'author',
     }, {
-      title: 'Address',
-      dataIndex: 'address',
-      key: 'address',
+      title: '文章类型',
+      dataIndex: 'type',
+      key: 'type',
+      render: (text, record) => {
+        switch (text) {
+          case 'news':
+            return '资讯';
+          case 'flower':
+            return '花语';
+          case 'board':
+            return '公告';
+          default:
+            return '未知类型';
+        }
+      },
     }, {
-      title: 'Action',
+      title: '文章内容',
+      dataIndex: 'content',
+      key: 'content',
+      render: (text, record) => {
+        return decodeURIComponent(text).length > 10 ? decodeURIComponent(text).substring(0, 10).concat('...') : decodeURIComponent(text);
+      },
+    }, {
+      title: '最后修改时间',
+      dataIndex: 'timestamp',
+      key: 'timestamp',
+      render: (text, record) => {
+        return !_.isUndefined(text) && moment(parseInt(text)).format('YYYY-MM-DD HH:mm:ss');
+      },
+    }, {
+      title: '操作',
       key: 'action',
       render: (text, record) => (
         <span>
-          <Link>Action 一 {record.name}</Link>
+          <Link>查看</Link>
         </span>
       ),
-    }];
-    const data = [{
-      key: '1',
-      name: 'John Brown',
-      age: 32,
-      address: 'New York No. 1 Lake Park',
-    }, {
-      key: '2',
-      name: 'Jim Green',
-      age: 42,
-      address: 'London No. 1 Lake Park',
-    }, {
-      key: '3',
-      name: 'Joe Black',
-      age: 32,
-      address: 'Sidney No. 1 Lake Park',
     }];
     const formItemLayout = {
       labelCol: {
@@ -122,7 +151,7 @@ class Info extends React.Component {
               <div className="table-fields">
                 <Table
                   columns={columns}
-                  dataSource={data}
+                  dataSource={infoData}
                 />
               </div>
             </Col>
@@ -132,5 +161,17 @@ class Info extends React.Component {
     );
   }
 }
+
+const mapStateToProps = (state) => {
+  return {
+    infos: infoSelector(state),
+  };
+};
+
+const mapDispatchToProps = {
+  onViewInit,
+  getInfoList,
+};
+
 const InfoForm = Form.create()(Info);
-export default InfoForm;
+export default connect(mapStateToProps, mapDispatchToProps)(InfoForm);
