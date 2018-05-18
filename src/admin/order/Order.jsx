@@ -5,12 +5,21 @@
 import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
 import { Row, Col, Card, Form, Input, Button, Table } from 'antd';
+import { connect } from 'react-redux';
+import _ from 'lodash';
+import moment from 'moment';
+import { getAllOrders } from '../../user/userInfo/action/action';
+import { orderListSelector } from '../../user/userInfo/selector/selector';
+import { onViewInit } from './action/action';
 import './Order.less';
 
 const FormItem = Form.Item;
 class Order extends React.Component {
   static propTypes = {
     form: PropTypes.object.isRequired,
+    orderList: PropTypes.object.isRequired,
+    getAllOrders: PropTypes.func.isRequired,
+    onViewInit: PropTypes.func.isRequired,
   };
   handleSubmit = (e) => {
     e.preventDefault();
@@ -20,45 +29,115 @@ class Order extends React.Component {
       }
     });
   };
+  componentWillMount() {
+    this.props.onViewInit();
+    this.props.getAllOrders();
+  }
   render() {
     const { getFieldDecorator } = this.props.form;
+    const { orderList } = this.props;
+    let orderData = [];
+    if (!_.isEmpty(orderList) && !_.isEmpty(orderList.data)) {
+      orderData = orderList.data;
+    }
+    const itemColumns = [{
+      title: '商品',
+      dataIndex: 'item',
+      key: 'item',
+      render: (text, record) => {
+        return (
+          <div className="shoppinglist-table-item clearfix">
+            <img src={record.url} alt="花之韵" className="shoppinglist-table-item-img" />
+            <Link to="" className="shoppinglist-table-item-link">{record.itemName}</Link>
+          </div>
+        );
+      },
+    }, {
+      title: '单价(元)',
+      dataIndex: 'itemPrice',
+      key: 'itemPrice',
+    }, {
+      title: '数量',
+      dataIndex: 'count',
+      key: 'count',
+    }, {
+      title: '小计(元)',
+      dataIndex: 'itemTotalPrice',
+      key: 'itemTotalPrice',
+      render: (text, record) => {
+        return `￥${parseFloat((text).split('￥')[1]).toFixed(2)}`;
+      },
+    }];
     const columns = [{
-      title: 'Name',
-      dataIndex: 'name',
-      key: 'name',
-      render: text => <Link>{text}</Link>,
+      title: '订单id',
+      dataIndex: '_id',
+      key: '_id',
     }, {
-      title: 'Age',
-      dataIndex: 'age',
-      key: 'age',
+      title: '产品列表',
+      dataIndex: 'itemList',
+      key: 'itemList',
+      render: (text, record) => {
+        return (
+          <div className="shoppinglist-table-item clearfix">
+            <Table
+              columns={itemColumns}
+              dataSource={record.itemList || []}
+              showHeader={true}
+              pagination={false}
+            />
+          </div>
+        );
+      },
     }, {
-      title: 'Address',
+      title: '收货地址',
       dataIndex: 'address',
       key: 'address',
     }, {
-      title: 'Action',
+      title: '用户姓名',
+      dataIndex: 'sendName',
+      key: 'sendName',
+    }, {
+      title: '用户电话',
+      dataIndex: 'sendPhone',
+      key: 'sendPhone',
+    }, {
+      title: '收货时间',
+      dataIndex: 'date',
+      key: 'date',
+    }, {
+      title: '总价',
+      dataIndex: 'totalPrice',
+      key: 'totalPrice',
+      render: (text, record) => {
+        return `￥${parseFloat(text).toFixed(2)}`;
+      },
+    }, {
+      title: '最后修改时间',
+      dataIndex: 'timestamp',
+      key: 'timestamp',
+      render: (text, record) => {
+        return !_.isUndefined(text) && moment(parseInt(text)).format('YYYY-MM-DD HH:mm:ss');
+      },
+    }, {
+      title: '状态',
+      dataIndex: 'status',
+      key: 'status',
+      render: (text, record) => {
+        switch (text) {
+          case 1:
+            return '已付款';
+          default:
+            return '未知状态';
+        }
+      },
+    }, {
+      title: '操作',
       key: 'action',
       render: (text, record) => (
         <span>
-          <Link>Action 一 {record.name}</Link>
+          <Link>操作</Link>
         </span>
       ),
-    }];
-    const data = [{
-      key: '1',
-      name: 'John Brown',
-      age: 32,
-      address: 'New York No. 1 Lake Park',
-    }, {
-      key: '2',
-      name: 'Jim Green',
-      age: 42,
-      address: 'London No. 1 Lake Park',
-    }, {
-      key: '3',
-      name: 'Joe Black',
-      age: 32,
-      address: 'Sidney No. 1 Lake Park',
     }];
     const formItemLayout = {
       labelCol: {
@@ -120,7 +199,7 @@ class Order extends React.Component {
               <div className="table-fields">
                 <Table
                   columns={columns}
-                  dataSource={data}
+                  dataSource={orderData}
                 />
               </div>
             </Col>
@@ -130,5 +209,17 @@ class Order extends React.Component {
     );
   }
 }
+
+const mapStateToProps = (state) => {
+  return {
+    orderList: orderListSelector(state),
+  };
+};
+
+const mapDispatchToProps = {
+  onViewInit,
+  getAllOrders,
+};
+
 const OrderForm = Form.create()(Order);
-export default OrderForm;
+export default connect(mapStateToProps, mapDispatchToProps)(OrderForm);
