@@ -3,34 +3,33 @@
  * Created by tianrenjie on 2018/5/17
  */
 import React, { PropTypes } from 'react';
+import { connect } from 'react-redux';
 import { Form, Icon, Input, Button, Card } from 'antd';
+import { onViewInit, getAdminUser } from './action/action';
+import { adminSelector } from './selector/selector';
 import './Login.less';
 
 const FormItem = Form.Item;
 class Login extends React.Component {
   static propTypes = {
     form: PropTypes.object.isRequired,
+    admin: PropTypes.object.isRequired,
+    onViewInit: PropTypes.func.isRequired,
+    getAdminUser: PropTypes.func.isRequired,
   };
+  componentWillMount() {
+    this.props.onViewInit();
+  }
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
       if (!err) {
-        console.log('Received values of form: ', values);
+        this.props.getAdminUser({ ...values });
       }
     });
   };
   render() {
     const { getFieldDecorator } = this.props.form;
-    const formItemLayout = {
-      labelCol: {
-        xs: { span: 24 },
-        sm: { span: 8 },
-      },
-      wrapperCol: {
-        xs: { span: 24 },
-        sm: { span: 16 },
-      },
-    };
     return (
       <div className="adminlogin">
         <div className="adminlogin-card">
@@ -68,5 +67,16 @@ class Login extends React.Component {
   }
 }
 
+const mapStateToProps = (state) => {
+  return {
+    admin: adminSelector(state),
+  };
+};
+
+const mapDispatchToProps = {
+  onViewInit,
+  getAdminUser,
+};
+
 const LoginForm = Form.create()(Login);
-export default LoginForm;
+export default connect(mapStateToProps, mapDispatchToProps)(LoginForm);

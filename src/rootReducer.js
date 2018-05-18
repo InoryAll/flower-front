@@ -11,6 +11,7 @@ import { order } from './user/checkInfo/reducer/reducer';
 import { recommend } from './user/shoppingFinish/reducer/reducer';
 import { orderList } from './user/userInfo/reducer/reducer';
 import { infos, info } from './user/info/reducer/reducer';
+import { admin } from './admin/login/reducer/reducer';
 
 export const rootReducer = combineReducers({
   user,
@@ -24,4 +25,5 @@ export const rootReducer = combineReducers({
   orderList,
   infos,
   info,
+  admin,
 });
