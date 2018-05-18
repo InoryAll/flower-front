@@ -78,58 +78,23 @@ class Order extends React.Component {
                   <Row className="form-search-fields-row">
                     <Col span={8}>
                       <FormItem
-                        label="用户名"
+                        label="寄件人"
                         {...formItemLayout}
                       >
-                        {getFieldDecorator('username', {
+                        {getFieldDecorator('sendName', {
                         })(
-                          <Input placeholder="输入用户名" />
+                          <Input placeholder="输入寄件人" />
                         )}
                       </FormItem>
                     </Col>
                     <Col span={8}>
                       <FormItem
-                        label="姓名"
+                        label="收件人"
                         {...formItemLayout}
                       >
-                        {getFieldDecorator('name', {
+                        {getFieldDecorator('receiveName', {
                         })(
-                          <Input placeholder="输入姓名" />
-                        )}
-                      </FormItem>
-                    </Col>
-                    <Col span={8}>
-                      <FormItem
-                        label="手机号"
-                        {...formItemLayout}
-                      >
-                        {getFieldDecorator('tel', {
-                        })(
-                          <Input placeholder="输入手机号" />
-                        )}
-                      </FormItem>
-                    </Col>
-                  </Row>
-                  <Row className="form-search-fields-row">
-                    <Col span={8}>
-                      <FormItem
-                        label="邮箱"
-                        {...formItemLayout}
-                      >
-                        {getFieldDecorator('email', {
-                        })(
-                          <Input placeholder="输入邮箱" />
-                        )}
-                      </FormItem>
-                    </Col>
-                    <Col span={8}>
-                      <FormItem
-                        label="QQ"
-                        {...formItemLayout}
-                      >
-                        {getFieldDecorator('qq', {
-                        })(
-                          <Input placeholder="输入QQ号" />
+                          <Input placeholder="输入收件人" />
                         )}
                       </FormItem>
                     </Col>
@@ -147,9 +112,7 @@ class Order extends React.Component {
           </Row>
           <Row>
             <Col>
-              <div className="action-fields">
-                <Button type="default">添加用户</Button>
-              </div>
+              <div className="action-fields" />
             </Col>
           </Row>
           <Row>

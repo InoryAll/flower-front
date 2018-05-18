@@ -78,58 +78,23 @@ class Info extends React.Component {
                   <Row className="form-search-fields-row">
                     <Col span={8}>
                       <FormItem
-                        label="用户名"
-                        {...formItemLayout}
-                      >
-                        {getFieldDecorator('username', {
-                        })(
-                          <Input placeholder="输入用户名" />
-                        )}
-                      </FormItem>
-                    </Col>
-                    <Col span={8}>
-                      <FormItem
-                        label="姓名"
+                        label="文案名"
                         {...formItemLayout}
                       >
                         {getFieldDecorator('name', {
                         })(
-                          <Input placeholder="输入姓名" />
+                          <Input placeholder="输入文案名" />
                         )}
                       </FormItem>
                     </Col>
                     <Col span={8}>
                       <FormItem
-                        label="手机号"
+                        label="作者"
                         {...formItemLayout}
                       >
-                        {getFieldDecorator('tel', {
+                        {getFieldDecorator('author', {
                         })(
-                          <Input placeholder="输入手机号" />
-                        )}
-                      </FormItem>
-                    </Col>
-                  </Row>
-                  <Row className="form-search-fields-row">
-                    <Col span={8}>
-                      <FormItem
-                        label="邮箱"
-                        {...formItemLayout}
-                      >
-                        {getFieldDecorator('email', {
-                        })(
-                          <Input placeholder="输入邮箱" />
-                        )}
-                      </FormItem>
-                    </Col>
-                    <Col span={8}>
-                      <FormItem
-                        label="QQ"
-                        {...formItemLayout}
-                      >
-                        {getFieldDecorator('qq', {
-                        })(
-                          <Input placeholder="输入QQ号" />
+                          <Input placeholder="输入文案名" />
                         )}
                       </FormItem>
                     </Col>
@@ -148,7 +113,7 @@ class Info extends React.Component {
           <Row>
             <Col>
               <div className="action-fields">
-                <Button type="default">添加用户</Button>
+                <Button type="default">添加文案</Button>
               </div>
             </Col>
           </Row>
