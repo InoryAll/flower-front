@@ -4,14 +4,27 @@
  */
 import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
+import _ from 'lodash';
+import { connect } from 'react-redux';
 import { Row, Col, Card, Form, Input, Button, Table } from 'antd';
+import { onViewInit } from './action/action';
+import { getUserList, getAdminList } from '../index/action/action';
+import { userListSelector, adminListSelector } from '../index/selector/selector';
 import './User.less';
 
 const FormItem = Form.Item;
 class User extends React.Component {
   static propTypes = {
     form: PropTypes.object.isRequired,
+    userList: PropTypes.object.isRequired,
+    adminList: PropTypes.object.isRequired,
+    getUserList: PropTypes.func.isRequired,
+    getAdminList: PropTypes.func.isRequired,
   };
+  componentWillMount() {
+    this.props.getUserList();
+    this.props.getAdminList();
+  }
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
@@ -22,43 +35,46 @@ class User extends React.Component {
   };
   render() {
     const { getFieldDecorator } = this.props.form;
+    const { adminList, userList } = this.props;
+    let userData = [];
+    if (!_.isEmpty(adminList) && !_.isEmpty(adminList.data) && !_.isEmpty(userList) && !_.isEmpty(userList.data)) {
+      userData = adminList.data.concat(userList.data);
+    }
     const columns = [{
-      title: 'Name',
-      dataIndex: 'name',
-      key: 'name',
-      render: text => <Link>{text}</Link>,
+      title: '用户id',
+      dataIndex: '_id',
+      key: '_id',
     }, {
-      title: 'Age',
-      dataIndex: 'age',
-      key: 'age',
+      title: '账号',
+      dataIndex: 'username',
+      key: 'username',
     }, {
-      title: 'Address',
-      dataIndex: 'address',
-      key: 'address',
+      title: '邮箱',
+      dataIndex: 'email',
+      key: 'email',
     }, {
-      title: 'Action',
+      title: '手机号',
+      dataIndex: 'tel',
+      key: 'tel',
+    }, {
+      title: 'QQ',
+      dataIndex: 'qq',
+      key: 'qq',
+    }, {
+      title: '角色',
+      dataIndex: 'permission',
+      key: 'permission',
+      render: (text, record) => {
+        return parseInt(text) > 0 ? '管理员' : '普通用户';
+      },
+    }, {
+      title: '操作',
       key: 'action',
       render: (text, record) => (
         <span>
-          <Link>Action 一 {record.name}</Link>
+          <Link>查看</Link>
         </span>
       ),
-    }];
-    const data = [{
-      key: '1',
-      name: 'John Brown',
-      age: 32,
-      address: 'New York No. 1 Lake Park',
-    }, {
-      key: '2',
-      name: 'Jim Green',
-      age: 42,
-      address: 'London No. 1 Lake Park',
-    }, {
-      key: '3',
-      name: 'Joe Black',
-      age: 32,
-      address: 'Sidney No. 1 Lake Park',
     }];
     const formItemLayout = {
       labelCol: {
@@ -157,7 +173,7 @@ class User extends React.Component {
               <div className="table-fields">
                 <Table
                   columns={columns}
-                  dataSource={data}
+                  dataSource={userData}
                 />
               </div>
             </Col>
@@ -167,5 +183,19 @@ class User extends React.Component {
     );
   }
 }
+
+const mapStateToProps = (state) => {
+  return {
+    userList: userListSelector(state),
+    adminList: adminListSelector(state),
+  };
+};
+
+const mapDispatchToProps = {
+  onViewInit,
+  getAdminList,
+  getUserList,
+};
+
 const UserForm = Form.create()(User);
-export default UserForm;
+export default connect(mapStateToProps, mapDispatchToProps)(UserForm);
