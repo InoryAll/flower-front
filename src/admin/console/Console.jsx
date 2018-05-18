@@ -41,8 +41,10 @@ class Console extends React.Component {
             collapsed={this.state.collapsed}
           >
             <div className="admin-logo">
-              <Icon type="home" className="admin-logo-icon" />
-              <span className="admin-logo-title">{this.state.collapsed ? '' : '鲜花销售管理控制台'}</span>
+              <Link to="/admin/console">
+                <Icon type="home" className="admin-logo-icon" />
+                <span className="admin-logo-title">{this.state.collapsed ? '' : '鲜花销售管理控制台'}</span>
+              </Link>
             </div>
             <Menu theme="dark" mode="inline">
               <Menu.Item key="1">

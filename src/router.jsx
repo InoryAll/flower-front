@@ -19,6 +19,11 @@ import AdminLogin from './admin/login/Login';
 import Console from './admin/console/Console';
 import ConsoleIndex from './admin/index/Index';
 import ConsoleUser from './admin/user/User';
+import ConsoleItem from './admin/item/Item';
+import ConsoleInfo from './admin/info/Info';
+import ConsoleOrder from './admin/order/Order';
+import ConsoleWorksheet from './admin/worksheet/Worksheet';
+import ConsoleAction from './admin/action/Action';
 
 export const router = (
   <Router history={browserHistory}>
@@ -41,6 +46,11 @@ export const router = (
       <Route path="console" component={Console}>
         <IndexRoute component={ConsoleIndex} />
         <Route path="user" component={ConsoleUser} />
+        <Route path="item" component={ConsoleItem} />
+        <Route path="info" component={ConsoleInfo} />
+        <Route path="order" component={ConsoleOrder} />
+        <Route path="worksheet" component={ConsoleWorksheet} />
+        <Route path="action" component={ConsoleAction} />
       </Route>
     </Route>
   </Router>
