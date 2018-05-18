@@ -4,27 +4,40 @@
  */
 import React, { PropTypes } from 'react';
 import { Timeline, Card, Pagination } from 'antd';
+import { connect } from 'react-redux';
+import _ from 'lodash';
+import moment from 'moment';
+import { onViewInit, getActions } from './action/action';
+import { actionSelector } from './selector/selector';
 import './Action.less';
 
 class Action extends React.Component {
-  static propTypes = {};
+  static propTypes = {
+    actions: PropTypes.object.isRequired,
+    onViewInit: PropTypes.func.isRequired,
+    getActions: PropTypes.func.isRequired,
+  };
+  componentWillMount() {
+    this.props.onViewInit();
+    this.props.getActions();
+  }
   render() {
+    const { actions } = this.props;
+    let actionData = [];
+    const timelines = [];
+    if (!_.isEmpty(actions) && !_.isEmpty(actions.data)) {
+      actionData = actions.data;
+    }
+    actionData.map((item, index) => {
+      timelines.push(<Timeline.Item>用户{item.adminName}&emsp;{item.content}&emsp;{!_.isUndefined(item.timestamp) &&
+      moment(parseInt(item.timestamp)).format('YYYY-MM-DD HH:mm:ss')}</Timeline.Item>);
+      return true;
+    });
     return (
       <div className="console-action">
         <Card className="console-action-card" title="操作记录列表">
           <Timeline>
-            <Timeline.Item>Create a services site 2015-09-01</Timeline.Item>
-            <Timeline.Item>Solve initial network problems 2015-09-01</Timeline.Item>
-            <Timeline.Item>Technical testing 2015-09-01</Timeline.Item>
-            <Timeline.Item>Network problems being solved 2015-09-01</Timeline.Item>
-            <Timeline.Item>Create a services site 2015-09-01</Timeline.Item>
-            <Timeline.Item>Solve initial network problems 2015-09-01</Timeline.Item>
-            <Timeline.Item>Technical testing 2015-09-01</Timeline.Item>
-            <Timeline.Item>Network problems being solved 2015-09-01</Timeline.Item>
-            <Timeline.Item>Create a services site 2015-09-01</Timeline.Item>
-            <Timeline.Item>Solve initial network problems 2015-09-01</Timeline.Item>
-            <Timeline.Item>Technical testing 2015-09-01</Timeline.Item>
-            <Timeline.Item>Network problems being solved 2015-09-01</Timeline.Item>
+            {timelines}
           </Timeline>
           <div className="console-action-pagination">
             <Pagination defaultCurrent={1} total={50} />
@@ -35,4 +48,15 @@ class Action extends React.Component {
   }
 }
 
-export default Action;
+const mapStateToProps = (state) => {
+  return {
+    actions: actionSelector(state),
+  };
+};
+
+const mapDispatchToProps = {
+  onViewInit,
+  getActions,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Action);

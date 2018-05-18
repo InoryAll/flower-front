@@ -13,3 +13,8 @@ export const getQuestionApi = ajaxRequest.createAjax({
   method: 'GET',
   url: 'http://localhost:3000/question/getQuestion',
 });
+
+export const getActionApi = ajaxRequest.createAjax({
+  method: 'GET',
+  url: 'http://localhost:3000/action/getAction',
+});
