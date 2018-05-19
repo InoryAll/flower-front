@@ -4,6 +4,7 @@
  */
 import React, { PropTypes } from 'react';
 import { Row, Col, InputNumber, Icon } from 'antd';
+import { browserHistory } from 'react-router';
 import Settings from '../../../common/setting';
 import Cookie from '../../../common/cookie';
 import './ItemInfo.less';
@@ -24,6 +25,19 @@ class ItemInfo extends React.Component {
     });
   };
   handleBuy = (item) => {
+    const params = {
+      itemId: item._id,
+      itemName: item.name,
+      itemPrice: item.nowPrice,
+      url: item.url,
+      count: this.state.count,
+      itemTotalPrice: `￥${this.state.count * parseFloat(item.nowPrice.split('￥')[1]).toFixed(2)}`,
+      userId: Cookie.getCookie('_id'),
+      userName: Cookie.getCookie('username'),
+      deleteFlag: 0,
+    };
+    this.props.addGood(params);
+    browserHistory.push('/cart');
   };
   handleAddToCart = (item) => {
     const params = {
