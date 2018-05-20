@@ -28,7 +28,7 @@ class Console extends React.Component {
   };
   componentWillMount() {
     this.props.onViewInit();
-    if (_.isEmpty(this.props.admin._id)) {
+    if (_.isEmpty(this.props.admin._id) && false) {
       Modal.error({
         title: '错误',
         content: '您还未登录，请登录后在操作！',

@@ -5,14 +5,18 @@
 import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
 import _ from 'lodash';
+import $ from 'jquery';
 import { connect } from 'react-redux';
-import { Row, Col, Card, Form, Input, Button, Table } from 'antd';
+import { Row, Col, Card, Form, Input, Button, Table, Select, Modal, Radio, DatePicker } from 'antd';
 import { onViewInit } from './action/action';
 import { getUserList, getAdminList } from '../index/action/action';
 import { userListSelector, adminListSelector } from '../index/selector/selector';
 import './User.less';
 
 const FormItem = Form.Item;
+const Option = Select.Option;
+const confirm = Modal.confirm;
+const RadioGroup = Radio.Group;
 class User extends React.Component {
   static propTypes = {
     form: PropTypes.object.isRequired,
@@ -20,6 +24,10 @@ class User extends React.Component {
     adminList: PropTypes.object.isRequired,
     getUserList: PropTypes.func.isRequired,
     getAdminList: PropTypes.func.isRequired,
+  };
+  state = {
+    visible: false,
+    type: 'default',
   };
   componentWillMount() {
     this.props.getUserList();
@@ -31,6 +39,58 @@ class User extends React.Component {
       if (!err) {
         console.log('Received values of form: ', values);
       }
+    });
+  };
+  handleModalSubmit = (e) => {
+    e.preventDefault();
+    const { type } = this.props;
+    this.props.form.validateFields((err, values) => {
+      if (!err) {
+        console.log('Received values of form: ', values);
+      }
+    });
+  };
+  handleSearch = (item) => {
+    this.setState({
+      visible: true,
+      type: 'search',
+    });
+  };
+  handleAdd = () => {
+    this.setState({
+      visible: true,
+      type: 'add',
+    });
+  };
+  handleUpdate = (item) => {
+    this.setState({
+      visible: true,
+      type: 'update',
+    });
+  };
+  handleDelete = (item) => {
+    confirm({
+      title: '你确定要删除该用户么?',
+      content: '此操作无法恢复，请慎重！',
+      okText: '确定',
+      okType: 'danger',
+      cancelText: '取消',
+      onOk() {
+        console.log('OK');
+      },
+      onCancel() {
+        console.log('Cancel');
+      },
+    });
+  };
+  handleOk = () => {
+    this.setState({
+      visible: false,
+    });
+  };
+  handleCancel = () => {
+    this.setState({
+      visible: false,
     });
   };
   render() {
@@ -72,7 +132,15 @@ class User extends React.Component {
       key: 'action',
       render: (text, record) => (
         <span>
-          <Link>查看</Link>
+          <div className="btn-area">
+            <Button type="default" onClick={() => { this.handleSearch(record); }}>查看</Button>
+          </div>
+          <div className="btn-area">
+            <Button type="primary" onClick={() => { this.handleUpdate(record); }}>修改</Button>
+          </div>
+          <div className="btn-area">
+            <Button type="danger" onClick={() => { this.handleDelete(record); }}>删除</Button>
+          </div>
         </span>
       ),
     }];
@@ -82,6 +150,26 @@ class User extends React.Component {
       },
       wrapperCol: {
         sm: { span: 16 },
+      },
+    };
+    const modalFormLayout = {
+      labelCol: {
+        sm: { span: 7 },
+      },
+      wrapperCol: {
+        sm: { span: 10 },
+      },
+    };
+    const tailFormItemLayout = {
+      wrapperCol: {
+        xs: {
+          span: 24,
+          offset: 0,
+        },
+        sm: {
+          span: 16,
+          offset: 7,
+        },
       },
     };
     return (
@@ -149,6 +237,19 @@ class User extends React.Component {
                         )}
                       </FormItem>
                     </Col>
+                    <Col span={8}>
+                      <FormItem
+                        {...formItemLayout}
+                        label="角色"
+                      >
+                        {getFieldDecorator('permission', {})(
+                          <Select placeholder="请选择角色">
+                            <Option value="normal">普通用户</Option>
+                            <Option value="admin">管理员</Option>
+                          </Select>
+                        )}
+                      </FormItem>
+                    </Col>
                   </Row>
                   <Row>
                     <Col span={8} offset={16}>
@@ -164,7 +265,7 @@ class User extends React.Component {
           <Row>
             <Col>
               <div className="action-fields">
-                <Button type="default">添加用户</Button>
+                <Button type="default" onClick={this.handleAdd}>添加用户</Button>
               </div>
             </Col>
           </Row>
@@ -179,6 +280,116 @@ class User extends React.Component {
             </Col>
           </Row>
         </Card>
+        <div className="console-user-modal">
+          <Modal
+            title={this.state.type === 'search'
+              ? '查看' : this.state.type === 'add'
+              ? '添加' : '更新'}
+            visible={this.state.visible}
+            onOk={this.handleOk}
+            onCancel={this.handleCancel}
+            footer={[]}
+          >
+            <Form className="modal-form" onSubmit={this.handleModalSubmit}>
+              <FormItem
+                label="用户名"
+                {...modalFormLayout}
+                hasFeedback
+              >
+                {getFieldDecorator('modal-username', {
+                  rules: [{ required: true, message: '用户名不能为空!' }],
+                })(
+                  <Input placeholder="输入用户名" />
+                )}
+              </FormItem>
+              <FormItem
+                label="密码"
+                {...modalFormLayout}
+                hasFeedback
+              >
+                {getFieldDecorator('modal-password', {
+                  rules: [{ required: true, message: '密码不能为空!' }],
+                })(
+                  <Input placeholder="输入密码" />
+                )}
+              </FormItem>
+              <FormItem
+                label="邮箱"
+                {...modalFormLayout}
+                hasFeedback
+              >
+                {getFieldDecorator('modal-email', {
+                  rules: [{ required: true, message: '邮箱不能为空!' }],
+                })(
+                  <Input placeholder="输入邮箱" />
+                )}
+              </FormItem>
+              <FormItem
+                label="姓名"
+                {...modalFormLayout}
+              >
+                {getFieldDecorator('modal-name', {
+                })(
+                  <Input placeholder="输入姓名" />
+                )}
+              </FormItem>
+              <FormItem
+                {...modalFormLayout}
+                label="性別"
+              >
+                {getFieldDecorator('modal-sex')(
+                  <RadioGroup>
+                    <Radio value="male">男</Radio>
+                    <Radio value="female">女</Radio>
+                  </RadioGroup>
+                )}
+              </FormItem>
+              <FormItem
+                {...modalFormLayout}
+                label="生日"
+              >
+                {getFieldDecorator('modal-birthday', {})(
+                  <DatePicker
+                    showTime
+                    format="YYYY-MM-DD HH:mm:ss"
+                  />
+                )}
+              </FormItem>
+              <FormItem
+                label="手机号"
+                {...modalFormLayout}
+              >
+                {getFieldDecorator('modal-tel', {
+                })(
+                  <Input placeholder="输入手机号" />
+                )}
+              </FormItem>
+              <FormItem
+                label="QQ"
+                {...modalFormLayout}
+              >
+                {getFieldDecorator('modal-qq', {
+                })(
+                  <Input placeholder="输入QQ号" />
+                )}
+              </FormItem>
+              <FormItem
+                {...modalFormLayout}
+                label="角色"
+              >
+                {getFieldDecorator('modal-permission', {})(
+                  <Select placeholder="请选择角色">
+                    <Option value="normal">普通用户</Option>
+                    <Option value="admin">管理员</Option>
+                  </Select>
+                )}
+              </FormItem>
+              <FormItem {...tailFormItemLayout}>
+                <Button type="primary" htmlType="submit">确定</Button>
+              </FormItem>
+            </Form>
+          </Modal>
+        </div>
       </div>
     );
   }
