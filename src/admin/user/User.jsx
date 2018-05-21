@@ -6,6 +6,7 @@ import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
 import _ from 'lodash';
 import $ from 'jquery';
+import moment from 'moment';
 import { connect } from 'react-redux';
 import { Row, Col, Card, Form, Input, Button, Table, Select, Modal, Radio, DatePicker } from 'antd';
 import { onViewInit } from './action/action';
@@ -28,6 +29,7 @@ class User extends React.Component {
   state = {
     visible: false,
     type: 'default',
+    userItem: undefined,
   };
   componentWillMount() {
     this.props.getUserList();
@@ -47,25 +49,44 @@ class User extends React.Component {
     this.props.form.validateFields((err, values) => {
       if (!err) {
         console.log('Received values of form: ', values);
+        switch (type) {
+          case 'add':
+            break;
+          case 'update':
+            break;
+          default:
+            this.setState({
+              visible: false,
+            });
+        }
       }
     });
   };
   handleSearch = (item) => {
+    const { resetFields } = this.props.form;
+    resetFields();
     this.setState({
       visible: true,
       type: 'search',
+      userItem: item,
     });
   };
   handleAdd = () => {
+    const { resetFields } = this.props.form;
+    resetFields();
     this.setState({
       visible: true,
       type: 'add',
+      userItem: undefined,
     });
   };
   handleUpdate = (item) => {
+    const { resetFields } = this.props.form;
+    resetFields();
     this.setState({
       visible: true,
       type: 'update',
+      userItem: item,
     });
   };
   handleDelete = (item) => {
@@ -96,6 +117,7 @@ class User extends React.Component {
   render() {
     const { getFieldDecorator } = this.props.form;
     const { adminList, userList } = this.props;
+    const { userItem } = this.state;
     let userData = [];
     if (!_.isEmpty(adminList) && !_.isEmpty(adminList.data) && !_.isEmpty(userList) && !_.isEmpty(userList.data)) {
       userData = adminList.data.concat(userList.data);
@@ -298,6 +320,7 @@ class User extends React.Component {
               >
                 {getFieldDecorator('modal-username', {
                   rules: [{ required: true, message: '用户名不能为空!' }],
+                  initialValue: userItem && userItem.username,
                 })(
                   <Input placeholder="输入用户名" />
                 )}
@@ -309,8 +332,9 @@ class User extends React.Component {
               >
                 {getFieldDecorator('modal-password', {
                   rules: [{ required: true, message: '密码不能为空!' }],
+                  initialValue: userItem && userItem.password,
                 })(
-                  <Input placeholder="输入密码" />
+                  <Input type="password" placeholder="输入密码" />
                 )}
               </FormItem>
               <FormItem
@@ -320,6 +344,7 @@ class User extends React.Component {
               >
                 {getFieldDecorator('modal-email', {
                   rules: [{ required: true, message: '邮箱不能为空!' }],
+                  initialValue: userItem && userItem.email,
                 })(
                   <Input placeholder="输入邮箱" />
                 )}
@@ -329,6 +354,7 @@ class User extends React.Component {
                 {...modalFormLayout}
               >
                 {getFieldDecorator('modal-name', {
+                  initialValue: userItem && userItem.name,
                 })(
                   <Input placeholder="输入姓名" />
                 )}
@@ -337,7 +363,9 @@ class User extends React.Component {
                 {...modalFormLayout}
                 label="性別"
               >
-                {getFieldDecorator('modal-sex')(
+                {getFieldDecorator('modal-sex', {
+                  initialValue: userItem && userItem.sex,
+                })(
                   <RadioGroup>
                     <Radio value="male">男</Radio>
                     <Radio value="female">女</Radio>
@@ -348,7 +376,9 @@ class User extends React.Component {
                 {...modalFormLayout}
                 label="生日"
               >
-                {getFieldDecorator('modal-birthday', {})(
+                {getFieldDecorator('modal-birthday', {
+                  initialValue: userItem && moment(userItem.birthday),
+                })(
                   <DatePicker
                     showTime
                     format="YYYY-MM-DD HH:mm:ss"
@@ -360,6 +390,7 @@ class User extends React.Component {
                 {...modalFormLayout}
               >
                 {getFieldDecorator('modal-tel', {
+                  initialValue: userItem && userItem.tel,
                 })(
                   <Input placeholder="输入手机号" />
                 )}
@@ -369,6 +400,7 @@ class User extends React.Component {
                 {...modalFormLayout}
               >
                 {getFieldDecorator('modal-qq', {
+                  initialValue: userItem && userItem.qq,
                 })(
                   <Input placeholder="输入QQ号" />
                 )}
@@ -377,7 +409,9 @@ class User extends React.Component {
                 {...modalFormLayout}
                 label="角色"
               >
-                {getFieldDecorator('modal-permission', {})(
+                {getFieldDecorator('modal-permission', {
+                  initialValue: userItem ? (userItem.permission > 0 ? 'admin' : 'normal') : undefined,
+                })(
                   <Select placeholder="请选择角色">
                     <Option value="normal">普通用户</Option>
                     <Option value="admin">管理员</Option>

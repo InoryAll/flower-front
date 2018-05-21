@@ -85,7 +85,15 @@ class Info extends React.Component {
       key: 'action',
       render: (text, record) => (
         <span>
-          <Link>查看</Link>
+          <div className="btn-area">
+            <Button type="default" onClick={() => { this.handleSearch(record); }}>查看</Button>
+          </div>
+          <div className="btn-area">
+            <Button type="primary" onClick={() => { this.handleUpdate(record); }}>修改</Button>
+          </div>
+          <div className="btn-area">
+            <Button type="danger" onClick={() => { this.handleDelete(record); }}>删除</Button>
+          </div>
         </span>
       ),
     }];
