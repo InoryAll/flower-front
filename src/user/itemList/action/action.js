@@ -31,10 +31,13 @@ export const filtItemList = (params) => {
     const state = getState();
     const items = state.shoppingItems.items;
     let filterData = [];
-    if (!_.isEmpty(items.data)) {
+    if (!_.isEmpty(items.data) && !_.isEmpty(params[0])) {
       filterData = items.data.filter(item => params.every(param => JSON.stringify(item).indexOf(param) > -1));
     }
-    dispatch(onFiltItemListAction({ data: { ...items, data: filterData } }));
+    if (_.isEmpty(params[0])) {
+      filterData = items;
+    }
+    dispatch(onFiltItemListAction({ ...items, data: filterData }));
   };
 };
 
