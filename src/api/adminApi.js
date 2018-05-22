@@ -18,3 +18,8 @@ export const getActionApi = ajaxRequest.createAjax({
   method: 'GET',
   url: 'http://localhost:3000/action/getAction',
 });
+
+export const addAdminApi = ajaxRequest.createAjax({
+  method: 'POST',
+  url: 'http://localhost:3000/admin/addAdmin',
+});

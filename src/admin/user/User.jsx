@@ -12,6 +12,8 @@ import { Row, Col, Card, Form, Input, Button, Table, Select, Modal, Radio, DateP
 import { onViewInit } from './action/action';
 import { getUserList, getAdminList } from '../index/action/action';
 import { userListSelector, adminListSelector } from '../index/selector/selector';
+import { addUser } from '../../user/regedit/action/action';
+import { addAdminUser } from '../login/action/action';
 import './User.less';
 
 const FormItem = Form.Item;
@@ -25,6 +27,8 @@ class User extends React.Component {
     adminList: PropTypes.object.isRequired,
     getUserList: PropTypes.func.isRequired,
     getAdminList: PropTypes.func.isRequired,
+    addUser: PropTypes.func.isRequired,
+    addAdmin: PropTypes.func.isRequired,
   };
   state = {
     visible: false,
@@ -45,12 +49,33 @@ class User extends React.Component {
   };
   handleModalSubmit = (e) => {
     e.preventDefault();
-    const { type } = this.props;
+    const { type } = this.state;
     this.props.form.validateFields((err, values) => {
       if (!err) {
-        console.log('Received values of form: ', values);
         switch (type) {
           case 'add':
+            if (values['modal-permission'] === 'normal') {
+              const userObj = {
+                username: values['modal-username'],
+                password: values['modal-password'],
+                name: values['modal-name'],
+                sex: values['modal-sex'],
+                birthday: values['modal-birthday'],
+                tel: values['modal-tel'],
+                email: values['modal-email'],
+                permission: values.permission,
+                qq: values.qq,
+              };
+              this.props.addUser(userObj);
+            } else {
+              const adminObj = {
+                username: values['modal-username'],
+                password: values['modal-password'],
+                email: values['modal-email'],
+                permission: values.permission,
+              };
+              this.props.addAdmin(adminObj);
+            }
             break;
           case 'update':
             break;
@@ -411,6 +436,7 @@ class User extends React.Component {
               >
                 {getFieldDecorator('modal-permission', {
                   initialValue: userItem ? (userItem.permission > 0 ? 'admin' : 'normal') : undefined,
+                  rules: [{ required: true, message: '请选择角色类型' }],
                 })(
                   <Select placeholder="请选择角色">
                     <Option value="normal">普通用户</Option>
@@ -440,6 +466,8 @@ const mapDispatchToProps = {
   onViewInit,
   getAdminList,
   getUserList,
+  addUser,
+  addAdminUser,
 };
 
 const UserForm = Form.create()(User);
