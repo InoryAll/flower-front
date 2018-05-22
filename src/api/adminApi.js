@@ -23,3 +23,8 @@ export const addAdminApi = ajaxRequest.createAjax({
   method: 'POST',
   url: 'http://localhost:3000/admin/addAdmin',
 });
+
+export const updateAdminApi = ajaxRequest.createAjax({
+  method: 'POST',
+  url: 'http://localhost:3000/admin/updateAdmin',
+});

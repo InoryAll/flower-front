@@ -12,6 +12,7 @@ import {
   ADD_ADMIN_USER,
 } from '../constant/constant';
 import { getAdminApi, addAdminApi } from '../../../api/adminApi';
+import { getAdminList } from '../../index/action/action';
 
 const onViewInitAction = createAction(ADMIN_LOGIN_VIEW_INIT);
 const getAdminUserAction = createAction(GET_ADMIN_USER);
@@ -60,7 +61,7 @@ export const addAdminUser = (params) => {
               if (back.code === 1 && !_.isEmpty(back.data)) {
                 dispatch(addAdminUserAction({ data: back }));
                 message.success('添加管理员成功!');
-                getAdminUser({})(dispatch);
+                getAdminList({})(dispatch);
               } else {
                 message.error('添加管理员失败，请重试!');
               }

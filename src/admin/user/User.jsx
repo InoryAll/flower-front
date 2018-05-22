@@ -14,6 +14,7 @@ import { getUserList, getAdminList } from '../index/action/action';
 import { userListSelector, adminListSelector } from '../index/selector/selector';
 import { addUser } from '../../user/regedit/action/action';
 import { addAdminUser } from '../login/action/action';
+import { updateAdminUser, updateNormalUser } from '../user/action/action';
 import './User.less';
 
 const FormItem = Form.Item;
@@ -28,7 +29,9 @@ class User extends React.Component {
     getUserList: PropTypes.func.isRequired,
     getAdminList: PropTypes.func.isRequired,
     addUser: PropTypes.func.isRequired,
-    addAdmin: PropTypes.func.isRequired,
+    addAdminUser: PropTypes.func.isRequired,
+    updateNormalUser: PropTypes.func.isRequired,
+    updateAdminUser: PropTypes.func.isRequired,
   };
   state = {
     visible: false,
@@ -78,6 +81,28 @@ class User extends React.Component {
             }
             break;
           case 'update':
+            if (values['modal-permission'] === 'normal') {
+              const userObj = {
+                username: values['modal-username'],
+                password: values['modal-password'],
+                name: values['modal-name'],
+                sex: values['modal-sex'],
+                birthday: values['modal-birthday'],
+                tel: values['modal-tel'],
+                email: values['modal-email'],
+                permission: values.permission,
+                qq: values.qq,
+              };
+              this.props.updateNormalUser(userObj);
+            } else {
+              const adminObj = {
+                username: values['modal-username'],
+                password: values['modal-password'],
+                email: values['modal-email'],
+                permission: values.permission,
+              };
+              this.props.updateAdminUser(adminObj);
+            }
             break;
           default:
             this.setState({
@@ -123,6 +148,11 @@ class User extends React.Component {
       cancelText: '取消',
       onOk() {
         console.log('OK');
+        if (item.permission === '0') {
+          this.props.updateNormalUser({ ...item, deleteFlag: 1 });
+        } else {
+          this.props.updateAdminUser({ ...item, deleteFlag: 1 });
+        }
       },
       onCancel() {
         console.log('Cancel');
@@ -347,7 +377,7 @@ class User extends React.Component {
                   rules: [{ required: true, message: '用户名不能为空!' }],
                   initialValue: userItem && userItem.username,
                 })(
-                  <Input placeholder="输入用户名" />
+                  <Input disabled={ userItem && true } placeholder="输入用户名" />
                 )}
               </FormItem>
               <FormItem
@@ -438,7 +468,7 @@ class User extends React.Component {
                   initialValue: userItem ? (userItem.permission > 0 ? 'admin' : 'normal') : undefined,
                   rules: [{ required: true, message: '请选择角色类型' }],
                 })(
-                  <Select placeholder="请选择角色">
+                  <Select disabled={ userItem && true } placeholder="请选择角色">
                     <Option value="normal">普通用户</Option>
                     <Option value="admin">管理员</Option>
                   </Select>
@@ -468,6 +498,8 @@ const mapDispatchToProps = {
   getUserList,
   addUser,
   addAdminUser,
+  updateAdminUser,
+  updateNormalUser,
 };
 
 const UserForm = Form.create()(User);
