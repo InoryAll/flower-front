@@ -67,8 +67,8 @@ const ModalForm = Form.create()((props) => {
                 birthday: values['modal-birthday'],
                 tel: values['modal-tel'],
                 email: values['modal-email'],
-                permission: values.permission,
-                qq: values.qq,
+                permission: ['modal-permission'],
+                qq: values['modal-qq'],
               };
               props.addUser(userObj);
             } else {
@@ -76,10 +76,11 @@ const ModalForm = Form.create()((props) => {
                 username: values['modal-username'],
                 password: values['modal-password'],
                 email: values['modal-email'],
-                permission: values.permission,
+                permission: values['modal-permission'],
               };
-              props.addAdmin(adminObj);
+              props.addAdminUser(adminObj);
             }
+            props.onVisibleChange(false);
             break;
           case 'update':
             if (values['modal-permission'] === 'normal') {
@@ -91,8 +92,8 @@ const ModalForm = Form.create()((props) => {
                 birthday: values['modal-birthday'],
                 tel: values['modal-tel'],
                 email: values['modal-email'],
-                permission: values.permission,
-                qq: values.qq,
+                permission: values['modal-permission'],
+                qq: values['modal-qq'],
               };
               props.updateNormalUser(userObj);
             } else {
@@ -100,15 +101,14 @@ const ModalForm = Form.create()((props) => {
                 username: values['modal-username'],
                 password: values['modal-password'],
                 email: values['modal-email'],
-                permission: values.permission,
+                permission: values['modal-permission'],
               };
               props.updateAdminUser(adminObj);
             }
+            props.onVisibleChange(false);
             break;
           default:
-            this.setState({
-              visible: false,
-            });
+            props.onVisibleChange(false);
         }
       }
     });
@@ -464,6 +464,11 @@ class User extends React.Component {
   //     }
   //   });
   // };
+  onVisibleChange = (visible) => {
+    this.setState({
+      visible,
+    });
+  };
   handleSearch = (item) => {
     // const { resetFields } = this.props.form;
     // resetFields();
@@ -492,6 +497,7 @@ class User extends React.Component {
     });
   };
   handleDelete = (item) => {
+    const _this = this;
     confirm({
       title: '你确定要删除该用户么?',
       content: '此操作无法恢复，请慎重！',
@@ -500,10 +506,10 @@ class User extends React.Component {
       cancelText: '取消',
       onOk() {
         console.log('OK');
-        if (item.permission === '0') {
-          this.props.updateNormalUser({ ...item, deleteFlag: 1 });
+        if (item.permission === 0) {
+          _this.props.updateNormalUser({ ...item, deleteFlag: 1 });
         } else {
-          this.props.updateAdminUser({ ...item, deleteFlag: 1 });
+          _this.props.updateAdminUser({ ...item, deleteFlag: 1 });
         }
       },
       onCancel() {
@@ -525,8 +531,10 @@ class User extends React.Component {
     const { adminList, userList } = this.props;
     const { userItem } = this.state;
     let userData = [];
-    if ((!_.isEmpty(adminList) && !_.isEmpty(adminList.data)) || (!_.isEmpty(userList) && !_.isEmpty(userList.data))) {
-      userData = adminList.data.concat(userList.data);
+    if (!_.isUndefined(adminList) && !_.isUndefined(adminList.data) && !_.isUndefined(userList) && !_.isUndefined(userList.data)) {
+      if ((!_.isEmpty(adminList) && !_.isEmpty(adminList.data)) || (!_.isEmpty(userList) && !_.isEmpty(userList.data))) {
+        userData = adminList.data.concat(userList.data);
+      }
     }
     const columns = [{
       title: '用户id',
@@ -609,6 +617,7 @@ class User extends React.Component {
                 <FieldForm
                   {...this.state}
                   {...this.props}
+                  onVisibleChange={this.onVisibleChange}
                 />
               </div>
             </Col>
@@ -644,6 +653,7 @@ class User extends React.Component {
             <ModalForm
               {...this.state}
               {...this.props}
+              onVisibleChange={this.onVisibleChange}
             />
           </Modal>
         </div>
