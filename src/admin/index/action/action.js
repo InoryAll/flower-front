@@ -30,6 +30,7 @@ export const onViewInit = () => {
  */
 export const getUserList = (params) => {
   return (dispatch) => {
+    console.log(params);
     loginApi({ ...params, deleteFlag: 0 }, (data) => {
       if (data.code === 1) {
         dispatch(getUserListAction({ data }));

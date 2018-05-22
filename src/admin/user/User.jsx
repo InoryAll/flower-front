@@ -9,21 +9,363 @@ import $ from 'jquery';
 import moment from 'moment';
 import { connect } from 'react-redux';
 import { Row, Col, Card, Form, Input, Button, Table, Select, Modal, Radio, DatePicker } from 'antd';
-import { onViewInit } from './action/action';
+import { onViewInit, updateAdminUser, updateNormalUser } from './action/action';
 import { getUserList, getAdminList } from '../index/action/action';
 import { userListSelector, adminListSelector } from '../index/selector/selector';
 import { addUser } from '../../user/regedit/action/action';
 import { addAdminUser } from '../login/action/action';
-import { updateAdminUser, updateNormalUser } from '../user/action/action';
 import './User.less';
 
 const FormItem = Form.Item;
 const Option = Select.Option;
 const confirm = Modal.confirm;
 const RadioGroup = Radio.Group;
+
+const ModalForm = Form.create()((props) => {
+  const { type, userItem } = props;
+  const { getFieldDecorator } = props.form;
+  const formItemLayout = {
+    labelCol: {
+      sm: { span: 8 },
+    },
+    wrapperCol: {
+      sm: { span: 16 },
+    },
+  };
+  const modalFormLayout = {
+    labelCol: {
+      sm: { span: 7 },
+    },
+    wrapperCol: {
+      sm: { span: 10 },
+    },
+  };
+  const tailFormItemLayout = {
+    wrapperCol: {
+      xs: {
+        span: 24,
+        offset: 0,
+      },
+      sm: {
+        span: 16,
+        offset: 7,
+      },
+    },
+  };
+  const handleModalSubmit = (e) => {
+    e.preventDefault();
+    props.form.validateFields((err, values) => {
+      if (!err) {
+        switch (type) {
+          case 'add':
+            if (values['modal-permission'] === 'normal') {
+              const userObj = {
+                username: values['modal-username'],
+                password: values['modal-password'],
+                name: values['modal-name'],
+                sex: values['modal-sex'],
+                birthday: values['modal-birthday'],
+                tel: values['modal-tel'],
+                email: values['modal-email'],
+                permission: values.permission,
+                qq: values.qq,
+              };
+              props.addUser(userObj);
+            } else {
+              const adminObj = {
+                username: values['modal-username'],
+                password: values['modal-password'],
+                email: values['modal-email'],
+                permission: values.permission,
+              };
+              props.addAdmin(adminObj);
+            }
+            break;
+          case 'update':
+            if (values['modal-permission'] === 'normal') {
+              const userObj = {
+                username: values['modal-username'],
+                password: values['modal-password'],
+                name: values['modal-name'],
+                sex: values['modal-sex'],
+                birthday: values['modal-birthday'],
+                tel: values['modal-tel'],
+                email: values['modal-email'],
+                permission: values.permission,
+                qq: values.qq,
+              };
+              props.updateNormalUser(userObj);
+            } else {
+              const adminObj = {
+                username: values['modal-username'],
+                password: values['modal-password'],
+                email: values['modal-email'],
+                permission: values.permission,
+              };
+              props.updateAdminUser(adminObj);
+            }
+            break;
+          default:
+            this.setState({
+              visible: false,
+            });
+        }
+      }
+    });
+  };
+  return (
+    <Form className="modal-form" onSubmit={handleModalSubmit}>
+      <FormItem
+        label="用户名"
+        {...modalFormLayout}
+        hasFeedback
+      >
+        {getFieldDecorator('modal-username', {
+          rules: [{ required: true, message: '用户名不能为空!' }],
+          initialValue: userItem && userItem.username,
+        })(
+          <Input disabled={ userItem && true } placeholder="输入用户名" />
+        )}
+      </FormItem>
+      <FormItem
+        label="密码"
+        {...modalFormLayout}
+        hasFeedback
+      >
+        {getFieldDecorator('modal-password', {
+          rules: [{ required: true, message: '密码不能为空!' }],
+          initialValue: userItem && userItem.password,
+        })(
+          <Input type="password" placeholder="输入密码" />
+        )}
+      </FormItem>
+      <FormItem
+        label="邮箱"
+        {...modalFormLayout}
+        hasFeedback
+      >
+        {getFieldDecorator('modal-email', {
+          rules: [{ required: true, message: '邮箱不能为空!' }],
+          initialValue: userItem && userItem.email,
+        })(
+          <Input placeholder="输入邮箱" />
+        )}
+      </FormItem>
+      <FormItem
+        label="姓名"
+        {...modalFormLayout}
+      >
+        {getFieldDecorator('modal-name', {
+          initialValue: userItem && userItem.name,
+        })(
+          <Input placeholder="输入姓名" />
+        )}
+      </FormItem>
+      <FormItem
+        {...modalFormLayout}
+        label="性別"
+      >
+        {getFieldDecorator('modal-sex', {
+          initialValue: userItem && userItem.sex,
+        })(
+          <RadioGroup>
+            <Radio value="male">男</Radio>
+            <Radio value="female">女</Radio>
+          </RadioGroup>
+        )}
+      </FormItem>
+      <FormItem
+        {...modalFormLayout}
+        label="生日"
+      >
+        {getFieldDecorator('modal-birthday', {
+          initialValue: userItem && moment(userItem.birthday),
+        })(
+          <DatePicker
+            showTime
+            format="YYYY-MM-DD HH:mm:ss"
+          />
+        )}
+      </FormItem>
+      <FormItem
+        label="手机号"
+        {...modalFormLayout}
+      >
+        {getFieldDecorator('modal-tel', {
+          initialValue: userItem && userItem.tel,
+        })(
+          <Input placeholder="输入手机号" />
+        )}
+      </FormItem>
+      <FormItem
+        label="QQ"
+        {...modalFormLayout}
+      >
+        {getFieldDecorator('modal-qq', {
+          initialValue: userItem && userItem.qq,
+        })(
+          <Input placeholder="输入QQ号" />
+        )}
+      </FormItem>
+      <FormItem
+        {...modalFormLayout}
+        label="角色"
+      >
+        {getFieldDecorator('modal-permission', {
+          initialValue: userItem ? (userItem.permission > 0 ? 'admin' : 'normal') : undefined,
+          rules: [{ required: true, message: '请选择角色类型' }],
+        })(
+          <Select disabled={ userItem && true } placeholder="请选择角色">
+            <Option value="normal">普通用户</Option>
+            <Option value="admin">管理员</Option>
+          </Select>
+        )}
+      </FormItem>
+      <FormItem {...tailFormItemLayout}>
+        <Button type="primary" htmlType="submit">确定</Button>
+      </FormItem>
+    </Form>
+  );
+});
+
+const FieldForm = Form.create()((props) => {
+  const { form } = props;
+  const { getFieldDecorator } = form;
+  const formItemLayout = {
+    labelCol: {
+      sm: { span: 8 },
+    },
+    wrapperCol: {
+      sm: { span: 16 },
+    },
+  };
+  const modalFormLayout = {
+    labelCol: {
+      sm: { span: 7 },
+    },
+    wrapperCol: {
+      sm: { span: 10 },
+    },
+  };
+  const tailFormItemLayout = {
+    wrapperCol: {
+      xs: {
+        span: 24,
+        offset: 0,
+      },
+      sm: {
+        span: 16,
+        offset: 7,
+      },
+    },
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    props.form.validateFields((err, values) => {
+      if (!err) {
+        console.log('Received values of form: ', values);
+        const formatValues = {};
+        _.mapKeys(values, (value, key) => {
+          if (!_.isEmpty(value)) {
+            formatValues[key] = value;
+            if (key === 'permission') {
+              formatValues[key] = value === 'normal' ? 0 : 1;
+            }
+          }
+        });
+        console.log(formatValues);
+        props.getUserList({ ...formatValues });
+        props.getAdminList({ ...formatValues });
+      }
+    });
+  };
+  return (
+    <Form onSubmit={handleSubmit} layout="inline">
+      <Row className="form-search-fields-row">
+        <Col span={8}>
+          <FormItem
+            label="用户名"
+            {...formItemLayout}
+          >
+            {getFieldDecorator('username', {
+            })(
+              <Input placeholder="输入用户名" />
+            )}
+          </FormItem>
+        </Col>
+        <Col span={8}>
+          <FormItem
+            label="姓名"
+            {...formItemLayout}
+          >
+            {getFieldDecorator('name', {
+            })(
+              <Input placeholder="输入姓名" />
+            )}
+          </FormItem>
+        </Col>
+        <Col span={8}>
+          <FormItem
+            label="手机号"
+            {...formItemLayout}
+          >
+            {getFieldDecorator('tel', {
+            })(
+              <Input placeholder="输入手机号" />
+            )}
+          </FormItem>
+        </Col>
+      </Row>
+      <Row className="form-search-fields-row">
+        <Col span={8}>
+          <FormItem
+            label="邮箱"
+            {...formItemLayout}
+          >
+            {getFieldDecorator('email', {
+            })(
+              <Input placeholder="输入邮箱" />
+            )}
+          </FormItem>
+        </Col>
+        <Col span={8}>
+          <FormItem
+            label="QQ"
+            {...formItemLayout}
+          >
+            {getFieldDecorator('qq', {
+            })(
+              <Input placeholder="输入QQ号" />
+            )}
+          </FormItem>
+        </Col>
+        <Col span={8}>
+          <FormItem
+            {...formItemLayout}
+            label="角色"
+          >
+            {getFieldDecorator('permission', {})(
+              <Select placeholder="请选择角色">
+                <Option value="normal">普通用户</Option>
+                <Option value="admin">管理员</Option>
+              </Select>
+            )}
+          </FormItem>
+        </Col>
+      </Row>
+      <Row>
+        <Col span={8} offset={16}>
+          <FormItem className="form-search-fields-search">
+            <Button className="form-search-fields-search-btn" htmlType="submit" type="primary" icon="search">搜索</Button>
+          </FormItem>
+        </Col>
+      </Row>
+    </Form>
+  );
+});
+
 class User extends React.Component {
   static propTypes = {
-    form: PropTypes.object.isRequired,
     userList: PropTypes.object.isRequired,
     adminList: PropTypes.object.isRequired,
     getUserList: PropTypes.func.isRequired,
@@ -42,79 +384,89 @@ class User extends React.Component {
     this.props.getUserList({});
     this.props.getAdminList({});
   }
-  handleSubmit = (e) => {
-    e.preventDefault();
-    this.props.form.validateFields((err, values) => {
-      if (!err) {
-        console.log('Received values of form: ', values);
-      }
-    });
-  };
-  handleModalSubmit = (e) => {
-    e.preventDefault();
-    const { type } = this.state;
-    this.props.form.validateFields((err, values) => {
-      if (!err) {
-        switch (type) {
-          case 'add':
-            if (values['modal-permission'] === 'normal') {
-              const userObj = {
-                username: values['modal-username'],
-                password: values['modal-password'],
-                name: values['modal-name'],
-                sex: values['modal-sex'],
-                birthday: values['modal-birthday'],
-                tel: values['modal-tel'],
-                email: values['modal-email'],
-                permission: values.permission,
-                qq: values.qq,
-              };
-              this.props.addUser(userObj);
-            } else {
-              const adminObj = {
-                username: values['modal-username'],
-                password: values['modal-password'],
-                email: values['modal-email'],
-                permission: values.permission,
-              };
-              this.props.addAdmin(adminObj);
-            }
-            break;
-          case 'update':
-            if (values['modal-permission'] === 'normal') {
-              const userObj = {
-                username: values['modal-username'],
-                password: values['modal-password'],
-                name: values['modal-name'],
-                sex: values['modal-sex'],
-                birthday: values['modal-birthday'],
-                tel: values['modal-tel'],
-                email: values['modal-email'],
-                permission: values.permission,
-                qq: values.qq,
-              };
-              this.props.updateNormalUser(userObj);
-            } else {
-              const adminObj = {
-                username: values['modal-username'],
-                password: values['modal-password'],
-                email: values['modal-email'],
-                permission: values.permission,
-              };
-              this.props.updateAdminUser(adminObj);
-            }
-            break;
-          default:
-            this.setState({
-              visible: false,
-            });
-        }
-      }
-    });
-  };
+  // handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   this.props.form.validateFields((err, values) => {
+  //     if (!err) {
+  //       console.log('Received values of form: ', values);
+  //       const formatValues = {};
+  //       _.mapKeys(values, (value, key) => {
+  //         if (_.isUndefined(value)) {
+  //           formatValues[key] = '';
+  //         } else {
+  //           formatValues[key] = value;
+  //         }
+  //       });
+  //       this.props.getUserList({ ...formatValues, permission: !_.isEmpty(values.permission) ? (values.permission === 'normal' ? 0 : 1) : '' });
+  //       this.props.getAdminList({ ...formatValues, permission: !_.isEmpty(values.permission) ? (values.permission === 'normal' ? 0 : 1) : '' });
+  //     }
+  //   });
+  // };
+  // handleModalSubmit = (e) => {
+  //   e.preventDefault();
+  //   const { type } = this.state;
+  //   this.props.form.validateFields((err, values) => {
+  //     if (!err) {
+  //       switch (type) {
+  //         case 'add':
+  //           if (values['modal-permission'] === 'normal') {
+  //             const userObj = {
+  //               username: values['modal-username'],
+  //               password: values['modal-password'],
+  //               name: values['modal-name'],
+  //               sex: values['modal-sex'],
+  //               birthday: values['modal-birthday'],
+  //               tel: values['modal-tel'],
+  //               email: values['modal-email'],
+  //               permission: values.permission,
+  //               qq: values.qq,
+  //             };
+  //             this.props.addUser(userObj);
+  //           } else {
+  //             const adminObj = {
+  //               username: values['modal-username'],
+  //               password: values['modal-password'],
+  //               email: values['modal-email'],
+  //               permission: values.permission,
+  //             };
+  //             this.props.addAdmin(adminObj);
+  //           }
+  //           break;
+  //         case 'update':
+  //           if (values['modal-permission'] === 'normal') {
+  //             const userObj = {
+  //               username: values['modal-username'],
+  //               password: values['modal-password'],
+  //               name: values['modal-name'],
+  //               sex: values['modal-sex'],
+  //               birthday: values['modal-birthday'],
+  //               tel: values['modal-tel'],
+  //               email: values['modal-email'],
+  //               permission: values.permission,
+  //               qq: values.qq,
+  //             };
+  //             this.props.updateNormalUser(userObj);
+  //           } else {
+  //             const adminObj = {
+  //               username: values['modal-username'],
+  //               password: values['modal-password'],
+  //               email: values['modal-email'],
+  //               permission: values.permission,
+  //             };
+  //             this.props.updateAdminUser(adminObj);
+  //           }
+  //           break;
+  //         default:
+  //           this.setState({
+  //             visible: false,
+  //           });
+  //       }
+  //     }
+  //   });
+  // };
   handleSearch = (item) => {
-    const { resetFields } = this.props.form;
-    resetFields();
+    // const { resetFields } = this.props.form;
+    // resetFields();
     this.setState({
       visible: true,
       type: 'search',
@@ -122,8 +474,8 @@ class User extends React.Component {
     });
   };
   handleAdd = () => {
-    const { resetFields } = this.props.form;
-    resetFields();
+    // const { resetFields } = this.props.form;
+    // resetFields();
     this.setState({
       visible: true,
       type: 'add',
@@ -131,8 +483,8 @@ class User extends React.Component {
     });
   };
   handleUpdate = (item) => {
-    const { resetFields } = this.props.form;
-    resetFields();
+    // const { resetFields } = this.props.form;
+    // resetFields();
     this.setState({
       visible: true,
       type: 'update',
@@ -170,11 +522,10 @@ class User extends React.Component {
     });
   };
   render() {
-    const { getFieldDecorator } = this.props.form;
     const { adminList, userList } = this.props;
     const { userItem } = this.state;
     let userData = [];
-    if (!_.isEmpty(adminList) && !_.isEmpty(adminList.data) && !_.isEmpty(userList) && !_.isEmpty(userList.data)) {
+    if ((!_.isEmpty(adminList) && !_.isEmpty(adminList.data)) || (!_.isEmpty(userList) && !_.isEmpty(userList.data))) {
       userData = adminList.data.concat(userList.data);
     }
     const columns = [{
@@ -255,87 +606,10 @@ class User extends React.Component {
           <Row>
             <Col>
               <div className="form-search-fields">
-                <Form onSubmit={this.handleSubmit} layout="inline">
-                  <Row className="form-search-fields-row">
-                    <Col span={8}>
-                      <FormItem
-                        label="用户名"
-                        {...formItemLayout}
-                      >
-                        {getFieldDecorator('username', {
-                        })(
-                          <Input placeholder="输入用户名" />
-                        )}
-                      </FormItem>
-                    </Col>
-                    <Col span={8}>
-                      <FormItem
-                        label="姓名"
-                        {...formItemLayout}
-                      >
-                        {getFieldDecorator('name', {
-                        })(
-                          <Input placeholder="输入姓名" />
-                        )}
-                      </FormItem>
-                    </Col>
-                    <Col span={8}>
-                      <FormItem
-                        label="手机号"
-                        {...formItemLayout}
-                      >
-                        {getFieldDecorator('tel', {
-                        })(
-                          <Input placeholder="输入手机号" />
-                        )}
-                      </FormItem>
-                    </Col>
-                  </Row>
-                  <Row className="form-search-fields-row">
-                    <Col span={8}>
-                      <FormItem
-                        label="邮箱"
-                        {...formItemLayout}
-                      >
-                        {getFieldDecorator('email', {
-                        })(
-                          <Input placeholder="输入邮箱" />
-                        )}
-                      </FormItem>
-                    </Col>
-                    <Col span={8}>
-                      <FormItem
-                        label="QQ"
-                        {...formItemLayout}
-                      >
-                        {getFieldDecorator('qq', {
-                        })(
-                          <Input placeholder="输入QQ号" />
-                        )}
-                      </FormItem>
-                    </Col>
-                    <Col span={8}>
-                      <FormItem
-                        {...formItemLayout}
-                        label="角色"
-                      >
-                        {getFieldDecorator('permission', {})(
-                          <Select placeholder="请选择角色">
-                            <Option value="normal">普通用户</Option>
-                            <Option value="admin">管理员</Option>
-                          </Select>
-                        )}
-                      </FormItem>
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Col span={8} offset={16}>
-                      <FormItem className="form-search-fields-search">
-                        <Button className="form-search-fields-search-btn" htmlType="submit" type="primary" icon="search">搜索</Button>
-                      </FormItem>
-                    </Col>
-                  </Row>
-                </Form>
+                <FieldForm
+                  {...this.state}
+                  {...this.props}
+                />
               </div>
             </Col>
           </Row>
@@ -367,117 +641,10 @@ class User extends React.Component {
             onCancel={this.handleCancel}
             footer={[]}
           >
-            <Form className="modal-form" onSubmit={this.handleModalSubmit}>
-              <FormItem
-                label="用户名"
-                {...modalFormLayout}
-                hasFeedback
-              >
-                {getFieldDecorator('modal-username', {
-                  rules: [{ required: true, message: '用户名不能为空!' }],
-                  initialValue: userItem && userItem.username,
-                })(
-                  <Input disabled={ userItem && true } placeholder="输入用户名" />
-                )}
-              </FormItem>
-              <FormItem
-                label="密码"
-                {...modalFormLayout}
-                hasFeedback
-              >
-                {getFieldDecorator('modal-password', {
-                  rules: [{ required: true, message: '密码不能为空!' }],
-                  initialValue: userItem && userItem.password,
-                })(
-                  <Input type="password" placeholder="输入密码" />
-                )}
-              </FormItem>
-              <FormItem
-                label="邮箱"
-                {...modalFormLayout}
-                hasFeedback
-              >
-                {getFieldDecorator('modal-email', {
-                  rules: [{ required: true, message: '邮箱不能为空!' }],
-                  initialValue: userItem && userItem.email,
-                })(
-                  <Input placeholder="输入邮箱" />
-                )}
-              </FormItem>
-              <FormItem
-                label="姓名"
-                {...modalFormLayout}
-              >
-                {getFieldDecorator('modal-name', {
-                  initialValue: userItem && userItem.name,
-                })(
-                  <Input placeholder="输入姓名" />
-                )}
-              </FormItem>
-              <FormItem
-                {...modalFormLayout}
-                label="性別"
-              >
-                {getFieldDecorator('modal-sex', {
-                  initialValue: userItem && userItem.sex,
-                })(
-                  <RadioGroup>
-                    <Radio value="male">男</Radio>
-                    <Radio value="female">女</Radio>
-                  </RadioGroup>
-                )}
-              </FormItem>
-              <FormItem
-                {...modalFormLayout}
-                label="生日"
-              >
-                {getFieldDecorator('modal-birthday', {
-                  initialValue: userItem && moment(userItem.birthday),
-                })(
-                  <DatePicker
-                    showTime
-                    format="YYYY-MM-DD HH:mm:ss"
-                  />
-                )}
-              </FormItem>
-              <FormItem
-                label="手机号"
-                {...modalFormLayout}
-              >
-                {getFieldDecorator('modal-tel', {
-                  initialValue: userItem && userItem.tel,
-                })(
-                  <Input placeholder="输入手机号" />
-                )}
-              </FormItem>
-              <FormItem
-                label="QQ"
-                {...modalFormLayout}
-              >
-                {getFieldDecorator('modal-qq', {
-                  initialValue: userItem && userItem.qq,
-                })(
-                  <Input placeholder="输入QQ号" />
-                )}
-              </FormItem>
-              <FormItem
-                {...modalFormLayout}
-                label="角色"
-              >
-                {getFieldDecorator('modal-permission', {
-                  initialValue: userItem ? (userItem.permission > 0 ? 'admin' : 'normal') : undefined,
-                  rules: [{ required: true, message: '请选择角色类型' }],
-                })(
-                  <Select disabled={ userItem && true } placeholder="请选择角色">
-                    <Option value="normal">普通用户</Option>
-                    <Option value="admin">管理员</Option>
-                  </Select>
-                )}
-              </FormItem>
-              <FormItem {...tailFormItemLayout}>
-                <Button type="primary" htmlType="submit">确定</Button>
-              </FormItem>
-            </Form>
+            <ModalForm
+              {...this.state}
+              {...this.props}
+            />
           </Modal>
         </div>
       </div>
@@ -502,5 +669,4 @@ const mapDispatchToProps = {
   updateNormalUser,
 };
 
-const UserForm = Form.create()(User);
-export default connect(mapStateToProps, mapDispatchToProps)(UserForm);
+export default connect(mapStateToProps, mapDispatchToProps)(User);
