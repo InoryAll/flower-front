@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08c3298d-d019-4401-abb2-96f78fb0689a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/admin/login/action/action.js" afterPath="$PROJECT_DIR$/src/admin/login/action/action.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/admin/index/Index.jsx" afterPath="$PROJECT_DIR$/src/admin/index/Index.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/admin/index/action/action.js" afterPath="$PROJECT_DIR$/src/admin/index/action/action.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/admin/user/User.jsx" afterPath="$PROJECT_DIR$/src/admin/user/User.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/admin/user/action/action.js" afterPath="$PROJECT_DIR$/src/admin/user/action/action.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/admin/user/constant/constant.js" afterPath="$PROJECT_DIR$/src/admin/user/constant/constant.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/api/adminApi.js" afterPath="$PROJECT_DIR$/src/api/adminApi.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,19 +20,51 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Index.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/admin/index/Index.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="311">
+              <caret line="12" column="18" lean-forward="true" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="action.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/user/userInfo/action/action.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="30" column="13" lean-forward="false" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="action.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/user/index/action/action.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="796">
+              <caret line="125" column="13" lean-forward="false" selection-start-line="125" selection-start-column="13" selection-end-line="125" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="User.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/admin/user/User.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="147" column="23" lean-forward="true" selection-start-line="147" selection-start-column="23" selection-end-line="147" selection-end-column="23" />
+            <state relative-caret-position="323">
+              <caret line="148" column="14" lean-forward="true" selection-start-line="148" selection-start-column="14" selection-end-line="148" selection-end-column="14" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#61#102#0" expanded="true" />
-                <element signature="e#4983#5038#0" expanded="false" />
-                <element signature="e#5063#5118#0" expanded="false" />
-                <element signature="e#6628#6742#0" expanded="false" />
-                <element signature="e#6772#6886#0" expanded="false" />
-                <element signature="e#6919#7087#0" expanded="false" />
+                <element signature="e#4987#5042#0" expanded="false" />
+                <element signature="e#5067#5122#0" expanded="false" />
+                <element signature="e#6632#6746#0" expanded="false" />
+                <element signature="e#6776#6890#0" expanded="false" />
+                <element signature="e#6923#7091#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -76,22 +107,10 @@
       <file leaf-file-name="action.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/admin/index/action/action.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="49" column="31" lean-forward="true" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
+            <state relative-caret-position="148">
+              <caret line="30" column="24" lean-forward="false" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="24" />
               <folding>
                 <element signature="e#71#116#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="action.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/user/userInfo/action/action.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-114">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -103,18 +122,6 @@
             <state relative-caret-position="551">
               <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="indexApi.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/api/indexApi.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -131,16 +138,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="action.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/user/login/action/action.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="86" column="23" lean-forward="false" selection-start-line="86" selection-start-column="13" selection-end-line="86" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -152,22 +149,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>update</find>
-      <find>updateO</find>
-      <find>updateOr</find>
-      <find>updateOrd</find>
-      <find>updateOrder</find>
-      <find>addO</find>
-      <find>addOr</find>
-      <find>addOrd</find>
-      <find>addOrder</find>
-      <find>to=&quot;&quot;</find>
-      <find>callback</find>
-      <find>infocontent-content-p-red</find>
-      <find>rate</find>
-      <find>/admin</find>
-      <find>Item</find>
-      <find>orderData</find>
       <find>itemList</find>
       <find>margin-left: 109px;</find>
       <find>visible</find>
@@ -182,6 +163,22 @@
       <find>permission</find>
       <find>updateUserApi</find>
       <find>UPDATE_USER</find>
+      <find>getUserList</find>
+      <find>tgetUserList</find>
+      <find>thisgetUserList</find>
+      <find>this.getUserList</find>
+      <find>this.pgetUserList</find>
+      <find>this.propgetUserList</find>
+      <find>this.propsgetUserList</find>
+      <find>this.props.getUserList</find>
+      <find>getAdminList</find>
+      <find>tgetAdminList</find>
+      <find>thisgetAdminList</find>
+      <find>this.getAdminList</find>
+      <find>this.pgetAdminList</find>
+      <find>this.prgetAdminList</find>
+      <find>this.propsgetAdminList</find>
+      <find>this.props.getAdminList</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;dl className=&quot;info-row-ul-li-dl&quot;</replace>
@@ -223,9 +220,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/admin/index/reducer/reducer.js" />
-        <option value="$PROJECT_DIR$/src/admin/index/action/action.js" />
         <option value="$PROJECT_DIR$/src/admin/index/selector/selector.js" />
-        <option value="$PROJECT_DIR$/src/admin/index/Index.jsx" />
         <option value="$PROJECT_DIR$/src/admin/index/Index.less" />
         <option value="$PROJECT_DIR$/src/admin/user/selector/selector.js" />
         <option value="$PROJECT_DIR$/src/admin/user/reducer/reducer.js" />
@@ -272,6 +267,8 @@
         <option value="$PROJECT_DIR$/src/admin/user/constant/constant.js" />
         <option value="$PROJECT_DIR$/src/api/adminApi.js" />
         <option value="$PROJECT_DIR$/src/admin/user/action/action.js" />
+        <option value="$PROJECT_DIR$/src/admin/index/action/action.js" />
+        <option value="$PROJECT_DIR$/src/admin/index/Index.jsx" />
         <option value="$PROJECT_DIR$/src/admin/user/User.jsx" />
       </list>
     </option>
@@ -914,12 +911,12 @@
       <workItem from="1526713168841" duration="6614000" />
       <workItem from="1526786333565" duration="9267000" />
       <workItem from="1526883181691" duration="7379000" />
-      <workItem from="1526986403275" duration="5538000" />
+      <workItem from="1526986403275" duration="5855000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="515585000" />
+    <option name="totallyTimeSpent" value="515902000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1073,14 +1070,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/index/action/action.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3500">
-          <caret line="125" column="13" lean-forward="false" selection-start-line="125" selection-start-column="13" selection-end-line="125" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/user/itemDetail/itemInfo/ItemInfo.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="735">
@@ -1132,17 +1121,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="9" column="3" lean-forward="false" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/admin/index/Index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1645">
-          <caret line="62" column="7" lean-forward="false" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="e#63#104#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1335,16 +1313,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/userInfo/action/action.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-114">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/api/indexApi.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1389,16 +1357,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/admin/index/action/action.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="49" column="31" lean-forward="true" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
-          <folding>
-            <element signature="e#71#116#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/admin/login/action/action.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1820">
@@ -1419,18 +1377,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/admin/index/action/action.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="30" column="24" lean-forward="false" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="24" />
+          <folding>
+            <element signature="e#71#116#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/user/index/action/action.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="796">
+          <caret line="125" column="13" lean-forward="false" selection-start-line="125" selection-start-column="13" selection-end-line="125" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/user/userInfo/action/action.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="30" column="13" lean-forward="false" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/admin/index/Index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="12" column="18" lean-forward="true" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/admin/user/User.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="147" column="23" lean-forward="true" selection-start-line="147" selection-start-column="23" selection-end-line="147" selection-end-column="23" />
+        <state relative-caret-position="323">
+          <caret line="148" column="14" lean-forward="true" selection-start-line="148" selection-start-column="14" selection-end-line="148" selection-end-column="14" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#61#102#0" expanded="true" />
-            <element signature="e#4983#5038#0" expanded="false" />
-            <element signature="e#5063#5118#0" expanded="false" />
-            <element signature="e#6628#6742#0" expanded="false" />
-            <element signature="e#6772#6886#0" expanded="false" />
-            <element signature="e#6919#7087#0" expanded="false" />
+            <element signature="e#4987#5042#0" expanded="false" />
+            <element signature="e#5067#5122#0" expanded="false" />
+            <element signature="e#6632#6746#0" expanded="false" />
+            <element signature="e#6776#6890#0" expanded="false" />
+            <element signature="e#6923#7091#0" expanded="false" />
           </folding>
         </state>
       </provider>

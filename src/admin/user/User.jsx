@@ -39,8 +39,8 @@ class User extends React.Component {
     userItem: undefined,
   };
   componentWillMount() {
-    this.props.getUserList();
-    this.props.getAdminList();
+    this.props.getUserList({});
+    this.props.getAdminList({});
   }
   handleSubmit = (e) => {
     e.preventDefault();

@@ -31,8 +31,8 @@ class Index extends React.Component {
   };
   componentWillMount() {
     this.props.onViewInit();
-    this.props.getAdminList();
-    this.props.getUserList();
+    this.props.getAdminList({});
+    this.props.getUserList({});
     this.props.getItem();
     this.props.getAllOrders();
   }

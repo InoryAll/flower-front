@@ -28,9 +28,9 @@ export const onViewInit = () => {
 /**
  * 获取用户列表
  */
-export const getUserList = () => {
+export const getUserList = (params) => {
   return (dispatch) => {
-    loginApi({}, (data) => {
+    loginApi({ ...params, deleteFlag: 0 }, (data) => {
       if (data.code === 1) {
         dispatch(getUserListAction({ data }));
       } else {
@@ -45,9 +45,9 @@ export const getUserList = () => {
 /**
  * 获取管理员列表
  */
-export const getAdminList = () => {
+export const getAdminList = (params) => {
   return (dispatch) => {
-    getAdminApi({}, (data) => {
+    getAdminApi({ ...params, deleteFlag: 0 }, (data) => {
       if (data.code === 1) {
         dispatch(getAdminListAction({ data }));
       } else {
