@@ -4,7 +4,7 @@
  */
 import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
-import { Row, Col, Card, Form, Input, Button, Table } from 'antd';
+import { Row, Col, Card, Form, Input, Button, Table, Select, DatePicker } from 'antd';
 import { connect } from 'react-redux';
 import _ from 'lodash';
 import moment from 'moment';
@@ -14,6 +14,8 @@ import { onViewInit } from './action/action';
 import './Order.less';
 
 const FormItem = Form.Item;
+const Option = Select.Option;
+const RangePicker = DatePicker.RangePicker;
 class Order extends React.Component {
   static propTypes = {
     form: PropTypes.object.isRequired,
@@ -90,12 +92,12 @@ class Order extends React.Component {
       key: 'address',
     }, {
       title: '用户姓名',
-      dataIndex: 'sendName',
-      key: 'sendName',
+      dataIndex: 'receiveName',
+      key: 'receiveName',
     }, {
       title: '用户电话',
-      dataIndex: 'sendPhone',
-      key: 'sendPhone',
+      dataIndex: 'receivePhone',
+      key: 'receivePhone',
     }, {
       title: '收货时间',
       dataIndex: 'date',
@@ -151,6 +153,26 @@ class Order extends React.Component {
         sm: { span: 16 },
       },
     };
+    const modalFormLayout = {
+      labelCol: {
+        sm: { span: 7 },
+      },
+      wrapperCol: {
+        sm: { span: 10 },
+      },
+    };
+    const tailFormItemLayout = {
+      wrapperCol: {
+        xs: {
+          span: 24,
+          offset: 0,
+        },
+        sm: {
+          span: 16,
+          offset: 7,
+        },
+      },
+    };
     return (
       <div className="console-order">
         <Card className="console-order-card" title="订单管理">
@@ -161,23 +183,52 @@ class Order extends React.Component {
                   <Row className="form-search-fields-row">
                     <Col span={8}>
                       <FormItem
-                        label="寄件人"
-                        {...formItemLayout}
-                      >
-                        {getFieldDecorator('sendName', {
-                        })(
-                          <Input placeholder="输入寄件人" />
-                        )}
-                      </FormItem>
-                    </Col>
-                    <Col span={8}>
-                      <FormItem
-                        label="收件人"
+                        label="收件人姓名"
                         {...formItemLayout}
                       >
                         {getFieldDecorator('receiveName', {
                         })(
                           <Input placeholder="输入收件人" />
+                        )}
+                      </FormItem>
+                    </Col>
+                    <Col span={8}>
+                      <FormItem
+                        label="收件人电话"
+                        {...formItemLayout}
+                      >
+                        {getFieldDecorator('receivePhone', {
+                        })(
+                          <Input placeholder="输入收件人" />
+                        )}
+                      </FormItem>
+                    </Col>
+                    <Col span={8}>
+                      <FormItem
+                        {...formItemLayout}
+                        label="状态"
+                      >
+                        {getFieldDecorator('permission', {})(
+                          <Select placeholder="请选择状态">
+                            <Option value="normal">普通用户</Option>
+                            <Option value="admin">管理员</Option>
+                          </Select>
+                        )}
+                      </FormItem>
+                    </Col>
+                  </Row>
+                  <Row className="form-search-fields-row">
+                    <Col span={8}>
+                      <FormItem
+                        {...formItemLayout}
+                        label="收货时间"
+                      >
+                        {getFieldDecorator('modal-birthday', {
+                        })(
+                          <RangePicker
+                            showTime
+                            format="YYYY-MM-DD HH:mm:ss"
+                          />
                         )}
                       </FormItem>
                     </Col>

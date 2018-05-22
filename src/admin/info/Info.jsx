@@ -4,7 +4,7 @@
  */
 import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
-import { Row, Col, Card, Form, Input, Button, Table } from 'antd';
+import { Row, Col, Card, Form, Input, Button, Table, DatePicker, Select } from 'antd';
 import _ from 'lodash';
 import moment from 'moment';
 import { connect } from 'react-redux';
@@ -15,6 +15,8 @@ import { infoSelector } from '../../user/info/selector/selector';
 import './Info.less';
 
 const FormItem = Form.Item;
+const RangePicker = DatePicker.RangePicker;
+const Option = Select.Option;
 class Info extends React.Component {
   static propTypes = {
     form: PropTypes.object.isRequired,
@@ -105,6 +107,26 @@ class Info extends React.Component {
         sm: { span: 16 },
       },
     };
+    const modalFormLayout = {
+      labelCol: {
+        sm: { span: 7 },
+      },
+      wrapperCol: {
+        sm: { span: 10 },
+      },
+    };
+    const tailFormItemLayout = {
+      wrapperCol: {
+        xs: {
+          span: 24,
+          offset: 0,
+        },
+        sm: {
+          span: 16,
+          offset: 7,
+        },
+      },
+    };
     return (
       <div className="console-info">
         <Card className="console-info-card" title="文案管理">
@@ -131,7 +153,36 @@ class Info extends React.Component {
                       >
                         {getFieldDecorator('author', {
                         })(
-                          <Input placeholder="输入文案名" />
+                          <Input placeholder="输入作者名" />
+                        )}
+                      </FormItem>
+                    </Col>
+                    <Col span={8}>
+                      <FormItem
+                        {...formItemLayout}
+                        label="类型"
+                      >
+                        {getFieldDecorator('permission', {})(
+                          <Select placeholder="请选择类型">
+                            <Option value="normal">普通用户</Option>
+                            <Option value="admin">管理员</Option>
+                          </Select>
+                        )}
+                      </FormItem>
+                    </Col>
+                  </Row>
+                  <Row className="form-search-fields-row">
+                    <Col span={8}>
+                      <FormItem
+                        {...formItemLayout}
+                        label="最后修改时间"
+                      >
+                        {getFieldDecorator('modal-birthday', {
+                        })(
+                          <RangePicker
+                            showTime
+                            format="YYYY-MM-DD HH:mm:ss"
+                          />
                         )}
                       </FormItem>
                     </Col>

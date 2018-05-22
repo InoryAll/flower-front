@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08c3298d-d019-4401-abb2-96f78fb0689a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/admin/info/Info.jsx" afterPath="$PROJECT_DIR$/src/admin/info/Info.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/admin/item/Item.jsx" afterPath="$PROJECT_DIR$/src/admin/item/Item.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/admin/order/Order.jsx" afterPath="$PROJECT_DIR$/src/admin/order/Order.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/admin/user/User.jsx" afterPath="$PROJECT_DIR$/src/admin/user/User.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/admin/user/User.less" afterPath="$PROJECT_DIR$/src/admin/user/User.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/admin/worksheet/Worksheet.jsx" afterPath="$PROJECT_DIR$/src/admin/worksheet/Worksheet.jsx" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -26,15 +22,16 @@
       <file leaf-file-name="User.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/admin/user/User.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="199" column="15" lean-forward="true" selection-start-line="199" selection-start-column="15" selection-end-line="199" selection-end-column="15" />
+            <state relative-caret-position="501">
+              <caret line="386" column="25" lean-forward="true" selection-start-line="374" selection-start-column="13" selection-end-line="386" selection-end-column="25" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#61#102#0" expanded="true" />
                 <element signature="e#2682#2737#0" expanded="false" />
                 <element signature="e#2762#2817#0" expanded="false" />
-                <element signature="e#5067#6321#0" expanded="false" />
-                <element signature="e#6340#7732#0" expanded="false" />
+                <element signature="e#4327#4441#0" expanded="false" />
+                <element signature="e#4471#4585#0" expanded="false" />
+                <element signature="e#4618#4786#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -51,18 +48,6 @@
                 <element signature="e#4453#6004#0" expanded="false" />
                 <element signature="e#6023#7723#0" expanded="false" />
                 <element signature="e#7742#8897#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="loginApi.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/api/loginApi.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -103,11 +88,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Order.jsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Order.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/admin/order/Order.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="71" column="20" lean-forward="true" selection-start-line="71" selection-start-column="20" selection-end-line="71" selection-end-column="20" />
+            <state relative-caret-position="560">
+              <caret line="233" column="26" lean-forward="true" selection-start-line="220" selection-start-column="20" selection-end-line="233" selection-end-column="26" />
+              <folding>
+                <element signature="e#61#102#0" expanded="true" />
+                <element signature="e#4179#4293#0" expanded="false" />
+                <element signature="e#4323#4437#0" expanded="false" />
+                <element signature="e#4470#4638#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="selector.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/user/userInfo/selector/selector.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -116,9 +116,14 @@
       <file leaf-file-name="Info.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/admin/info/Info.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="84" column="20" lean-forward="true" selection-start-line="84" selection-start-column="20" selection-end-line="84" selection-end-column="20" />
-              <folding />
+            <state relative-caret-position="525">
+              <caret line="184" column="28" lean-forward="true" selection-start-line="184" selection-start-column="28" selection-end-line="184" selection-end-column="28" />
+              <folding>
+                <element signature="e#61#102#0" expanded="true" />
+                <element signature="e#3016#3130#0" expanded="false" />
+                <element signature="e#3160#3274#0" expanded="false" />
+                <element signature="e#3307#3475#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -133,12 +138,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Worksheet.jsx" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Worksheet.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/admin/worksheet/Worksheet.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="71" column="14" lean-forward="true" selection-start-line="71" selection-start-column="14" selection-end-line="71" selection-end-column="14" />
-              <folding />
+            <state relative-caret-position="376">
+              <caret line="140" column="23" lean-forward="true" selection-start-line="140" selection-start-column="23" selection-end-line="140" selection-end-column="23" />
+              <folding>
+                <element signature="e#61#102#0" expanded="true" />
+                <element signature="e#2983#4246#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -270,11 +278,11 @@
         <option value="$PROJECT_DIR$/src/user/itemDetail/itemInfo/ItemInfo.jsx" />
         <option value="$PROJECT_DIR$/src/admin/console/Console.jsx" />
         <option value="$PROJECT_DIR$/src/admin/user/User.jsx" />
-        <option value="$PROJECT_DIR$/src/admin/info/Info.jsx" />
-        <option value="$PROJECT_DIR$/src/admin/worksheet/Worksheet.jsx" />
         <option value="$PROJECT_DIR$/src/admin/user/User.less" />
         <option value="$PROJECT_DIR$/src/admin/item/Item.jsx" />
         <option value="$PROJECT_DIR$/src/admin/order/Order.jsx" />
+        <option value="$PROJECT_DIR$/src/admin/info/Info.jsx" />
+        <option value="$PROJECT_DIR$/src/admin/worksheet/Worksheet.jsx" />
       </list>
     </option>
   </component>
@@ -733,12 +741,12 @@
       <workItem from="1526642424026" duration="13708000" />
       <workItem from="1526713168841" duration="6614000" />
       <workItem from="1526786333565" duration="9267000" />
-      <workItem from="1526883181691" duration="3634000" />
+      <workItem from="1526883181691" duration="6089000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="506302000" />
+    <option name="totallyTimeSpent" value="508757000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -782,18 +790,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="8" />
+      <option name="time" value="9" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/user/userInfo/UserInfo.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-630">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/admin/info/reducer/reducer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
@@ -982,6 +983,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="8" column="16" lean-forward="false" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1139,37 +1143,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/admin/info/Info.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="84" column="20" lean-forward="true" selection-start-line="84" selection-start-column="20" selection-end-line="84" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/admin/worksheet/Worksheet.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/admin/worksheet/Worksheet.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="71" column="14" lean-forward="true" selection-start-line="71" selection-start-column="14" selection-end-line="71" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/admin/user/User.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="51" column="22" lean-forward="true" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
-          <folding>
-            <element signature="e#151#432#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1187,26 +1165,74 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/admin/user/User.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="51" column="22" lean-forward="true" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
+          <folding>
+            <element signature="e#151#432#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/admin/user/User.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="199" column="15" lean-forward="true" selection-start-line="199" selection-start-column="15" selection-end-line="199" selection-end-column="15" />
+        <state relative-caret-position="501">
+          <caret line="386" column="25" lean-forward="true" selection-start-line="374" selection-start-column="13" selection-end-line="386" selection-end-column="25" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#61#102#0" expanded="true" />
             <element signature="e#2682#2737#0" expanded="false" />
             <element signature="e#2762#2817#0" expanded="false" />
-            <element signature="e#5067#6321#0" expanded="false" />
-            <element signature="e#6340#7732#0" expanded="false" />
+            <element signature="e#4327#4441#0" expanded="false" />
+            <element signature="e#4471#4585#0" expanded="false" />
+            <element signature="e#4618#4786#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/user/userInfo/selector/selector.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/admin/info/Info.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="184" column="28" lean-forward="true" selection-start-line="184" selection-start-column="28" selection-end-line="184" selection-end-column="28" />
+          <folding>
+            <element signature="e#61#102#0" expanded="true" />
+            <element signature="e#3016#3130#0" expanded="false" />
+            <element signature="e#3160#3274#0" expanded="false" />
+            <element signature="e#3307#3475#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/admin/order/Order.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="71" column="20" lean-forward="true" selection-start-line="71" selection-start-column="20" selection-end-line="71" selection-end-column="20" />
-          <folding />
+        <state relative-caret-position="560">
+          <caret line="233" column="26" lean-forward="true" selection-start-line="220" selection-start-column="20" selection-end-line="233" selection-end-column="26" />
+          <folding>
+            <element signature="e#61#102#0" expanded="true" />
+            <element signature="e#4179#4293#0" expanded="false" />
+            <element signature="e#4323#4437#0" expanded="false" />
+            <element signature="e#4470#4638#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/admin/worksheet/Worksheet.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="140" column="23" lean-forward="true" selection-start-line="140" selection-start-column="23" selection-end-line="140" selection-end-column="23" />
+          <folding>
+            <element signature="e#61#102#0" expanded="true" />
+            <element signature="e#2983#4246#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

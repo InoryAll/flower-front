@@ -7,12 +7,13 @@ import { Link } from 'react-router';
 import { connect } from 'react-redux';
 import _ from 'lodash';
 import moment from 'moment';
-import { Row, Col, Card, Form, Input, Button, Table } from 'antd';
+import { Row, Col, Card, Form, Input, Button, Table, DatePicker } from 'antd';
 import { onViewInit, getWorksheet } from './action/action';
 import { worksheetSelector } from './selector/selector';
 import './Worksheet.less';
 
 const FormItem = Form.Item;
+const RangePicker = DatePicker.RangePicker;
 class Worksheet extends React.Component {
   static propTypes = {
     form: PropTypes.object.isRequired,
@@ -100,12 +101,50 @@ class Worksheet extends React.Component {
                   <Row className="form-search-fields-row">
                     <Col span={8}>
                       <FormItem
-                        label="名称"
+                        label="工作记录id"
                         {...formItemLayout}
                       >
                         {getFieldDecorator('name', {
                         })(
-                          <Input placeholder="输入工作记录名称" />
+                          <Input placeholder="输入工作记录id" />
+                        )}
+                      </FormItem>
+                    </Col>
+                    <Col span={8}>
+                      <FormItem
+                        label="主题"
+                        {...formItemLayout}
+                      >
+                        {getFieldDecorator('name', {
+                        })(
+                          <Input placeholder="输入工作记录主题" />
+                        )}
+                      </FormItem>
+                    </Col>
+                    <Col span={8}>
+                      <FormItem
+                        label="作者"
+                        {...formItemLayout}
+                      >
+                        {getFieldDecorator('name', {
+                        })(
+                          <Input placeholder="输入工作记录作者" />
+                        )}
+                      </FormItem>
+                    </Col>
+                  </Row>
+                  <Row className="form-search-fields-row">
+                    <Col span={8}>
+                      <FormItem
+                        {...formItemLayout}
+                        label="最后修改时间"
+                      >
+                        {getFieldDecorator('modal-birthday', {
+                        })(
+                          <RangePicker
+                            showTime
+                            format="YYYY-MM-DD HH:mm:ss"
+                          />
                         )}
                       </FormItem>
                     </Col>
