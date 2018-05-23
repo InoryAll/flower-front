@@ -36,7 +36,7 @@ class UserInfo extends React.Component {
     this.props.onViewInit();
     this.props.validateLoginState();
     this.props.getCart({ _id: Cookie.getCookie('_id') });
-    this.props.getAllOrders();
+    this.props.getAllOrders({});
   }
   render() {
     return (

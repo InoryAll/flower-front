@@ -27,13 +27,34 @@ class Order extends React.Component {
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
       if (!err) {
-        console.log('Received values of form: ', values);
+        let formatValues = {};
+        if (!_.isEmpty(values.timestamp)) {
+          formatValues = {
+            $and: [
+              {
+                timestamp: {
+                  $gt: moment(values.timestamp[0]).valueOf(),
+                }
+              },
+              {
+                timestamp: {
+                  $lt: moment(values.timestamp[1]).valueOf(),
+                }
+              }
+            ],
+          };
+          delete values.timestamp;
+          formatValues.$and = [...formatValues.$and, ...values];
+        } else {
+          formatValues = {...values};
+        }
+        this.props.getAllOrders({ ...formatValues });
       }
     });
   };
   componentWillMount() {
     this.props.onViewInit();
-    this.props.getAllOrders();
+    this.props.getAllOrders({});
   }
   render() {
     const { getFieldDecorator } = this.props.form;
@@ -208,7 +229,7 @@ class Order extends React.Component {
                         {...formItemLayout}
                         label="状态"
                       >
-                        {getFieldDecorator('permission', {})(
+                        {getFieldDecorator('status', {})(
                           <Select placeholder="请选择状态">
                             <Option value="normal">普通用户</Option>
                             <Option value="admin">管理员</Option>
@@ -221,9 +242,9 @@ class Order extends React.Component {
                     <Col span={8}>
                       <FormItem
                         {...formItemLayout}
-                        label="收货时间"
+                        label="最后修改时间"
                       >
-                        {getFieldDecorator('modal-birthday', {
+                        {getFieldDecorator('timestamp', {
                         })(
                           <RangePicker
                             showTime

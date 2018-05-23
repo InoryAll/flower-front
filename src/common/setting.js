@@ -254,6 +254,22 @@ class Settings {
       label: '天天特价',
       value: 'dailySale',
     }];
+    this.status = [{
+      label: '待付款',
+      value: 0,
+    }, {
+      label: '已付款',
+      value: 1,
+    }, {
+      label: '待发货',
+      value: 2,
+    }, {
+      label: '待收货',
+      value: 3,
+    }, {
+      label: '已收货',
+      value: 4,
+    }];
   }
   static mapLabelToValue(label) {
     let result = null;

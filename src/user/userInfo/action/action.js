@@ -28,9 +28,9 @@ export const onViewInit = () => {
 /**
  * 获取所有的订单
  */
-export const getAllOrders = () => {
+export const getAllOrders = (params) => {
   return (dispatch) => {
-    getOrderApi({ userId: Cookie.getCookie('_id'), deleteFlag: 0, status: { $gt: 0 } }, (data) => {
+    getOrderApi({ ...params, userId: Cookie.getCookie('_id'), deleteFlag: 0, status: { $gt: 0 } }, (data) => {
       if (data.code === 1) {
         dispatch(getAllOrderAction({ data }));
       } else {

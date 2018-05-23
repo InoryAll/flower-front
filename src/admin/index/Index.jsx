@@ -34,7 +34,7 @@ class Index extends React.Component {
     this.props.getAdminList({});
     this.props.getUserList({});
     this.props.getItem({});
-    this.props.getAllOrders();
+    this.props.getAllOrders({});
   }
   render() {
     const { adminList, userList, itemList, orderList } = this.props;
