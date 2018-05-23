@@ -35,19 +35,20 @@ class Order extends React.Component {
               {
                 timestamp: {
                   $gt: moment(values.timestamp[0]).valueOf(),
-                }
+                },
               },
               {
                 timestamp: {
                   $lt: moment(values.timestamp[1]).valueOf(),
-                }
-              }
+                },
+              },
             ],
           };
+          // eslint-disable-next-line
           delete values.timestamp;
           formatValues.$and = [...formatValues.$and, ...values];
         } else {
-          formatValues = {...values};
+          formatValues = { ...values };
         }
         this.props.getAllOrders({ ...formatValues });
       }

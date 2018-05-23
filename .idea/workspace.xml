@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08c3298d-d019-4401-abb2-96f78fb0689a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/admin/info/Info.jsx" afterPath="$PROJECT_DIR$/src/admin/info/Info.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/admin/info/action/action.js" afterPath="$PROJECT_DIR$/src/admin/info/action/action.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/admin/info/constant/constant.js" afterPath="$PROJECT_DIR$/src/admin/info/constant/constant.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/admin/item/Item.jsx" afterPath="$PROJECT_DIR$/src/admin/item/Item.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/api/infoApi.js" afterPath="$PROJECT_DIR$/src/api/infoApi.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/setting.js" afterPath="$PROJECT_DIR$/src/common/setting.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/admin/order/Order.jsx" afterPath="$PROJECT_DIR$/src/admin/order/Order.jsx" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,24 +22,23 @@
       <file leaf-file-name="Info.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/admin/info/Info.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="94" column="14" lean-forward="true" selection-start-line="94" selection-start-column="14" selection-end-line="94" selection-end-column="14" />
+            <state relative-caret-position="288">
+              <caret line="12" column="53" lean-forward="true" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
               <folding>
-                <element signature="e#61#102#0" expanded="true" />
-                <element signature="e#4498#6953#0" expanded="false" />
-                <element signature="e#10135#10249#0" expanded="false" />
-                <element signature="e#10279#10393#0" expanded="false" />
-                <element signature="e#10426#10594#0" expanded="false" />
+                <element signature="e#859#4451#0" expanded="false" />
+                <element signature="e#10814#10928#0" expanded="false" />
+                <element signature="e#10958#11072#0" expanded="false" />
+                <element signature="e#11105#11273#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Item.jsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Item.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/admin/item/Item.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="454">
-              <caret line="116" column="18" lean-forward="true" selection-start-line="116" selection-start-column="18" selection-end-line="116" selection-end-column="18" />
+            <state relative-caret-position="1189">
+              <caret line="110" column="47" lean-forward="false" selection-start-line="110" selection-start-column="47" selection-end-line="110" selection-end-column="47" />
               <folding>
                 <element signature="e#61#102#0" expanded="true" />
                 <element signature="e#968#1068#0" expanded="false" />
@@ -91,11 +85,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="action.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="action.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/admin/info/action/action.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1671">
-              <caret line="60" column="25" lean-forward="true" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
+            <state relative-caret-position="341">
+              <caret line="49" column="39" lean-forward="true" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#71#116#0" expanded="true" />
@@ -115,6 +109,20 @@
                 <element signature="e#7050#7150#0" expanded="false" />
                 <element signature="e#7178#7278#0" expanded="false" />
                 <element signature="e#7309#7455#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Order.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/admin/order/Order.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-520">
+              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="52" selection-end-column="53" />
+              <folding>
+                <element signature="e#5069#5183#0" expanded="false" />
+                <element signature="e#5213#5327#0" expanded="false" />
+                <element signature="e#5360#5528#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -156,16 +164,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="indexApi.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/api/indexApi.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="infoApi.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/api/infoApi.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -179,8 +177,8 @@
       <file leaf-file-name="action.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/user/info/action/action.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="29" column="13" lean-forward="false" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+            <state relative-caret-position="901">
+              <caret line="36" column="7" lean-forward="true" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -197,7 +195,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ModalForm</find>
       <find>userItem</find>
       <find>name</find>
       <find>ADD_ITEM</find>
@@ -227,6 +224,7 @@
       <find>$gt</find>
       <find>Setting</find>
       <find>getInfoListApi</find>
+      <find>handleDelete</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;dd className=&quot;info-row-ul-li-dl-dt-dd&quot;</replace>
@@ -310,14 +308,14 @@
         <option value="$PROJECT_DIR$/src/user/itemList/ItemList.jsx" />
         <option value="$PROJECT_DIR$/src/user/userInfo/UserInfo.jsx" />
         <option value="$PROJECT_DIR$/src/admin/index/Index.jsx" />
-        <option value="$PROJECT_DIR$/src/admin/order/Order.jsx" />
         <option value="$PROJECT_DIR$/src/user/userInfo/action/action.js" />
         <option value="$PROJECT_DIR$/src/common/setting.js" />
         <option value="$PROJECT_DIR$/src/api/infoApi.js" />
         <option value="$PROJECT_DIR$/src/admin/info/constant/constant.js" />
-        <option value="$PROJECT_DIR$/src/admin/info/action/action.js" />
-        <option value="$PROJECT_DIR$/src/admin/info/Info.jsx" />
         <option value="$PROJECT_DIR$/src/admin/item/Item.jsx" />
+        <option value="$PROJECT_DIR$/src/admin/order/Order.jsx" />
+        <option value="$PROJECT_DIR$/src/admin/info/Info.jsx" />
+        <option value="$PROJECT_DIR$/src/admin/info/action/action.js" />
       </list>
     </option>
   </component>
@@ -835,12 +833,12 @@
       <workItem from="1526883181691" duration="7379000" />
       <workItem from="1526986403275" duration="14513000" />
       <workItem from="1527047779851" duration="21595000" />
-      <workItem from="1527083077143" duration="7488000" />
+      <workItem from="1527083077143" duration="9131000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="553643000" />
+    <option name="totallyTimeSpent" value="555286000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1205,7 +1203,7 @@
         <state relative-caret-position="253">
           <caret line="36" column="32" lean-forward="true" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
           <folding>
-            <element signature="e#63#104#0" expanded="true" />
+            <element signature="e#63#104#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1322,20 +1320,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/admin/order/Order.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="47" column="59" lean-forward="false" selection-start-line="47" selection-start-column="59" selection-end-line="47" selection-end-column="59" />
-          <folding>
-            <element signature="e#61#102#0" expanded="true" />
-            <element signature="e#1137#1468#0" expanded="false" />
-            <element signature="e#5026#5140#0" expanded="false" />
-            <element signature="e#5170#5284#0" expanded="false" />
-            <element signature="e#5317#5485#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/api/indexApi.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1382,25 +1366,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/info/action/action.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="29" column="13" lean-forward="false" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/admin/info/action/action.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1671">
-          <caret line="60" column="25" lean-forward="true" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#71#116#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/admin/user/User.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -1415,24 +1380,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/admin/info/Info.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="94" column="14" lean-forward="true" selection-start-line="94" selection-start-column="14" selection-end-line="94" selection-end-column="14" />
-          <folding>
-            <element signature="e#61#102#0" expanded="true" />
-            <element signature="e#4498#6953#0" expanded="false" />
-            <element signature="e#10135#10249#0" expanded="false" />
-            <element signature="e#10279#10393#0" expanded="false" />
-            <element signature="e#10426#10594#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/admin/item/Item.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="116" column="18" lean-forward="true" selection-start-line="116" selection-start-column="18" selection-end-line="116" selection-end-column="18" />
+        <state relative-caret-position="1189">
+          <caret line="110" column="47" lean-forward="false" selection-start-line="110" selection-start-column="47" selection-end-line="110" selection-end-column="47" />
           <folding>
             <element signature="e#61#102#0" expanded="true" />
             <element signature="e#968#1068#0" expanded="false" />
@@ -1474,6 +1425,50 @@
             <marker date="1527090853454" expanded="true" signature="11068:11173" ph="..." />
             <marker date="1527090853454" expanded="true" signature="11089:11153" ph="..." />
             <marker date="1527090853454" expanded="true" signature="11243:11322" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/admin/order/Order.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-520">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="52" selection-end-column="53" />
+          <folding>
+            <element signature="e#5069#5183#0" expanded="false" />
+            <element signature="e#5213#5327#0" expanded="false" />
+            <element signature="e#5360#5528#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/admin/info/Info.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="12" column="53" lean-forward="true" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
+          <folding>
+            <element signature="e#859#4451#0" expanded="false" />
+            <element signature="e#10814#10928#0" expanded="false" />
+            <element signature="e#10958#11072#0" expanded="false" />
+            <element signature="e#11105#11273#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/user/info/action/action.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="36" column="7" lean-forward="true" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/admin/info/action/action.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="49" column="39" lean-forward="true" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#71#116#0" expanded="true" />
           </folding>
         </state>
       </provider>

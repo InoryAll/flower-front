@@ -49,7 +49,7 @@ export const addInfo = (params) => {
  */
 export const updateInfo = (params) => {
   return (dispatch) => {
-    updateInfoApi(JSON.stringify({ ...params }), (data) => {
+    updateInfoApi(JSON.stringify({ condition: { _id: params._id }, obj: { ...params } }), (data) => {
       if (data.code === 1) {
         dispatch(updateInfoAction({ data }));
         message.success('修改文章成功!');

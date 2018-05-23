@@ -201,7 +201,29 @@ const FieldForm = Form.create()((props) => {
     e.preventDefault();
     props.form.validateFields((err, values) => {
       if (!err) {
-        props.getItem({ ...values });
+        let formatValues = {};
+        if (!_.isEmpty(values.timestamp)) {
+          formatValues = {
+            $and: [
+              {
+                timestamp: {
+                  $gt: moment(values.timestamp[0]).valueOf(),
+                },
+              },
+              {
+                timestamp: {
+                  $lt: moment(values.timestamp[1]).valueOf(),
+                },
+              },
+            ],
+          };
+          // eslint-disable-next-line
+          delete values.timestamp;
+          formatValues.$and = [...formatValues.$and, ...values];
+        } else {
+          formatValues = { ...values };
+        }
+        props.getInfoList({ ...formatValues });
       }
     });
   };
@@ -235,10 +257,11 @@ const FieldForm = Form.create()((props) => {
             {...formItemLayout}
             label="类型"
           >
-            {getFieldDecorator('permission', {})(
+            {getFieldDecorator('type', {})(
               <Select placeholder="请选择类型">
-                <Option value="normal">普通用户</Option>
-                <Option value="admin">管理员</Option>
+                {Settings.type.map((it, index) => {
+                  return <Option value={it.value}>{it.label}</Option>;
+                })}
               </Select>
             )}
           </FormItem>
@@ -250,7 +273,7 @@ const FieldForm = Form.create()((props) => {
             {...formItemLayout}
             label="最后修改时间"
           >
-            {getFieldDecorator('modal-birthday', {
+            {getFieldDecorator('timestamp', {
             })(
               <RangePicker
                 showTime
@@ -305,13 +328,13 @@ class Info extends React.Component {
   handleDelete = (item) => {
     const _this = this;
     confirm({
-      title: '你确定要删除该产品么?',
+      title: '你确定要删除该文章么?',
       content: '此操作无法恢复，请慎重！',
       okText: '确定',
       okType: 'danger',
       cancelText: '取消',
       onOk() {
-        _this.props.updateItem({ ...item, deleteFlag: 1 });
+        _this.props.updateInfo({ ...item, deleteFlag: 1 });
       },
       onCancel() {
         console.log('Cancel');
