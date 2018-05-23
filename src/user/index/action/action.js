@@ -51,9 +51,9 @@ export const onViewInit = () => {
  * 获取到所有的商品
  * return {*}
  */
-export const getItem = (callback) => {
+export const getItem = (params, callback) => {
   return (dispatch) => {
-    getItemApi({ deleteFlag: 0 }, (data) => {
+    getItemApi({ ...params, deleteFlag: 0 }, (data) => {
       if (data.code === 1) {
         const hotSale = { ...data, data: data.data.filter((item) => { return item.position === 'hotSale'; }) };
         const firstFloor = { ...data, data: data.data.filter((item) => { return item.position === 'firstFloor'; }) };

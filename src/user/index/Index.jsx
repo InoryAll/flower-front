@@ -62,7 +62,7 @@ class Index extends React.Component {
   componentWillMount() {
     this.props.onViewInit();
     this.props.validateLoginState();
-    this.props.getItem();
+    this.props.getItem({});
     this.props.getCart({ _id: Cookie.getCookie('_id') });
     this.props.getInfoList();
   }

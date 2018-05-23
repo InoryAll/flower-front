@@ -235,6 +235,25 @@ class Settings {
       label: '混色',
       value: 'mixed',
     }];
+    this.position = [{
+      label: '正在热卖',
+      value: 'hotSale',
+    }, {
+      label: '1F 玫瑰花',
+      value: 'firstFloor',
+    }, {
+      label: '2F 新品上市',
+      value: 'secondFloor',
+    }, {
+      label: '3F 礼盒鲜花',
+      value: 'thirdFloor',
+    }, {
+      label: '4F 花篮绿植',
+      value: 'forthFloor',
+    }, {
+      label: '天天特价',
+      value: 'dailySale',
+    }];
   }
   static mapLabelToValue(label) {
     let result = null;

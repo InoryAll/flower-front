@@ -8,7 +8,7 @@ import _ from 'lodash';
 import $ from 'jquery';
 import moment from 'moment';
 import { connect } from 'react-redux';
-import { Row, Col, Card, Form, Input, Button, Table, Select, Modal, Radio, DatePicker } from 'antd';
+import { Row, Col, Card, Form, Input, Button, Table, Select, Modal, Radio, DatePicker, Badge } from 'antd';
 import { onViewInit, updateAdminUser, updateNormalUser } from './action/action';
 import { getUserList, getAdminList } from '../index/action/action';
 import { userListSelector, adminListSelector } from '../index/selector/selector';
@@ -24,6 +24,7 @@ const RadioGroup = Radio.Group;
 const ModalForm = Form.create()((props) => {
   const { type, userItem } = props;
   const { getFieldDecorator } = props.form;
+  const { resetFields } = props.form;
   const formItemLayout = {
     labelCol: {
       sm: { span: 8 },
@@ -81,6 +82,7 @@ const ModalForm = Form.create()((props) => {
               props.addAdminUser(adminObj);
             }
             props.onVisibleChange(false);
+            resetFields();
             break;
           case 'update':
             if (values['modal-permission'] === 'normal') {
@@ -106,8 +108,10 @@ const ModalForm = Form.create()((props) => {
               props.updateAdminUser(adminObj);
             }
             props.onVisibleChange(false);
+            resetFields();
             break;
           default:
+            resetFields();
             props.onVisibleChange(false);
         }
       }
@@ -561,7 +565,10 @@ class User extends React.Component {
       dataIndex: 'permission',
       key: 'permission',
       render: (text, record) => {
-        return parseInt(text) > 0 ? '管理员' : '普通用户';
+        if (parseInt(text) > 0) {
+          return <span><Badge status="error" />管理员</span>;
+        }
+        return <span><Badge status="default" />普通用户</span>;
       },
     }, {
       title: '操作',
