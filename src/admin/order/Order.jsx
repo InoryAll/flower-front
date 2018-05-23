@@ -9,6 +9,7 @@ import { connect } from 'react-redux';
 import _ from 'lodash';
 import moment from 'moment';
 import { getAllOrders } from '../../user/userInfo/action/action';
+import Settings from  '../../common/setting';
 import { orderListSelector } from '../../user/userInfo/selector/selector';
 import { onViewInit } from './action/action';
 import './Order.less';
@@ -59,6 +60,7 @@ class Order extends React.Component {
   render() {
     const { getFieldDecorator } = this.props.form;
     const { orderList } = this.props;
+    Settings.initSettings();
     let orderData = [];
     if (!_.isEmpty(orderList) && !_.isEmpty(orderList.data)) {
       orderData = orderList.data;
@@ -143,8 +145,16 @@ class Order extends React.Component {
       key: 'status',
       render: (text, record) => {
         switch (text) {
+          case 0:
+            return '待付款';
           case 1:
             return '已付款';
+          case 2:
+            return '待发货';
+          case 3:
+            return '待收货';
+          case 4:
+            return '已收货';
           default:
             return '未知状态';
         }
@@ -231,8 +241,9 @@ class Order extends React.Component {
                       >
                         {getFieldDecorator('status', {})(
                           <Select placeholder="请选择状态">
-                            <Option value="normal">普通用户</Option>
-                            <Option value="admin">管理员</Option>
+                            {Settings.status.map((item, index) => {
+                              return <Option value={item.value}>{item.label}</Option>;
+                            })}
                           </Select>
                         )}
                       </FormItem>

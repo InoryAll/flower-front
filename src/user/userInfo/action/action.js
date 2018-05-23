@@ -30,7 +30,7 @@ export const onViewInit = () => {
  */
 export const getAllOrders = (params) => {
   return (dispatch) => {
-    getOrderApi({ ...params, userId: Cookie.getCookie('_id'), deleteFlag: 0, status: { $gt: 0 } }, (data) => {
+    getOrderApi({ ...params, userId: Cookie.getCookie('_id'), deleteFlag: 0 }, (data) => {
       if (data.code === 1) {
         dispatch(getAllOrderAction({ data }));
       } else {
