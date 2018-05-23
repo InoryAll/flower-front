@@ -4,3 +4,5 @@
  * */
 
 export const CONSOLE_INFO_VIEW_INIT = 'CONSOLE_INFO_VIEW_INIT';
+export const ADD_INFO = 'ADD_INFO';
+export const UPDATE_INFO = 'UPDATE_INFO';

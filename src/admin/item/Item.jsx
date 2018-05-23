@@ -115,6 +115,7 @@ const ModalForm = Form.create()((props) => {
             props.onVisibleChange(false);
             break;
           default:
+            resetFields();
             props.onVisibleChange(false);
         }
       }

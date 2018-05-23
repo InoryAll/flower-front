@@ -270,6 +270,16 @@ class Settings {
       label: '已收货',
       value: 4,
     }];
+    this.type = [{
+      label: '资讯',
+      value: 'news',
+    }, {
+      label: '花语',
+      value: 'flower',
+    }, {
+      label: '公告',
+      value: 'board',
+    }];
   }
   static mapLabelToValue(label) {
     let result = null;

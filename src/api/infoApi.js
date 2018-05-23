@@ -8,3 +8,13 @@ export const getInfoListApi = ajaxRequest.createAjax({
   method: 'GET',
   url: 'http://localhost:3000/info/getInfo',
 });
+
+export const addInfoApi = ajaxRequest.createAjax({
+  method: 'POST',
+  url: 'http://localhost:3000/info/addInfo',
+});
+
+export const updateInfoApi = ajaxRequest.createAjax({
+  method: 'POST',
+  url: 'http://localhost:3000/info/updateInfo',
+});
