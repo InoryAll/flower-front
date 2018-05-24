@@ -551,9 +551,27 @@ class User extends React.Component {
       onOk() {
         console.log('OK');
         if (item.permission === 0) {
-          _this.props.updateNormalUser({ ...item, deleteFlag: 1 });
+          _this.props.updateNormalUser({ ...item, deleteFlag: 1 }, (params) => {
+            _this.props.addAction({
+              adminId: _this.props._id,
+              adminName: _this.props.username,
+              type: 'delete',
+              content: `管理员${_this.props.username}删除了普通用户${params.username}`,
+              timestamp: new Date().getTime(),
+              deleteFlag: 0,
+            });
+          });
         } else {
-          _this.props.updateAdminUser({ ...item, deleteFlag: 1 });
+          _this.props.updateAdminUser({ ...item, deleteFlag: 1 }, (params) => {
+            _this.props.addAction({
+              adminId: _this.props._id,
+              adminName: _this.props.username,
+              type: 'delete',
+              content: `管理员${_this.props.username}删除了管理员${params.username}`,
+              timestamp: new Date().getTime(),
+              deleteFlag: 0,
+            });
+          });
         }
       },
       onCancel() {
