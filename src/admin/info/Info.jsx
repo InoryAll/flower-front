@@ -202,6 +202,12 @@ const FieldForm = Form.create()((props) => {
     props.form.validateFields((err, values) => {
       if (!err) {
         let formatValues = {};
+        const formatValues2 = {};
+        _.mapKeys(values, (value, key) => {
+          if (!_.isEmpty(value)) {
+            formatValues2[key] = value;
+          }
+        });
         if (!_.isEmpty(values.timestamp)) {
           formatValues = {
             $and: [
@@ -219,9 +225,9 @@ const FieldForm = Form.create()((props) => {
           };
           // eslint-disable-next-line
           delete values.timestamp;
-          formatValues.$and = [...formatValues.$and, ...values];
+          formatValues.$and = [...formatValues.$and, ...formatValues2];
         } else {
-          formatValues = { ...values };
+          formatValues = { ...formatValues2 };
         }
         props.getInfoList({ ...formatValues });
       }

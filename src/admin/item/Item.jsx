@@ -419,7 +419,13 @@ const FieldForm = Form.create()((props) => {
     e.preventDefault();
     props.form.validateFields((err, values) => {
       if (!err) {
-        props.getItem({ ...values });
+        const formatValues = {};
+        _.mapKeys(values, (value, key) => {
+          if (!_.isEmpty(value)) {
+            formatValues[key] = value;
+          }
+        });
+        props.getItem({ ...formatValues });
       }
     });
   };
