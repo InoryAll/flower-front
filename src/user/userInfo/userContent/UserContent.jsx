@@ -130,8 +130,16 @@ class UserContent extends React.Component {
       key: 'status',
       render: (text, record) => {
         switch (text) {
+          case 0:
+            return '待付款';
           case 1:
             return '已付款';
+          case 2:
+            return '待发货';
+          case 3:
+            return '待收货';
+          case 4:
+            return '已收货';
           default:
             return '未知状态';
         }
@@ -250,7 +258,7 @@ class UserContent extends React.Component {
                         dataSource={orderList.data || []}
                         pagination={{
                           defaultCurrent: 1,
-                          pageSize: 1,
+                          pageSize: 3,
                         }}
                       />
                     </div>
