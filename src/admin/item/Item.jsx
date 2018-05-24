@@ -88,10 +88,10 @@ const ModalForm = Form.create()((props) => {
             };
             props.addItem(itemObj, (params) => {
               props.addAction({
-                adminId: props._id,
-                adminName: props.username,
+                adminId: props.admin._id,
+                adminName: props.admin.username,
                 type: 'add',
-                content: `管理员${props.username}添加了商品${params.name}`,
+                content: `管理员${props.admin.username}添加了商品${params.name}`,
                 timestamp: new Date().getTime(),
                 deleteFlag: 0,
               });
