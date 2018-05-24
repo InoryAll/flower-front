@@ -147,7 +147,7 @@ const ModalForm = Form.create()((props) => {
 });
 
 const FieldForm = Form.create()((props) => {
-  const { type, item } = props;
+  const { type, worksheet } = props;
   const { getFieldDecorator } = props.form;
   Settings.initSettings();
   const formItemLayout = {
@@ -204,7 +204,7 @@ const FieldForm = Form.create()((props) => {
         } else {
           formatValues = { ...values };
         }
-        props.getInfoList({ ...formatValues });
+        props.getWorksheet({ ...formatValues });
       }
     });
   };
@@ -216,7 +216,7 @@ const FieldForm = Form.create()((props) => {
             label="工作记录id"
             {...formItemLayout}
           >
-            {getFieldDecorator('name', {
+            {getFieldDecorator('_id', {
             })(
               <Input placeholder="输入工作记录id" />
             )}
@@ -238,7 +238,7 @@ const FieldForm = Form.create()((props) => {
             label="作者"
             {...formItemLayout}
           >
-            {getFieldDecorator('name', {
+            {getFieldDecorator('adminName', {
             })(
               <Input placeholder="输入工作记录作者" />
             )}
@@ -251,7 +251,7 @@ const FieldForm = Form.create()((props) => {
             {...formItemLayout}
             label="最后修改时间"
           >
-            {getFieldDecorator('modal-birthday', {
+            {getFieldDecorator('timestamp', {
             })(
               <RangePicker
                 showTime

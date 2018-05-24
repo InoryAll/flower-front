@@ -88,17 +88,11 @@
       <file leaf-file-name="Worksheet.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/admin/worksheet/Worksheet.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="312" column="23" lean-forward="true" selection-start-line="312" selection-start-column="23" selection-end-line="312" selection-end-column="23" />
+            <state relative-caret-position="322">
+              <caret line="198" column="14" lean-forward="true" selection-start-line="198" selection-start-column="14" selection-end-line="198" selection-end-column="14" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#61#102#0" expanded="true" />
-                <element signature="e#791#3890#0" expanded="false" />
-                <element signature="e#3937#6933#0" expanded="false" />
-                <element signature="e#5322#6926#0" expanded="false" />
-                <element signature="e#9938#10052#0" expanded="false" />
-                <element signature="e#9956#9990#0" expanded="false" />
-                <element signature="e#10010#10045#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -1007,12 +1001,12 @@
       <workItem from="1526986403275" duration="14513000" />
       <workItem from="1527047779851" duration="21595000" />
       <workItem from="1527083077143" duration="9168000" />
-      <workItem from="1527132913393" duration="9359000" />
+      <workItem from="1527132913393" duration="9735000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="564682000" />
+    <option name="totallyTimeSpent" value="565058000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1707,17 +1701,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/admin/worksheet/Worksheet.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="312" column="23" lean-forward="true" selection-start-line="312" selection-start-column="23" selection-end-line="312" selection-end-column="23" />
+        <state relative-caret-position="322">
+          <caret line="198" column="14" lean-forward="true" selection-start-line="198" selection-start-column="14" selection-end-line="198" selection-end-column="14" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#61#102#0" expanded="true" />
-            <element signature="e#791#3890#0" expanded="false" />
-            <element signature="e#3937#6933#0" expanded="false" />
-            <element signature="e#5322#6926#0" expanded="false" />
-            <element signature="e#9938#10052#0" expanded="false" />
-            <element signature="e#9956#9990#0" expanded="false" />
-            <element signature="e#10010#10045#0" expanded="false" />
           </folding>
         </state>
       </provider>
