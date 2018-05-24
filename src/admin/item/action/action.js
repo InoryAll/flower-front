@@ -28,13 +28,14 @@ export const onViewInit = () => {
 /**
  * 添加商品
  */
-export const addItem = (params) => {
+export const addItem = (params, callback) => {
   return (dispatch) => {
     addItemApi(JSON.stringify({ ...params }), (data) => {
       if (data.code === 1) {
         dispatch(addItemAction({ data }));
         message.success('添加产品成功!');
         getItem()(dispatch);
+        callback && callback(params);
       } else {
         message.error('添加产品失败!');
       }
@@ -47,13 +48,14 @@ export const addItem = (params) => {
 /**
  * 更新商品
  */
-export const updateItem = (params) => {
+export const updateItem = (params, callback) => {
   return (dispatch) => {
     updateItemApi(JSON.stringify({ condition: { _id: params._id }, obj: { ...params } }), (data) => {
       if (data.code === 1) {
         dispatch(updateItemAction({ data }));
         message.success('修改产品成功!');
         getItem()(dispatch);
+        callback && callback(params);
       } else {
         message.error('修改产品失败!');
       }

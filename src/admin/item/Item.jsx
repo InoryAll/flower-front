@@ -12,6 +12,8 @@ import Setting from '../../common/setting';
 import { onViewInit, addItem, updateItem } from './action/action';
 import { getItem } from '../../user/index/action/action';
 import { itemListSelector } from '../../user/itemList/selector/selector';
+import { adminSelector } from '../login/selector/selector';
+import { addAction } from '../action/action/action';
 import './Item.less';
 
 const FormItem = Form.Item;
@@ -84,7 +86,16 @@ const ModalForm = Form.create()((props) => {
               position: values['modal-position'],
               url: values['modal-url'][0].thumbUrl,
             };
-            props.addItem(itemObj);
+            props.addItem(itemObj, (params) => {
+              props.addAction({
+                adminId: props._id,
+                adminName: props.username,
+                type: 'add',
+                content: `管理员${props.username}添加了商品${params.name}`,
+                timestamp: new Date().getTime(),
+                deleteFlag: 0,
+              });
+            });
             resetFields();
             props.onVisibleChange(false);
             break;
@@ -110,7 +121,16 @@ const ModalForm = Form.create()((props) => {
               position: values['modal-position'],
               url: values['modal-url'][0].thumbUrl,
             };
-            props.updateItem(itemObj2);
+            props.updateItem(itemObj2, (params) => {
+              props.addAction({
+                adminId: props._id,
+                adminName: props.username,
+                type: 'update',
+                content: `管理员${props.username}更新了商品${params._id}`,
+                timestamp: new Date().getTime(),
+                deleteFlag: 0,
+              });
+            });
             resetFields();
             props.onVisibleChange(false);
             break;
@@ -574,10 +594,12 @@ const FieldForm = Form.create()((props) => {
 class Item extends React.Component {
   static propTypes = {
     itemList: PropTypes.object.isRequired,
+    admin: PropTypes.object.isRequired,
     getItem: PropTypes.func.isRequired,
     onViewInit: PropTypes.func.isRequired,
     addItem: PropTypes.func.isRequired,
     updateItem: PropTypes.func.isRequired,
+    addAction: PropTypes.func.isRequired,
   };
   state = {
     visible: false,
@@ -611,7 +633,16 @@ class Item extends React.Component {
       okType: 'danger',
       cancelText: '取消',
       onOk() {
-        _this.props.updateItem({ ...item, deleteFlag: 1 });
+        _this.props.updateItem({ ...item, deleteFlag: 1 }, (params) => {
+          _this.props.addAction({
+            adminId: _this.props._id,
+            adminName: _this.props.username,
+            type: 'delete',
+            content: `管理员${_this.props.username}删除了商品${params.name}`,
+            timestamp: new Date().getTime(),
+            deleteFlag: 0,
+          });
+        });
       },
       onCancel() {
         console.log('Cancel');
@@ -826,6 +857,7 @@ class Item extends React.Component {
 const mapStateToProps = (state) => {
   return {
     itemList: itemListSelector(state),
+    admin: adminSelector(state),
   };
 };
 
@@ -834,6 +866,7 @@ const mapDispatchToProps = {
   onViewInit,
   addItem,
   updateItem,
+  addAction,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Item);
