@@ -12,7 +12,7 @@ import Settings from '../../common/setting';
 import { getAllOrders } from '../../user/userInfo/action/action';
 import { orderListSelector } from '../../user/userInfo/selector/selector';
 import { onViewInit, updateConsoleOrder } from './action/action';
-import { adminListSelector } from '../index/selector/selector';
+import { adminSelector } from '../login/selector/selector';
 import { addAction } from '../action/action/action';
 import './Order.less';
 
@@ -644,7 +644,7 @@ class Order extends React.Component {
 const mapStateToProps = (state) => {
   return {
     orderList: orderListSelector(state),
-    admin: adminListSelector(state),
+    admin: adminSelector(state),
   };
 };
 
