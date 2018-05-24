@@ -49,7 +49,7 @@ export const getAdminUser = (params) => {
 /**
  * 新增管理员
  */
-export const addAdminUser = (params) => {
+export const addAdminUser = (params, callback) => {
   return (dispatch) => {
     getAdminApi({ username: params.username }, (data) => {
       if (data.data && !_.isEmpty(data.data[0])) {
@@ -62,6 +62,7 @@ export const addAdminUser = (params) => {
                 dispatch(addAdminUserAction({ data: back }));
                 message.success('添加管理员成功!');
                 getAdminList({})(dispatch);
+                callback && callback(params);
               } else {
                 message.error('添加管理员失败，请重试!');
               }

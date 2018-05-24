@@ -72,7 +72,7 @@ export const onRegedit = (params) => {
 /**
  *  添加用户
  */
-export const addUser = (params) => {
+export const addUser = (params, callback) => {
   return (dispatch) => {
     loginApi({ username: params.username }, (data) => {
       if (data.data && !_.isEmpty(data.data[0])) {
@@ -85,6 +85,7 @@ export const addUser = (params) => {
                 dispatch(onRegeditAction({ data: back }));
                 message.success('添加用户成功!');
                 getUserList({})(dispatch);
+                callback && callback(params);
               } else {
                 message.error('添加用户失败，请重试!');
               }

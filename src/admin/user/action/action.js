@@ -29,13 +29,14 @@ export const onViewInit = () => {
 /**
  * 修改管理员
  */
-export const updateAdminUser = (params) => {
+export const updateAdminUser = (params, callback) => {
   return (dispatch) => {
     updateAdminApi(JSON.stringify({ condition: { username: params.username }, obj: { ...params } }), (data) => {
       if (data.code === 1) {
         message.success('修改用户成功！');
         dispatch(updateAdminUserAction({ data }));
         getAdminList()(dispatch);
+        callback && callback(params);
       } else {
         message.error('修改用户失败！');
       }
@@ -48,13 +49,14 @@ export const updateAdminUser = (params) => {
 /**
  * 修改用户
  */
-export const updateNormalUser = (params) => {
+export const updateNormalUser = (params, callback) => {
   return (dispatch) => {
     updateUserApi(JSON.stringify({ condition: { username: params.username }, obj: { ...params } }), (data) => {
       if (data.code === 1) {
         message.success('修改用户成功！');
         dispatch(updateNormalUserAction({ data }));
         getUserList()(dispatch);
+        callback && callback(params);
       } else {
         message.error('修改用户失败！');
       }

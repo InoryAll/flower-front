@@ -29,7 +29,7 @@ class Action extends React.Component {
       actionData = actions.data;
     }
     actionData.map((item, index) => {
-      timelines.push(<Timeline.Item>用户{item.adminName}&emsp;{item.content}&emsp;{!_.isUndefined(item.timestamp) &&
+      timelines.push(<Timeline.Item>&emsp;{item.content}&emsp;{!_.isUndefined(item.timestamp) &&
       moment(parseInt(item.timestamp)).format('YYYY-MM-DD HH:mm:ss')}</Timeline.Item>);
       return true;
     });

@@ -10,8 +10,10 @@ import moment from 'moment';
 import { connect } from 'react-redux';
 import { Row, Col, Card, Form, Input, Button, Table, Select, Modal, Radio, DatePicker, Badge } from 'antd';
 import { onViewInit, updateAdminUser, updateNormalUser } from './action/action';
+import { addAction } from '../action/action/action';
 import { getUserList, getAdminList } from '../index/action/action';
 import { userListSelector, adminListSelector } from '../index/selector/selector';
+import { adminSelector } from '../login/selector/selector';
 import { addUser } from '../../user/regedit/action/action';
 import { addAdminUser } from '../login/action/action';
 import './User.less';
@@ -71,7 +73,16 @@ const ModalForm = Form.create()((props) => {
                 permission: 0,
                 qq: values['modal-qq'],
               };
-              props.addUser(userObj);
+              props.addUser(userObj, (params) => {
+                props.addAction({
+                  adminId: props._id,
+                  adminName: props.username,
+                  type: 'add',
+                  content: `管理员${props.username}添加了普通用户${params.username}`,
+                  timestamp: new Date().getTime(),
+                  deleteFlag: 0,
+                });
+              });
             } else {
               const adminObj = {
                 username: values['modal-username'],
@@ -79,7 +90,16 @@ const ModalForm = Form.create()((props) => {
                 email: values['modal-email'],
                 permission: 1,
               };
-              props.addAdminUser(adminObj);
+              props.addAdminUser(adminObj, (params) => {
+                props.addAction({
+                  adminId: props._id,
+                  adminName: props.username,
+                  type: 'add',
+                  content: `管理员${props.username}添加了管理员${params.username}`,
+                  timestamp: new Date().getTime(),
+                  deleteFlag: 0,
+                });
+              });
             }
             props.onVisibleChange(false);
             resetFields();
@@ -97,7 +117,16 @@ const ModalForm = Form.create()((props) => {
                 permission: 0,
                 qq: values['modal-qq'],
               };
-              props.updateNormalUser(userObj);
+              props.updateNormalUser(userObj, (params) => {
+                props.addAction({
+                  adminId: props._id,
+                  adminName: props.username,
+                  type: 'update',
+                  content: `管理员${props.username}更新了普通用户${params.username}`,
+                  timestamp: new Date().getTime(),
+                  deleteFlag: 0,
+                });
+              });
             } else {
               const adminObj = {
                 username: values['modal-username'],
@@ -105,7 +134,16 @@ const ModalForm = Form.create()((props) => {
                 email: values['modal-email'],
                 permission: 1,
               };
-              props.updateAdminUser(adminObj);
+              props.updateAdminUser(adminObj, (params) => {
+                props.addAction({
+                  adminId: props._id,
+                  adminName: props.username,
+                  type: 'update',
+                  content: `管理员${props.username}更新了管理员${params.username}`,
+                  timestamp: new Date().getTime(),
+                  deleteFlag: 0,
+                });
+              });
             }
             props.onVisibleChange(false);
             resetFields();
@@ -372,12 +410,14 @@ class User extends React.Component {
   static propTypes = {
     userList: PropTypes.object.isRequired,
     adminList: PropTypes.object.isRequired,
+    admin: PropTypes.object.isRequired,
     getUserList: PropTypes.func.isRequired,
     getAdminList: PropTypes.func.isRequired,
     addUser: PropTypes.func.isRequired,
     addAdminUser: PropTypes.func.isRequired,
     updateNormalUser: PropTypes.func.isRequired,
     updateAdminUser: PropTypes.func.isRequired,
+    addAction: PropTypes.func.isRequired,
   };
   state = {
     visible: false,
@@ -673,6 +713,7 @@ const mapStateToProps = (state) => {
   return {
     userList: userListSelector(state),
     adminList: adminListSelector(state),
+    admin: adminSelector(state),
   };
 };
 
@@ -684,6 +725,7 @@ const mapDispatchToProps = {
   addAdminUser,
   updateAdminUser,
   updateNormalUser,
+  addAction,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(User);
