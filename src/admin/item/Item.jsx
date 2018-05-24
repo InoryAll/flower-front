@@ -123,10 +123,10 @@ const ModalForm = Form.create()((props) => {
             };
             props.updateItem(itemObj2, (params) => {
               props.addAction({
-                adminId: props._id,
-                adminName: props.username,
+                adminId: props.admin._id,
+                adminName: props.admin.username,
                 type: 'update',
-                content: `管理员${props.username}更新了商品${params._id}`,
+                content: `管理员${props.admin.username}更新了商品${params._id}`,
                 timestamp: new Date().getTime(),
                 deleteFlag: 0,
               });
@@ -635,10 +635,10 @@ class Item extends React.Component {
       onOk() {
         _this.props.updateItem({ ...item, deleteFlag: 1 }, (params) => {
           _this.props.addAction({
-            adminId: _this.props._id,
-            adminName: _this.props.username,
+            adminId: _this.admin.props._id,
+            adminName: _this.admin.props.username,
             type: 'delete',
-            content: `管理员${_this.props.username}删除了商品${params.name}`,
+            content: `管理员${_this.props.admin.username}删除了商品${params.name}`,
             timestamp: new Date().getTime(),
             deleteFlag: 0,
           });
