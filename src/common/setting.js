@@ -280,6 +280,19 @@ class Settings {
       label: '公告',
       value: 'board',
     }];
+    this.payWay = [{
+      label: '货到付款',
+      value: 'default',
+    }, {
+      label: '网银在线',
+      value: 'bank',
+    }, {
+      label: '支付宝',
+      value: 'alipay',
+    }, {
+      label: '微信',
+      value: 'wechat',
+    }];
   }
   static mapLabelToValue(label) {
     let result = null;
