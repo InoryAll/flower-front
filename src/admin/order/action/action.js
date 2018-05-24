@@ -26,13 +26,14 @@ export const onViewInit = () => {
 /**
  * 更新订单
  */
-export const updateConsoleOrder = (params) => {
+export const updateConsoleOrder = (params, callback) => {
   return (dispatch) => {
     updateOrderApi(JSON.stringify({ condition: { _id: params._id }, obj: { ...params } }), (data) => {
       if (data.code === 1) {
         dispatch(updateConsoleOrderAction({ data }));
         getAllOrders({})(dispatch);
         message.success('订单更新成功！');
+        callback && callback(params);
       } else {
         message.error('订单更新失败！');
       }

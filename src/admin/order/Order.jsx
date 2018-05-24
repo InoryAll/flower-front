@@ -12,6 +12,8 @@ import Settings from '../../common/setting';
 import { getAllOrders } from '../../user/userInfo/action/action';
 import { orderListSelector } from '../../user/userInfo/selector/selector';
 import { onViewInit, updateConsoleOrder } from './action/action';
+import { adminListSelector } from '../index/selector/selector';
+import { addAction } from '../action/action/action';
 import './Order.less';
 
 const FormItem = Form.Item;
@@ -75,7 +77,16 @@ const ModalForm = Form.create()((props) => {
               totalPrice: values['modal-totalPrice'],
               status: values['modal-status'],
             };
-            props.updateConsoleOrder(orderObj);
+            props.updateConsoleOrder(orderObj, (params) => {
+              props.addAction({
+                adminId: props._id,
+                adminName: props.username,
+                type: 'update',
+                content: `管理员${props.username}更新了订单${params._id}`,
+                timestamp: new Date().getTime(),
+                deleteFlag: 0,
+              });
+            });
             resetFields();
             props.onVisibleChange(false);
             break;
@@ -364,9 +375,11 @@ const FieldForm = Form.create()((props) => {
 class Order extends React.Component {
   static propTypes = {
     orderList: PropTypes.object.isRequired,
+    admin: PropTypes.object.isRequired,
     getAllOrders: PropTypes.func.isRequired,
     onViewInit: PropTypes.func.isRequired,
     updateConsoleOrder: PropTypes.func.isRequired,
+    addAction: PropTypes.func.isRequired,
   };
   state = {
     visible: false,
@@ -396,7 +409,16 @@ class Order extends React.Component {
       okType: 'danger',
       cancelText: '取消',
       onOk() {
-        _this.props.updateConsoleOrder({ ...item, deleteFlag: 1 });
+        _this.props.updateConsoleOrder({ ...item, deleteFlag: 1 }, (params) => {
+          _this.props.addAction({
+            adminId: _this.props._id,
+            adminName: _this.props.username,
+            type: 'delete',
+            content: `管理员${_this.props.username}删除了订单${params.username}`,
+            timestamp: new Date().getTime(),
+            deleteFlag: 0,
+          });
+        });
       },
       onCancel() {
         console.log('Cancel');
@@ -622,6 +644,7 @@ class Order extends React.Component {
 const mapStateToProps = (state) => {
   return {
     orderList: orderListSelector(state),
+    admin: adminListSelector(state),
   };
 };
 
@@ -629,6 +652,7 @@ const mapDispatchToProps = {
   onViewInit,
   getAllOrders,
   updateConsoleOrder,
+  addAction,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Order);
