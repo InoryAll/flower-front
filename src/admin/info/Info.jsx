@@ -12,7 +12,7 @@ import Settings from '../../common/setting';
 import { onViewInit, addInfo, updateInfo } from './action/action';
 import { getInfoList } from '../../user/info/action/action';
 import { infoSelector } from '../../user/info/selector/selector';
-import { adminListSelector } from '../index/selector/selector';
+import { adminSelector } from '../login/selector/selector';
 import { addAction } from '../action/action/action';
 import './Info.less';
 
@@ -546,7 +546,7 @@ class Info extends React.Component {
 const mapStateToProps = (state) => {
   return {
     infos: infoSelector(state),
-    admin: adminListSelector(state),
+    admin: adminSelector(state),
   };
 };
 

@@ -11,6 +11,8 @@ import { Row, Col, Card, Form, Input, Button, Table, DatePicker, Modal, Radio, S
 import Settings from '../../common/setting';
 import { onViewInit, getWorksheet, addWorksheet, updateWorksheet } from './action/action';
 import { worksheetSelector } from './selector/selector';
+import { adminSelector } from '../login/selector/selector';
+import { addAction } from '../action/action/action';
 import './Worksheet.less';
 
 const FormItem = Form.Item;
@@ -78,7 +80,16 @@ const ModalForm = Form.create()((props) => {
               content: values['modal-content'],
               timestamp: new Date().getTime(),
             };
-            props.addWorksheet(worksheetObj);
+            props.addWorksheet(worksheetObj, (params) => {
+              props.addAction({
+                adminId: props._id,
+                adminName: props.username,
+                type: 'add',
+                content: `管理员${props.username}添加了工作记录${params.name}`,
+                timestamp: new Date().getTime(),
+                deleteFlag: 0,
+              });
+            });
             resetFields();
             props.onVisibleChange(false);
             break;
@@ -90,7 +101,16 @@ const ModalForm = Form.create()((props) => {
               content: values['modal-content'],
               timestamp: new Date().getTime(),
             };
-            props.updateWorksheet(worksheetObj2);
+            props.updateWorksheet(worksheetObj2, (params) => {
+              props.addAction({
+                adminId: props._id,
+                adminName: props.username,
+                type: 'update',
+                content: `管理员${props.username}更新了工作记录${params._id}`,
+                timestamp: new Date().getTime(),
+                deleteFlag: 0,
+              });
+            });
             resetFields();
             props.onVisibleChange(false);
             break;
@@ -280,12 +300,13 @@ const FieldForm = Form.create()((props) => {
 
 class Worksheet extends React.Component {
   static propTypes = {
-    form: PropTypes.object.isRequired,
     worksheets: PropTypes.object.isRequired,
+    admin: PropTypes.object.isRequired,
     getWorksheet: PropTypes.func.isRequired,
     addWorksheet: PropTypes.func.isRequired,
     updateWorksheet: PropTypes.func.isRequired,
     onViewInit: PropTypes.func.isRequired,
+    addAction: PropTypes.func.isRequired,
   };
   state = {
     visible: false,
@@ -319,7 +340,16 @@ class Worksheet extends React.Component {
       okType: 'danger',
       cancelText: '取消',
       onOk() {
-        _this.props.updateWorksheet({ ...item, deleteFlag: 1 });
+        _this.props.updateWorksheet({ ...item, deleteFlag: 1 }, (params) => {
+          _this.props.addAction({
+            adminId: _this.props._id,
+            adminName: _this.props.username,
+            type: 'delete',
+            content: `管理员${_this.props.username}删除了工作记录${params.username}`,
+            timestamp: new Date().getTime(),
+            deleteFlag: 0,
+          });
+        });
       },
       onCancel() {
         console.log('Cancel');
@@ -349,7 +379,6 @@ class Worksheet extends React.Component {
     });
   };
   render() {
-    const { getFieldDecorator } = this.props.form;
     const { worksheets } = this.props;
     let worksheetData = [];
     if (!_.isEmpty(worksheets) && !_.isEmpty(worksheets.data)) {
@@ -462,6 +491,7 @@ class Worksheet extends React.Component {
 const mapStateToProps = (state) => {
   return {
     worksheets: worksheetSelector(state),
+    admin: adminSelector(state),
   };
 };
 
@@ -470,7 +500,7 @@ const mapDispatchToProps = {
   getWorksheet,
   addWorksheet,
   updateWorksheet,
+  addAction,
 };
 
-const WorksheetForm = Form.create()(Worksheet);
-export default connect(mapStateToProps, mapDispatchToProps)(WorksheetForm);
+export default connect(mapStateToProps, mapDispatchToProps)(Worksheet);

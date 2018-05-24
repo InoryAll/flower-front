@@ -47,13 +47,14 @@ export const getWorksheet = (params) => {
 /**
  * 新增工作记录
  */
-export const addWorksheet = (params) => {
+export const addWorksheet = (params, callback) => {
   return (dispatch) => {
     addQuestionApi(JSON.stringify({ ...params }), (data) => {
       if (data.code === 1) {
         dispatch(addWorksheetAction({ data }));
         message.success('工作记录添加成功！');
         getWorksheet({})(dispatch);
+        callback && callback(params);
       } else {
         message.error('工作记录添加失败！');
       }
@@ -66,13 +67,14 @@ export const addWorksheet = (params) => {
 /**
  * 更新工作记录
  */
-export const updateWorksheet = (params) => {
+export const updateWorksheet = (params, callback) => {
   return (dispatch) => {
     updateQuestionApi(JSON.stringify({ condition: { _id: params._id }, obj: { ...params } }), (data) => {
       if (data.code === 1) {
         dispatch(updateWorksheetAction({ data }));
         message.success('工作记录修改成功！');
         getWorksheet({})(dispatch);
+        callback && callback(params);
       } else {
         message.error('工作记录修改失败！');
       }
