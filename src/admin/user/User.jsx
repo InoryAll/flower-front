@@ -68,7 +68,7 @@ const ModalForm = Form.create()((props) => {
                 birthday: values['modal-birthday'],
                 tel: values['modal-tel'],
                 email: values['modal-email'],
-                permission: ['modal-permission'],
+                permission: 0,
                 qq: values['modal-qq'],
               };
               props.addUser(userObj);
@@ -77,7 +77,7 @@ const ModalForm = Form.create()((props) => {
                 username: values['modal-username'],
                 password: values['modal-password'],
                 email: values['modal-email'],
-                permission: values['modal-permission'],
+                permission: 1,
               };
               props.addAdminUser(adminObj);
             }
@@ -94,7 +94,7 @@ const ModalForm = Form.create()((props) => {
                 birthday: values['modal-birthday'],
                 tel: values['modal-tel'],
                 email: values['modal-email'],
-                permission: values['modal-permission'],
+                permission: 0,
                 qq: values['modal-qq'],
               };
               props.updateNormalUser(userObj);
@@ -103,7 +103,7 @@ const ModalForm = Form.create()((props) => {
                 username: values['modal-username'],
                 password: values['modal-password'],
                 email: values['modal-email'],
-                permission: values['modal-permission'],
+                permission: 1,
               };
               props.updateAdminUser(adminObj);
             }

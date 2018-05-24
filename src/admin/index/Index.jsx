@@ -106,8 +106,16 @@ class Index extends React.Component {
       key: 'status',
       render: (text, record) => {
         switch (text) {
+          case 0:
+            return '待付款';
           case 1:
             return '已付款';
+          case 2:
+            return '待发货';
+          case 3:
+            return '待收货';
+          case 4:
+            return '已收货';
           default:
             return '未知状态';
         }
@@ -134,6 +142,10 @@ class Index extends React.Component {
                 <Table
                   columns={userColumns}
                   dataSource={userData}
+                  pagination={{
+                    defaultCurrent: 1,
+                    pageSize: 5,
+                  }}
                 />
               </Card>
             </div>
@@ -144,6 +156,10 @@ class Index extends React.Component {
                 <Table
                   columns={orderColumns}
                   dataSource={orderData}
+                  pagination={{
+                    defaultCurrent: 1,
+                    pageSize: 5,
+                  }}
                 />
               </Card>
             </div>
@@ -156,6 +172,10 @@ class Index extends React.Component {
                 <Table
                   columns={itemColumns}
                   dataSource={itemData}
+                  pagination={{
+                    defaultCurrent: 1,
+                    pageSize: 5,
+                  }}
                 />
               </Card>
             </div>

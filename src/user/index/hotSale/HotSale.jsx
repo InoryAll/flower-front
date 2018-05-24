@@ -38,27 +38,27 @@ class HotSale extends React.Component {
           <Col span={11}>
             <ul className="hotsale-ul">
               <li className="hotsale-ul-li">
-                <Link className="hotsale-link" to={`/itemDetail?id=${hotSale.data && hotSale.data[0]._id}`} >
-                  <p className="hotsale-link-p">{hotSale.data && hotSale.data[0].name}</p>
-                  <img className="hotsale-link-img" src={hotSale.data && hotSale.data[0].url} alt="花之韵" />
+                <Link className="hotsale-link" to={`/itemDetail?id=${hotSale.data && hotSale.data[0] && hotSale.data[0]._id}`} >
+                  <p className="hotsale-link-p">{hotSale.data && hotSale.data[0] && hotSale.data[0].name}</p>
+                  <img className="hotsale-link-img" src={hotSale.data && hotSale.data[0] && hotSale.data[0].url} alt="花之韵" />
                 </Link>
               </li>
               <li className="hotsale-ul-li">
-                <Link className="hotsale-link" to={`/itemDetail?id=${hotSale.data && hotSale.data[1]._id}`} >
-                  <p className="hotsale-link-p">{hotSale.data && hotSale.data[1].name}</p>
-                  <img className="hotsale-link-img" src={hotSale.data && hotSale.data[1].url} alt="花之韵" />
+                <Link className="hotsale-link" to={`/itemDetail?id=${hotSale.data && hotSale.data[1] && hotSale.data[1]._id}`} >
+                  <p className="hotsale-link-p">{hotSale.data && hotSale.data[1] && hotSale.data[1].name}</p>
+                  <img className="hotsale-link-img" src={hotSale.data && hotSale.data[1] && hotSale.data[1].url} alt="花之韵" />
                 </Link>
               </li>
               <li className="hotsale-ul-li">
-                <Link className="hotsale-link" to={`/itemDetail?id=${hotSale.data && hotSale.data[2]._id}`} >
-                  <p className="hotsale-link-p">{hotSale.data && hotSale.data[2].name}</p>
-                  <img className="hotsale-link-img" src={hotSale.data && hotSale.data[2].url} alt="花之韵" />
+                <Link className="hotsale-link" to={`/itemDetail?id=${hotSale.data && hotSale.data[2] && hotSale.data[2]._id}`} >
+                  <p className="hotsale-link-p">{hotSale.data && hotSale.data[2] && hotSale.data[2].name}</p>
+                  <img className="hotsale-link-img" src={hotSale.data && hotSale.data[2] && hotSale.data[2].url} alt="花之韵" />
                 </Link>
               </li>
               <li className="hotsale-ul-li">
-                <Link className="hotsale-link" to={`/itemDetail?id=${hotSale.data && hotSale.data[3]._id}`} >
-                  <p className="hotsale-link-p">{hotSale.data && hotSale.data[3].name}</p>
-                  <img className="hotsale-link-img" src={hotSale.data && hotSale.data[3].url} alt="花之韵" />
+                <Link className="hotsale-link" to={`/itemDetail?id=${hotSale.data && hotSale.data[3] && hotSale.data[3]._id}`} >
+                  <p className="hotsale-link-p">{hotSale.data && hotSale.data[3] && hotSale.data[3].name}</p>
+                  <img className="hotsale-link-img" src={hotSale.data && hotSale.data[3] && hotSale.data[3].url} alt="花之韵" />
                 </Link>
               </li>
             </ul>
@@ -69,15 +69,15 @@ class HotSale extends React.Component {
           <Col span={5}>
             <ul className="hotsale-ul hotsale-ul-vertical">
               <li className="hotsale-ul-li">
-                <Link className="hotsale-link" to={`/itemDetail?id=${hotSale.data && hotSale.data[4]._id}`} >
-                  <p className="hotsale-link-p">{hotSale.data && hotSale.data[4].name}</p>
-                  <img className="hotsale-link-img" src={hotSale.data && hotSale.data[4].url} alt="花之韵" />
+                <Link className="hotsale-link" to={`/itemDetail?id=${hotSale.data && hotSale.data[4] && hotSale.data[4]._id}`} >
+                  <p className="hotsale-link-p">{hotSale.data && hotSale.data[4] && hotSale.data[4].name}</p>
+                  <img className="hotsale-link-img" src={hotSale.data && hotSale.data[4] && hotSale.data[4].url} alt="花之韵" />
                 </Link>
               </li>
               <li className="hotsale-ul-li">
-                <Link className="hotsale-link" to={`/itemDetail?id=${hotSale.data && hotSale.data[5]._id}`} >
-                  <p className="hotsale-link-p">{hotSale.data && hotSale.data[5].name}</p>
-                  <img className="hotsale-link-img" src={hotSale.data && hotSale.data[5].url} alt="花之韵" />
+                <Link className="hotsale-link" to={`/itemDetail?id=${hotSale.data && hotSale.data[5] && hotSale.data[5]._id}`} >
+                  <p className="hotsale-link-p">{hotSale.data && hotSale.data[5] && hotSale.data[5].name}</p>
+                  <img className="hotsale-link-img" src={hotSale.data && hotSale.data[5] && hotSale.data[5].url} alt="花之韵" />
                 </Link>
               </li>
             </ul>
