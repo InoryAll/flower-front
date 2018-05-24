@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08c3298d-d019-4401-abb2-96f78fb0689a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/api/worksheetApi.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/admin/worksheet/Worksheet.jsx" afterPath="$PROJECT_DIR$/src/admin/worksheet/Worksheet.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/admin/worksheet/action/action.js" afterPath="$PROJECT_DIR$/src/admin/worksheet/action/action.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/admin/worksheet/constant/constant.js" afterPath="$PROJECT_DIR$/src/admin/worksheet/constant/constant.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -92,16 +88,17 @@
       <file leaf-file-name="Worksheet.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/admin/worksheet/Worksheet.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="86" column="33" lean-forward="true" selection-start-line="86" selection-start-column="33" selection-end-line="86" selection-end-column="33" />
+            <state relative-caret-position="252">
+              <caret line="312" column="23" lean-forward="true" selection-start-line="312" selection-start-column="23" selection-end-line="312" selection-end-column="23" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#61#102#0" expanded="true" />
+                <element signature="e#791#3890#0" expanded="false" />
                 <element signature="e#3937#6933#0" expanded="false" />
                 <element signature="e#5322#6926#0" expanded="false" />
-                <element signature="e#9931#10045#0" expanded="false" />
-                <element signature="e#9949#9983#0" expanded="false" />
-                <element signature="e#10003#10038#0" expanded="false" />
+                <element signature="e#9938#10052#0" expanded="false" />
+                <element signature="e#9956#9990#0" expanded="false" />
+                <element signature="e#10010#10045#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -1010,12 +1007,12 @@
       <workItem from="1526986403275" duration="14513000" />
       <workItem from="1527047779851" duration="21595000" />
       <workItem from="1527083077143" duration="9168000" />
-      <workItem from="1527132913393" duration="9271000" />
+      <workItem from="1527132913393" duration="9359000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="564594000" />
+    <option name="totallyTimeSpent" value="564682000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1710,16 +1707,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/admin/worksheet/Worksheet.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="86" column="33" lean-forward="true" selection-start-line="86" selection-start-column="33" selection-end-line="86" selection-end-column="33" />
+        <state relative-caret-position="252">
+          <caret line="312" column="23" lean-forward="true" selection-start-line="312" selection-start-column="23" selection-end-line="312" selection-end-column="23" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#61#102#0" expanded="true" />
+            <element signature="e#791#3890#0" expanded="false" />
             <element signature="e#3937#6933#0" expanded="false" />
             <element signature="e#5322#6926#0" expanded="false" />
-            <element signature="e#9931#10045#0" expanded="false" />
-            <element signature="e#9949#9983#0" expanded="false" />
-            <element signature="e#10003#10038#0" expanded="false" />
+            <element signature="e#9938#10052#0" expanded="false" />
+            <element signature="e#9956#9990#0" expanded="false" />
+            <element signature="e#10010#10045#0" expanded="false" />
           </folding>
         </state>
       </provider>

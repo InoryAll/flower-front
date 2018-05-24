@@ -307,13 +307,13 @@ class Worksheet extends React.Component {
   handleDelete = (item) => {
     const _this = this;
     confirm({
-      title: '你确定要删除该文章么?',
+      title: '你确定要删除该工作记录么?',
       content: '此操作无法恢复，请慎重！',
       okText: '确定',
       okType: 'danger',
       cancelText: '取消',
       onOk() {
-        _this.props.updateInfo({ ...item, deleteFlag: 1 });
+        _this.props.updateWorksheet({ ...item, deleteFlag: 1 });
       },
       onCancel() {
         console.log('Cancel');
