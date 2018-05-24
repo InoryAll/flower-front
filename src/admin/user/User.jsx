@@ -78,7 +78,7 @@ const ModalForm = Form.create()((props) => {
                   adminId: props._id,
                   adminName: props.username,
                   type: 'add',
-                  content: `管理员${props.username}添加了普通用户${params.username}`,
+                  content: `管理员${props.admin.username}添加了普通用户${params.username}`,
                   timestamp: new Date().getTime(),
                   deleteFlag: 0,
                 });
@@ -95,7 +95,7 @@ const ModalForm = Form.create()((props) => {
                   adminId: props._id,
                   adminName: props.username,
                   type: 'add',
-                  content: `管理员${props.username}添加了管理员${params.username}`,
+                  content: `管理员${props.admin.username}添加了管理员${params.username}`,
                   timestamp: new Date().getTime(),
                   deleteFlag: 0,
                 });
@@ -122,7 +122,7 @@ const ModalForm = Form.create()((props) => {
                   adminId: props._id,
                   adminName: props.username,
                   type: 'update',
-                  content: `管理员${props.username}更新了普通用户${params.username}`,
+                  content: `管理员${props.admin.username}更新了普通用户${params.username}`,
                   timestamp: new Date().getTime(),
                   deleteFlag: 0,
                 });
@@ -139,7 +139,7 @@ const ModalForm = Form.create()((props) => {
                   adminId: props._id,
                   adminName: props.username,
                   type: 'update',
-                  content: `管理员${props.username}更新了管理员${params.username}`,
+                  content: `管理员${props.admin.username}更新了管理员${params.username}`,
                   timestamp: new Date().getTime(),
                   deleteFlag: 0,
                 });
@@ -556,7 +556,7 @@ class User extends React.Component {
               adminId: _this.props._id,
               adminName: _this.props.username,
               type: 'delete',
-              content: `管理员${_this.props.username}删除了普通用户${params.username}`,
+              content: `管理员${_this.props.admin.username}删除了普通用户${params.username}`,
               timestamp: new Date().getTime(),
               deleteFlag: 0,
             });
@@ -567,7 +567,7 @@ class User extends React.Component {
               adminId: _this.props._id,
               adminName: _this.props.username,
               type: 'delete',
-              content: `管理员${_this.props.username}删除了管理员${params.username}`,
+              content: `管理员${_this.props.admin.username}删除了管理员${params.username}`,
               timestamp: new Date().getTime(),
               deleteFlag: 0,
             });
