@@ -28,13 +28,14 @@ export const onViewInit = () => {
 /**
  * 添加文章
  */
-export const addInfo = (params) => {
+export const addInfo = (params, callback) => {
   return (dispatch) => {
     addInfoApi(JSON.stringify({ ...params }), (data) => {
       if (data.code === 1) {
         dispatch(addInfoAction({ data }));
         message.success('添加文章成功!');
         getInfoList({})(dispatch);
+        callback && callback(params);
       } else {
         message.error('添加文章失败!');
       }
@@ -47,13 +48,14 @@ export const addInfo = (params) => {
 /**
  * 更新文章
  */
-export const updateInfo = (params) => {
+export const updateInfo = (params, callback) => {
   return (dispatch) => {
     updateInfoApi(JSON.stringify({ condition: { _id: params._id }, obj: { ...params } }), (data) => {
       if (data.code === 1) {
         dispatch(updateInfoAction({ data }));
         message.success('修改文章成功!');
         getInfoList({})(dispatch);
+        callback && callback(params);
       } else {
         message.error('修改文章失败!');
       }

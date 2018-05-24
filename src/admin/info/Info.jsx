@@ -12,6 +12,8 @@ import Settings from '../../common/setting';
 import { onViewInit, addInfo, updateInfo } from './action/action';
 import { getInfoList } from '../../user/info/action/action';
 import { infoSelector } from '../../user/info/selector/selector';
+import { adminListSelector } from '../index/selector/selector';
+import { addAction } from '../action/action/action';
 import './Info.less';
 
 const FormItem = Form.Item;
@@ -80,7 +82,16 @@ const ModalForm = Form.create()((props) => {
               content: values['modal-content'],
               timestamp: new Date().getTime(),
             };
-            props.addInfo(infoObj);
+            props.addInfo(infoObj, (params) => {
+              props.addAction({
+                adminId: props._id,
+                adminName: props.username,
+                type: 'add',
+                content: `管理员${props.username}添加了文案${params.name}`,
+                timestamp: new Date().getTime(),
+                deleteFlag: 0,
+              });
+            });
             resetFields();
             props.onVisibleChange(false);
             break;
@@ -93,7 +104,16 @@ const ModalForm = Form.create()((props) => {
               content: values['modal-content'],
               timestamp: new Date().getTime(),
             };
-            props.updateInfo(infoObj2);
+            props.updateInfo(infoObj2, (params) => {
+              props.addAction({
+                adminId: props._id,
+                adminName: props.username,
+                type: 'update',
+                content: `管理员${props.username}更新了文案${params._id}`,
+                timestamp: new Date().getTime(),
+                deleteFlag: 0,
+              });
+            });
             resetFields();
             props.onVisibleChange(false);
             break;
@@ -303,10 +323,12 @@ const FieldForm = Form.create()((props) => {
 class Info extends React.Component {
   static propTypes = {
     infos: PropTypes.object.isRequired,
+    admin: PropTypes.object.isRequired,
     onViewInit: PropTypes.func.isRequired,
     getInfoList: PropTypes.func.isRequired,
     addInfo: PropTypes.func.isRequired,
     updateInfo: PropTypes.func.isRequired,
+    addAction: PropTypes.func.isRequired,
   };
   state = {
     visible: false,
@@ -340,7 +362,16 @@ class Info extends React.Component {
       okType: 'danger',
       cancelText: '取消',
       onOk() {
-        _this.props.updateInfo({ ...item, deleteFlag: 1 });
+        _this.props.updateInfo({ ...item, deleteFlag: 1 }, (params) => {
+          _this.props.addAction({
+            adminId: _this.props._id,
+            adminName: _this.props.username,
+            type: 'delete',
+            content: `管理员${_this.props.username}删除了文案${params._id}`,
+            timestamp: new Date().getTime(),
+            deleteFlag: 0,
+          });
+        });
       },
       onCancel() {
         console.log('Cancel');
@@ -515,6 +546,7 @@ class Info extends React.Component {
 const mapStateToProps = (state) => {
   return {
     infos: infoSelector(state),
+    admin: adminListSelector(state),
   };
 };
 
@@ -523,6 +555,7 @@ const mapDispatchToProps = {
   getInfoList,
   addInfo,
   updateInfo,
+  addAction,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Info);
