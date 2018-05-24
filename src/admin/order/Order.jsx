@@ -79,10 +79,10 @@ const ModalForm = Form.create()((props) => {
             };
             props.updateConsoleOrder(orderObj, (params) => {
               props.addAction({
-                adminId: props._id,
-                adminName: props.username,
+                adminId: props.admin._id,
+                adminName: props.admin.username,
                 type: 'update',
-                content: `管理员${props.username}更新了订单${params._id}`,
+                content: `管理员${props.admin.username}更新了订单${params._id}`,
                 timestamp: new Date().getTime(),
                 deleteFlag: 0,
               });
@@ -411,10 +411,10 @@ class Order extends React.Component {
       onOk() {
         _this.props.updateConsoleOrder({ ...item, deleteFlag: 1 }, (params) => {
           _this.props.addAction({
-            adminId: _this.props._id,
-            adminName: _this.props.username,
+            adminId: _this.props.admin._id,
+            adminName: _this.props.admin.username,
             type: 'delete',
-            content: `管理员${_this.props.username}删除了订单${params.username}`,
+            content: `管理员${_this.props.admin.username}删除了订单${params.username}`,
             timestamp: new Date().getTime(),
             deleteFlag: 0,
           });
