@@ -7,30 +7,339 @@ import { Link } from 'react-router';
 import { connect } from 'react-redux';
 import _ from 'lodash';
 import moment from 'moment';
-import { Row, Col, Card, Form, Input, Button, Table, DatePicker } from 'antd';
-import { onViewInit, getWorksheet } from './action/action';
+import { Row, Col, Card, Form, Input, Button, Table, DatePicker, Modal, Radio, Select } from 'antd';
+import Settings from '../../common/setting';
+import { onViewInit, getWorksheet, addWorksheet, updateWorksheet } from './action/action';
 import { worksheetSelector } from './selector/selector';
 import './Worksheet.less';
 
 const FormItem = Form.Item;
+const Option = Select.Option;
+const confirm = Modal.confirm;
+const RadioGroup = Radio.Group;
 const RangePicker = DatePicker.RangePicker;
+const { TextArea } = Input;
+
+const ModalForm = Form.create()((props) => {
+  Settings.initSettings();
+  const { type, worksheet } = props;
+  const { getFieldDecorator, resetFields } = props.form;
+  const formItemLayout = {
+    labelCol: {
+      sm: { span: 8 },
+    },
+    wrapperCol: {
+      sm: { span: 16 },
+    },
+  };
+  const modalFormLayout = {
+    labelCol: {
+      sm: { span: 6 },
+    },
+    wrapperCol: {
+      sm: { span: 13 },
+    },
+  };
+  const textAreaFormLayout = {
+    labelCol: {
+      sm: { span: 6 },
+    },
+    wrapperCol: {
+      sm: { span: 16 },
+    },
+  };
+  const normFile = (e) => {
+    if (Array.isArray(e)) {
+      return e;
+    }
+    return e && e.fileList;
+  };
+  const tailFormItemLayout = {
+    wrapperCol: {
+      xs: {
+        span: 24,
+        offset: 0,
+      },
+      sm: {
+        span: 16,
+        offset: 6,
+      },
+    },
+  };
+  const handleModalSubmit = (e) => {
+    e.preventDefault();
+    props.form.validateFields((err, values) => {
+      if (!err) {
+        switch (type) {
+          case 'add':
+            const worksheetObj = {
+              name: values['modal-name'],
+              adminName: values['modal-adminName'],
+              content: values['modal-content'],
+              timestamp: new Date().getTime(),
+            };
+            props.addWorksheet(worksheetObj);
+            resetFields();
+            props.onVisibleChange(false);
+            break;
+          case 'update':
+            const worksheetObj2 = {
+              _id: worksheet._id,
+              name: values['modal-name'],
+              adminName: values['modal-adminName'],
+              content: values['modal-content'],
+              timestamp: new Date().getTime(),
+            };
+            props.updateWorksheet(worksheetObj2);
+            resetFields();
+            props.onVisibleChange(false);
+            break;
+          default:
+            resetFields();
+            props.onVisibleChange(false);
+        }
+      }
+    });
+  };
+  const removeItem = (file) => {
+  };
+  return (
+    <Form className="modal-form" onSubmit={handleModalSubmit}>
+      <FormItem
+        label="工作记录主题"
+        {...modalFormLayout}
+        hasFeedback
+      >
+        {getFieldDecorator('modal-name', {
+          rules: [{ required: true, message: '工作记录主题不能为空!' }],
+          initialValue: worksheet && worksheet.name,
+        })(
+          <Input placeholder="输入工作记录主题" />
+        )}
+      </FormItem>
+      <FormItem
+        label="添加人"
+        {...modalFormLayout}
+        hasFeedback
+      >
+        {getFieldDecorator('modal-adminName', {
+          rules: [{ required: true, message: '作者不能为空!' }],
+          initialValue: worksheet && worksheet.adminName,
+        })(
+          <Input placeholder="输入文章作者" />
+        )}
+      </FormItem>
+      <FormItem
+        label="内容"
+        {...textAreaFormLayout}
+      >
+        {getFieldDecorator('modal-content', {
+          initialValue: worksheet && worksheet.content,
+        })(
+          <TextArea rows={12} placeholder="输入内容" />
+        )}
+      </FormItem>
+      <FormItem {...tailFormItemLayout}>
+        <Button type="primary" htmlType="submit">确定</Button>
+      </FormItem>
+    </Form>
+  );
+});
+
+const FieldForm = Form.create()((props) => {
+  const { type, item } = props;
+  const { getFieldDecorator } = props.form;
+  Settings.initSettings();
+  const formItemLayout = {
+    labelCol: {
+      sm: { span: 8 },
+    },
+    wrapperCol: {
+      sm: { span: 16 },
+    },
+  };
+  const modalFormLayout = {
+    labelCol: {
+      sm: { span: 6 },
+    },
+    wrapperCol: {
+      sm: { span: 13 },
+    },
+  };
+  const tailFormItemLayout = {
+    wrapperCol: {
+      xs: {
+        span: 24,
+        offset: 0,
+      },
+      sm: {
+        span: 16,
+        offset: 6,
+      },
+    },
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    props.form.validateFields((err, values) => {
+      if (!err) {
+        let formatValues = {};
+        if (!_.isEmpty(values.timestamp)) {
+          formatValues = {
+            $and: [
+              {
+                timestamp: {
+                  $gt: moment(values.timestamp[0]).valueOf(),
+                },
+              },
+              {
+                timestamp: {
+                  $lt: moment(values.timestamp[1]).valueOf(),
+                },
+              },
+            ],
+          };
+          // eslint-disable-next-line
+          delete values.timestamp;
+          formatValues.$and = [...formatValues.$and, ...values];
+        } else {
+          formatValues = { ...values };
+        }
+        props.getInfoList({ ...formatValues });
+      }
+    });
+  };
+  return (
+    <Form onSubmit={handleSubmit} layout="inline">
+      <Row className="form-search-fields-row">
+        <Col span={8}>
+          <FormItem
+            label="工作记录id"
+            {...formItemLayout}
+          >
+            {getFieldDecorator('name', {
+            })(
+              <Input placeholder="输入工作记录id" />
+            )}
+          </FormItem>
+        </Col>
+        <Col span={8}>
+          <FormItem
+            label="主题"
+            {...formItemLayout}
+          >
+            {getFieldDecorator('name', {
+            })(
+              <Input placeholder="输入工作记录主题" />
+            )}
+          </FormItem>
+        </Col>
+        <Col span={8}>
+          <FormItem
+            label="作者"
+            {...formItemLayout}
+          >
+            {getFieldDecorator('name', {
+            })(
+              <Input placeholder="输入工作记录作者" />
+            )}
+          </FormItem>
+        </Col>
+      </Row>
+      <Row className="form-search-fields-row">
+        <Col span={8}>
+          <FormItem
+            {...formItemLayout}
+            label="最后修改时间"
+          >
+            {getFieldDecorator('modal-birthday', {
+            })(
+              <RangePicker
+                showTime
+                format="YYYY-MM-DD HH:mm:ss"
+              />
+            )}
+          </FormItem>
+        </Col>
+      </Row>
+      <Row>
+        <Col span={8} offset={16}>
+          <FormItem className="form-search-fields-search">
+            <Button className="form-search-fields-search-btn" htmlType="submit" type="primary" icon="search">搜索</Button>
+          </FormItem>
+        </Col>
+      </Row>
+    </Form>
+  );
+});
+
 class Worksheet extends React.Component {
   static propTypes = {
     form: PropTypes.object.isRequired,
     worksheets: PropTypes.object.isRequired,
     getWorksheet: PropTypes.func.isRequired,
+    addWorksheet: PropTypes.func.isRequired,
+    updateWorksheet: PropTypes.func.isRequired,
     onViewInit: PropTypes.func.isRequired,
+  };
+  state = {
+    visible: false,
+    type: 'default',
+    worksheet: undefined,
   };
   componentWillMount() {
     this.props.onViewInit();
-    this.props.getWorksheet();
+    this.props.getWorksheet({});
   }
-  handleSubmit = (e) => {
-    e.preventDefault();
-    this.props.form.validateFields((err, values) => {
-      if (!err) {
-        console.log('Received values of form: ', values);
-      }
+  handleSearch = (item) => {
+    this.setState({
+      visible: true,
+      type: 'search',
+      worksheet: item,
+    });
+  };
+  handleUpdate = (item) => {
+    this.setState({
+      visible: true,
+      type: 'update',
+      worksheet: item,
+    });
+  };
+  handleDelete = (item) => {
+    const _this = this;
+    confirm({
+      title: '你确定要删除该文章么?',
+      content: '此操作无法恢复，请慎重！',
+      okText: '确定',
+      okType: 'danger',
+      cancelText: '取消',
+      onOk() {
+        _this.props.updateInfo({ ...item, deleteFlag: 1 });
+      },
+      onCancel() {
+        console.log('Cancel');
+      },
+    });
+  };
+  handleAdd = () => {
+    this.setState({
+      visible: true,
+      type: 'add',
+      worksheet: undefined,
+    });
+  };
+  onVisibleChange = (visible) => {
+    this.setState({
+      visible,
+    });
+  };
+  handleOk = () => {
+    this.setState({
+      visible: false,
+    });
+  };
+  handleCancel = () => {
+    this.setState({
+      visible: false,
     });
   };
   render() {
@@ -97,73 +406,17 @@ class Worksheet extends React.Component {
           <Row>
             <Col>
               <div className="form-search-fields">
-                <Form onSubmit={this.handleSubmit} layout="inline">
-                  <Row className="form-search-fields-row">
-                    <Col span={8}>
-                      <FormItem
-                        label="工作记录id"
-                        {...formItemLayout}
-                      >
-                        {getFieldDecorator('name', {
-                        })(
-                          <Input placeholder="输入工作记录id" />
-                        )}
-                      </FormItem>
-                    </Col>
-                    <Col span={8}>
-                      <FormItem
-                        label="主题"
-                        {...formItemLayout}
-                      >
-                        {getFieldDecorator('name', {
-                        })(
-                          <Input placeholder="输入工作记录主题" />
-                        )}
-                      </FormItem>
-                    </Col>
-                    <Col span={8}>
-                      <FormItem
-                        label="作者"
-                        {...formItemLayout}
-                      >
-                        {getFieldDecorator('name', {
-                        })(
-                          <Input placeholder="输入工作记录作者" />
-                        )}
-                      </FormItem>
-                    </Col>
-                  </Row>
-                  <Row className="form-search-fields-row">
-                    <Col span={8}>
-                      <FormItem
-                        {...formItemLayout}
-                        label="最后修改时间"
-                      >
-                        {getFieldDecorator('modal-birthday', {
-                        })(
-                          <RangePicker
-                            showTime
-                            format="YYYY-MM-DD HH:mm:ss"
-                          />
-                        )}
-                      </FormItem>
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Col span={8} offset={16}>
-                      <FormItem className="form-search-fields-search">
-                        <Button className="form-search-fields-search-btn" htmlType="submit" type="primary" icon="search">搜索</Button>
-                      </FormItem>
-                    </Col>
-                  </Row>
-                </Form>
+                <FieldForm
+                  {...this.state}
+                  {...this.props}
+                />
               </div>
             </Col>
           </Row>
           <Row>
             <Col>
               <div className="action-fields">
-                <Button type="default">添加工作记录</Button>
+                <Button type="default" onClick={this.handleAdd}>添加工作记录</Button>
               </div>
             </Col>
           </Row>
@@ -178,12 +431,29 @@ class Worksheet extends React.Component {
             </Col>
           </Row>
         </Card>
+        <div className="console-item-modal">
+          <Modal
+            title={this.state.type === 'search'
+              ? '查看' : this.state.type === 'add'
+                ? '添加' : '更新'}
+            visible={this.state.visible}
+            onOk={this.handleOk}
+            onCancel={this.handleCancel}
+            footer={[]}
+          >
+            <ModalForm
+              {...this.state}
+              {...this.props}
+              onVisibleChange={this.onVisibleChange}
+            />
+          </Modal>
+        </div>
       </div>
     );
   }
 }
 
-const mapStateToProps  = (state) => {
+const mapStateToProps = (state) => {
   return {
     worksheets: worksheetSelector(state),
   };
@@ -192,6 +462,8 @@ const mapStateToProps  = (state) => {
 const mapDispatchToProps = {
   onViewInit,
   getWorksheet,
+  addWorksheet,
+  updateWorksheet,
 };
 
 const WorksheetForm = Form.create()(Worksheet);
