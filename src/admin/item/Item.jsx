@@ -46,6 +46,7 @@ const ModalForm = Form.create()((props) => {
     if (Array.isArray(e)) {
       return e;
     }
+    console.log(e);
     return e && e.fileList;
   };
   const tailFormItemLayout = {
@@ -63,7 +64,17 @@ const ModalForm = Form.create()((props) => {
   const handleModalSubmit = (e) => {
     e.preventDefault();
     props.form.validateFields((err, values) => {
+      console.log(values);
       if (!err) {
+        let realPath = values['modal-url'][0].url;
+        values['modal-url'].map((it, index) => {
+          if (values['modal-url'][index].response) {
+            const path = values['modal-url'][index].response.files.logo.path;
+            const lastIndex = path.lastIndexOf('\\');
+            realPath = 'http://localhost:3000/static/'.concat(path.substring(lastIndex + 1));
+          }
+          return true;
+        });
         switch (type) {
           case 'add':
             const itemObj = {
@@ -84,7 +95,7 @@ const ModalForm = Form.create()((props) => {
               send: values['modal-send'],
               detail: values['modal-detail'],
               position: values['modal-position'],
-              url: values['modal-url'][0].thumbUrl,
+              url: realPath,
             };
             props.addItem(itemObj, (params) => {
               props.addAction({
@@ -119,7 +130,7 @@ const ModalForm = Form.create()((props) => {
               send: values['modal-send'],
               detail: values['modal-detail'],
               position: values['modal-position'],
-              url: values['modal-url'][0].thumbUrl,
+              url: realPath,
             };
             props.updateItem(itemObj2, (params) => {
               props.addAction({
