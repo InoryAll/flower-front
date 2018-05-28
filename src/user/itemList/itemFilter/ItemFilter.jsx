@@ -13,7 +13,9 @@ class ItemFilter extends React.Component {
   static propTypes = {
     location: PropTypes.object.isRequired,
     items: PropTypes.object.isRequired,
+    itemList: PropTypes.object.isRequired,
     filtItemList: PropTypes.func.isRequired,
+    pagenationItemList: PropTypes.func.isRequired,
   };
   state = {
     filter: [],
@@ -26,6 +28,7 @@ class ItemFilter extends React.Component {
         });
         this.state.filter = [...new Set([...this.state.filter, this.props.location.query.condition])];
         this.props.filtItemList(this.state.filter);
+        this.props.pagenationItemList({ currentPage: 1, pageSize: 20, totalPage: this.props.itemList.totalPage });
       }
     }
   }
@@ -37,6 +40,7 @@ class ItemFilter extends React.Component {
         });
         this.state.filter = [...new Set([...this.state.filter, nextProps.location.query.condition])];
         this.props.filtItemList(this.state.filter);
+        this.props.pagenationItemList({ currentPage: 1, pageSize: 20, totalPage: nextProps.itemList.totalPage });
       }
     }
   }
@@ -46,6 +50,7 @@ class ItemFilter extends React.Component {
       filter: [...new Set([...this.state.filter, value])],
     });
     this.props.filtItemList(this.state.filter);
+    this.props.pagenationItemList({ currentPage: 1, pageSize: 20, totalPage: this.props.itemList.totalPage });
   };
   handleDeleteClick = (value) => {
     this.state.filter = this.state.filter.filter(item => item !== value);

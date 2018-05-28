@@ -42,8 +42,8 @@ class ItemPage extends React.Component {
     const { currentPage, pageSize } = this.state;
     const items = [];
     if (!_.isEmpty(itemList.data)) {
-      itemList.data.slice((currentPage - 1) * pageSize,
-      currentPage * pageSize).map((item, index) => {
+      itemList.data.slice(((itemList.currentPage || currentPage) - 1) * pageSize,
+        (itemList.currentPage || currentPage) * pageSize).map((item, index) => {
         items.push(<ItemSelf
           item={{
             data: { ...item },
@@ -74,7 +74,7 @@ class ItemPage extends React.Component {
             <Pagination
               onChange={this.onSizeChange}
               defaultCurrent={1}
-              current={currentPage || 1}
+              current={ itemList.currentPage || currentPage || 1}
               total={(itemList.data && itemList.data.length) || 1}
               pageSize={pageSize || 20}
             />
