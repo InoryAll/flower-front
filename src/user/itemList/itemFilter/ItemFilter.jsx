@@ -27,6 +27,15 @@ class ItemFilter extends React.Component {
       this.props.filtItemList(this.state.filter);
     }
   }
+  componentWillReceiveProps(nextProps) {
+    if (!_.isEqual(this.props.location.query.condition, nextProps.location.query.condition)) {
+      this.setState({
+        filter: [...this.state.filter, nextProps.location.query.condition],
+      });
+      this.state.filter = [...new Set([...this.state.filter, nextProps.location.query.condition])];
+      this.props.filtItemList(this.state.filter);
+    }
+  }
   onSearch = (attribute, value) => {
     this.state.filter = [...new Set([...this.state.filter, value])];
     this.setState({

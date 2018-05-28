@@ -15,9 +15,10 @@ class Navigation extends React.Component {
   };
   handleMenuClick = (menuItem) => {
     console.log('menu changed:', menuItem);
-    this.setState({
-      menuItem,
-    });
+    // this.setState({
+    //   menuItem,
+    // });
+    this.state.menuItem = menuItem;
     switch (menuItem) {
       case 'allFlower':
         browserHistory.push('/itemList');

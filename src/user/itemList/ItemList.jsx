@@ -4,6 +4,7 @@
  */
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
+import _ from 'lodash';
 import { onViewInit, filtItemList, pagenationItemList } from './action/action';
 import { validateLoginState } from '../../user/login/action/action';
 import { getItem, getCart, deleteGood, addGood } from '../../user/index/action/action';
