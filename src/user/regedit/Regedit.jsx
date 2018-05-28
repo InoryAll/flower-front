@@ -25,7 +25,7 @@ class Regedit extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div className="regedit">
         <Header />
         <RegeditBox {...this.props} />
         <Footer />
