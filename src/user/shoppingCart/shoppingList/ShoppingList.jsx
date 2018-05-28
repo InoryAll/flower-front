@@ -12,10 +12,13 @@ import './ShoppingList.less';
 class ShoppingList extends React.Component {
   static propTypes = {
     cart: PropTypes.object.isRequired,
+    selectCarts: PropTypes.object.isRequired,
     deleteGood: PropTypes.func.isRequired,
+    onSelect: PropTypes.func.isRequired,
   };
   state = {
     value: 1,
+    selectedRows: [],
   };
   onNumberChange = (value) => {
     console.log(value);
@@ -26,11 +29,14 @@ class ShoppingList extends React.Component {
   handleDelete = (item) => {
     this.props.deleteGood({ ...item });
   };
+  handleNext = () => {
+
+  };
   render() {
     const { cart } = this.props;
     let totalPrice = 0;
-    if (!_.isEmpty(cart.data)) {
-      cart.data.map((item, index) => {
+    if (!_.isEmpty(this.state.selectedRows)) {
+      this.state.selectedRows.map((item, index) => {
         totalPrice += parseFloat(item.itemPrice.split('￥')[1]) * parseInt(item.count);
         return true;
       });
@@ -75,6 +81,18 @@ class ShoppingList extends React.Component {
         <Link className="shoppinglist-table-delete" onClick={() => { this.handleDelete(record); }}>删除</Link>
       ),
     }];
+    const rowSelection = {
+      onChange: (selectedRowKeys, selectedRows) => {
+        this.setState({
+          selectedRows,
+        });
+        this.props.onSelect([...selectedRows]);
+      },
+      getCheckboxProps: record => ({
+        disabled: record.name === 'Disabled User', // Column configuration not to be checked
+        name: record.name,
+      }),
+    };
     return (
       <div className="shoppinglist">
         <Row>
@@ -91,6 +109,7 @@ class ShoppingList extends React.Component {
               <Table
                 columns={columns}
                 dataSource={cart.data || []}
+                rowSelection={rowSelection}
                 pagination={false}
               />
               <div className="shoppinglist-table-total">
@@ -102,7 +121,7 @@ class ShoppingList extends React.Component {
         <Row>
           <Col>
             <div className="shoppinglist-next clearfix">
-              <Link className="shoppinglist-next-btn" to="/checkInfo">
+              <Link className="shoppinglist-next-btn" onClick={this.handleNext} to="/checkInfo">
                 下一步，填写核对购物信息
               </Link>
             </div>

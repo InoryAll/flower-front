@@ -15,7 +15,7 @@ class ShoppingCode extends React.Component {
   };
   handleFinish = () => {
     if (!_.isEmpty(this.props.order) && !_.isEmpty(this.props.order.data)) {
-      this.props.updateOrder({ _id: this.props.order.data[0]._id });
+      this.props.updateOrder({ ...this.props.order.data[0] });
     }
   };
   render() {

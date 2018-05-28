@@ -4,3 +4,4 @@
  * */
 
 export const SHOPPING_CART_VIEW_INIT = 'SHOPPING_CART_VIEW_INIT';
+export const SELECT_ITEMS = 'SELECT_ITEMS';

@@ -5,7 +5,8 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import Cookie from '../../common/cookie';
-import { onViewInit } from './action/action';
+import { onViewInit, onSelect } from './action/action';
+import { selectCartsSelector } from './selector/selector';
 import { validateLoginState } from '../../user/login/action/action';
 import { userSelector } from '../../user/login/selector/selector';
 import { getCart, deleteGood } from '../../user/index/action/action';
@@ -19,10 +20,12 @@ class ShoppingCart extends React.Component {
   static propTypes = {
     user: PropTypes.object.isRequired,
     cart: PropTypes.object.isRequired,
+    selectCarts: PropTypes.object.isRequired,
     validateLoginState: PropTypes.func.isRequired,
     getCart: PropTypes.func.isRequired,
     onViewInit: PropTypes.func.isRequired,
     deleteGood: PropTypes.func.isRequired,
+    onSelect: PropTypes.func.isRequired,
   };
   componentWillMount() {
     this.props.onViewInit();
@@ -45,6 +48,7 @@ const mapStateToProps = (state) => {
   return {
     user: userSelector(state),
     cart: cartSelector(state),
+    selectCarts: selectCartsSelector(state),
   };
 };
 
@@ -53,6 +57,7 @@ const mapDispatchToProps = {
   getCart,
   onViewInit,
   deleteGood,
+  onSelect,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ShoppingCart);

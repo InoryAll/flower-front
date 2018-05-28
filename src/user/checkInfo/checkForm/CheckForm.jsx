@@ -16,6 +16,7 @@ class CheckForm extends React.Component {
   static propTypes = {
     cart: PropTypes.object.isRequired,
     order: PropTypes.object.isRequired,
+    selectCarts: PropTypes.object.isRequired,
     addOrder: PropTypes.func.isRequired,
   };
   state = {
@@ -30,8 +31,8 @@ class CheckForm extends React.Component {
   handleOrderAdd = () => {
     let params = {};
     let totalPrice = 0;
-    if (!_.isEmpty(this.props.cart.data)) {
-      this.props.cart.data.map((item, index) => {
+    if (!_.isEmpty(this.props.selectCarts)) {
+      this.props.selectCarts.map((item, index) => {
         totalPrice += parseFloat(item.itemTotalPrice.split('￥')[1]);
         return true;
       });
@@ -43,7 +44,7 @@ class CheckForm extends React.Component {
     params = { ...params,
       date: moment(this.state.date).format('YYYY-MM-DD HH:mm:ss'),
       payWay: this.state.payWay,
-      itemList: this.props.cart ? this.props.cart.data : [],
+      itemList: this.props.selectCarts ? this.props.selectCarts : [],
       status: 0,
       totalPrice,
       timestamp: new Date().getTime(),
@@ -74,10 +75,10 @@ class CheckForm extends React.Component {
   };
   render() {
     const { payWay } = this.state;
-    const { cart } = this.props;
+    const { selectCarts } = this.props;
     let totalPrice = 0;
-    if (!_.isEmpty(cart.data)) {
-      cart.data.map((item, index) => {
+    if (!_.isEmpty(selectCarts)) {
+      selectCarts.map((item, index) => {
         totalPrice += parseFloat(item.itemTotalPrice.split('￥')[1]);
         return true;
       });
@@ -170,7 +171,7 @@ class CheckForm extends React.Component {
                 <div className="checkform-list-table">
                   <Table
                     columns={columns}
-                    dataSource={cart.data || []}
+                    dataSource={selectCarts || []}
                     pagination={false}
                   />
                 </div>

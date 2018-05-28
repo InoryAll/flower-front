@@ -6,6 +6,7 @@ import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import Cookie from '../../common/cookie';
 import { onViewInit, addOrder } from './action/action';
+import { selectCartsSelector } from '../shoppingCart/selector/selector';
 import { validateLoginState } from '../../user/login/action/action';
 import { getCart } from '../../user/index/action/action';
 import { userSelector } from '../../user/login/selector/selector';
@@ -20,6 +21,7 @@ class CheckInfo extends React.Component {
   static propTypes = {
     user: PropTypes.object.isRequired,
     cart: PropTypes.object.isRequired,
+    selectCarts: PropTypes.object.isRequired,
     validateLoginState: PropTypes.func.isRequired,
     onViewInit: PropTypes.func.isRequired,
     getCart: PropTypes.func.isRequired,
@@ -47,6 +49,7 @@ const mapStateToProps = (state) => {
     user: userSelector(state),
     cart: cartSelector(state),
     order: orderSelector(state),
+    selectCarts: selectCartsSelector(state),
   };
 };
 

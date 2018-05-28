@@ -14,6 +14,7 @@ import {
 } from '../constant/constant';
 import { getOrderApi, addOrderApi, updateOrderApi } from '../../../api/orderApi';
 import { getAllOrders } from '../../../user/userInfo/action/action';
+import { deleteGood } from '../../../user/index/action/action';
 
 const onViewInitAction = createAction(CHECK_INFO_VIEW_INIT);
 const getOrderAction = createAction(GET_ORDER);
@@ -65,26 +66,6 @@ export const addOrder = (params) => {
 };
 
 /**
- * 更新订单
- */
-export const updateOrder = (params) => {
-  return (dispatch) => {
-    updateOrderApi(JSON.stringify({ condition: { _id: params._id }, obj: { status: 1 } }), (data) => {
-      if (data.code === 1) {
-        dispatch(updateOrderAction({ data }));
-        getOrder({ _id: params._id })(dispatch);
-        message.success('订单付款成功！');
-        browserHistory.push('/result');
-      } else {
-        message.error('订单付款失败！');
-      }
-    }, (err) => {
-      message.error(err);
-    });
-  };
-};
-
-/**
  * 删除订单
  */
 export const deleteOrder = (params) => {
@@ -96,6 +77,32 @@ export const deleteOrder = (params) => {
         message.success('订单删除成功！');
       } else {
         message.error('订单删除失败！');
+      }
+    }, (err) => {
+      message.error(err);
+    });
+  };
+};
+
+/**
+ * 更新订单
+ */
+export const updateOrder = (params) => {
+  return (dispatch) => {
+    updateOrderApi(JSON.stringify({ condition: { _id: params._id }, obj: { status: 1 } }), (data) => {
+      if (data.code === 1) {
+        dispatch(updateOrderAction({ data }));
+        getOrder({ _id: params._id })(dispatch);
+        message.success('订单付款成功！');
+        params.itemList.map((item, index) => {
+          deleteGood(item)(dispatch);
+          return true;
+        });
+        setTimeout(() => {
+          browserHistory.push('/result');
+        }, 300);
+      } else {
+        message.error('订单付款失败！');
       }
     }, (err) => {
       message.error(err);
