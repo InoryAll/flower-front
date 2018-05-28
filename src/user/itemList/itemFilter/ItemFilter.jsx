@@ -20,20 +20,24 @@ class ItemFilter extends React.Component {
   };
   componentWillMount() {
     if (!_.isUndefined(this.props.location.query.condition)) {
-      this.setState({
-        filter: [...this.state.filter, this.props.location.query.condition],
-      });
-      this.state.filter = [...new Set([...this.state.filter, this.props.location.query.condition])];
-      this.props.filtItemList(this.state.filter);
+      if (!_.isEmpty(this.props.location.query.condition)) {
+        this.setState({
+          filter: [...this.state.filter, this.props.location.query.condition],
+        });
+        this.state.filter = [...new Set([...this.state.filter, this.props.location.query.condition])];
+        this.props.filtItemList(this.state.filter);
+      }
     }
   }
   componentWillReceiveProps(nextProps) {
     if (!_.isEqual(this.props.location.query.condition, nextProps.location.query.condition)) {
-      this.setState({
-        filter: [...this.state.filter, nextProps.location.query.condition],
-      });
-      this.state.filter = [...new Set([...this.state.filter, nextProps.location.query.condition])];
-      this.props.filtItemList(this.state.filter);
+      if (!_.isEmpty(nextProps.location.query.condition)) {
+        this.setState({
+          filter: [...this.state.filter, nextProps.location.query.condition],
+        });
+        this.state.filter = [...new Set([...this.state.filter, nextProps.location.query.condition])];
+        this.props.filtItemList(this.state.filter);
+      }
     }
   }
   onSearch = (attribute, value) => {
