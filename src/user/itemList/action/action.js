@@ -35,9 +35,10 @@ export const filtItemList = (params) => {
       filterData = items.data.filter(item => params.every(param => JSON.stringify(item).indexOf(param) > -1));
     }
     if (_.isEmpty(params[0])) {
-      filterData = items;
+      filterData = items.data;
     }
-    dispatch(onFiltItemListAction({ ...items, data: filterData }));
+    const formatData = { ...items, data: filterData };
+    dispatch(onFiltItemListAction({ data: formatData }));
   };
 };
 

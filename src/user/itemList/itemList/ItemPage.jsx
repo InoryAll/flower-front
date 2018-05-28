@@ -50,7 +50,7 @@ class ItemPage extends React.Component {
             link: `/itemDetail?id=${item._id}`,
             img: item.url,
             title: item.name,
-            description: item.description || '暂无描述*************************************',
+            description: item.meaning.substring(0, 24).concat('...') || '暂无描述*************************************',
             nowPrice: item.nowPrice,
             prePrice: item.prePrice,
             sales: item.count || '暂无',
