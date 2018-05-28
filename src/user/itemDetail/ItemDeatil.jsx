@@ -42,7 +42,7 @@ class ItemDeatil extends React.Component {
     this.props.getCart({ _id: Cookie.getCookie('_id') });
     if (!_.isEmpty(this.props.location.query.id)) {
       this.props.getSingleItem({ _id: this.props.location.query.id });
-      this.props.getItemComment(this.props.item.data);
+      this.props.getItemComment({ itemId: this.props.location.query.id });
     }
   }
   render() {

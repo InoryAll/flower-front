@@ -95,15 +95,15 @@ class ItemOther extends React.Component {
               <Row>
                 <Col span={4}>
                   <div className="itemother-comment-total-left">
-                    <span className="itemother-comment-total-left-span"><strong className="itemother-comment-total-left-span-strong">{comment.data && 100 * parseFloat(comment.data.filter(item => item.level === '5').length / comment.data.length).toFixed(2)}</strong>%</span>
+                    <span className="itemother-comment-total-left-span"><strong className="itemother-comment-total-left-span-strong">{!_.isEmpty(comment.data) ? 100 * parseFloat(comment.data.filter(item => item.level === '5').length / comment.data.length).toFixed(2) : 0}</strong>%</span>
                     好评
                   </div>
                 </Col>
                 <Col span={16}>
                   <ul className="itemother-comment-total-center">
-                    <li className="itemother-comment-total-center-li">好评({comment.data && 100 * parseFloat(comment.data.filter(item => item.level === '5').length / comment.data.length).toFixed(2)}%)<span className="itemother-comment-total-center-li-span"><Progress showInfo={false} percent={100} size="small" /></span></li>
-                    <li className="itemother-comment-total-center-li">中评({comment.data && 100 * parseFloat(comment.data.filter(item => item.level >= 3 && item.level < 5).length / comment.data.length).toFixed(2)}%)<span className="itemother-comment-total-center-li-span"><Progress showInfo={false} percent={0} size="small" /></span></li>
-                    <li className="itemother-comment-total-center-li">差评({comment.data && 100 * parseFloat(comment.data.filter(item => item.level < 3).length / comment.data.length).toFixed(2)}%)<span className="itemother-comment-total-center-li-span"><Progress showInfo={false} percent={0} size="small" /></span></li>
+                    <li className="itemother-comment-total-center-li">好评({!_.isEmpty(comment.data) ? 100 * parseFloat(comment.data.filter(item => item.level === '5').length / comment.data.length).toFixed(2) : 0}%)<span className="itemother-comment-total-center-li-span"><Progress showInfo={false} percent={!_.isEmpty(comment.data) ? 100 * parseFloat(comment.data.filter(item => item.level === '5').length / comment.data.length).toFixed(2) : 0} size="small" /></span></li>
+                    <li className="itemother-comment-total-center-li">中评({!_.isEmpty(comment.data) ? 100 * parseFloat(comment.data.filter(item => item.level >= 3 && item.level < 5).length / comment.data.length).toFixed(2) : 0}%)<span className="itemother-comment-total-center-li-span"><Progress showInfo={false} percent={!_.isEmpty(comment.data) ? 100 * parseFloat(comment.data.filter(item => item.level >= 3 && item.level < 5).length / comment.data.length).toFixed(2) : 0} size="small" /></span></li>
+                    <li className="itemother-comment-total-center-li">差评({!_.isEmpty(comment.data) ? 100 * parseFloat(comment.data.filter(item => item.level < 3).length / comment.data.length).toFixed(2) : 0}%)<span className="itemother-comment-total-center-li-span"><Progress showInfo={false} percent={!_.isEmpty(comment.data) ? 100 * parseFloat(comment.data.filter(item => item.level < 3).length / comment.data.length).toFixed(2) : 0} size="small" /></span></li>
                   </ul>
                 </Col>
                 <Col span={4}>
