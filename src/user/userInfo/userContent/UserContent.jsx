@@ -3,7 +3,7 @@
  * Created by tianrenjie on 2018/5/6
  */
 import React, { PropTypes } from 'react';
-import { Row, Col, Tabs, Avatar, DatePicker, Table } from 'antd';
+import { Row, Col, Tabs, Avatar, DatePicker, Table, Form, Radio, Modal, Select, Input, Button } from 'antd';
 import moment from 'moment';
 import $ from 'jquery';
 import _ from 'lodash';
@@ -13,11 +13,19 @@ import img from '../../../../static/img/itemList/1.jpg';
 import './UserContent.less';
 
 const TabPane = Tabs.TabPane;
+const FormItem = Form.Item;
+const Option = Select.Option;
+const confirm = Modal.confirm;
+const RadioGroup = Radio.Group;
+const RangePicker = DatePicker.RangePicker;
+
 class UserContent extends React.Component {
   static propTypes = {
     user: PropTypes.object.isRequired,
+    form: PropTypes.object.isRequired,
     updateUser: PropTypes.func.isRequired,
     deleteOrder: PropTypes.func.isRequired,
+    getAllOrders: PropTypes.func.isRequired,
     orderList: PropTypes.object.isRequired,
   };
   state = {
@@ -28,9 +36,6 @@ class UserContent extends React.Component {
     if (!_.isUndefined(this.props.orderList.data) && !_.isEqual(this.props.orderList.data, nextProps.orderList.data)) {
       $('.usercontent-pannel-basic').hide();
       $('.usercontent-pannel-order').show();
-    } else {
-      $('.usercontent-pannel-basic').show();
-      $('.usercontent-pannel-order').hide();
     }
     if (!_.isUndefined(this.props.user.birthday)) {
       this.setState({
@@ -68,8 +73,46 @@ class UserContent extends React.Component {
       $('.usercontent-pannel-order').show();
     }
   };
+  handleSubmit = (e) => {
+    e.preventDefault();
+    this.props.form.validateFields((err, values) => {
+      if (!err) {
+        let formatValues = {};
+        const formatValues2 = {};
+        _.mapKeys(values, (value, key) => {
+          if (!_.isEmpty(value)) {
+            formatValues2[key] = value;
+          }
+        });
+        if (!_.isEmpty(values.timestamp)) {
+          formatValues = {
+            $and: [
+              {
+                timestamp: {
+                  $gt: moment(values.timestamp[0]).valueOf(),
+                },
+              },
+              {
+                timestamp: {
+                  $lt: moment(values.timestamp[1]).valueOf(),
+                },
+              },
+            ],
+          };
+          // eslint-disable-next-line
+          delete values.timestamp;
+          formatValues.$and = [...formatValues.$and, ...formatValues2];
+        } else {
+          formatValues = { ...formatValues2 };
+        }
+        console.log(formatValues);
+        this.props.getAllOrders({ ...formatValues });
+      }
+    });
+  };
   render() {
     const { user, orderList } = this.props;
+    const { getFieldDecorator } = this.props.form;
     $('#username').val(user.username);
     $('#email').val(user.email);
     $('#name').val(user.name);
@@ -109,6 +152,10 @@ class UserContent extends React.Component {
       },
     }];
     const columns = [{
+      title: '订单id',
+      dataIndex: '_id',
+      key: '_id',
+    }, {
       title: '商品',
       dataIndex: 'item',
       key: 'item',
@@ -145,6 +192,13 @@ class UserContent extends React.Component {
         }
       },
     }, {
+      title: '订单时间',
+      dataIndex: 'timestamp',
+      key: 'timestamp',
+      render: (text, record) => {
+        return !_.isUndefined(text) && moment(parseInt(text)).format('YYYY-MM-DD HH:mm:ss');
+      },
+    }, {
       title: '操作',
       key: 'action',
       render: (text, record) => {
@@ -155,6 +209,34 @@ class UserContent extends React.Component {
         );
       },
     }];
+    const formItemLayout = {
+      labelCol: {
+        sm: { span: 8 },
+      },
+      wrapperCol: {
+        sm: { span: 16 },
+      },
+    };
+    const modalFormLayout = {
+      labelCol: {
+        sm: { span: 7 },
+      },
+      wrapperCol: {
+        sm: { span: 10 },
+      },
+    };
+    const tailFormItemLayout = {
+      wrapperCol: {
+        xs: {
+          span: 24,
+          offset: 0,
+        },
+        sm: {
+          span: 16,
+          offset: 7,
+        },
+      },
+    };
     return (
       <div className="usercontent">
         <Row className="usercontent-row">
@@ -252,6 +334,48 @@ class UserContent extends React.Component {
                 </Row>
                 <Row>
                   <Col>
+                    <div className="form-search-fields">
+                      <Form onSubmit={this.handleSubmit} layout="inline">
+                        <Row className="form-search-fields-row">
+                          <Col span={8}>
+                            <FormItem
+                              label="订单id"
+                              {...formItemLayout}
+                            >
+                              {getFieldDecorator('_id', {
+                              })(
+                                <Input placeholder="输入订单id" />
+                              )}
+                            </FormItem>
+                          </Col>
+                          <Col span={16}>
+                            <FormItem
+                              {...formItemLayout}
+                              label="最后修改时间"
+                            >
+                              {getFieldDecorator('timestamp', {
+                              })(
+                                <RangePicker
+                                  showTime
+                                  format="YYYY-MM-DD HH:mm:ss"
+                                />
+                              )}
+                            </FormItem>
+                          </Col>
+                        </Row>
+                        <Row>
+                          <Col span={8} offset={16}>
+                            <FormItem className="form-search-fields-search">
+                              <Button className="form-search-fields-search-btn" htmlType="submit" type="primary" icon="search">搜索</Button>
+                            </FormItem>
+                          </Col>
+                        </Row>
+                      </Form>
+                    </div>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col>
                     <div className="usercontent-pannel-order-table">
                       <Table
                         columns={columns}
@@ -273,4 +397,4 @@ class UserContent extends React.Component {
   }
 }
 
-export default UserContent;
+export default Form.create()(UserContent);
