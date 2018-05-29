@@ -40,11 +40,11 @@ class ForthFloor extends React.Component {
           <Col className="clearfix forthfloor-title">
             <h3 className="forthfloor-h">4F 花篮绿植</h3>
             <ul className="forthfloor-title-ul">
-              <li className="forthfloor-title-ul-li"><Link onClick={() => { this.onSearch('basket', 'default'); }} className={this.state.menuItem === 'default' ? 'forthfloor-title-ul-li-a active' : 'forthfloor-title-ul-li-a'} to="#">精选热卖</Link></li>
-              <li className="forthfloor-title-ul-li"><Link onClick={() => { this.onSearch('basket', 'opening'); }} className={this.state.menuItem === 'chineseValentine' ? 'forthfloor-title-ul-li-a active' : 'forthfloor-title-ul-li-a'} to="#">开业花篮</Link></li>
-              <li className="forthfloor-title-ul-li"><Link onClick={() => { this.onSearch('basket', 'rich'); }} className={this.state.menuItem === 'valentine' ? 'forthfloor-title-ul-li-a active' : 'forthfloor-title-ul-li-a'} to="#">绿植发财树</Link></li>
-              <li className="forthfloor-title-ul-li"><Link onClick={() => { this.onSearch('basket', 'table'); }} className={this.state.menuItem === 'bachelor' ? 'forthfloor-title-ul-li-a active' : 'forthfloor-title-ul-li-a'} to="#">精美桌花</Link></li>
-              <li className="forthfloor-title-ul-li"><Link onClick={() => { this.onSearch('basket', 'death'); }} className={this.state.menuItem === 'christmas' ? 'forthfloor-title-ul-li-a active' : 'forthfloor-title-ul-li-a'} to="#">祭奠花篮</Link></li>
+              <li className="forthfloor-title-ul-li"><Link onClick={() => { this.onSearch('basket', 'default'); }} className={this.state.menuItem === 'default' ? 'forthfloor-title-ul-li-a active' : 'forthfloor-title-ul-li-a'} to="/itemList?condition=hotSale">精选热卖</Link></li>
+              <li className="forthfloor-title-ul-li"><Link onClick={() => { this.onSearch('basket', 'opening'); }} className={this.state.menuItem === 'chineseValentine' ? 'forthfloor-title-ul-li-a active' : 'forthfloor-title-ul-li-a'} to="/itemList?condition=basket">开业花篮</Link></li>
+              <li className="forthfloor-title-ul-li"><Link onClick={() => { this.onSearch('basket', 'rich'); }} className={this.state.menuItem === 'valentine' ? 'forthfloor-title-ul-li-a active' : 'forthfloor-title-ul-li-a'} to="/itemList?condition=tree">绿植发财树</Link></li>
+              <li className="forthfloor-title-ul-li"><Link onClick={() => { this.onSearch('basket', 'table'); }} className={this.state.menuItem === 'bachelor' ? 'forthfloor-title-ul-li-a active' : 'forthfloor-title-ul-li-a'} to="/itemList?condition=table">精美桌花</Link></li>
+              <li className="forthfloor-title-ul-li"><Link onClick={() => { this.onSearch('basket', 'death'); }} className={this.state.menuItem === 'christmas' ? 'forthfloor-title-ul-li-a active' : 'forthfloor-title-ul-li-a'} to="/itemList?condition=death">祭奠花篮</Link></li>
             </ul>
           </Col>
         </Row>
@@ -52,24 +52,28 @@ class ForthFloor extends React.Component {
           <Col span={4}>
             <FloorSpecific
               top={{ img: specific1 }}
-              middle={{ bg: '#a6c7ec', url: '/itemList', text: '花篮绿植' }}
+              middle={{ bg: '#a6c7ec', url: '/itemList?condition=forthFloor', text: '花篮绿植' }}
               bottom={{ bg: '#d4e9ff',
                 data: [{
                   text: '开业花篮',
                   attribute: 'basket',
                   value: 'opening',
+                  url: '/itemList?condition=basket',
                 }, {
                   text: '绿植发财树',
-                  attribute: 'basket',
+                  attribute: 'tree',
                   value: 'rich',
+                  url: '/itemList?condition=tree',
                 }, {
                   text: '精美桌花',
-                  attribute: 'basket',
+                  attribute: 'table',
                   value: 'table',
+                  url: '/itemList?condition=table',
                 }, {
                   text: '祭奠花篮',
-                  attribute: 'basket',
+                  attribute: 'death',
                   value: 'death',
+                  url: '/itemList?condition=death',
                 }] }}
             />
           </Col>

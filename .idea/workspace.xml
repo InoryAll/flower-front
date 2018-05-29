@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08c3298d-d019-4401-abb2-96f78fb0689a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/index/firstFloor/FirstFloor.jsx" afterPath="$PROJECT_DIR$/src/user/index/firstFloor/FirstFloor.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/index/firstFloor/floorSpecific/FloorSpecific.jsx" afterPath="$PROJECT_DIR$/src/user/index/firstFloor/floorSpecific/FloorSpecific.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/index/hotSale/HotSale.jsx" afterPath="$PROJECT_DIR$/src/user/index/hotSale/HotSale.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/index/secondFloor/SecondFloor.jsx" afterPath="$PROJECT_DIR$/src/user/index/secondFloor/SecondFloor.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/itemDetail/itemInfo/ItemInfo.less" afterPath="$PROJECT_DIR$/src/user/itemDetail/itemInfo/ItemInfo.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/itemList/itemFilter/ItemFilter.jsx" afterPath="$PROJECT_DIR$/src/user/itemList/itemFilter/ItemFilter.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/index/forthFloor/ForthFloor.jsx" afterPath="$PROJECT_DIR$/src/user/index/forthFloor/ForthFloor.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user/index/thirdFloor/ThirdFloor.jsx" afterPath="$PROJECT_DIR$/src/user/index/thirdFloor/ThirdFloor.jsx" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,18 +18,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ItemOther.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/user/itemDetail/itemOther/ItemOther.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="99" column="24" lean-forward="true" selection-start-line="99" selection-start-column="24" selection-end-line="99" selection-end-column="24" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="FirstFloor.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/user/index/firstFloor/FirstFloor.jsx">
           <provider selected="true" editor-type-id="text-editor">
@@ -58,11 +42,47 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HotSale.jsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HotSale.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/user/index/hotSale/HotSale.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-560">
-              <caret line="43" column="23" lean-forward="true" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
+            <state relative-caret-position="455">
+              <caret line="72" column="92" lean-forward="false" selection-start-line="72" selection-start-column="92" selection-end-line="72" selection-end-column="92" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ThirdFloor.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/user/index/thirdFloor/ThirdFloor.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1050">
+              <caret line="62" column="30" lean-forward="true" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ForthFloor.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/user/index/forthFloor/ForthFloor.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="560">
+              <caret line="49" column="14" lean-forward="true" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DailySale.jsx" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/user/index/dailySale/DailySale.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="269">
+              <caret line="69" column="14" lean-forward="true" selection-start-line="69" selection-start-column="14" selection-end-line="69" selection-end-column="14" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -105,21 +125,10 @@
       <file leaf-file-name="setting.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/common/setting.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="239" column="23" lean-forward="true" selection-start-line="239" selection-start-column="23" selection-end-line="239" selection-end-column="23" />
+            <state relative-caret-position="372">
+              <caret line="35" column="18" lean-forward="true" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
               <folding>
                 <element signature="n#!!doc;n#Settings#0" expanded="false" />
-                <element signature="e#116#664#0" expanded="false" />
-                <element signature="e#117#166#0" expanded="false" />
-                <element signature="e#168#221#0" expanded="false" />
-                <element signature="e#223#276#0" expanded="false" />
-                <element signature="e#278#333#0" expanded="false" />
-                <element signature="e#335#389#0" expanded="false" />
-                <element signature="e#391#443#0" expanded="false" />
-                <element signature="e#445#497#0" expanded="false" />
-                <element signature="e#499#552#0" expanded="false" />
-                <element signature="e#554#613#0" expanded="false" />
-                <element signature="e#615#663#0" expanded="false" />
                 <element signature="e#1183#1486#0" expanded="false" />
                 <element signature="e#1184#1241#0" expanded="false" />
                 <element signature="e#1243#1302#0" expanded="false" />
@@ -135,14 +144,6 @@
                 <element signature="e#1762#1813#0" expanded="false" />
                 <element signature="e#1815#1863#0" expanded="false" />
                 <element signature="e#1865#1915#0" expanded="false" />
-                <element signature="e#2055#2104#0" expanded="false" />
-                <element signature="e#2106#2156#0" expanded="false" />
-                <element signature="e#2158#2210#0" expanded="false" />
-                <element signature="e#2212#2265#0" expanded="false" />
-                <element signature="e#2267#2328#0" expanded="false" />
-                <element signature="e#2330#2386#0" expanded="false" />
-                <element signature="e#2388#2438#0" expanded="false" />
-                <element signature="e#2440#2491#0" expanded="false" />
                 <element signature="e#2512#3136#0" expanded="false" />
                 <element signature="e#2513#2557#0" expanded="false" />
                 <element signature="e#2559#2605#0" expanded="false" />
@@ -157,17 +158,6 @@
                 <element signature="e#2991#3037#0" expanded="false" />
                 <element signature="e#3039#3085#0" expanded="false" />
                 <element signature="e#3087#3135#0" expanded="false" />
-                <element signature="e#3154#3682#0" expanded="false" />
-                <element signature="e#3155#3203#0" expanded="false" />
-                <element signature="e#3205#3254#0" expanded="false" />
-                <element signature="e#3256#3306#0" expanded="false" />
-                <element signature="e#3308#3359#0" expanded="false" />
-                <element signature="e#3361#3416#0" expanded="false" />
-                <element signature="e#3418#3466#0" expanded="false" />
-                <element signature="e#3468#3520#0" expanded="false" />
-                <element signature="e#3522#3578#0" expanded="false" />
-                <element signature="e#3580#3631#0" expanded="false" />
-                <element signature="e#3633#3681#0" expanded="false" />
                 <element signature="e#3701#4157#0" expanded="false" />
                 <element signature="e#3702#3748#0" expanded="false" />
                 <element signature="e#3750#3797#0" expanded="false" />
@@ -224,28 +214,6 @@
                 <element signature="e#7299#7337#0" expanded="false" />
                 <element signature="e#7401#7498#0" expanded="false" />
                 <element signature="e#7435#7473#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FloorSpecific.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/user/index/firstFloor/floorSpecific/FloorSpecific.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="18" column="12" lean-forward="true" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ItemComment.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/user/itemDetail/itemOther/itemComment/ItemComment.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-525">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -332,8 +300,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/api/worksheetApi.js" />
-        <option value="$PROJECT_DIR$/src/admin/worksheet/constant/constant.js" />
         <option value="$PROJECT_DIR$/src/api/actionApi.js" />
         <option value="$PROJECT_DIR$/src/admin/action/constant/constant.js" />
         <option value="$PROJECT_DIR$/src/admin/action/action/action.js" />
@@ -383,6 +349,8 @@
         <option value="$PROJECT_DIR$/src/user/itemDetail/itemInfo/ItemInfo.less" />
         <option value="$PROJECT_DIR$/src/user/index/hotSale/HotSale.jsx" />
         <option value="$PROJECT_DIR$/src/user/itemList/itemFilter/ItemFilter.jsx" />
+        <option value="$PROJECT_DIR$/src/user/index/thirdFloor/ThirdFloor.jsx" />
+        <option value="$PROJECT_DIR$/src/user/index/forthFloor/ForthFloor.jsx" />
       </list>
     </option>
   </component>
@@ -652,7 +620,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="secondFloor" />
+              <option name="myItemId" value="thirdFloor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -678,7 +646,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="hotSale" />
+              <option name="myItemId" value="forthFloor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -704,7 +672,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="firstFloor" />
+              <option name="myItemId" value="dailySale" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1020,12 +988,12 @@
       <workItem from="1527132913393" duration="21131000" />
       <workItem from="1527228220913" duration="2698000" />
       <workItem from="1527406836163" duration="615000" />
-      <workItem from="1527475427268" duration="23475000" />
+      <workItem from="1527475427268" duration="24312000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="603242000" />
+    <option name="totallyTimeSpent" value="604079000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1084,32 +1052,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/user/shoppingFinish/action/action.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-658">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/shoppingCart/shoppingList/ShoppingList.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/shoppingCart/constant/constant.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="6" column="43" lean-forward="true" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/user/userInfo/userContent/UserContent.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="317">
@@ -1570,23 +1512,78 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/user/index/firstFloor/FirstFloor.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="56" column="24" lean-forward="true" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/user/index/secondFloor/SecondFloor.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="56" column="24" lean-forward="true" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/user/itemDetail/ItemDetail.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/user/itemDetail/itemInfo/ItemInfo.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/user/itemList/itemFilter/ItemFilter.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="177" column="54" lean-forward="true" selection-start-line="177" selection-start-column="54" selection-end-line="177" selection-end-column="54" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/user/index/hotSale/HotSale.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="72" column="92" lean-forward="false" selection-start-line="72" selection-start-column="92" selection-end-line="72" selection-end-column="92" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/user/index/thirdFloor/ThirdFloor.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1050">
+          <caret line="62" column="30" lean-forward="true" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/common/setting.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="239" column="23" lean-forward="true" selection-start-line="239" selection-start-column="23" selection-end-line="239" selection-end-column="23" />
+        <state relative-caret-position="372">
+          <caret line="35" column="18" lean-forward="true" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
           <folding>
             <element signature="n#!!doc;n#Settings#0" expanded="false" />
-            <element signature="e#116#664#0" expanded="false" />
-            <element signature="e#117#166#0" expanded="false" />
-            <element signature="e#168#221#0" expanded="false" />
-            <element signature="e#223#276#0" expanded="false" />
-            <element signature="e#278#333#0" expanded="false" />
-            <element signature="e#335#389#0" expanded="false" />
-            <element signature="e#391#443#0" expanded="false" />
-            <element signature="e#445#497#0" expanded="false" />
-            <element signature="e#499#552#0" expanded="false" />
-            <element signature="e#554#613#0" expanded="false" />
-            <element signature="e#615#663#0" expanded="false" />
             <element signature="e#1183#1486#0" expanded="false" />
             <element signature="e#1184#1241#0" expanded="false" />
             <element signature="e#1243#1302#0" expanded="false" />
@@ -1602,14 +1599,6 @@
             <element signature="e#1762#1813#0" expanded="false" />
             <element signature="e#1815#1863#0" expanded="false" />
             <element signature="e#1865#1915#0" expanded="false" />
-            <element signature="e#2055#2104#0" expanded="false" />
-            <element signature="e#2106#2156#0" expanded="false" />
-            <element signature="e#2158#2210#0" expanded="false" />
-            <element signature="e#2212#2265#0" expanded="false" />
-            <element signature="e#2267#2328#0" expanded="false" />
-            <element signature="e#2330#2386#0" expanded="false" />
-            <element signature="e#2388#2438#0" expanded="false" />
-            <element signature="e#2440#2491#0" expanded="false" />
             <element signature="e#2512#3136#0" expanded="false" />
             <element signature="e#2513#2557#0" expanded="false" />
             <element signature="e#2559#2605#0" expanded="false" />
@@ -1624,17 +1613,6 @@
             <element signature="e#2991#3037#0" expanded="false" />
             <element signature="e#3039#3085#0" expanded="false" />
             <element signature="e#3087#3135#0" expanded="false" />
-            <element signature="e#3154#3682#0" expanded="false" />
-            <element signature="e#3155#3203#0" expanded="false" />
-            <element signature="e#3205#3254#0" expanded="false" />
-            <element signature="e#3256#3306#0" expanded="false" />
-            <element signature="e#3308#3359#0" expanded="false" />
-            <element signature="e#3361#3416#0" expanded="false" />
-            <element signature="e#3418#3466#0" expanded="false" />
-            <element signature="e#3468#3520#0" expanded="false" />
-            <element signature="e#3522#3578#0" expanded="false" />
-            <element signature="e#3580#3631#0" expanded="false" />
-            <element signature="e#3633#3681#0" expanded="false" />
             <element signature="e#3701#4157#0" expanded="false" />
             <element signature="e#3702#3748#0" expanded="false" />
             <element signature="e#3750#3797#0" expanded="false" />
@@ -1695,56 +1673,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/index/firstFloor/FirstFloor.jsx">
+    <entry file="file://$PROJECT_DIR$/src/user/index/forthFloor/ForthFloor.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="56" column="24" lean-forward="true" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
+        <state relative-caret-position="560">
+          <caret line="49" column="14" lean-forward="true" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/index/secondFloor/SecondFloor.jsx">
+    <entry file="file://$PROJECT_DIR$/src/user/index/dailySale/DailySale.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="56" column="24" lean-forward="true" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/itemDetail/ItemDetail.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/itemDetail/itemInfo/ItemInfo.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/itemList/itemFilter/ItemFilter.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="177" column="54" lean-forward="true" selection-start-line="177" selection-start-column="54" selection-end-line="177" selection-end-column="54" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/index/hotSale/HotSale.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-560">
-          <caret line="43" column="23" lean-forward="true" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
+        <state relative-caret-position="269">
+          <caret line="69" column="14" lean-forward="true" selection-start-line="69" selection-start-column="14" selection-end-line="69" selection-end-column="14" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>

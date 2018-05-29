@@ -39,12 +39,12 @@ class ThirdFloor extends React.Component {
           <Col className="clearfix thirdfloor-title">
             <h3 className="thirdfloor-h">3F 礼盒鲜花</h3>
             <ul className="thirdfloor-title-ul">
-              <li className="thirdfloor-title-ul-li"><Link onClick={() => { this.onSearch('holiday', 'default'); }} className={this.state.menuItem === 'default' ? 'thirdfloor-title-ul-li-a active' : 'thirdfloor-title-ul-li-a'} to="#">精选热卖</Link></li>
-              <li className="thirdfloor-title-ul-li"><Link onClick={() => { this.onSearch('holiday', 'chineseValentine'); }} className={this.state.menuItem === 'chineseValentine' ? 'thirdfloor-title-ul-li-a active' : 'thirdfloor-title-ul-li-a'} to="#">七夕</Link></li>
-              <li className="thirdfloor-title-ul-li"><Link onClick={() => { this.onSearch('holiday', 'valentine'); }} className={this.state.menuItem === 'valentine' ? 'thirdfloor-title-ul-li-a active' : 'thirdfloor-title-ul-li-a'} to="#">情人节</Link></li>
-              <li className="thirdfloor-title-ul-li"><Link onClick={() => { this.onSearch('holiday', 'bachelor'); }} className={this.state.menuItem === 'bachelor' ? 'thirdfloor-title-ul-li-a active' : 'thirdfloor-title-ul-li-a'} to="#">光棍节</Link></li>
-              <li className="thirdfloor-title-ul-li"><Link onClick={() => { this.onSearch('holiday', 'christmas'); }} className={this.state.menuItem === 'christmas' ? 'thirdfloor-title-ul-li-a active' : 'thirdfloor-title-ul-li-a'} to="#">圣诞节</Link></li>
-              <li className="thirdfloor-title-ul-li"><Link onClick={() => { this.onSearch('holiday', 'teacher'); }} className={this.state.menuItem === 'teacher' ? 'thirdfloor-title-ul-li-a active' : 'thirdfloor-title-ul-li-a'} to="#">教师节</Link></li>
+              <li className="thirdfloor-title-ul-li"><Link onClick={() => { this.onSearch('holiday', 'default'); }} className={this.state.menuItem === 'default' ? 'thirdfloor-title-ul-li-a active' : 'thirdfloor-title-ul-li-a'} to="/itemList?condition=hotSale">精选热卖</Link></li>
+              <li className="thirdfloor-title-ul-li"><Link onClick={() => { this.onSearch('holiday', 'chineseValentine'); }} className={this.state.menuItem === 'chineseValentine' ? 'thirdfloor-title-ul-li-a active' : 'thirdfloor-title-ul-li-a'} to="/itemList?condition=chineseValentine">七夕</Link></li>
+              <li className="thirdfloor-title-ul-li"><Link onClick={() => { this.onSearch('holiday', 'valentine'); }} className={this.state.menuItem === 'valentine' ? 'thirdfloor-title-ul-li-a active' : 'thirdfloor-title-ul-li-a'} to="/itemList?condition=valentine">情人节</Link></li>
+              <li className="thirdfloor-title-ul-li"><Link onClick={() => { this.onSearch('holiday', 'bachelor'); }} className={this.state.menuItem === 'bachelor' ? 'thirdfloor-title-ul-li-a active' : 'thirdfloor-title-ul-li-a'} to="/itemList?condition=bachelor">光棍节</Link></li>
+              <li className="thirdfloor-title-ul-li"><Link onClick={() => { this.onSearch('holiday', 'christmas'); }} className={this.state.menuItem === 'christmas' ? 'thirdfloor-title-ul-li-a active' : 'thirdfloor-title-ul-li-a'} to="/itemList?condition=christmas">圣诞节</Link></li>
+              <li className="thirdfloor-title-ul-li"><Link onClick={() => { this.onSearch('holiday', 'teacher'); }} className={this.state.menuItem === 'teacher' ? 'thirdfloor-title-ul-li-a active' : 'thirdfloor-title-ul-li-a'} to="/itemList?condition=teacher">教师节</Link></li>
             </ul>
           </Col>
         </Row>
@@ -52,28 +52,33 @@ class ThirdFloor extends React.Component {
           <Col span={4}>
             <FloorSpecific
               top={{ img: specific1 }}
-              middle={{ bg: '#cda5e6', url: '/itemList', text: '礼盒鲜花' }}
+              middle={{ bg: '#cda5e6', url: '/itemList?condition=thirdFloor', text: '礼盒鲜花' }}
               bottom={{ bg: '#f4e3ff',
                 data: [{
                   text: '七夕',
                   attribute: 'holiday',
                   value: 'chineseValentine',
+                  url: '/itemList?condition=chineseValentine',
                 }, {
                   text: '情人节',
                   attribute: 'holiday',
                   value: 'valentine',
+                  url: '/itemList?condition=valentine',
                 }, {
                   text: '光棍节',
                   attribute: 'holiday',
                   value: 'bachelor',
+                  url: '/itemList?condition=bachelor',
                 }, {
                   text: '圣诞节',
                   attribute: 'holiday',
                   value: 'christmas',
+                  url: '/itemList?condition=christmas',
                 }, {
                   text: '教师节',
                   attribute: 'holiday',
                   value: 'teacher',
+                  url: '/itemList?condition=teacher',
                 }] }}
             />
           </Col>
