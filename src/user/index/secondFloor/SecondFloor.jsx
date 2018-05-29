@@ -39,12 +39,12 @@ class SecondFloor extends React.Component {
           <Col className="clearfix secondfloor-title">
             <h3 className="secondfloor-h">2F 新品上市</h3>
             <ul className="secondfloor-title-ul">
-              <li className="secondfloor-title-ul-li"><Link onClick={() => { this.onSearch('material', 'default'); }} className={this.state.menuItem === 'default' ? 'secondfloor-title-ul-li-a active' : 'secondfloor-title-ul-li-a'} to="#">精选热卖</Link></li>
-              <li className="secondfloor-title-ul-li"><Link onClick={() => { this.onSearch('material', 'whiteLily'); }} className={this.state.menuItem === 'whiteLily' ? 'secondfloor-title-ul-li-a active' : 'secondfloor-title-ul-li-a'} to="#">白百何</Link></li>
-              <li className="secondfloor-title-ul-li"><Link onClick={() => { this.onSearch('material', 'pinkLily'); }} className={this.state.menuItem === 'pinkLily' ? 'secondfloor-title-ul-li-a active' : 'secondfloor-title-ul-li-a'} to="#">粉百合</Link></li>
-              <li className="secondfloor-title-ul-li"><Link onClick={() => { this.onSearch('material', 'carnations'); }} className={this.state.menuItem === 'carnations' ? 'secondfloor-title-ul-li-a active' : 'secondfloor-title-ul-li-a'} to="#">康乃馨</Link></li>
-              <li className="secondfloor-title-ul-li"><Link onClick={() => { this.onSearch('material', 'sunflower'); }} className={this.state.menuItem === 'sunflower' ? 'secondfloor-title-ul-li-a active' : 'secondfloor-title-ul-li-a'} to="#">向日葵</Link></li>
-              <li className="secondfloor-title-ul-li"><Link onClick={() => { this.onSearch('material', 'tulip'); }} className={this.state.menuItem === 'tulip' ? 'secondfloor-title-ul-li-a active' : 'secondfloor-title-ul-li-a'} to="#">郁金香</Link></li>
+              <li className="secondfloor-title-ul-li"><Link onClick={() => { this.onSearch('material', 'default'); }} className={this.state.menuItem === 'default' ? 'secondfloor-title-ul-li-a active' : 'secondfloor-title-ul-li-a'} to="/itemList?condition=hotSale">精选热卖</Link></li>
+              <li className="secondfloor-title-ul-li"><Link onClick={() => { this.onSearch('material', 'whiteLily'); }} className={this.state.menuItem === 'whiteLily' ? 'secondfloor-title-ul-li-a active' : 'secondfloor-title-ul-li-a'} to="/itemList?condition=lily">白百何</Link></li>
+              <li className="secondfloor-title-ul-li"><Link onClick={() => { this.onSearch('material', 'pinkLily'); }} className={this.state.menuItem === 'pinkLily' ? 'secondfloor-title-ul-li-a active' : 'secondfloor-title-ul-li-a'} to="/itemList?condition=lily">粉百合</Link></li>
+              <li className="secondfloor-title-ul-li"><Link onClick={() => { this.onSearch('material', 'carnations'); }} className={this.state.menuItem === 'carnations' ? 'secondfloor-title-ul-li-a active' : 'secondfloor-title-ul-li-a'} to="/itemList?condition=carnations">康乃馨</Link></li>
+              <li className="secondfloor-title-ul-li"><Link onClick={() => { this.onSearch('material', 'sunflower'); }} className={this.state.menuItem === 'sunflower' ? 'secondfloor-title-ul-li-a active' : 'secondfloor-title-ul-li-a'} to="/itemList?condition=sunflower">向日葵</Link></li>
+              <li className="secondfloor-title-ul-li"><Link onClick={() => { this.onSearch('material', 'tulip'); }} className={this.state.menuItem === 'tulip' ? 'secondfloor-title-ul-li-a active' : 'secondfloor-title-ul-li-a'} to="/itemList?condition=tulip">郁金香</Link></li>
             </ul>
           </Col>
         </Row>
@@ -52,28 +52,33 @@ class SecondFloor extends React.Component {
           <Col span={4}>
             <FloorSpecific
               top={{ img: specific1 }}
-              middle={{ bg: '#a6ddc9', url: '/itemList', text: '新品上市' }}
+              middle={{ bg: '#a6ddc9', url: '/itemList?condition=secondFloor', text: '新品上市' }}
               bottom={{ bg: '#caf4e5',
                 data: [{
                   text: '白百何',
                   attribute: 'material',
                   value: 'whiteLily',
+                  url: '/itemList?condition=lily',
                 }, {
                   text: '粉百合',
                   attribute: 'material',
                   value: 'pinkLily',
+                  url: '/itemList?condition=lily',
                 }, {
                   text: '康乃馨',
                   attribute: 'material',
                   value: 'carnations',
+                  url: '/itemList?condition=carnations',
                 }, {
                   text: '向日葵',
                   attribute: 'material',
                   value: 'sunflower',
+                  url: '/itemList?condition=sunflower',
                 }, {
                   text: '郁金香',
                   attribute: 'material',
                   value: 'tulip',
+                  url: '/itemList?condition=tulip',
                 }] }}
             />
           </Col>

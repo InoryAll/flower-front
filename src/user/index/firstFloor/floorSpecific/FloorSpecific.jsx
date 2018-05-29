@@ -19,7 +19,7 @@ class FloorSpecific extends React.Component {
   render() {
     const { top, middle, bottom } = this.props;
     const li = bottom.data.map((item, index) => {
-      return (<li className="floorspecific-ul-li" key={index}><Link className="floorspecific-ul-li-a" onClick={() => { this.onSearch(item.attribute, item.value); }} to="#">{item.text}</Link></li>);
+      return (<li className="floorspecific-ul-li" key={index}><Link className="floorspecific-ul-li-a" onClick={() => { this.onSearch(item.attribute, item.value); }} to={item.url}>{item.text}</Link></li>);
     });
     return (
       <div className="floorspecific">

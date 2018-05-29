@@ -33,7 +33,7 @@ class HotSale extends React.Component {
         </Row>
         <Row className="hotsale-detail-row">
           <Col span={4}>
-            <Link className="hotsale-special-link"><img className="hotsale-special-link-img" src={this.state.imgArr[0]} alt="花之韵" /></Link>
+            <Link to="/itemDetail?id=5b0c2b857a3a935fa4f6fad9" className="hotsale-special-link"><img className="hotsale-special-link-img" src={this.state.imgArr[0]} alt="花之韵" /></Link>
           </Col>
           <Col span={11}>
             <ul className="hotsale-ul">
@@ -64,7 +64,7 @@ class HotSale extends React.Component {
             </ul>
           </Col>
           <Col span={4}>
-            <Link className="hotsale-special-link"><img className="hotsale-special-link-img" src={this.state.imgArr[5]} alt="花之韵" /></Link>
+            <Link to="/itemDetail?id=5b0c15fd7a3a935fa4f6faa7" className="hotsale-special-link"><img className="hotsale-special-link-img" src={this.state.imgArr[5]} alt="花之韵" /></Link>
           </Col>
           <Col span={5}>
             <ul className="hotsale-ul hotsale-ul-vertical">

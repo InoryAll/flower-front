@@ -39,12 +39,12 @@ class FirstFloor extends React.Component {
           <Col>
             <h3 className="firstfloor-h">1F 玫瑰花</h3>
             <ul className="firstfloor-title-ul">
-              <li className="firstfloor-title-ul-li"><Link onClick={() => { this.onSearch('material', 'default'); }} className={this.state.menuItem === 'default' ? 'firstfloor-title-ul-li-a active' : 'firstfloor-title-ul-li-a'} to="#">精选热卖</Link></li>
-              <li className="firstfloor-title-ul-li"><Link onClick={() => { this.onSearch('material', 'redRose'); }} className={this.state.menuItem === 'redRose' ? 'firstfloor-title-ul-li-a active' : 'firstfloor-title-ul-li-a'} to="#">红玫瑰</Link></li>
-              <li className="firstfloor-title-ul-li"><Link onClick={() => { this.onSearch('material', 'whiteRose'); }} className={this.state.menuItem === 'whiteRose' ? 'firstfloor-title-ul-li-a active' : 'firstfloor-title-ul-li-a'} to="#">白玫瑰</Link></li>
-              <li className="firstfloor-title-ul-li"><Link onClick={() => { this.onSearch('material', 'pinkRose'); }} className={this.state.menuItem === 'pinkRose' ? 'firstfloor-title-ul-li-a active' : 'firstfloor-title-ul-li-a'} to="#">粉玫瑰</Link></li>
-              <li className="firstfloor-title-ul-li"><Link onClick={() => { this.onSearch('material', 'champagneRose'); }} className={this.state.menuItem === 'champagneRose' ? 'firstfloor-title-ul-li-a active' : 'firstfloor-title-ul-li-a'} to="#">香槟玫瑰</Link></li>
-              <li className="firstfloor-title-ul-li"><Link onClick={() => { this.onSearch('material', 'blueRose'); }} className={this.state.menuItem === 'blueRose' ? 'firstfloor-title-ul-li-a active' : 'firstfloor-title-ul-li-a'} to="#">蓝色妖姬</Link></li>
+              <li className="firstfloor-title-ul-li"><Link onClick={() => { this.onSearch('material', 'default'); }} className={this.state.menuItem === 'default' ? 'firstfloor-title-ul-li-a active' : 'firstfloor-title-ul-li-a'} to="/itemList?condition=hotSale">精选热卖</Link></li>
+              <li className="firstfloor-title-ul-li"><Link onClick={() => { this.onSearch('material', 'redRose'); }} className={this.state.menuItem === 'redRose' ? 'firstfloor-title-ul-li-a active' : 'firstfloor-title-ul-li-a'} to="/itemList?condition=rose">红玫瑰</Link></li>
+              <li className="firstfloor-title-ul-li"><Link onClick={() => { this.onSearch('material', 'whiteRose'); }} className={this.state.menuItem === 'whiteRose' ? 'firstfloor-title-ul-li-a active' : 'firstfloor-title-ul-li-a'} to="/itemList?condition=rose">白玫瑰</Link></li>
+              <li className="firstfloor-title-ul-li"><Link onClick={() => { this.onSearch('material', 'pinkRose'); }} className={this.state.menuItem === 'pinkRose' ? 'firstfloor-title-ul-li-a active' : 'firstfloor-title-ul-li-a'} to="/itemList?condition=rose">粉玫瑰</Link></li>
+              <li className="firstfloor-title-ul-li"><Link onClick={() => { this.onSearch('material', 'champagneRose'); }} className={this.state.menuItem === 'champagneRose' ? 'firstfloor-title-ul-li-a active' : 'firstfloor-title-ul-li-a'} to="/itemList?condition=rose">香槟玫瑰</Link></li>
+              <li className="firstfloor-title-ul-li"><Link onClick={() => { this.onSearch('material', 'blueRose'); }} className={this.state.menuItem === 'blueRose' ? 'firstfloor-title-ul-li-a active' : 'firstfloor-title-ul-li-a'} to="/itemList?condition=rose">蓝色妖姬</Link></li>
             </ul>
           </Col>
         </Row>
@@ -52,28 +52,33 @@ class FirstFloor extends React.Component {
           <Col span={4}>
             <FloorSpecific
               top={{ img: specific1 }}
-              middle={{ bg: '#f588af', url: '/itemList?condition=rose', text: '玫瑰花' }}
+              middle={{ bg: '#f588af', url: '/itemList?condition=firstFloor', text: '玫瑰花' }}
               bottom={{ bg: '#ffeef4',
                 data: [{
                   text: '红玫瑰',
                   attribute: 'material',
                   value: 'redRose',
+                  url: '/itemList?condition=rose',
                 }, {
                   text: '白玫瑰',
                   attribute: 'material',
                   value: 'whiteRose',
+                  url: '/itemList?condition=rose',
                 }, {
                   text: '粉玫瑰',
                   attribute: 'material',
                   value: 'pinkRose',
+                  url: '/itemList?condition=rose',
                 }, {
                   text: '香槟玫瑰',
                   attribute: 'material',
                   value: 'champagneRose',
+                  url: '/itemList?condition=rose',
                 }, {
                   text: '蓝色妖姬',
                   attribute: 'material',
                   value: 'blueRose',
+                  url: '/itemList?condition=rose',
                 }] }}
             />
           </Col>

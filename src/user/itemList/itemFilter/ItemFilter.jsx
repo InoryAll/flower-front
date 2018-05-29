@@ -120,11 +120,11 @@ class ItemFilter extends React.Component {
                 <li className="itemfilter-ul-li clearfix">
                   <span className="itemfilter-ul-li-span">价格：</span>
                   <ul className="itemfilter-ul-li-ul">
-                    <li className="itemfilter-ul-li-ul-li"><Link onClick={() => { this.onSearch('price', 'oneToTwo'); }} className={ filter.indexOf('rose') > -1 ? 'itemfilter-ul-li-ul-li-link itemfilter-active' : 'itemfilter-ul-li-ul-li-link' }>100-200元</Link></li>
-                    <li className="itemfilter-ul-li-ul-li"><Link onClick={() => { this.onSearch('price', 'twoToThree'); }} className={ filter.indexOf('lily') > -1 ? 'itemfilter-ul-li-ul-li-link itemfilter-active' : 'itemfilter-ul-li-ul-li-link' }>200-300元</Link></li>
-                    <li className="itemfilter-ul-li-ul-li"><Link onClick={() => { this.onSearch('price', 'threeToFive'); }} className={ filter.indexOf('sunflower') > -1 ? 'itemfilter-ul-li-ul-li-link itemfilter-active' : 'itemfilter-ul-li-ul-li-link' }>300-500元</Link></li>
-                    <li className="itemfilter-ul-li-ul-li"><Link onClick={() => { this.onSearch('price', 'fiveToEight'); }} className={ filter.indexOf('carnations') > -1 ? 'itemfilter-ul-li-ul-li-link itemfilter-active' : 'itemfilter-ul-li-ul-li-link' }>500-800元</Link></li>
-                    <li className="itemfilter-ul-li-ul-li"><Link onClick={() => { this.onSearch('price', 'aboveEight'); }} className={ filter.indexOf('tulip') > -1 ? 'itemfilter-ul-li-ul-li-link itemfilter-active' : 'itemfilter-ul-li-ul-li-link' }>800元以上</Link></li>
+                    <li className="itemfilter-ul-li-ul-li"><Link onClick={() => { this.onSearch('price', 'oneToTwo'); }} className={ filter.indexOf('oneToTwo') > -1 ? 'itemfilter-ul-li-ul-li-link itemfilter-active' : 'itemfilter-ul-li-ul-li-link' }>100-200元</Link></li>
+                    <li className="itemfilter-ul-li-ul-li"><Link onClick={() => { this.onSearch('price', 'twoToThree'); }} className={ filter.indexOf('twoToThree') > -1 ? 'itemfilter-ul-li-ul-li-link itemfilter-active' : 'itemfilter-ul-li-ul-li-link' }>200-300元</Link></li>
+                    <li className="itemfilter-ul-li-ul-li"><Link onClick={() => { this.onSearch('price', 'threeToFive'); }} className={ filter.indexOf('threeToFive') > -1 ? 'itemfilter-ul-li-ul-li-link itemfilter-active' : 'itemfilter-ul-li-ul-li-link' }>300-500元</Link></li>
+                    <li className="itemfilter-ul-li-ul-li"><Link onClick={() => { this.onSearch('price', 'fiveToEight'); }} className={ filter.indexOf('fiveToEight') > -1 ? 'itemfilter-ul-li-ul-li-link itemfilter-active' : 'itemfilter-ul-li-ul-li-link' }>500-800元</Link></li>
+                    <li className="itemfilter-ul-li-ul-li"><Link onClick={() => { this.onSearch('price', 'aboveEight'); }} className={ filter.indexOf('aboveEight') > -1 ? 'itemfilter-ul-li-ul-li-link itemfilter-active' : 'itemfilter-ul-li-ul-li-link' }>800元以上</Link></li>
                   </ul>
                 </li>
                 <li className="itemfilter-ul-li clearfix">
