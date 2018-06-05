@@ -591,6 +591,22 @@ const FieldForm = Form.create()((props) => {
           </FormItem>
         </Col>
       </Row>
+      <Row className="form-search-fields-row">
+        <Col span={8}>
+          <FormItem
+            {...formItemLayout}
+            label="位置"
+          >
+            {getFieldDecorator('position', {})(
+              <Select placeholder="请选择种类">
+                {Setting.position.map((it, index) => {
+                  return <Option value={it.value}>{it.label}</Option>;
+                })}
+              </Select>
+            )}
+          </FormItem>
+        </Col>
+      </Row>
       <Row>
         <Col span={8} offset={16}>
           <FormItem className="form-search-fields-search">
