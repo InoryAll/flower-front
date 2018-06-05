@@ -7,6 +7,8 @@ import { connect } from 'react-redux';
 import _ from 'lodash';
 import { If } from 'jsx-control-statements';
 import { onViewInit, getSingleItem, getItemComment, addItemComment } from './action/action';
+import { getAllOrders } from '../userInfo/action/action';
+import { orderListSelector } from '../userInfo/selector/selector';
 import { itemSelector, commentSelector } from './selector/selector';
 import { validateLoginState } from '../../user/login/action/action';
 import { getCart, deleteGood, addGood } from '../../user/index/action/action';
@@ -26,6 +28,7 @@ class ItemDeatil extends React.Component {
     user: PropTypes.object.isRequired,
     cart: PropTypes.object.isRequired,
     item: PropTypes.object.isRequired,
+    orderList: PropTypes.object.isRequired,
     location: PropTypes.object.isRequired,
     onViewInit: PropTypes.func.isRequired,
     validateLoginState: PropTypes.func.isRequired,
@@ -35,10 +38,12 @@ class ItemDeatil extends React.Component {
     getSingleItem: PropTypes.func.isRequired,
     getItemComment: PropTypes.func.isRequired,
     addItemComment: PropTypes.func.isRequired,
+    getAllOrders: PropTypes.func.isRequired,
   };
   componentWillMount() {
     this.props.onViewInit();
     this.props.validateLoginState();
+    this.props.getAllOrders({});
     this.props.getCart({ _id: Cookie.getCookie('_id') });
     if (!_.isEmpty(this.props.location.query.id)) {
       this.props.getSingleItem({ _id: this.props.location.query.id });
@@ -70,6 +75,7 @@ const mapStateToProps = (state) => {
     cart: cartSelector(state),
     item: itemSelector(state),
     comment: commentSelector(state),
+    orderList: orderListSelector(state),
   };
 };
 
@@ -82,6 +88,7 @@ const mapDispatchToProps = {
   getSingleItem,
   getItemComment,
   addItemComment,
+  getAllOrders,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ItemDeatil);

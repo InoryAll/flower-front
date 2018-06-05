@@ -4,7 +4,7 @@
  */
 import React, { PropTypes } from 'react';
 import _ from 'lodash';
-import { Row, Col, Tabs, Pagination, Progress, Icon, Modal, Button, Rate, Input } from 'antd';
+import { Row, Col, Tabs, Pagination, Progress, Icon, Modal, Button, Rate, Input, message } from 'antd';
 import './ItemOther.less';
 import ItemComment from './itemComment/ItemComment';
 
@@ -15,6 +15,7 @@ class ItemOther extends React.Component {
     comment: PropTypes.object.isRequired,
     item: PropTypes.object.isRequired,
     user: PropTypes.object.isRequired,
+    orderList: PropTypes.object.isRequired,
     addItemComment: PropTypes.func.isRequired,
   };
   state = {
@@ -47,7 +48,7 @@ class ItemOther extends React.Component {
     });
   };
   handleOk = () => {
-    const { item, user } = this.props;
+    const { item, user, orderList } = this.props;
     const params = {
       level: this.state.level,
       content: this.state.content,
@@ -60,12 +61,20 @@ class ItemOther extends React.Component {
       timestamp: new Date().getTime(),
       deleteFlag: 0,
     };
-    this.props.addItemComment(params);
-    this.setState({
-      visible: false,
-      level: 0,
-      content: '',
-    });
+    if (JSON.stringify(orderList).indexOf(item.data[0]._id) > -1) {
+      this.props.addItemComment(params);
+      this.setState({
+        visible: false,
+        level: 0,
+        content: '',
+      });
+    } else {
+      message.error('购买商品后才能作评价！');
+      this.setState({
+        level: 0,
+        content: '',
+      });
+    }
   };
   onRateChange = (value) => {
     this.setState({
